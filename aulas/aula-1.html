@@ -1,0 +1,371 @@
+<section class="view" id="v-aula-1" data-aula="1" data-tempo="10min">
+<header class="hero"><div class="hero-inner">
+  <div>
+    <p class="kicker">Trilha 01 · Aula 1</p>
+    <h1>Pedido completo,<br>não <em>pergunta solta</em></h1>
+
+    <p class="promise">Ao fim desta aula você transforma uma pergunta solta num pedido completo — material, saída, critério de pronto — e recebe algo pronto para usar.</p>
+
+    <p class="why">O retrabalho chega no fim da tarde: um texto para refazer inteiro. A causa é o que ficou de fora ao pedir.</p>
+
+    <p class="cue"><span class="arw">↓</span> role para estudar</p>
+  </div>
+  <div class="herofig"><svg viewBox="0 0 300 240" fill="none" aria-hidden="true">
+    <!-- balcão / bancada -->
+    <path d="M14 196h272" stroke="currentColor" stroke-width="1.5" opacity=".35"/>
+    <path d="M40 196v22M260 196v22" stroke="currentColor" stroke-width="1.5" opacity=".2"/>
+    <!-- recado: papel torto, uma linha rabiscada, sem campos -->
+    <g transform="rotate(-8 84 130)">
+      <rect x="44" y="90" width="80" height="78" rx="3" stroke="currentColor" stroke-width="1.5" opacity=".4"/>
+      <path d="M44 90h80v10H44z" fill="currentColor" opacity=".08"/>
+      <path d="M56 120c8-6 14 6 22 0s14 6 22 0" stroke="currentColor" stroke-width="1.5" opacity=".4"/>
+      <path d="M56 138h30" stroke="currentColor" stroke-width="1.5" opacity=".25"/>
+    </g>
+    <path d="M88 84l-2-14" stroke="currentColor" stroke-width="1.5" opacity=".35"/>
+    <circle cx="86" cy="68" r="4" stroke="currentColor" stroke-width="1.5" opacity=".35"/>
+    <!-- ordem de serviço: prancheta reta, três campos preenchidos, carimbo de pronto -->
+    <rect x="168" y="48" width="112" height="140" rx="5" stroke="var(--accent)" stroke-width="1.5"/>
+    <rect x="204" y="40" width="40" height="14" rx="3" stroke="var(--accent)" stroke-width="1.5"/>
+    <path d="M182 82h84" stroke="var(--accent)" stroke-width="1.5" opacity=".35"/>
+    <path d="M182 116h84" stroke="var(--accent)" stroke-width="1.5" opacity=".35"/>
+    <path d="M182 150h84" stroke="var(--accent)" stroke-width="1.5" opacity=".35"/>
+    <text x="182" y="74" font-family="monospace" font-size="9" fill="var(--accent)">material</text>
+    <path d="M232 72h30" stroke="var(--accent)" stroke-width="1.5" opacity=".7"/>
+    <text x="182" y="108" font-family="monospace" font-size="9" fill="var(--accent)">saída</text>
+    <path d="M220 106h42" stroke="var(--accent)" stroke-width="1.5" opacity=".7"/>
+    <text x="182" y="142" font-family="monospace" font-size="9" fill="var(--accent)">pronto</text>
+    <path d="M226 140h36" stroke="var(--accent)" stroke-width="1.5" opacity=".7"/>
+    <path d="M186 166l6 6 12-12" stroke="var(--accent)" stroke-width="2"/>
+    <path d="M212 170h50" stroke="var(--accent)" stroke-width="1.5" opacity=".7"/>
+    <!-- legendas -->
+    <text x="84" y="230" font-family="monospace" font-size="11" fill="currentColor" opacity=".5" text-anchor="middle">recado no balcão</text>
+    <text x="224" y="230" font-family="monospace" font-size="11" fill="var(--accent)" text-anchor="middle">ordem de serviço</text>
+  </svg></div>
+</div></header>
+
+<div class="layout">
+  <div class="col">
+
+    <section class="step" data-fig="1" data-kind="fundamento">
+      <h2><span class="n">01</span> A IA começa cada conversa sem saber nada de você</h2>
+      <p>Numa conversa nova, ninguém do outro lado conhece sua escola nem sua equipe. O sistema lê só a caixa. O resto ele preenche pela média.</p>
+      <p>O que vai junto tem nome: <span class="gterm" tabindex="0" data-def="Texto, dados, exemplo e situação de uso que vão junto com o pedido.">contexto</span>. É a matéria-prima do trabalho.</p>
+      <p data-ex="professor">Um professor pede &ldquo;resuma a aula de ontem&rdquo; e recebe um texto que serve para qualquer turma. Não colou o plano nem disse a série.</p>
+      <figure class="colfig"><svg viewBox="0 0 320 180" fill="none" aria-hidden="true">
+        <!-- três cartões do professor, fora da caixa -->
+        <rect x="18" y="22" width="78" height="30" rx="4" stroke="currentColor" stroke-width="1.4" opacity=".4"/>
+        <text x="57" y="41" font-family="monospace" font-size="9" fill="currentColor" opacity=".6" text-anchor="middle">plano</text>
+        <rect x="18" y="62" width="78" height="30" rx="4" stroke="currentColor" stroke-width="1.4" opacity=".4"/>
+        <text x="57" y="81" font-family="monospace" font-size="9" fill="currentColor" opacity=".6" text-anchor="middle">turma</text>
+        <rect x="18" y="102" width="78" height="30" rx="4" stroke="currentColor" stroke-width="1.4" opacity=".4"/>
+        <text x="57" y="121" font-family="monospace" font-size="9" fill="currentColor" opacity=".6" text-anchor="middle">leitor</text>
+        <!-- tentam entrar e batem na parede da caixa -->
+        <path d="M100 37h22M100 77h22M100 117h22" stroke="currentColor" stroke-width="1.4" stroke-dasharray="3 3" opacity=".35"/>
+        <path d="M126 31l8 12M134 31l-8 12M126 71l8 12M134 71l-8 12M126 111l8 12M134 111l-8 12" stroke="currentColor" stroke-width="1.4" opacity=".4"/>
+        <!-- a caixa do pedido: só uma linha dentro -->
+        <rect x="146" y="58" width="80" height="38" rx="5" stroke="var(--accent)" stroke-width="1.5"/>
+        <path d="M158 77h44" stroke="var(--accent)" stroke-width="1.5"/>
+                <!-- seta para a resposta -->
+        <path d="M230 77h30" stroke="var(--accent)" stroke-width="1.5"/>
+        <path d="M254 72l7 5-7 5" stroke="var(--accent)" stroke-width="1.5"/>
+        <!-- resposta: uma linha sua, o resto média -->
+        <rect x="266" y="40" width="42" height="74" rx="5" stroke="currentColor" stroke-width="1.4" opacity=".5"/>
+        <path d="M274 54h26" stroke="var(--accent)" stroke-width="1.5"/>
+        <path d="M274 68h26M274 82h20M274 96h26" stroke="currentColor" stroke-width="1.4" stroke-dasharray="2 3" opacity=".4"/>
+        <text x="287" y="130" font-family="monospace" font-size="9" fill="currentColor" opacity=".55" text-anchor="middle">média</text>
+        <path d="M18 156h290" stroke="currentColor" stroke-width="1" opacity=".15"/>
+      </svg><figcaption>o que ficou fora da caixa não entra na resposta</figcaption></figure>
+      <div class="mobfig" data-mobfig="1"></div>
+      <button class="readbtn" data-read="s1">marcar como lido</button>
+    </section>
+
+    <section class="step" data-fig="2" data-kind="fundamento">
+      <h2><span class="n">02</span> Material, saída e critério — o que o pedido carrega</h2>
+      <p>Na oficina, a ordem de serviço registra o barulho, o que resolver e o prazo. Um pedido à IA carrega o mesmo.</p>
+      <p><b>Material</b>: o que ela lê. <b>Saída</b>: tamanho, tom, leitor. <b>Critério de pronto</b>: o que precisa aparecer.</p>
+      <p data-ex="gestora">Uma gestora colou a norma de trinta páginas, pediu &ldquo;tabela: tema, carga horária, público e mês&rdquo; e fechou: &ldquo;pronto só cobrindo os cinco temas&rdquo;.</p>
+      <div class="qbefore-after">
+        <div class="qba-col qba-before">
+          <p class="qba-lbl">Antes</p>
+          <p class="qba-txt">&ldquo;Monta um cronograma com base nessa norma.&rdquo;</p>
+        </div>
+        <div class="qba-col qba-depois">
+          <p class="qba-lbl">Depois</p>
+          <p class="qba-txt">Norma colada · quatro colunas · cinco temas.</p>
+        </div>
+        <p class="qba-saldo"><b>Saldo:</b> quatro reescritas viraram um ajuste.</p>
+      </div>
+      <figure class="colfig"><svg viewBox="0 0 320 180" fill="none" aria-hidden="true">
+        <!-- ANTES: pedido de uma linha, quatro voltas de retrabalho -->
+        <rect x="18" y="30" width="70" height="26" rx="4" stroke="currentColor" stroke-width="1.4" opacity=".45"/>
+        <path d="M30 43h30" stroke="currentColor" stroke-width="1.4" opacity=".45"/>
+        <path d="M92 43h20" stroke="currentColor" stroke-width="1.4" opacity=".45"/>
+        <g stroke="currentColor" stroke-width="1.4" opacity=".5">
+          <path d="M135 43a9 9 0 1 1-9-9"/><path d="M122 30l4 4-4 4"/>
+          <path d="M165 43a9 9 0 1 1-9-9"/><path d="M152 30l4 4-4 4"/>
+          <path d="M195 43a9 9 0 1 1-9-9"/><path d="M182 30l4 4-4 4"/>
+          <path d="M225 43a9 9 0 1 1-9-9"/><path d="M212 30l4 4-4 4"/>
+        </g>
+        <path d="M232 43h30" stroke="currentColor" stroke-width="1.4" opacity=".45"/>
+        <path d="M256 38l7 5-7 5" stroke="currentColor" stroke-width="1.4" opacity=".45"/>
+        <rect x="270" y="30" width="34" height="26" rx="4" stroke="currentColor" stroke-width="1.4" opacity=".45"/>
+        <text x="18" y="76" font-family="monospace" font-size="9" fill="currentColor" opacity=".55">4 voltas</text>
+        <!-- divisor -->
+        <path d="M18 92h286" stroke="currentColor" stroke-width="1" opacity=".15"/>
+        <!-- DEPOIS: pedido de três campos, uma volta, pronto -->
+        <rect x="18" y="104" width="70" height="58" rx="4" stroke="var(--accent)" stroke-width="1.5"/>
+        <path d="M30 118h44M30 133h44M30 148h30" stroke="var(--accent)" stroke-width="1.5"/>
+        <path d="M92 133h20" stroke="var(--accent)" stroke-width="1.5"/>
+        <path d="M135 133a9 9 0 1 1-9-9" stroke="var(--accent)" stroke-width="1.5"/><path d="M122 120l4 4-4 4" stroke="var(--accent)" stroke-width="1.5"/>
+        <path d="M142 133h120" stroke="var(--accent)" stroke-width="1.5"/>
+        <path d="M256 128l7 5-7 5" stroke="var(--accent)" stroke-width="1.5"/>
+        <rect x="270" y="120" width="34" height="26" rx="4" stroke="var(--accent)" stroke-width="1.5"/>
+        <path d="M279 133l5 5 10-10" stroke="var(--accent)" stroke-width="1.8"/>
+        <text x="18" y="176" font-family="monospace" font-size="9" fill="var(--accent)">1 ajuste</text>
+      </svg><figcaption>uma linha dá quatro voltas; três partes, um ajuste</figcaption></figure>
+      <div class="mobfig" data-mobfig="2"></div>
+      <button class="readbtn" data-read="s2">marcar como lido</button>
+    </section>
+
+    <section class="step" data-fig="3" data-kind="fundamento">
+      <h2><span class="n">03</span> Quem decide o que é um bom resultado é você</h2>
+      <p>O critério de pronto fica na sua cabeça — e o que fica só ali não chega do outro lado.</p>
+      <p>&ldquo;Fica bom&rdquo; é desejo. &ldquo;Cite três decisões&rdquo; é critério: conta três, ou não.</p>
+      <p data-ex="professor">Um professor de história corrige oitenta devolutivas por bimestre com um critério: um acerto, uma melhoria, até quatro linhas. Confere cada uma em segundos.</p>
+      <figure class="colfig"><svg viewBox="0 0 320 180" fill="none" aria-hidden="true">
+        <!-- a devolutiva: quatro linhas de texto -->
+        <rect x="20" y="24" width="150" height="132" rx="6" stroke="currentColor" stroke-width="1.4" opacity=".45"/>
+        <path d="M36 52h110M36 78h96M36 104h118M36 130h80" stroke="currentColor" stroke-width="1.4" opacity=".4"/>
+        <!-- régua ao lado com os três itens do critério -->
+        <path d="M186 30v120" stroke="var(--accent)" stroke-width="1.5"/>
+        <path d="M182 30h8M182 150h8" stroke="var(--accent)" stroke-width="1.5"/>
+        <!-- item 1: um acerto -> linha 1 -->
+        <path d="M196 52h14" stroke="var(--accent)" stroke-width="1.5"/>
+        <path d="M214 56l5 5 10-10" stroke="var(--accent)" stroke-width="1.8"/>
+        <text x="236" y="57" font-family="monospace" font-size="9" fill="var(--accent)">1 acerto</text>
+        <!-- item 2: uma melhoria -> linha 2 -->
+        <path d="M196 78h14" stroke="var(--accent)" stroke-width="1.5"/>
+        <path d="M214 82l5 5 10-10" stroke="var(--accent)" stroke-width="1.8"/>
+        <text x="236" y="83" font-family="monospace" font-size="9" fill="var(--accent)">1 melhoria</text>
+        <!-- item 3: até 4 linhas -> mede a altura -->
+        <path d="M196 130h14" stroke="var(--accent)" stroke-width="1.5"/>
+        <path d="M214 134l5 5 10-10" stroke="var(--accent)" stroke-width="1.8"/>
+        <text x="236" y="135" font-family="monospace" font-size="9" fill="var(--accent)">4 linhas</text>
+        <!-- chave de medida cobrindo as 4 linhas -->
+        <path d="M176 46v90" stroke="currentColor" stroke-width="1.2" opacity=".35"/>
+        <path d="M172 46h4M172 136h4" stroke="currentColor" stroke-width="1.2" opacity=".35"/>
+              </svg><figcaption>a devolutiva contra a régua: três marcas, sem discutir se ficou bom</figcaption></figure>
+      <div class="quiz" data-answer="b">
+        <p class="qk">Teste-se</p><p class="q">Você pediu &ldquo;um material sobre a nova regra&rdquo;; veio um texto correto que ninguém usou. O que faltou?</p>
+        <button class="opt" data-k="a">Uma IA mais avançada</button>
+        <button class="opt" data-k="b" data-fb="O texto estava correto, então o problema era alvo, não capacidade. Sem alvo escrito, qualquer resposta plausível cumpre o pedido — inclusive uma que não serve.">O critério de pronto: leitor, tamanho, o que aparece</button>
+        <button class="opt" data-k="c">Mais contexto</button>
+        <p class="qfb"></p>
+      </div>
+      <div class="mobfig" data-mobfig="3"></div>
+      <button class="readbtn" data-read="s3">marcar como lido</button>
+    </section>
+
+    <section class="step" data-fig="4" data-kind="fundamento">
+      <h2><span class="n">04</span> Antes de mandar executar, peça o que falta</h2>
+      <p>Feche o pedido com uma linha: &ldquo;antes de executar, me diga o que falta&rdquo;. Custa trinta segundos.</p>
+      <p>Volta uma lista curta e desconfortável: público, prazo, texto original. O que você descobriria depois vem antes.</p>
+      <p data-ex="gestora">Uma gestora usou a linha antes do aviso da regra de reembolso. A IA perguntou desde que mês valia e quem alcançava. Faltavam as duas.</p>
+      <figure class="colfig"><svg viewBox="0 0 320 180" fill="none" aria-hidden="true">
+        <!-- o aviso com duas lacunas -->
+        <rect x="20" y="30" width="118" height="118" rx="6" stroke="var(--accent)" stroke-width="1.5"/>
+        <path d="M34 54h90M34 72h60" stroke="currentColor" stroke-width="1.4" opacity=".45"/>
+        <rect x="34" y="86" width="90" height="14" rx="3" stroke="var(--accent)" stroke-width="1.4" stroke-dasharray="3 3"/>
+        <path d="M34 114h90" stroke="currentColor" stroke-width="1.4" opacity=".45"/>
+        <rect x="34" y="124" width="70" height="14" rx="3" stroke="var(--accent)" stroke-width="1.4" stroke-dasharray="3 3"/>
+                <!-- as duas perguntas apontando para as lacunas -->
+        <path d="M150 93h-22" stroke="var(--accent)" stroke-width="1.5"/>
+        <path d="M134 88l-7 5 7 5" stroke="var(--accent)" stroke-width="1.5"/>
+        <text x="156" y="97" font-family="monospace" font-size="9" fill="var(--accent)">mês?</text>
+        <path d="M150 131h-42" stroke="var(--accent)" stroke-width="1.5"/>
+        <path d="M114 126l-7 5 7 5" stroke="var(--accent)" stroke-width="1.5"/>
+        <text x="156" y="135" font-family="monospace" font-size="9" fill="var(--accent)">quem?</text>
+        <!-- portão: só depois de preencher, segue para a equipe -->
+        <path d="M212 89v52" stroke="currentColor" stroke-width="1.4" opacity=".3" stroke-dasharray="3 3"/>
+        <path d="M222 114h38" stroke="currentColor" stroke-width="1.4" opacity=".45"/>
+        <path d="M254 109l7 5-7 5" stroke="currentColor" stroke-width="1.4" opacity=".45"/>
+        <!-- a equipe inteira: seis assentos -->
+        <g stroke="currentColor" stroke-width="1.4" opacity=".5">
+          <circle cx="276" cy="96" r="5"/><circle cx="296" cy="96" r="5"/>
+          <circle cx="276" cy="114" r="5"/><circle cx="296" cy="114" r="5"/>
+          <circle cx="276" cy="132" r="5"/><circle cx="296" cy="132" r="5"/>
+        </g>
+        <text x="286" y="160" font-family="monospace" font-size="9" fill="currentColor" opacity=".55" text-anchor="middle">equipe</text>
+      </svg><figcaption>as lacunas viraram perguntas antes de o aviso sair para a equipe</figcaption></figure>
+      <div class="qanchor"><p>A IA não adivinha o que você não escreveu.</p></div>
+      <div class="mobfig" data-mobfig="4"></div>
+      <button class="readbtn" data-read="s4">marcar como lido</button>
+    </section>
+
+    <section class="practice" data-practice="p1" data-mode="prompt">
+      <p class="pk">Pratique agora <span class="pcount">0/3 feito</span></p>
+      <h3 class="ph">Um pedido seu, completo</h3>
+      <p class="pgoal">Pronto quando a resposta voltar sem reescrita. Cerca de 5 min.</p>
+      <p class="psafe">Nada aqui sai da sua conversa. Se vier estranho, apague e mande de novo.</p>
+      <div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">MATERIAL
+&lt;cole o material&gt;
+
+SAÍDA
+Formato: &lt;até 10 linhas&gt;
+
+CRITÉRIO DE PRONTO
+Só está pronto se: &lt;citar as 3 decisões&gt;
+
+Antes de executar, me diga o que falta.</pre></div>
+      <ol class="psteps">
+        <li><label><input type="checkbox" data-ptask="1"> <span>Pegue um pedido que voltou ruim e preencha as três partes.</span></label></li>
+        <li><label><input type="checkbox" data-ptask="2"> <span>Mande, complete o que falta e só então execute.</span></label></li>
+        <li><label><input type="checkbox" data-ptask="3"> <span>Confira o critério contando.</span></label></li>
+      </ol>
+      <p class="pdone">Pedido completo, resposta pronta.</p>
+    </section>
+  </div>
+
+  <aside class="rail"><div class="railsticky">
+    <div class="figstage">
+      <div class="fig on" data-fig="1" data-cap="<b>Fig.</b> o que não entra na caixa vira média">
+        <svg viewBox="0 0 220 200" fill="none" aria-hidden="true">
+          <!-- o que você sabe: pilha grande, apagada -->
+          <path d="M22 30h60M22 44h48M22 58h56M22 72h40M22 86h52" stroke="currentColor" stroke-width="1.4" opacity=".35"/>
+          <text x="52" y="20" font-family="monospace" font-size="9" fill="currentColor" opacity=".55" text-anchor="middle">o que você sabe</text>
+          <!-- funil até a caixa: só duas linhas descem -->
+          <path d="M22 96l30 18M82 96l-30 18" stroke="currentColor" stroke-width="1.2" opacity=".3"/>
+          <!-- a caixa: única entrada -->
+          <rect x="18" y="118" width="70" height="40" rx="5" stroke="var(--accent)" stroke-width="1.5"/>
+          <path d="M30 132h46M30 146h30" stroke="var(--accent)" stroke-width="1.5"/>
+          <text x="53" y="176" font-family="monospace" font-size="9" fill="var(--accent)" text-anchor="middle">a caixa</text>
+          <!-- seta -->
+          <path d="M94 138h34" stroke="var(--accent)" stroke-width="1.5"/>
+          <path d="M122 133l7 5-7 5" stroke="var(--accent)" stroke-width="1.5"/>
+          <!-- resposta: duas linhas suas, o resto preenchido pela média -->
+          <rect x="136" y="96" width="66" height="84" rx="5" stroke="currentColor" stroke-width="1.4" opacity=".5"/>
+          <path d="M148 112h42M148 126h30" stroke="var(--accent)" stroke-width="1.5"/>
+          <path d="M148 140h42M148 154h34M148 168h42" stroke="currentColor" stroke-width="1.4" stroke-dasharray="2 3" opacity=".4"/>
+          <text x="169" y="86" font-family="monospace" font-size="9" fill="currentColor" opacity=".55" text-anchor="middle">resposta</text>
+          <!-- o que não desceu -->
+          <path d="M84 58c22 0 30 14 40 30" stroke="currentColor" stroke-width="1.4" stroke-dasharray="3 4" opacity=".35"/>
+          <path d="M120 82l10 12M130 82l-10 12" stroke="currentColor" stroke-width="1.6" opacity=".5"/>
+        </svg>
+      </div>
+      <div class="fig" data-fig="2" data-cap="<b>Fig.</b> falta uma parte, a resposta sai pela metade">
+        <svg viewBox="0 0 220 200" fill="none" aria-hidden="true">
+          <rect x="16" y="22" width="88" height="34" rx="5" stroke="var(--accent)" stroke-width="1.5"/>
+          <text x="26" y="43" font-family="monospace" font-size="9" fill="var(--accent)">material</text>
+          <rect x="16" y="68" width="88" height="34" rx="5" stroke="var(--accent)" stroke-width="1.5"/>
+          <text x="26" y="89" font-family="monospace" font-size="9" fill="var(--accent)">saída</text>
+          <rect x="16" y="114" width="88" height="34" rx="5" stroke="var(--accent)" stroke-width="1.5"/>
+          <text x="26" y="135" font-family="monospace" font-size="9" fill="var(--accent)">pronto</text>
+          <!-- as três convergem num funil -->
+          <path d="M108 39h20M108 85h20M108 131h20" stroke="var(--accent)" stroke-width="1.4" opacity=".7"/>
+          <path d="M132 26v118l30-34v-50z" stroke="var(--accent)" stroke-width="1.5" fill="var(--accent)" fill-opacity=".08"/>
+          <path d="M132 39l30 26M132 85h30M132 131l30-26" stroke="var(--accent)" stroke-width="1.2" opacity=".5"/>
+          <!-- saída inteira -->
+          <path d="M164 85h14" stroke="var(--accent)" stroke-width="1.5"/>
+          <path d="M172 80l7 5-7 5" stroke="var(--accent)" stroke-width="1.5"/>
+          <rect x="182" y="60" width="26" height="50" rx="4" stroke="var(--accent)" stroke-width="1.5"/>
+          <path d="M187 85l4 4 9-9" stroke="var(--accent)" stroke-width="1.8"/>
+                  </svg>
+      </div>
+      <div class="fig" data-fig="3" data-cap="<b>Fig.</b> critério se conta: dois de três é ainda não">
+        <svg viewBox="0 0 220 200" fill="none" aria-hidden="true">
+          <!-- desejo: onda sem marcas -->
+          <path d="M28 40c10-10 20 10 30 0s20 10 30 0s20 10 30 0s20 10 30 0" stroke="currentColor" stroke-width="1.4" opacity=".35"/>
+          <text x="110" y="26" font-family="monospace" font-size="9" fill="currentColor" opacity=".5" text-anchor="middle">"fica bom"</text>
+          <!-- critério: lista que se conta -->
+          <rect x="28" y="62" width="164" height="112" rx="6" stroke="currentColor" stroke-width="1.4" opacity=".45"/>
+          <rect x="44" y="78" width="14" height="14" rx="3" stroke="var(--accent)" stroke-width="1.5"/>
+          <path d="M47 85l4 4 7-8" stroke="var(--accent)" stroke-width="1.8"/>
+          <path d="M70 85h96" stroke="currentColor" stroke-width="1.4" opacity=".45"/>
+          <rect x="44" y="110" width="14" height="14" rx="3" stroke="var(--accent)" stroke-width="1.5"/>
+          <path d="M47 117l4 4 7-8" stroke="var(--accent)" stroke-width="1.8"/>
+          <path d="M70 117h80" stroke="currentColor" stroke-width="1.4" opacity=".45"/>
+          <rect x="44" y="142" width="14" height="14" rx="3" stroke="currentColor" stroke-width="1.5" opacity=".5"/>
+          <path d="M70 149h60" stroke="currentColor" stroke-width="1.4" opacity=".3"/>
+          <text x="110" y="192" font-family="monospace" font-size="9" fill="currentColor" opacity=".55" text-anchor="middle">2 de 3: ainda não</text>
+        </svg>
+      </div>
+      <div class="fig" data-fig="4" data-cap="<b>Fig.</b> o que falta volta ao pedido antes de executar">
+        <svg viewBox="0 0 220 200" fill="none" aria-hidden="true">
+          <!-- pedido -->
+          <rect x="24" y="26" width="90" height="52" rx="5" stroke="var(--accent)" stroke-width="1.5"/>
+          <path d="M36 42h60M36 56h40" stroke="var(--accent)" stroke-width="1.5"/>
+          <text x="69" y="18" font-family="monospace" font-size="9" fill="var(--accent)" text-anchor="middle">pedido</text>
+          <!-- pergunta tracejada -->
+          <path d="M69 82v18" stroke="var(--accent)" stroke-width="1.5"/>
+          <path d="M64 94l5 7 5-7" stroke="var(--accent)" stroke-width="1.5"/>
+          <rect x="24" y="106" width="90" height="42" rx="5" stroke="var(--accent)" stroke-width="1.5" stroke-dasharray="4 4"/>
+          <text x="69" y="131" font-family="monospace" font-size="9" fill="var(--accent)" text-anchor="middle">o que falta?</text>
+          <!-- lista do que falta -->
+          <path d="M118 127h24" stroke="var(--accent)" stroke-width="1.5"/>
+          <path d="M136 122l7 5-7 5" stroke="var(--accent)" stroke-width="1.5"/>
+          <rect x="148" y="106" width="52" height="42" rx="5" stroke="currentColor" stroke-width="1.4" opacity=".5"/>
+          <path d="M158 118h30M158 128h22M158 138h30" stroke="currentColor" stroke-width="1.4" stroke-dasharray="2 3" opacity=".45"/>
+          <!-- a lista volta para dentro do pedido -->
+          <path d="M174 100V52h-52" stroke="var(--accent)" stroke-width="1.5"/>
+          <path d="M128 47l-7 5 7 5" stroke="var(--accent)" stroke-width="1.5"/>
+          <!-- só então executa -->
+          <path d="M69 152v22" stroke="currentColor" stroke-width="1.4" opacity=".5"/>
+          <path d="M64 168l5 7 5-7" stroke="currentColor" stroke-width="1.4" opacity=".5"/>
+          <text x="69" y="192" font-family="monospace" font-size="9" fill="currentColor" opacity=".55" text-anchor="middle">executa</text>
+        </svg>
+      </div>
+    </div>
+    <p class="railcap"></p>
+    <div class="steps-ind"></div>
+    <p class="sidenote">Grife qualquer trecho para virar um cartão de revisão.</p>
+  </div></aside>
+</div>
+
+<div class="fecho-wrap">
+<div class="recap-autor">
+  <p class="rak">Resumo</p>
+  <ul>
+    <li>A IA começa cada conversa do zero: o que não recebe, preenche pela média.</li>
+    <li>Pedido completo tem três partes: material, saída e critério de pronto.</li>
+    <li>Quem define o bom resultado é você; a ferramenta só persegue alvo escrito.</li>
+    <li>Perguntar o que falta antes de executar custa meio minuto e evita retrabalho.</li>
+  </ul>
+</div>
+
+<div class="next-action">
+  <p class="nak">Seu próximo passo</p>
+  <p class="na-win">Você escreveu um pedido que volta pronto.</p>
+  <p class="na-action">Hoje: escreva as três partes do próximo pedido antes de mandar. Guarde o texto para a Aula 5.</p>
+  <p class="na-hook">Próxima aula: a resposta chegou bem escrita e ainda pode estar errada. Você monta a régua que separa as duas.</p>
+</div>
+</div>
+
+<nav class="lnav"><a href="#trilha">← trilha</a><a href="#aula-2">próxima aula →</a></nav>
+<footer>Aula 1 · OSWork Quick</footer>
+
+<script type="application/json" id="cards-1">
+[
+  {"front":"Você mandou hoje o mesmo tipo de pedido de ontem e a resposta voltou genérica outra vez. Qual das três partes provavelmente ficou de fora?","back":"O material. Sem o texto, os números ou o exemplo colados junto, ela responde pela média do que já viu — e a média nunca tem a cara do seu trabalho."},
+  {"front":"Qual a diferença entre pedir \"escreva um comunicado curto\" e pedir \"escreva em até 120 palavras, em três parágrafos\"?","back":"A primeira é um desejo e depende de opinião. A segunda permite conferir cumprimento contando, sem discussão."},
+  {"front":"Antes de mandar executar um pedido longo, o que você escreve na última linha — e o que ganha com isso?","back":"Escreve que ela diga o que falta para entregar direito. Meio minuto de checagem no lugar de um texto inteiro perdido."},
+  {"front":"Uma gestora tem três minutos para pedir o aviso da nova regra de reembolso. O que ela escreve primeiro, antes de qualquer frase do aviso?","back":"O critério de pronto: a partir de que mês vale, quem alcança, e que caiba em um parágrafo. É o alvo — sem ele, qualquer texto plausível passa."}
+]
+</script>
+
+<!--
+COMPLETUDE aula-1 | tipo=FUNDAMENTO | steps=4
+  [OK] promise            .promise no cold-open (1)
+  [OK] why                .why após a promessa (1)
+  [OK] tempo              data-tempo="10min" no view + render no cold-open (1)
+  [OK] exemplo-profissao  exemplo aplicado em 100% dos steps (4/4: professor, gestora, professor, gestora)
+  [OK] apoio-visual       figura do trilho legendada + .colfig inline em 100% dos steps (4/4 + 4/4)
+  [OK] practice           .practice[data-mode="prompt"] (exatamente 1)
+  [OK] psafe              .psafe dentro da prática (1)
+  [OK] pgoal-tempo        .pgoal com tempo declarado ("Cerca de 5 min")
+  [OK] recap-autor        .recap-autor no fecho (1)
+  [OK] next-action        .next-action no fecho (1)
+  [OK] cards              <script id="cards-1"> presente (1, com 4 cartões)
+  [OK] anti-duplicacao    3 testes passam (substring <6 / forma pergunta / operação difere do recap)
+  [OK] teste-se-FUND      tipo=FUNDAMENTO: presente (1 quiz com data-fb na opção certa)
+-->
+</section>
