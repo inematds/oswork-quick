@@ -1,0 +1,17 @@
+{
+  "pt": {
+    "url": "https://github.com/inematds/oswork-quick/releases/download/v1.1.0/oswork-quick-pt.mp4",
+    "srt": "https://github.com/inematds/oswork-quick/releases/download/v1.1.0/oswork-quick-pt.srt",
+    "duration": 1763.701016
+  },
+  "es": {
+    "url": "https://github.com/inematds/oswork-quick/releases/download/v1.1.0/oswork-quick-es.mp4",
+    "srt": "https://github.com/inematds/oswork-quick/releases/download/v1.1.0/oswork-quick-es.srt",
+    "duration": 1733.661333
+  },
+  "en": {
+    "url": "https://github.com/inematds/oswork-quick/releases/download/v1.1.0/oswork-quick-en.mp4",
+    "srt": "https://github.com/inematds/oswork-quick/releases/download/v1.1.0/oswork-quick-en.srt",
+    "duration": 1832.581016
+  }
+}

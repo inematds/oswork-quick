@@ -13,3 +13,8 @@ progresso no navegador.
 
 Quer a versão com práticas longas? É o repositório `oswork-v5`. A versão para quem encara
 terminal e linha de comando é o `oswork`.
+
+
+## Vídeos completos
+
+[Assistir em português, espanhol e inglês](https://inematds.github.io/oswork-quick/videos/). Avatar e voz do Nei, sete aulas, ilustrações e legendas.
