@@ -480,3 +480,12 @@ html[data-theme="sepia"] .col li{color:var(--ink)}
 :root{--figink:#ECE6D9}
 .figstage,.colfig,.mobfig{color:var(--figink)}
 .colfig figcaption{color:rgba(236,230,217,.62)}
+
+/* seletor de idioma (build_locales.py) */
+.langsel{display:inline-flex;gap:8px;align-items:center;margin-left:14px}
+.langsel a,.langsel .lang-cur{font-family:var(--mono);font-size:11px;letter-spacing:.04em;
+  text-decoration:none;padding:5px 9px;border-radius:9px;border:1px solid var(--line2)}
+.langsel a{color:var(--muted)}
+.langsel a:hover{color:var(--ink);border-color:var(--accent)}
+.langsel .lang-cur{color:var(--accent);border-color:var(--accent)}
+@media(max-width:720px){.langsel{margin-left:6px}.langsel a,.langsel .lang-cur{padding:4px 7px}}

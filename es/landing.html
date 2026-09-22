@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>OSWork Quick · Organiza tu entorno de IA en 77 minutos · INEMA.CLUB PRO</title>
+<meta content="La edición directa de OSWork: los mismos siete temas, con el dibujo explicando y el texto solo encajando. Siete lecciones de unos once minutos, 77 minutos en total." name="description"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&amp;family=Inter:wght@400;500;600;700&amp;family=Space+Mono:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<style>
+  :root{
+    --bg:#0E0D14;--bg2:#15131d;--panel:#1a1824;--ink:#ECE6D9;--ink-soft:#D5D0DE;--muted:#ABA4BC;--faint:#A9A2BB;
+    --line:#2A2637;--line2:#37324a;--accent:#7CE0C6;--accent-ink:#0E0D14;--warm:#F2B45C;
+    --serif:"Newsreader",Georgia,serif;--sans:"Inter",system-ui,sans-serif;--mono:"Space Mono",ui-monospace,monospace;
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  a{color:inherit}
+  img,svg{max-width:100%}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 clamp(18px,5vw,60px)}
+
+  header.top{padding:22px 0}
+  header.top .wrap{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+  header.top .mark{font-family:var(--mono);font-size:12px;letter-spacing:.1em;color:var(--accent);text-decoration:none;font-weight:700}
+  header.top .pro{background:var(--accent);color:var(--accent-ink);border-radius:4px;padding:2px 6px;font-size:9.5px;font-weight:700;letter-spacing:.1em;text-decoration:none}
+  header.top .course{color:var(--muted);font-size:12px;letter-spacing:.04em;border-left:1px solid var(--line2);padding-left:10px;font-family:var(--mono)}
+
+  .hero{position:relative;padding:9vh 0 8vh;border-bottom:1px solid var(--line);overflow:hidden}
+  .hero::before{content:"";position:absolute;inset:0;z-index:0;background:radial-gradient(55% 48% at 80% 20%,rgba(124,224,198,.13),transparent 60%),radial-gradient(90% 90% at 50% 40%,var(--bg2),var(--bg) 72%)}
+  .hero .wrap{position:relative;z-index:1}
+  .herogrid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:clamp(24px,5vw,56px);align-items:center}
+  .kicker{font-family:var(--mono);font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin:0 0 16px}
+  h1{font-family:var(--serif);font-weight:500;font-size:clamp(32px,5.6vw,58px);line-height:1.05;letter-spacing:-.02em;margin:0 0 20px;max-width:17ch}
+  h1 em{font-style:italic;color:var(--accent)}
+  .lead{font-family:var(--serif);font-size:clamp(18px,2vw,22px);line-height:1.55;color:var(--ink-soft);max-width:48ch;margin:0 0 30px}
+  .cta{display:inline-block;font-family:var(--mono);font-size:13px;letter-spacing:.06em;background:var(--accent);color:var(--accent-ink);text-decoration:none;border-radius:99px;padding:15px 26px;font-weight:700}
+  .cta:hover{opacity:.92}
+  .sub{color:var(--muted);font-size:13px;margin-top:14px;font-family:var(--mono);line-height:1.8}
+  .figbox{border:1px solid var(--line);border-radius:18px;background:var(--panel);padding:20px}
+  .figcap{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--faint);margin:14px 0 0;text-align:center}
+
+  section{padding:7vh 0}
+  .eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin:0 0 8px}
+  h2{font-family:var(--serif);font-weight:500;font-size:clamp(25px,3.6vw,36px);margin:0 0 26px;line-height:1.2}
+  .intro{color:var(--ink-soft);font-family:var(--serif);font-size:18px;max-width:58ch;margin:0 0 28px}
+
+  .duas{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:16px;overflow:hidden}
+  .duas .col{background:var(--panel);padding:24px}
+  .duas .lbl{font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;margin:0 0 12px;color:var(--accent)}
+  .duas .col.outra .lbl{color:var(--muted)}
+  .duas h3{font-family:var(--serif);font-weight:500;font-size:20px;margin:0 0 10px}
+  .duas p{margin:0 0 12px;color:var(--ink-soft);font-size:15px;line-height:1.6}
+  .duas a.linha{font-family:var(--mono);font-size:12px;color:var(--accent);word-break:break-word}
+
+  .resultados{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr));gap:16px}
+  .resultado{border:1px solid var(--line);border-radius:16px;background:var(--panel);padding:22px 24px}
+  .resultado .n{font-family:var(--mono);font-size:11px;letter-spacing:.12em;color:var(--accent);margin:0 0 8px}
+  .resultado p{margin:0;font-size:15px;color:var(--ink-soft);line-height:1.55}
+  .resultado p b{color:var(--ink)}
+
+  .aulas{display:grid;gap:14px}
+  .au{display:grid;grid-template-columns:52px minmax(0,1fr) auto;gap:18px;align-items:center;text-decoration:none;color:inherit;background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:18px 22px}
+  .au .num{font-family:var(--serif);font-size:26px;color:var(--accent);text-align:center}
+  .au h3{font-family:var(--serif);font-weight:500;font-size:19px;margin:0 0 4px;line-height:1.25}
+  .au p{margin:0;color:var(--muted);font-size:14px}
+  .au .meta{font-family:var(--mono);font-size:11px;color:var(--accent);white-space:nowrap;text-align:right}
+  .au:hover{border-color:var(--accent)}
+  .soma{font-family:var(--mono);font-size:12px;color:var(--faint);margin:18px 0 0}
+
+  .publico{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:16px;overflow:hidden}
+  .publico .col{background:var(--panel);padding:22px 24px}
+  .publico .lbl{font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;margin:0 0 12px}
+  .publico .col.sim .lbl{color:var(--accent)}
+  .publico .col.nao .lbl{color:var(--muted)}
+  .publico ul{margin:0;padding:0;list-style:none}
+  .publico li{position:relative;padding-left:20px;margin:0 0 10px;color:var(--ink-soft);font-size:14.5px;line-height:1.5}
+  .publico li::before{content:"—";position:absolute;left:0;color:var(--faint)}
+
+  .fechamento{border:1px solid var(--line2);border-radius:20px;background:var(--panel);padding:clamp(24px,5vw,40px);text-align:center}
+  .fechamento h2{margin-bottom:14px}
+  .fechamento p{color:var(--ink-soft);max-width:54ch;margin:0 auto 26px;font-family:var(--serif);font-size:18px}
+  .fechamento .alt{font-family:var(--sans);font-size:14px;color:var(--muted);margin:22px auto 0;max-width:54ch}
+  .fechamento .alt a{color:var(--accent)}
+
+  footer{border-top:1px solid var(--line);padding:6vh 0 8vh;color:var(--faint);text-align:center;font-family:var(--serif);font-style:italic}
+
+  @media(max-width:860px){.herogrid{grid-template-columns:1fr}.figbox{order:-1}}
+  @media(max-width:720px){.publico,.duas{grid-template-columns:1fr}
+    .au{grid-template-columns:40px minmax(0,1fr)}
+    .au .meta{grid-column:2;text-align:left;margin-top:6px}}
+  @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+  @media print{
+    html,body{background:#fff!important;color:#111!important}
+    .hero::before{display:none}
+    .figbox,.resultado,.au,.publico .col,.duas .col,.fechamento{background:#fff!important;border-color:#bbb!important}
+    h1,h2,h3,.lead,.intro,.resultado p,.publico li,.duas p,.fechamento p{color:#111!important}
+    .cta{color:#111!important;background:none!important;border:1px solid #111!important}
+    section{padding:14px 0}
+  }
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+<a class="mark" href="https://inema.club" rel="noopener" target="_blank">INEMA.CLUB</a>
+<a class="pro" href="https://inema.pro" rel="noopener" target="_blank">PRO</a>
+<span class="course">OSWork Quick</span>
+</div></header>
+<section class="hero"><div class="wrap">
+<div class="herogrid">
+<div>
+<p class="kicker">Edición Quick · 77 minutos</p>
+<h1>Organiza tu <em>entorno</em> de IA en 77 minutos</h1>
+<p class="lead">Esta es la versión directa de OSWork. Los mismos siete temas de la edición completa, con el dibujo explicándolo y el texto solo uniendo las ideas.</p>
+<a class="cta" href="curso.html#trilha">empezar ahora →</a>
+<p class="sub">7 lecciones de unos 11 minutos · 77 minutos en total<br/>funciona en el celular y en la computadora</p>
+</div>
+<div class="figbox">
+<svg aria-label="Siete bloques cortos alineados que suman un solo bloque" role="img" viewbox="0 0 320 220" xmlns="http://www.w3.org/2000/svg">
+<rect fill="none" height="192" rx="12" stroke="#37324a" stroke-width="2" width="284" x="18" y="14"></rect>
+<rect fill="none" height="86" rx="5" stroke="#7CE0C6" stroke-width="2" width="30" x="40" y="44"></rect>
+<rect fill="none" height="86" rx="5" stroke="#7CE0C6" stroke-width="2" width="30" x="76" y="44"></rect>
+<rect fill="none" height="86" rx="5" stroke="#7CE0C6" stroke-width="2" width="30" x="112" y="44"></rect>
+<rect fill="none" height="86" rx="5" stroke="#7CE0C6" stroke-width="2" width="30" x="148" y="44"></rect>
+<rect fill="none" height="86" rx="5" stroke="#7CE0C6" stroke-width="2" width="30" x="184" y="44"></rect>
+<rect fill="none" height="86" rx="5" stroke="#7CE0C6" stroke-width="2" width="30" x="220" y="44"></rect>
+<rect fill="none" height="86" rx="5" stroke="#7CE0C6" stroke-width="2" width="30" x="256" y="44"></rect>
+<line stroke="#F2B45C" stroke-linecap="round" stroke-width="3" x1="40" x2="286" y1="152" y2="152"></line>
+<line stroke="#F2B45C" stroke-linecap="round" stroke-width="3" x1="40" x2="40" y1="146" y2="158"></line>
+<line stroke="#F2B45C" stroke-linecap="round" stroke-width="3" x1="286" x2="286" y1="146" y2="158"></line>
+<rect fill="none" height="22" rx="6" stroke="#2A2637" stroke-width="2" width="84" x="128" y="168"></rect>
+</svg>
+<p class="figcap">siete bloques cortos, 77 minutos</p>
+</div>
+</div>
+</div></section>
+<section><div class="wrap">
+<p class="eyebrow">Las dos ediciones</p>
+<h2>El mismo tema, dos ritmos</h2>
+<p class="intro">OSWork existe en dos ediciones con los mismos siete temas. Elige según el tiempo que tienes y cuánto quieres practicar dentro de la lección.</p>
+<div class="duas">
+<div class="col">
+<p class="lbl">tú estás aquí</p>
+<h3>Quick · 77 minutos</h3>
+<p>Cada lección comienza con un dibujo que muestra el mecanismo. El texto entra corto, solo para unir lo que el dibujo ya dijo.</p>
+<p>Tú lees, entiendes y aplicas después, en tu material. Las cuatro piezas salen listas de la misma manera.</p>
+</div>
+<div class="col outra">
+<p class="lbl">alternativa</p>
+<h3>Completa · lecciones de 20 a 24 minutos</h3>
+<p>Los mismos siete temas, con las prácticas largas dentro de la lección: más ejemplos, más paso a paso, más espacio para escribir junto.</p>
+<p>Si prefieres practicar mientras lees, empieza por esta.<br/><a class="linha" href="https://inematds.github.io/oswork-v5/" rel="noopener" target="_blank">inematds.github.io/oswork-v5</a></p>
+</div>
+</div>
+</div></section>
+<section><div class="wrap">
+<p class="eyebrow">Para quién es</p>
+<h2>Hecho para tu momento</h2>
+<div class="publico">
+<div class="col sim">
+<p class="lbl">es para ti si</p>
+<ul>
+<li>Coordinas equipos y procesos y quieres recibir material listo, sin tener que reescribir todo.</li>
+<li>Preparas lecciones y devoluciones, y quieres ahorrar tiempo sin perder tu forma de escribir.</li>
+<li>Ya tienes una carrera hecha y quieres que la IA entre en tu manera de trabajar.</li>
+<li>Usas un chat de IA de vez en cuando y quieres dejar de improvisar en cada pedido.</li>
+<li>Tienes poco tiempo y prefieres entender a través del dibujo.</li>
+</ul>
+</div>
+<div class="col nao">
+<p class="lbl">tal vez no sea ahora</p>
+<ul>
+<li>Quieres practicar dentro de la lección, con un paso a paso largo. La edición completa te sirve mejor.</li>
+<li>Buscas trucos para respuestas rápidas, sin montar un lugar fijo para tu trabajo.</li>
+<li>Quieres estudiar cómo funciona la tecnología por dentro. Aquí organizamos el uso.</li>
+</ul>
+</div>
+</div>
+</div></section>
+<section><div class="wrap">
+<p class="eyebrow">Lo que llevas</p>
+<h2>Cuatro piezas, montadas por ti</h2>
+<p class="intro">Terminas con material tuyo, escrito con tus palabras. Nada de esto depende de seguir aquí.</p>
+<div class="resultados">
+<div class="resultado">
+<p class="n">PIEZA 01</p>
+<p><b>Carpetas por delante del trabajo.</b> Un lugar fijo para cada tema, con lo que entra y lo que nunca entra ahí.</p>
+</div>
+<div class="resultado">
+<p class="n">PIEZA 02</p>
+<p><b>Ficha de orientación.</b> Tus reglas escritas una vez, en lugar de repetirse en cada pedido.</p>
+</div>
+<div class="resultado">
+<p class="n">PIEZA 03</p>
+<p><b>Molde de pedido.</b> Tu tarea más repetida guardada, lista para cambiar solo lo que cambia.</p>
+</div>
+<div class="resultado">
+<p class="n">PIEZA 04</p>
+<p><b>Rutina de verificación.</b> Tres ítems escritos antes de pedir, para comprobar la respuesta en dos minutos.</p>
+</div>
+</div>
+</div></section>
+<section><div class="wrap">
+<p class="eyebrow">La cuadrícula</p>
+<h2>Del pedido suelto al entorno montado</h2>
+<div class="aulas">
+<a class="au" href="curso.html#trilha">
+<span class="num">1</span>
+<span><h3>Pedido completo, no preguntas sueltas</h3><p>Tú conviertes una pregunta vaga en un pedido que vuelve listo para usar.</p></span>
+<span class="meta">10 min</span>
+</a>
+<a class="au" href="curso.html#trilha">
+<span class="num">2</span>
+<span><h3>La regla de verificación</h3><p>Conferes una respuesta en dos minutos, con tres elementos escritos antes de pedir.</p></span>
+<span class="meta">11 min</span>
+</a>
+<a class="au" href="curso.html#trilha">
+<span class="num">3</span>
+<span><h3>Una carpeta por contexto</h3><p>Sales con una carpeta real armada para una frente de trabajo tuya.</p></span>
+<span class="meta">11 min</span>
+</a>
+<a class="au" href="curso.html#trilha">
+<span class="num">4</span>
+<span><h3>La ficha de orientación del proyecto</h3><p>Escribes tus reglas una vez y dejas de repetirlas en cada pedido.</p></span>
+<span class="meta">11 min</span>
+</a>
+<a class="au" href="curso.html#trilha">
+<span class="num">5</span>
+<span><h3>La plantilla que reusas</h3><p>Guardas el pedido de tu tarea más repetida y solo cambias lo que varía.</p></span>
+<span class="meta">11 min</span>
+</a>
+<a class="au" href="curso.html#trilha">
+<span class="num">6</span>
+<span><h3>No perder lo que ya funcionaba</h3><p>Cambias un material con un punto de retorno garantizado hacia la versión anterior.</p></span>
+<span class="meta">10 min</span>
+</a>
+<a class="au" href="curso.html#trilha">
+<span class="num">7</span>
+<span><h3>Lo que delegas y lo que sigue siendo tuyo</h3><p>Cierras todo el entorno que armado por completo y escribes tu lista de delegación.</p></span>
+<span class="meta">13 min</span>
+</a>
+</div>
+<p class="soma">10 + 11 + 11 + 11 + 11 + 10 + 13 = 77 minutos</p>
+</div></section>
+<section><div class="wrap">
+<p class="eyebrow">Lo que no tiene</p>
+<h2>Nada aquí pide conocimiento técnico</h2>
+<div class="publico">
+<div class="col nao">
+<p class="lbl">no vas a encontrar</p>
+<ul>
+<li>Programación. No escribes ni una línea de código en ninguna lección.</li>
+<li>Pantalla negra de comandos. Todo pasa en las pantallas que ya usas.</li>
+<li>Instalación de programas. No hace falta descargar nada para tu computadora.</li>
+</ul>
+</div>
+<div class="col sim">
+<p class="lbl">vas a encontrar</p>
+<ul>
+<li>Dibujos que muestran el mecanismo antes de cualquier explicación.</li>
+<li>Ejemplos de una gestora y de un profesor, en todas las lecciones.</li>
+<li>Un paso corto al final de cada lección, para hacerlo con tu material.</li>
+</ul>
+</div>
+</div>
+</div></section>
+<section><div class="wrap">
+<div class="fechamento">
+<h2>Empieza por la lección 1</h2>
+<p>Son 77 minutos hasta el entorno armado. Avanzas a tu ritmo y vuelves desde donde te quedaste.</p>
+<a class="cta" href="curso.html#trilha">empezar ahora →</a>
+<p class="alt">¿Prefieres practicar dentro de la lección, con más ejemplos y paso a paso? La edición completa cubre los mismos siete temas en lecciones de 20 a 24 minutos: <a href="https://inematds.github.io/oswork-v5/" rel="noopener" target="_blank">inematds.github.io/oswork-v5</a></p>
+</div>
+</div></section>
+<footer><div class="wrap">OSWork Quick · INEMA.CLUB PRO</div></footer>
+</body>
+</html>

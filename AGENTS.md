@@ -56,3 +56,37 @@ o que estiver montado em `curso.html`.
 ## Publicação
 
 Por git, GitHub Pages na raiz de `main`. Não usar Vercel.
+
+## Idiomas (EN e ES)
+
+PT na raiz, inglês em `en/`, espanhol em `es/`. Progresso e cartões são **isolados por
+idioma** (`<meta name="curso">` vira `osworkq-en` / `osworkq-es`): os cartões guardam o
+texto no estado do aluno, então compartilhar o progresso misturaria idiomas na revisão.
+
+```bash
+python3 scripts/i18n_extract.py      # PT -> i18n/source.json (+ js-offsets.json)
+python3 scripts/i18n_translate.py    # traduz o que falta; cache em i18n/<lang>.json
+python3 scripts/i18n_repair.py       # conserta espaço de borda e markup inventado
+python3 scripts/build_locales.py     # monta en/ e es/. OFFLINE, não chama API
+python3 scripts/validate-locales.py  # portão: paridade com o PT + jargão traduzido
+node scripts/browser-locales.cjs     # navegador nos dois idiomas
+```
+
+Rota de tradução: **OpenRouter + `gpt-5.4-nano`** (a `GROQ_API_KEY` devolveu 403 em
+21/09 — ver `~/projetos/wifi/LIMITES.md`). Chave lida em runtime dos `.env`, nunca
+copiada para o repo. Unidade sem tradução **interrompe o build**.
+
+### Quatro superfícies, não uma
+
+Traduzir só o HTML deixa o curso meio em português, sem erro nenhum aparecer:
+
+1. **HTML** — texto, atributos lidos pelo aluno, e os cartões em JSON.
+2. **`assets/curso.js`** — os rótulos do motor, recortados por **deslocamento**. Cada
+   idioma tem a sua cópia em `<lang>/assets/curso.js`; essa é a única que **não** sobe
+   para `../assets/`, senão a página traduzida carrega o motor em português.
+3. **CSS `content:`** — `PROMESSA` e `✓ seguro — ` são gerados pelo CSS. Vão para
+   `<lang>/assets/i18n.css`, carregado depois do `aula.css` compartilhado.
+4. **Texto dentro dos SVG** — os rótulos dos desenhos são nós de texto e entram no (1).
+
+O que **não** se traduz: `data-ex` (marcador de profissão), `data-answer`/`data-k`,
+`data-tempo`, nomes de classe, ids, e o nome OSWork.

@@ -1,0 +1,472 @@
+[
+  {
+    "inicio": 225,
+    "fim": 243,
+    "valor": "meta[name=\"curso\"]"
+  },
+  {
+    "inicio": 262,
+    "fim": 270,
+    "valor": "v4:curso"
+  },
+  {
+    "inicio": 440,
+    "fim": 557,
+    "valor": "<div class=\"seltb\" id=\"seltb\"><button data-a=\"hl\">grifar</button><button data-a=\"card\">grifar + cartão</button></div>"
+  },
+  {
+    "inicio": 658,
+    "fim": 782,
+    "valor": "<aside class=\"panel\" id=\"jornada\"><button class=\"close\" data-close>&#10005;</button><h3>Minha jornada</h3><div class=\"body\">"
+  },
+  {
+    "inicio": 792,
+    "fim": 890,
+    "valor": "<div class=\"block\"><p class=\"lbl\">Progresso do curso</p><div class=\"pbar\"><i id=\"jpbar\"></i></div>"
+  },
+  {
+    "inicio": 900,
+    "fim": 1054,
+    "valor": "<p class=\"stat\"><span id=\"jpct\">0</span><small>% lido &middot; <span id=\"jread\">0</span>/<span id=\"jtotal\">0</span> se&ccedil;&otilde;es</small></p></div>"
+  },
+  {
+    "inicio": 1064,
+    "fim": 1188,
+    "valor": "<div class=\"block\"><p class=\"lbl\">O que voc&ecirc; j&aacute; consegue fazer</p><ul class=\"capacidades\" id=\"jcap\"></ul></div>"
+  },
+  {
+    "inicio": 1198,
+    "fim": 1276,
+    "valor": "<div class=\"block\"><p class=\"lbl\">Tempo</p><div class=\"timeinvest\" id=\"jtime\">"
+  },
+  {
+    "inicio": 1288,
+    "fim": 1400,
+    "valor": "<div class=\"ti-block\"><span class=\"ti-num\" id=\"jtinvest\">~0min</span><span class=\"ti-lbl\">investido</span></div>"
+  },
+  {
+    "inicio": 1412,
+    "fim": 1533,
+    "valor": "<div class=\"ti-block\"><span class=\"ti-num\" id=\"jtrest\">~0min</span><span class=\"ti-lbl\">restante</span></div></div></div>"
+  },
+  {
+    "inicio": 1543,
+    "fim": 1670,
+    "valor": "<div class=\"block\"><p class=\"lbl\">Cart&otilde;es</p><p class=\"stat\"><span id=\"jcards\">0</span><small>cart&otilde;es</small></p>"
+  },
+  {
+    "inicio": 1741,
+    "fim": 1863,
+    "valor": "<div class=\"block\"><p class=\"lbl\">Pr&aacute;ticas conclu&iacute;das</p><div class=\"praticas-check\" id=\"jprat\"></div></div>"
+  },
+  {
+    "inicio": 1873,
+    "fim": 1951,
+    "valor": "<div class=\"block\"><p class=\"lbl\">Meus grifos</p><div id=\"jmarks\"></div></div>"
+  },
+  {
+    "inicio": 2036,
+    "fim": 2178,
+    "valor": "<div class=\"btnrow\"><button id=\"expbtn\">exportar .json</button><button id=\"impbtn\">importar</button><button id=\"resetbtn\">zerar</button></div>"
+  },
+  {
+    "inicio": 2289,
+    "fim": 2433,
+    "valor": "<aside class=\"panel\" id=\"revisar\"><button class=\"close\" data-close>&#10005;</button><h3>Revisar</h3><div class=\"rev\" id=\"revbody\"></div></aside>"
+  },
+  {
+    "inicio": 2441,
+    "fim": 2600,
+    "valor": "<aside class=\"panel\" id=\"exercicios\"><button class=\"close\" data-close>&#10005;</button><h3>Exerc&iacute;cios</h3><div class=\"exlist\" id=\"exlist\"></div></aside>"
+  },
+  {
+    "inicio": 2608,
+    "fim": 2715,
+    "valor": "<div class=\"cedit\" id=\"cedit\"><button class=\"close\" data-close>&#10005;</button><h3>Novo cart&atilde;o</h3>"
+  },
+  {
+    "inicio": 2725,
+    "fim": 2791,
+    "valor": "<label>Frente (pergunta)</label><textarea id=\"cefront\"></textarea>"
+  },
+  {
+    "inicio": 2801,
+    "fim": 2865,
+    "valor": "<label>Verso (resposta)</label><textarea id=\"ceback\"></textarea>"
+  },
+  {
+    "inicio": 2875,
+    "fim": 2986,
+    "valor": "<p class=\"cehint\">Reformule a frente como uma <b>pergunta</b> &mdash; recordar fixa mais do que reconhecer.</p>"
+  },
+  {
+    "inicio": 2996,
+    "fim": 3127,
+    "valor": "<div class=\"cerow\"><button id=\"cesave\" class=\"big\">salvar cart&atilde;o</button><button id=\"cecancel\">cancelar</button></div></div>"
+  },
+  {
+    "inicio": 3175,
+    "fim": 3396,
+    "valor": "<div class=\"prow\"><span>Tamanho do texto</span><span class=\"pbtns\"><button data-pf=\"size\" data-d=\"-1\" aria-label=\"diminuir\">A&minus;</button><button data-pf=\"size\" data-d=\"1\" aria-label=\"aumentar\">A+</button></span></div>"
+  },
+  {
+    "inicio": 3406,
+    "fim": 3625,
+    "valor": "<div class=\"prow\"><span>Largura</span><span class=\"pbtns\"><button data-pf=\"width\" data-d=\"-1\" aria-label=\"mais estreita\">&minus;</button><button data-pf=\"width\" data-d=\"1\" aria-label=\"mais larga\">+</button></span></div>"
+  },
+  {
+    "inicio": 3635,
+    "fim": 3847,
+    "valor": "<div class=\"prow\"><span>Entrelinha</span><span class=\"pbtns\"><button data-pf=\"leading\" data-d=\"-1\" aria-label=\"menos\">&minus;</button><button data-pf=\"leading\" data-d=\"1\" aria-label=\"mais\">+</button></span></div>"
+  },
+  {
+    "inicio": 3857,
+    "fim": 3934,
+    "valor": "<button class=\"preset\" data-pf=\"reset\">restaurar padr&atilde;o</button></div>"
+  },
+  {
+    "inicio": 4120,
+    "fim": 4180,
+    "valor": "<p class=\"wk\">Bem-vindo</p><h3>Como este curso funciona</h3>"
+  },
+  {
+    "inicio": 4220,
+    "fim": 4354,
+    "valor": "<li><b>Aumente a letra</b> &mdash; toque no <b>Aa</b> no topo para ajustar tamanho e largura; a p&aacute;gina foi feita pra isso.</li>"
+  },
+  {
+    "inicio": 4366,
+    "fim": 4451,
+    "valor": "<li><b>Leia com calma</b> &mdash; uma ideia por se&ccedil;&atilde;o, sem pressa.</li>"
+  },
+  {
+    "inicio": 4463,
+    "fim": 4588,
+    "valor": "<li><b>Grife</b> qualquer trecho e ele vira um <b>cart&atilde;o de revis&atilde;o</b> (voc&ecirc; reformula a pergunta).</li>"
+  },
+  {
+    "inicio": 4600,
+    "fim": 4685,
+    "valor": "<li><b>Revisar</b> traz as perguntas de volta sozinho, na hora certa de lembrar.</li>"
+  },
+  {
+    "inicio": 4697,
+    "fim": 4800,
+    "valor": "<li><b>Pratique agora</b>, no fim de cada aula: m&atilde;o na massa, passo a passo, sempre seguro.</li>"
+  },
+  {
+    "inicio": 4812,
+    "fim": 4922,
+    "valor": "<li><b>Jornada</b> mostra o que voc&ecirc; j&aacute; consegue fazer. Tudo salva sozinho no seu navegador.</li>"
+  },
+  {
+    "inicio": 4932,
+    "fim": 5008,
+    "valor": "</ul><button class=\"big\" id=\"wstart\">come&ccedil;ar a estudar</button></div>"
+  },
+  {
+    "inicio": 8436,
+    "fim": 8493,
+    "valor": "</span><span class=\"sc-lbl\">aulas concluídas</span></div>"
+  },
+  {
+    "inicio": 8562,
+    "fim": 8612,
+    "valor": "min</span><span class=\"sc-lbl\">faltam</span></div>"
+  },
+  {
+    "inicio": 8843,
+    "fim": 8860,
+    "valor": "input[data-ptask]"
+  },
+  {
+    "inicio": 9428,
+    "fim": 9434,
+    "valor": "escuro"
+  },
+  {
+    "inicio": 9447,
+    "fim": 9452,
+    "valor": "papel"
+  },
+  {
+    "inicio": 9465,
+    "fim": 9470,
+    "valor": "sépia"
+  },
+  {
+    "inicio": 9691,
+    "fim": 9697,
+    "valor": "tema: "
+  },
+  {
+    "inicio": 12769,
+    "fim": 12776,
+    "valor": "scaleX("
+  },
+  {
+    "inicio": 12918,
+    "fim": 12929,
+    "valor": "concluída ✓"
+  },
+  {
+    "inicio": 12941,
+    "fim": 12956,
+    "valor": "em andamento · "
+  },
+  {
+    "inicio": 12979,
+    "fim": 12996,
+    "valor": " seções · abrir →"
+  },
+  {
+    "inicio": 13186,
+    "fim": 13191,
+    "valor": " lido"
+  },
+  {
+    "inicio": 13847,
+    "fim": 13853,
+    "valor": "✓ lido"
+  },
+  {
+    "inicio": 13856,
+    "fim": 13872,
+    "valor": "marcar como lido"
+  },
+  {
+    "inicio": 14880,
+    "fim": 14889,
+    "valor": "copiado ✓"
+  },
+  {
+    "inicio": 15091,
+    "fim": 15100,
+    "valor": "copiado ✓"
+  },
+  {
+    "inicio": 15378,
+    "fim": 15395,
+    "valor": "input[data-ptask]"
+  },
+  {
+    "inicio": 15629,
+    "fim": 15635,
+    "valor": " feito"
+  },
+  {
+    "inicio": 16766,
+    "fim": 16772,
+    "valor": "copiar"
+  },
+  {
+    "inicio": 17842,
+    "fim": 17853,
+    "valor": "ver o certo"
+  },
+  {
+    "inicio": 17913,
+    "fim": 17929,
+    "valor": "ver o erro comum"
+  },
+  {
+    "inicio": 18308,
+    "fim": 18365,
+    "valor": "Reflita — explique com suas palavras, ou anote uma dúvida"
+  },
+  {
+    "inicio": 18457,
+    "fim": 18507,
+    "valor": "Escrever com suas palavras fixa mais do que reler."
+  },
+  {
+    "inicio": 19063,
+    "fim": 19341,
+    "valor": "<p class=\"rk\">Feche a aula</p><p class=\"rtext\">Revise agora, com recorda&ccedil;&atilde;o ativa &mdash; depois estes cart&otilde;es voltam sozinhos na hora certa. A revis&atilde;o da trilha (bot&atilde;o <b>revisar</b> no topo) mistura as perguntas de <b>todas</b> as aulas.</p>"
+  },
+  {
+    "inicio": 19432,
+    "fim": 19461,
+    "valor": "revisar os cartões desta aula"
+  },
+  {
+    "inicio": 19654,
+    "fim": 19682,
+    "valor": "refazer exercício desta aula"
+  },
+  {
+    "inicio": 20448,
+    "fim": 20462,
+    "valor": "<b>Certo.</b> "
+  },
+  {
+    "inicio": 20518,
+    "fim": 20532,
+    "valor": "<b>Quase.</b> "
+  },
+  {
+    "inicio": 20554,
+    "fim": 20577,
+    "valor": "A certa está destacada."
+  },
+  {
+    "inicio": 21571,
+    "fim": 21585,
+    "valor": "Seções da aula"
+  },
+  {
+    "inicio": 21770,
+    "fim": 21776,
+    "valor": "Seção "
+  },
+  {
+    "inicio": 26660,
+    "fim": 26752,
+    "valor": "<p class=\"revempty\">Nada para revisar agora. Volte amanhã &mdash; ou grife mais trechos.</p>"
+  },
+  {
+    "inicio": 27128,
+    "fim": 27144,
+    "valor": "mostrar resposta"
+  },
+  {
+    "inicio": 27239,
+    "fim": 27246,
+    "valor": "de novo"
+  },
+  {
+    "inicio": 27258,
+    "fim": 27261,
+    "valor": "bom"
+  },
+  {
+    "inicio": 27273,
+    "fim": 27278,
+    "valor": "fácil"
+  },
+  {
+    "inicio": 27650,
+    "fim": 27741,
+    "valor": "text-align:center;color:var(--faint);font-family:var(--mono);font-size:11px;margin-top:14px"
+  },
+  {
+    "inicio": 27857,
+    "fim": 27900,
+    "valor": "espaço revela · 1 de novo · 2 bom · 3 fácil"
+  },
+  {
+    "inicio": 28212,
+    "fim": 28219,
+    "valor": "scaleX("
+  },
+  {
+    "inicio": 28557,
+    "fim": 28570,
+    "valor": "sem pressa — "
+  },
+  {
+    "inicio": 28587,
+    "fim": 28606,
+    "valor": " esperando por você"
+  },
+  {
+    "inicio": 28612,
+    "fim": 28641,
+    "valor": "nada esperando por você agora"
+  },
+  {
+    "inicio": 29012,
+    "fim": 29075,
+    "valor": "<li class=\"capacidades-empty\">ainda nenhuma aula concluída</li>"
+  },
+  {
+    "inicio": 29665,
+    "fim": 29670,
+    "valor": "Aula "
+  },
+  {
+    "inicio": 29691,
+    "fim": 29711,
+    "valor": " · prática concluída"
+  },
+  {
+    "inicio": 29714,
+    "fim": 29733,
+    "valor": " · prática pendente"
+  },
+  {
+    "inicio": 30033,
+    "fim": 30115,
+    "valor": "Você concluiu a trilha inteira — o que estava no papel agora está no seu trabalho."
+  },
+  {
+    "inicio": 30318,
+    "fim": 30386,
+    "valor": "<p style=\"color:var(--muted);font-size:14px\">Nenhum grifo ainda.</p>"
+  },
+  {
+    "inicio": 30855,
+    "fim": 30860,
+    "valor": "Aula "
+  },
+  {
+    "inicio": 30976,
+    "fim": 30981,
+    "valor": "Aula "
+  },
+  {
+    "inicio": 31120,
+    "fim": 31125,
+    "valor": "feito"
+  },
+  {
+    "inicio": 31128,
+    "fim": 31136,
+    "valor": "pendente"
+  },
+  {
+    "inicio": 31299,
+    "fim": 31309,
+    "valor": "ir até ela"
+  },
+  {
+    "inicio": 31467,
+    "fim": 31474,
+    "valor": "resetar"
+  },
+  {
+    "inicio": 31733,
+    "fim": 31812,
+    "valor": "<p style=\"color:var(--muted);font-size:14px\">Nenhum exercício nesta trilha.</p>"
+  },
+  {
+    "inicio": 32582,
+    "fim": 32588,
+    "valor": "Escape"
+  },
+  {
+    "inicio": 32873,
+    "fim": 32878,
+    "valor": "Enter"
+  },
+  {
+    "inicio": 34770,
+    "fim": 34786,
+    "valor": "application/json"
+  },
+  {
+    "inicio": 35463,
+    "fim": 35480,
+    "valor": "Arquivo inválido."
+  },
+  {
+    "inicio": 35594,
+    "fim": 35626,
+    "valor": "Zerar todo o progresso do curso?"
+  },
+  {
+    "inicio": 35923,
+    "fim": 35930,
+    "valor": "scaleX("
+  }
+]
