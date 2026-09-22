@@ -8,6 +8,7 @@ def stamp(t):
  n=round(t*1000);return f'{n//3600000:02d}:{n//60000%60:02d}:{n//1000%60:02d},{n%1000:03d}'
 def assemble(lang):
  blocks=[b for b in json.loads((ROOT/'blocos/manifest.json').read_text()) if b['language']==lang]
+ if not (ROOT/'verification/production.json').exists():return None
  states=json.loads((ROOT/'verification/production.json').read_text());keys=[f"{lang}-b{b['part']:02d}" for b in blocks]
  if not all(states.get(k,{}).get('status')=='rendered' for k in keys):return None
  dest=ROOT/'final'/f'oswork-quick-{lang}.mp4';receipt=ROOT/'verification'/f'assembled-{lang}.json'

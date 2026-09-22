@@ -8,6 +8,9 @@ def clean(s):
 def text(node):return clean(node.get_text(' ',strip=True)) if node else ''
 LABEL={'pt':('Aula','Pratique agora','Resumo e próximo passo','Pause o vídeo para fazer a atividade no seu ritmo.'),'es':('Lección','Practica ahora','Resumen y siguiente paso','Pausa el video para hacer la actividad a tu ritmo.'),'en':('Lesson','Practice now','Recap and next step','Pause the video to do the activity at your own pace.')}
 for d in ['docs','blocos','assets','scripts','verification','compositions']:(OUT/d).mkdir(exist_ok=True)
+existing=OUT/'blocos/manifest.json'
+if existing.exists() and any(b.get('id') for b in json.loads(existing.read_text())):
+ raise SystemExit('Produção já enviada: preserve o manifesto e os roteiros usados nos vídeos.')
 manifest=[]
 for lang in ['pt','es','en']:
  path=REPO/('' if lang=='pt' else lang)/'curso.html';doc=BeautifulSoup(path.read_text(),'html.parser');scenes=[];L=LABEL[lang]

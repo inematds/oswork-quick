@@ -29,7 +29,7 @@ def publish():
  if marker not in text:readme.write_text(text+'\n\n'+marker+'\n\n[Assistir em português, espanhol e inglês](https://inematds.github.io/oswork-quick/videos/). Avatar e voz do Nei, sete aulas, ilustrações e legendas.\n')
  run(['git','config','user.name','inematds']);run(['git','config','user.email','inematds@gmail.com'])
  run(['git','add','videos','VERSION','README.md'])
- if subprocess.run(['git','diff','--cached','--quiet'],cwd=REPO).returncode:run(['git','commit','-m','feat: publica vídeos ilustrados do OSWork Quick em três idiomas'])
+ if subprocess.run(['git','diff','--cached','--quiet'],cwd=REPO).returncode:run(['git','commit','-m','feat: publica vídeos ilustrados do OSWork Quick em três idiomas','--','videos','VERSION','README.md'])
  run(['git','push','origin','HEAD:main']);run(['gh','release','edit',tag,'--repo',repo,'--draft=false'])
  for item in videos.values():
   with urllib.request.urlopen(urllib.request.Request(item['url'],method='HEAD'),timeout=60) as response:assert response.status==200

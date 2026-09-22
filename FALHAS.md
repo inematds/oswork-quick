@@ -22,3 +22,5 @@ Mais recente no topo.
 | 2026-09-21 | teto de palavras fixo por aula reprovava a Aula 7 por ela ter 5 steps, não por ser prolixa | teto por step (205/step) em vez de por aula | prompt |
 | 2026-09-21 | traços das figuras invisíveis nos temas papel e sépia: fundo da caixa é escuro nos 3 temas, mas `currentColor` seguia `--ink` (contraste medido 1,10 e 1,36) | token `--figink` claro em `.figstage`, `.colfig` e `.mobfig` | infra |
 | 2026-09-21 | limite de uso do Fable estourou no meio da geração; 6 de 7 subagentes caíram com HTTP 429 | os 65 desenhos já estavam entregues; o aperto final de texto foi feito no Opus | infra |
+
+| 2026-09-22 | Junção dos vídeos iniciou antes de existir o estado da primeira renderização | Aguardar production.json antes de consultar blocos; serviço reiniciado | infra |
