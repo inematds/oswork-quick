@@ -99,6 +99,15 @@
     .cta{color:#111!important;background:none!important;border:1px solid #111!important}
     section{padding:14px 0}
   }
+
+  .langsel{display:inline-flex;gap:8px;align-items:center;margin-left:14px}
+  .langsel a,.langsel .lang-cur{font-family:var(--mono,ui-monospace,monospace);font-size:11px;
+    letter-spacing:.04em;text-decoration:none;padding:5px 9px;border-radius:9px;
+    border:1px solid rgba(236,230,217,.22)}
+  .langsel a{color:#948DA6}
+  .langsel a:hover{color:#ECE6D9;border-color:#7CE0C6}
+  .langsel .lang-cur{color:#7CE0C6;border-color:#7CE0C6}
+  @media(max-width:720px){.langsel{margin-left:0;margin-top:10px}}
 </style>
 </head>
 <body>
@@ -107,6 +116,7 @@
   <a class="mark" href="https://inema.club" target="_blank" rel="noopener">INEMA.CLUB</a>
   <a class="pro" href="https://inema.pro" target="_blank" rel="noopener">PRO</a>
   <span class="course">OSWork Quick</span>
+  <div class="langsel"><span class="lang-cur">Português</span><a href="en/landing.html" data-lang="en">English</a><a href="es/landing.html" data-lang="es">Español</a></div>
 </div></header>
 
 <section class="hero"><div class="wrap">
@@ -284,5 +294,6 @@
 
 <footer><div class="wrap">OSWork Quick · INEMA.CLUB PRO</div></footer>
 
+  <script>(function(){document.querySelectorAll(".langsel a[data-lang]").forEach(function(a){a.addEventListener("click",function(e){if(location.hash){e.preventDefault();location.href=a.getAttribute("href")+location.hash;}});});})();</script>
 </body>
 </html>

@@ -56,9 +56,17 @@ def texto_util(s):
     return len(re.findall(r"[A-Za-zÀ-ÿ]{2,}", t)) > 0
 
 
+# Os nomes dos idiomas aparecem iguais nas três versões, por convenção do seletor:
+# "Português | English | Español". Traduzi-los daria "Portuguese | English | Spanish"
+# em inglês, o que confunde quem procura a sua própria língua.
+NAO_TRADUZ = {"Português", "English", "Español"}
+
+
 def add(bag, kind, valor):
     valor = valor.strip("\n")
     if not valor.strip():
+        return
+    if valor.strip() in NAO_TRADUZ:
         return
     if valor in bag:
         return

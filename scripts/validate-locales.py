@@ -176,6 +176,38 @@ def main():
         print(f"{lang}: {conta(doc, r'<section[^>]*id="v-aula-')} aulas · "
               f"{cards} cartões · estado '{estado or '?'}'")
 
+    # 9. o PT também precisa do seletor: é a página que o portal linka, e sem ele
+    # não existe caminho para EN/ES. Foi exatamente o que escapou em 21/09.
+    import os.path as _op
+    for f in ("curso.html", "landing.html"):
+        p_pt = os.path.join(ROOT, f)
+        if not os.path.exists(p_pt):
+            continue
+        d_pt = open(p_pt, encoding="utf-8").read()
+        if 'class="langsel"' not in d_pt:
+            falha(f"pt/{f}: sem seletor de idioma — quem chega pelo português "
+                  f"não alcança EN/ES")
+            continue
+        for l in IDIOMAS:
+            if f'data-lang="{l}"' not in d_pt:
+                falha(f"pt/{f}: seletor não oferece {l}")
+    # 10. todo destino do seletor, nos três idiomas, tem de existir em disco
+    for pasta in ("", ) + IDIOMAS:
+        for f in ("curso.html", "landing.html"):
+            p_x = os.path.join(ROOT, pasta, f)
+            if not os.path.exists(p_x):
+                continue
+            d_x = open(p_x, encoding="utf-8").read()
+            for tag in re.findall(r"<a[^>]*data-lang=\"[^\"]+\"[^>]*>", d_x):
+                hf = re.search(r'href="([^"]+)"', tag)
+                if not hf:
+                    falha(f"{pasta or 'pt'}/{f}: link de idioma sem href")
+                    continue
+                dest = _op.normpath(os.path.join(ROOT, pasta, hf.group(1)))
+                if not os.path.exists(dest):
+                    falha(f"{pasta or 'pt'}/{f}: seletor aponta para "
+                          f"arquivo inexistente: {hf.group(1)}")
+
     print()
     for e in erros:
         print("FALHA ", e)

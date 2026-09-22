@@ -70,6 +70,7 @@
 <body>
 <div class="bar"><div class="bar-inner">
   <span class="brand"><a class="mark" href="https://inema.club" target="_blank" rel="noopener">INEMA.CLUB</a><a class="pro" href="https://inema.pro" target="_blank" rel="noopener">PRO</a><a class="course" href="landing.html">OSWork Quick</a></span>
+  <div class="langsel"><span class="lang-cur">Português</span><a href="en/curso.html" data-lang="en">English</a><a href="es/curso.html" data-lang="es">Español</a></div>
   <a class="back" href="#trilha" style="display:none">← trilha</a>
   <button id="pill" class="pill" style="display:none">0 lido</button>
   <button id="revbtn">revisar <span id="revn">0</span></button>
@@ -131,6 +132,30 @@
   </div></section>
   <footer><div class="wrap">OSWork Quick · INEMA.CLUB PRO</div></footer>
 </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2519,5 +2544,6 @@ COMPLETUDE aula-7 | tipo=PRATICA | steps=5
 </section>
 
 <script src="assets/curso.js"></script>
+  <script>(function(){document.querySelectorAll(".langsel a[data-lang]").forEach(function(a){a.addEventListener("click",function(e){if(location.hash){e.preventDefault();location.href=a.getAttribute("href")+location.hash;}});});})();</script>
 </body>
 </html>

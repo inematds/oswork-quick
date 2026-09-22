@@ -5,6 +5,10 @@ Mais recente no topo.
 
 | data | o que quebrou | menor correção | prompt \| infra |
 |---|---|---|---|
+| 2026-09-22 | seletor de idioma só existia em `en/` e `es/`: quem chegava pela página em português — a que o portal linka — não tinha caminho para os outros idiomas | build insere o seletor no PT também, e o portão passou a cobrar isso nas 6 páginas | prompt |
+| 2026-09-22 | ao ganhar seletor, o PT passou a exportá-lo para EN/ES com caminhos da raiz (`en/curso.html` de dentro de `en/`) | o build remove qualquer seletor herdado antes de inserir o do idioma | prompt |
+| 2026-09-22 | trocar de idioma perdia a aula aberta e voltava para a trilha | script inline que acrescenta `location.hash` ao destino | prompt |
+| 2026-09-22 | nomes de idioma ("English", "Español") entraram na tradução e virariam "Portuguese/Spanish" em inglês | conjunto NAO_TRADUZ compartilhado pelo extrator e pelo build | prompt |
 | 2026-09-21 | páginas EN/ES carregavam `../assets/curso.js` — o motor em PORTUGUÊS — porque o build mandava todo `assets/` subir um nível; a interface voltava ao PT sem nenhum erro aparecer | manter `assets/curso.js` local em cada idioma; só CSS e capa sobem | prompt |
 | 2026-09-21 | rótulos gerados por `content:` no CSS (PROMESSA, "seguro") ficavam em português nos três idiomas; nenhum portão de HTML os alcança | extrator cobre os rótulos do CSS e o build emite `<lang>/assets/i18n.css` | prompt |
 | 2026-09-21 | rótulos de interface de uma palavra minúscula (escuro, papel, bom, copiar, feito, pendente, resetar) eram descartados pelo extrator como nome de classe | âncoras por deslocamento que capturam a ocorrência exata — resolve inclusive `['papel','papel']`, onde só o segundo é rótulo | prompt |
