@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en" class="dark">
+<head><meta charset="utf-8"><script>(function(){try{var p=JSON.parse(localStorage.getItem('inema.prefs')||'{}'),d=document.documentElement;d.classList.toggle('dark',p.theme?p.theme!=='claro':true);if(p.theme)d.dataset.theme=p.theme;if(p.fontScale)d.style.setProperty('--fs-root',p.fontScale+'%');if(p.font)d.dataset.font=p.font;if(p.accent)d.dataset.accent=p.accent;if(p.lineWidth)d.style.setProperty('--measure',p.lineWidth+'ch');if(p.leading)d.style.setProperty('--leading',p.leading)}catch(e){document.documentElement.classList.add('dark')}})();</script>
+<meta name="viewport" content="width=device-width,initial-scale=1"><meta name="inema-course" content="oswork-quick-en"><title>VPS · OSWork Quick</title><meta name="description" content="Open the Windows terminal, create your projects folder, see where everything lives, install Claude Code or Codex, save your work on GitHub with an SSH key, and move the project to a VPS. If you learn to navigate Windows, you can navigate a VPS the same way."><meta property="og:title" content="OSWork Quick — one command at a time."><meta property="og:image" content="https://inematds.github.io/oswork-quick/capa/capa.png">
+<link rel="canonical" href="https://inematds.github.io/oswork-quick/en/curso/trilha3/index.html"><link rel="alternate" hreflang="pt-BR" href="https://inematds.github.io/oswork-quick/curso/trilha3/index.html"><link rel="alternate" hreflang="en" href="https://inematds.github.io/oswork-quick/en/curso/trilha3/index.html"><link rel="alternate" hreflang="es" href="https://inematds.github.io/oswork-quick/es/curso/trilha3/index.html"><link rel="alternate" hreflang="x-default" href="https://inematds.github.io/oswork-quick/curso/trilha3/index.html">
+<script type="application/json" data-inema-manifest>{"course": "oswork-quick-en", "tracks": [{"n": "1", "title": "Your computer", "modules": [{"id": "1-1", "title": "Terminal, folders, and an agent on Windows", "topics": 7, "href": "../../curso/trilha1/modulo-1-1.html"}]}, {"n": "2", "title": "GitHub", "modules": [{"id": "2-1", "title": "Git, gh, and an SSH key on GitHub", "topics": 6, "href": "../../curso/trilha2/modulo-2-1.html"}]}, {"n": "3", "title": "VPS", "modules": [{"id": "3-1", "title": "VPS: the same, on a server", "topics": 6, "href": "../../curso/trilha3/modulo-3-1.html"}]}, {"n": "4", "title": "Overview: Vercel and Supabase", "modules": [{"id": "4-1", "title": "Vercel and Supabase: the overview", "topics": 6, "href": "../../curso/trilha4/modulo-4-1.html"}]}]}</script>
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../../assets/site.css"><link rel="stylesheet" href="../../assets/learn.css">
+<style>:root{--track:#c084fc}html:not(.dark){--track:#7e22ce}pre code{white-space:pre-wrap}.see{border-left:3px solid var(--track);padding:6px 0 6px 14px;margin:12px 0}.cmdbox{margin:14px 0}.hero>*{min-width:0}pre{overflow-wrap:anywhere}</style>
+</head>
+<body>
+<a class="skip" href="#conteudo">Skip to content</a>
+<nav class="topnav" aria-label="Main navigation">
+<div class="wrap">
+<div class="nav-main"><a class="brand" href="../../index.html">OSWork Quick<span aria-hidden="true">_</span></a><span aria-hidden="true">/</span><a class="text-sky-400" href="https://inema.club">INEMA.CLUB</a><span aria-hidden="true">-</span><a class="text-amber-700 dark:text-slate-300" href="https://inema.pro">PRO</a><span class="spacer"></span><button data-inema-journey-open>My journey</button><button data-inema-appearance-toggle="#aparencia" aria-expanded="false">Aa · Appearance</button><button onclick="toggleTheme()" aria-label="Toggle light and dark themes">◐ Theme</button>
+</div>
+<div class="nav-tracks"><a href="../../curso/trilha1/index.html" >T1<span class="long"> · Your computer</span></a><a href="../../curso/trilha2/index.html" >T2<span class="long"> · GitHub</span></a><a href="../../curso/trilha3/index.html" aria-current="page">T3<span class="long"> · VPS</span></a><a href="../../curso/trilha4/index.html" >T4<span class="long"> · Overview: Vercel and Supabase</span></a><a href="../../materiais/index.html">Command cheat sheet</a>
+</div>
+<div class="language-nav" data-os-languages><a href="../../../curso/trilha3/index.html" hreflang="pt-BR" lang="pt-BR">Português</a><a href="index.html" hreflang="en" lang="en" aria-current="page">English</a><a href="../../../es/curso/trilha3/index.html" hreflang="es" lang="es">Español</a>
+</div>
+<div id="aparencia" class="appearance" data-inema-appearance hidden>
+<div class="row"><button type="button" data-inema-set-theme="inema-dark">Dark</button><button type="button" data-inema-set-theme="claro">Light</button><button type="button" data-inema-set-theme="sepia">Sepia</button><button type="button" data-inema-set-theme="foco">Focus</button><button type="button" data-inema-set-theme="contraste">High contrast</button>
+</div>
+<div class="row"><span>Size</span><button data-inema-set-fontscale="100">100%</button><button data-inema-set-fontscale="112">112%</button><button data-inema-set-fontscale="125">125%</button><button data-inema-set-font="inter">Sans serif</button><button data-inema-set-font="leitura">Serif</button><button data-inema-set-linewidth="60">Narrow column</button><button data-inema-set-linewidth="75">Wide column</button><button data-inema-set-leading="1.7">Comfortable line spacing</button>
+</div>
+</div>
+</div>
+</nav>
+<main id="conteudo" class="wrap">
+<header class="hero">
+<div>
+<p class="kicker">TRACK 03 / OSWORK QUICK</p>
+<h1>VPS</h1>
+<p>The same project on a server, using the navigation you already know.</p>
+<div class="meter" data-inema-meter="trilha:3" role="progressbar" aria-label="Progress" aria-valuemin="0" aria-valuemax="100"><span class="inema-meter-pct" data-inema-meter-pct>0%</span><span class="inema-meter-count" data-inema-meter-frac>0 of 0</span>
+</div>
+</div>
+<figure class="hero-panel"><svg class="w-full h-auto" viewBox="0 0 490 320" role="img" aria-label="Get a VPS with your key → Connect to the VPS → Same navigation, different names → Bring your project from GitHub → Install the agent on the VPS → Get the changes and disconnect"><defs><filter id="glow"><feGaussianBlur stdDeviation="1"/></filter></defs><path d="M10 10H480V305H10Z" fill="none" stroke="#334155" stroke-dasharray="3 7"/><rect x="20" y="25" width="215" height="65" rx="10" fill="#152234" stroke="#c084fc"/><text x="36" y="50" fill="#cbd5e1" font-size="10" font-family="monospace">01 / OSWORK</text><text x="36" y="72" fill="#f1f5f9" font-size="14" font-family="sans-serif">Get a VPS with your key</text><path d="M120 90v25" stroke="#c084fc" stroke-width="2"/><rect x="255" y="25" width="215" height="65" rx="10" fill="#152234" stroke="#38bdf8"/><text x="271" y="50" fill="#cbd5e1" font-size="10" font-family="monospace">02 / OSWORK</text><text x="271" y="72" fill="#f1f5f9" font-size="14" font-family="sans-serif">Connect to the VPS</text><path d="M355 90v25" stroke="#c084fc" stroke-width="2"/><rect x="20" y="115" width="215" height="65" rx="10" fill="#152234" stroke="#c084fc"/><text x="36" y="140" fill="#cbd5e1" font-size="10" font-family="monospace">03 / OSWORK</text><text x="36" y="162" fill="#f1f5f9" font-size="14" font-family="sans-serif">Same navigation, different names</text><path d="M120 180v25" stroke="#c084fc" stroke-width="2"/><rect x="255" y="115" width="215" height="65" rx="10" fill="#152234" stroke="#38bdf8"/><text x="271" y="140" fill="#cbd5e1" font-size="10" font-family="monospace">04 / OSWORK</text><text x="271" y="162" fill="#f1f5f9" font-size="14" font-family="sans-serif">Bring your project from GitHub</text><path d="M355 180v25" stroke="#c084fc" stroke-width="2"/><rect x="20" y="205" width="215" height="65" rx="10" fill="#152234" stroke="#c084fc"/><text x="36" y="230" fill="#cbd5e1" font-size="10" font-family="monospace">05 / OSWORK</text><text x="36" y="252" fill="#f1f5f9" font-size="14" font-family="sans-serif">Install the agent on the VPS</text><rect x="255" y="205" width="215" height="65" rx="10" fill="#152234" stroke="#38bdf8"/><text x="271" y="230" fill="#cbd5e1" font-size="10" font-family="monospace">06 / OSWORK</text><text x="271" y="252" fill="#f1f5f9" font-size="14" font-family="sans-serif">Get the changes and disconnect</text></svg><figcaption class="help-note">Read the step, run the command, and check what appears on screen before continuing.</figcaption>
+</figure>
+</header>
+<div class="stats">
+<div><strong>1</strong><span>module</span>
+</div>
+<div><strong>6</strong><span>steps</span>
+</div>
+<div><strong>~20 min</strong><span>hands-on</span>
+</div>
+<div><strong>3/4</strong><span>track</span>
+</div>
+</div>
+<h2>Track map</h2>
+<div class="grid"><a class="card" href="#modulo-3-1">
+<div class="overline"><span>3.1</span><span>~20 min</span>
+</div>
+<h3>🧭 VPS: the same, on a server</h3>
+<p>Connect to an Ubuntu VPS with your key, navigate with the same commands, and bring your GitHub project there.</p></a>
+</div>
+<section class="band">
+<h2 class="text-2xl font-bold">Detailed content</h2>
+<article class="module-card" id="modulo-3-1" data-inema-module="3-1" data-inema-track="3">
+<p class="kicker">MODULE 3.1</p>
+<h2 class="text-2xl font-bold">VPS: the same, on a server</h2>
+<p>Connect to an Ubuntu VPS with your key, navigate with the same commands, and bring your GitHub project there.</p>
+<div class="meter" data-inema-meter="modulo:3-1" role="progressbar" aria-label="Progress" aria-valuemin="0" aria-valuemax="100"><span class="inema-meter-pct" data-inema-meter-pct>0%</span><span class="inema-meter-count" data-inema-meter-frac>0 of 0</span>
+</div>
+<div class="topic-item"><button onclick="toggleTopic(this)" aria-expanded="false" aria-controls="p-3-1-1"><span class="number">1</span><span>Get a VPS with your key</span></button>
+<div class="topic-explanation" id="p-3-1-1">
+<h4>What it is</h4>
+<p>Choose a provider and the Ubuntu operating system. During setup, it asks for an SSH key: paste the line this command displays. Make a note of the IP the provider gives you.</p>
+<h4>Why learn it</h4>
+<p>With your key registered, you can connect without a password, and no one without your private key can get in.</p>
+<h4>Key concepts</h4>
+<p>VPS: a rented Linux computer that runs 24 hours a day. Ubuntu: the most widely used Linux version on servers. IP: the server&#x27;s numeric address. type: displays the contents of a file in cmd.</p>
+</div>
+</div>
+<div class="topic-item"><button onclick="toggleTopic(this)" aria-expanded="false" aria-controls="p-3-1-2"><span class="number">2</span><span>Connect to the VPS</span></button>
+<div class="topic-explanation" id="p-3-1-2">
+<h4>What it is</h4>
+<p>Replace VPS-IP with the number from your provider. The first time, it asks whether you trust the server: answer yes. To disconnect, type exit.</p>
+<h4>Why learn it</h4>
+<p>It&#x27;s the same window as always, but connected to another machine. Everything you type now happens on the VPS.</p>
+<h4>Key concepts</h4>
+<p>ssh: opens a secure connection to another computer. root: the Linux administrator. ~: the user&#x27;s home folder on the VPS. exit: closes the connection and returns to Windows.</p>
+</div>
+</div>
+<div class="topic-item"><button onclick="toggleTopic(this)" aria-expanded="false" aria-controls="p-3-1-3"><span class="number">3</span><span>Same navigation, different names</span></button>
+<div class="topic-explanation" id="p-3-1-3">
+<h4>What it is</h4>
+<p>On the VPS: dir becomes ls, cls becomes clear, type becomes cat, %USERPROFILE% becomes ~, and the slash is / instead of \. cd, cd .., and mkdir are the same. There&#x27;s no File Explorer: ls does that job.</p>
+<h4>Why learn it</h4>
+<p>That&#x27;s why the course starts on Windows: anyone who understands folders there can navigate the VPS in minutes.</p>
+<h4>Key concepts</h4>
+<p>ls: lists the folder. pwd: shows where you are. mkdir -p: creates the folder and doesn&#x27;t complain if it already exists. Linux is case-sensitive: Projects and projects are different folders.</p>
+</div>
+</div>
+<div class="topic-item"><button onclick="toggleTopic(this)" aria-expanded="false" aria-controls="p-3-1-4"><span class="number">4</span><span>Bring your project from GitHub</span></button>
+<div class="topic-explanation" id="p-3-1-4">
+<h4>What it is</h4>
+<p>apt installs Git on Ubuntu. git clone copies the entire repository, including its history, into the current folder.</p>
+<h4>Why learn it</h4>
+<p>GitHub is the bridge: the same project lives on Windows and the VPS, and the versions move from one to the other.</p>
+<h4>Key concepts</h4>
+<p>apt: the Ubuntu installer (similar to winget). git clone: downloads a repository for the first time. &amp;&amp; : runs the second command only if the first one succeeds.</p>
+</div>
+</div>
+<div class="topic-item"><button onclick="toggleTopic(this)" aria-expanded="false" aria-controls="p-3-1-5"><span class="number">5</span><span>Install the agent on the VPS</span></button>
+<div class="topic-explanation" id="p-3-1-5">
+<h4>What it is</h4>
+<p>The Linux installation command is the one in the official documentation. The first time you use it, the agent shows an address: open it in your computer&#x27;s browser and sign in with your subscription.</p>
+<h4>Why learn it</h4>
+<p>With the agent on the VPS, work can continue on the server even when your computer is turned off.</p>
+<h4>Key concepts</h4>
+<p>install.sh: the installer for Linux and Mac. | bash: gives the downloaded installer to the terminal to run. Login without a screen: the agent shows a link and a code so you can authorize it from another device.</p>
+</div>
+</div>
+<div class="topic-item"><button onclick="toggleTopic(this)" aria-expanded="false" aria-controls="p-3-1-6"><span class="number">6</span><span>Get the changes and disconnect</span></button>
+<div class="topic-explanation" id="p-3-1-6">
+<h4>What it is</h4>
+<p>Changed something on Windows and pushed it? On the VPS, git pull brings in the change. To return to Windows, use exit.</p>
+<h4>Why learn it</h4>
+<p>That&#x27;s the routine between the two machines: push on one side, pull on the other, always through GitHub.</p>
+<h4>Key concepts</h4>
+<p>git pull: brings in the latest versions from GitHub. exit: closes the SSH connection. To reconnect: ssh root@VPS-IP and cd ~/projects/my-site.</p>
+</div>
+</div>
+<div class="actions"><a class="button primary" href="modulo-3-1.html">View full version →</a><button data-modal-src="modulo-3-1.html">View in modal</button>
+</div>
+</article>
+</section>
+</main>
+<footer>
+<div class="wrap">OSWork Quick · hands-on · INEMA.CLUB · v2.0.0<br>Commands checked against official documentation on 10/07/2026. Progress and notes stay in this browser; export them from your journey.<br><a href="../../FONTES.md">Sources</a>
+</div>
+</footer>
+<dialog id="module-dialog" aria-labelledby="modal-title">
+<div class="actions"><strong id="modal-title">Complete module</strong><button onclick="document.getElementById('module-dialog').close()">Close module</button>
+</div><iframe title="Complete module content"></iframe>
+</dialog>
+<script src="../../assets/learn.js"></script><script src="../../assets/site.js"></script>
+</body>
+</html>

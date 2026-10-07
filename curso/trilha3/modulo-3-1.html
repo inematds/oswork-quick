@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="pt-BR" class="dark">
+<head><meta charset="utf-8"><script>(function(){try{var p=JSON.parse(localStorage.getItem('inema.prefs')||'{}'),d=document.documentElement;d.classList.toggle('dark',p.theme?p.theme!=='claro':true);if(p.theme)d.dataset.theme=p.theme;if(p.fontScale)d.style.setProperty('--fs-root',p.fontScale+'%');if(p.font)d.dataset.font=p.font;if(p.accent)d.dataset.accent=p.accent;if(p.lineWidth)d.style.setProperty('--measure',p.lineWidth+'ch');if(p.leading)d.style.setProperty('--leading',p.leading)}catch(e){document.documentElement.classList.add('dark')}})();</script>
+<meta name="viewport" content="width=device-width,initial-scale=1"><meta name="inema-course" content="oswork-quick"><title>VPS: o mesmo, num servidor · OSWork Quick</title><meta name="description" content="Abra o terminal do Windows, crie a sua pasta de projetos, veja onde tudo fica, instale o Claude Code ou o Codex, guarde no GitHub com chave SSH e leve o projeto para uma VPS. Quem aprende a navegar no Windows navega na VPS do mesmo jeito."><meta property="og:title" content="OSWork Quick — comando por comando."><meta property="og:image" content="https://inematds.github.io/oswork-quick/capa/capa.png">
+<link rel="canonical" href="https://inematds.github.io/oswork-quick/curso/trilha3/modulo-3-1.html"><link rel="alternate" hreflang="pt-BR" href="https://inematds.github.io/oswork-quick/curso/trilha3/modulo-3-1.html"><link rel="alternate" hreflang="en" href="https://inematds.github.io/oswork-quick/en/curso/trilha3/modulo-3-1.html"><link rel="alternate" hreflang="es" href="https://inematds.github.io/oswork-quick/es/curso/trilha3/modulo-3-1.html"><link rel="alternate" hreflang="x-default" href="https://inematds.github.io/oswork-quick/curso/trilha3/modulo-3-1.html">
+<script type="application/json" data-inema-manifest>{"course": "oswork-quick", "tracks": [{"n": "1", "title": "Seu computador", "modules": [{"id": "1-1", "title": "Terminal, pastas e agente no Windows", "topics": 7, "href": "../../curso/trilha1/modulo-1-1.html"}]}, {"n": "2", "title": "GitHub", "modules": [{"id": "2-1", "title": "Git, gh e chave SSH no GitHub", "topics": 6, "href": "../../curso/trilha2/modulo-2-1.html"}]}, {"n": "3", "title": "VPS", "modules": [{"id": "3-1", "title": "VPS: o mesmo, num servidor", "topics": 6, "href": "../../curso/trilha3/modulo-3-1.html"}]}, {"n": "4", "title": "Visão: Vercel e Supabase", "modules": [{"id": "4-1", "title": "Vercel e Supabase: a visão", "topics": 6, "href": "../../curso/trilha4/modulo-4-1.html"}]}]}</script>
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../../assets/site.css"><link rel="stylesheet" href="../../assets/learn.css">
+<style>:root{--track:#c084fc}html:not(.dark){--track:#7e22ce}pre code{white-space:pre-wrap}.see{border-left:3px solid var(--track);padding:6px 0 6px 14px;margin:12px 0}.cmdbox{margin:14px 0}.hero>*{min-width:0}pre{overflow-wrap:anywhere}</style>
+</head>
+<body>
+<a class="skip" href="#conteudo">Pular para conteúdo</a>
+<nav class="topnav" aria-label="Navegação principal">
+<div class="wrap">
+<div class="nav-main"><a class="brand" href="../../index.html">OSWork Quick<span aria-hidden="true">_</span></a><span aria-hidden="true">/</span><a class="text-sky-400" href="https://inema.club">INEMA.CLUB</a><span aria-hidden="true">-</span><a class="text-amber-700 dark:text-slate-300" href="https://inema.pro">PRO</a><span class="spacer"></span><button data-inema-journey-open>Minha jornada</button><button data-inema-appearance-toggle="#aparencia" aria-expanded="false">Aa · Aparência</button><button onclick="toggleTheme()" aria-label="Alternar tema claro e escuro">◐ Tema</button>
+</div>
+<div class="nav-tracks"><a href="../../curso/trilha1/index.html" >T1<span class="long"> · Seu computador</span></a><a href="../../curso/trilha2/index.html" >T2<span class="long"> · GitHub</span></a><a href="../../curso/trilha3/index.html" aria-current="page">T3<span class="long"> · VPS</span></a><a href="../../curso/trilha4/index.html" >T4<span class="long"> · Visão: Vercel e Supabase</span></a><a href="../../materiais/index.html">Cola de comandos</a>
+</div>
+<div class="language-nav" data-os-languages><a href="modulo-3-1.html" hreflang="pt-BR" lang="pt-BR" aria-current="page">Português</a><a href="../../en/curso/trilha3/modulo-3-1.html" hreflang="en" lang="en">English</a><a href="../../es/curso/trilha3/modulo-3-1.html" hreflang="es" lang="es">Español</a>
+</div>
+<div id="aparencia" class="appearance" data-inema-appearance hidden>
+<div class="row"><button type="button" data-inema-set-theme="inema-dark">Escuro</button><button type="button" data-inema-set-theme="claro">Claro</button><button type="button" data-inema-set-theme="sepia">Sépia</button><button type="button" data-inema-set-theme="foco">Foco</button><button type="button" data-inema-set-theme="contraste">Alto contraste</button>
+</div>
+<div class="row"><span>Tamanho</span><button data-inema-set-fontscale="100">100%</button><button data-inema-set-fontscale="112">112%</button><button data-inema-set-fontscale="125">125%</button><button data-inema-set-font="inter">Sem serifa</button><button data-inema-set-font="leitura">Serifa</button><button data-inema-set-linewidth="60">Coluna estreita</button><button data-inema-set-linewidth="75">Coluna ampla</button><button data-inema-set-leading="1.7">Entrelinha confortável</button>
+</div>
+</div>
+</div>
+</nav>
+<main id="conteudo" class="wrap">
+<div class="breadcrumbs"><a href="../../index.html">Início</a> / <a href="index.html">VPS</a> / Módulo 3.1</div>
+<article id="modulo-3-1" data-inema-module="3-1" data-inema-track="3">
+<header class="hero">
+<div>
+<p class="kicker">MÓDULO 3.1 / 3 DE 4</p>
+<h1>VPS: o mesmo, num servidor</h1>
+<p>Entrar numa VPS Ubuntu com a sua chave, navegar com os mesmos comandos e trazer o projeto do GitHub para lá.</p>
+<div class="meter" data-inema-meter="modulo:3-1" role="progressbar" aria-label="Progresso" aria-valuemin="0" aria-valuemax="100"><span class="inema-meter-pct" data-inema-meter-pct>0%</span><span class="inema-meter-count" data-inema-meter-frac>0 de 0</span>
+</div>
+</div>
+<figure class="hero-panel"><svg class="w-full h-auto" viewBox="0 0 490 320" role="img" aria-label="Contrate a VPS com a sua chave → Entre na VPS → Mesma navegação, outros nomes → Traga o projeto do GitHub → Instale o agente na VPS → Traga o que mudou e saia"><defs><filter id="glow"><feGaussianBlur stdDeviation="1"/></filter></defs><path d="M10 10H480V305H10Z" fill="none" stroke="#334155" stroke-dasharray="3 7"/><rect x="20" y="25" width="215" height="65" rx="10" fill="#152234" stroke="#c084fc"/><text x="36" y="50" fill="#cbd5e1" font-size="10" font-family="monospace">01 / OSWORK</text><text x="36" y="72" fill="#f1f5f9" font-size="14" font-family="sans-serif">Contrate a VPS com a sua chave</text><path d="M120 90v25" stroke="#c084fc" stroke-width="2"/><rect x="255" y="25" width="215" height="65" rx="10" fill="#152234" stroke="#38bdf8"/><text x="271" y="50" fill="#cbd5e1" font-size="10" font-family="monospace">02 / OSWORK</text><text x="271" y="72" fill="#f1f5f9" font-size="14" font-family="sans-serif">Entre na VPS</text><path d="M355 90v25" stroke="#c084fc" stroke-width="2"/><rect x="20" y="115" width="215" height="65" rx="10" fill="#152234" stroke="#c084fc"/><text x="36" y="140" fill="#cbd5e1" font-size="10" font-family="monospace">03 / OSWORK</text><text x="36" y="162" fill="#f1f5f9" font-size="14" font-family="sans-serif">Mesma navegação, outros nomes</text><path d="M120 180v25" stroke="#c084fc" stroke-width="2"/><rect x="255" y="115" width="215" height="65" rx="10" fill="#152234" stroke="#38bdf8"/><text x="271" y="140" fill="#cbd5e1" font-size="10" font-family="monospace">04 / OSWORK</text><text x="271" y="162" fill="#f1f5f9" font-size="14" font-family="sans-serif">Traga o projeto do GitHub</text><path d="M355 180v25" stroke="#c084fc" stroke-width="2"/><rect x="20" y="205" width="215" height="65" rx="10" fill="#152234" stroke="#c084fc"/><text x="36" y="230" fill="#cbd5e1" font-size="10" font-family="monospace">05 / OSWORK</text><text x="36" y="252" fill="#f1f5f9" font-size="14" font-family="sans-serif">Instale o agente na VPS</text><rect x="255" y="205" width="215" height="65" rx="10" fill="#152234" stroke="#38bdf8"/><text x="271" y="230" fill="#cbd5e1" font-size="10" font-family="monospace">06 / OSWORK</text><text x="271" y="252" fill="#f1f5f9" font-size="14" font-family="sans-serif">Traga o que mudou e saia</text></svg><figcaption class="help-note">Os passos deste módulo, na ordem em que você vai digitar.</figcaption>
+</figure>
+</header>
+<div class="stats">
+<div><strong>6</strong><span>passos</span>
+</div>
+<div><strong>~20 min</strong><span>mão na massa</span>
+</div>
+<div><strong>3/4</strong><span>trilha</span>
+</div>
+<div><strong>3</strong><span>idiomas · languages</span>
+</div>
+</div>
+<div class="reading-layout">
+<div>
+<section class="topic inema-prose" id="topico-1" data-inema-topic="modulo-3-1#topico-1">
+<h2><span class="number">1</span>Contrate a VPS com a sua chave</h2>
+<div class="cmdbox">
+<pre><code>type %USERPROFILE%\.ssh\id_ed25519.pub</code>
+</pre><button data-copy-prev>Copiar bloco</button>
+</div>
+<p class="see" data-inema-block="m3-1-t1-see"><strong>Você vê:</strong> Uma linha começando com ssh-ed25519. Copie a linha inteira.</p>
+<h3>O que é</h3>
+<p data-inema-block="m3-1-t1-p1">Escolha um provedor e o sistema Ubuntu. Na criação, ele pede uma chave SSH: cole a linha que este comando mostra. Anote o IP que o provedor informar.</p>
+<h3>Por que aprender</h3>
+<p data-inema-block="m3-1-t1-p2">Com a chave cadastrada você entra sem senha, e ninguém sem a sua chave privada consegue entrar.</p>
+<h3>Conceitos-chave</h3>
+<p data-inema-block="m3-1-t1-p3">VPS: um computador Linux alugado, ligado 24 horas. Ubuntu: a versão de Linux mais usada em servidores. IP: o endereço numérico do servidor. type: mostra o conteúdo de um arquivo no cmd.</p>
+<aside class="tip">
+<h4>Deu erro?</h4>
+<p data-inema-block="m3-1-t1-fix">O provedor não pediu chave? Procure “SSH keys” no painel e cadastre lá antes de criar a máquina, ou use o console web dele para colar a chave depois.</p>
+</aside>
+<div class="actions"><button type="button" data-inema-read-toggle aria-pressed="false"><span class="inema-read-icon" aria-hidden="true">○</span><span class="inema-read-label" data-inema-read-label>Marcar como lido</span></button><button type="button" data-inema-doubt-toggle aria-pressed="false">? Tenho dúvida</button>
+</div>
+</section>
+<section class="topic inema-prose" id="topico-2" data-inema-topic="modulo-3-1#topico-2">
+<h2><span class="number">2</span>Entre na VPS</h2>
+<div class="cmdbox">
+<pre><code>ssh root@IP-DA-VPS</code>
+</pre><button data-copy-prev>Copiar bloco</button>
+</div>
+<p class="see" data-inema-block="m3-1-t2-see"><strong>Você vê:</strong> root@nome-da-vps:~# — agora o terminal é o servidor.</p>
+<h3>O que é</h3>
+<p data-inema-block="m3-1-t2-p1">Troque IP-DA-VPS pelo número do provedor. Na primeira vez ele pergunta se confia no servidor: responda yes. Para sair, digite exit.</p>
+<h3>Por que aprender</h3>
+<p data-inema-block="m3-1-t2-p2">É a mesma janela de sempre, só que conectada a outra máquina. Tudo que você digitar agora acontece na VPS.</p>
+<h3>Conceitos-chave</h3>
+<p data-inema-block="m3-1-t2-p3">ssh: abre uma conexão segura com outro computador. root: o administrador do Linux. ~: a pasta pessoal do usuário na VPS. exit: fecha a conexão e volta ao Windows.</p>
+<aside class="tip">
+<h4>Deu erro?</h4>
+<p data-inema-block="m3-1-t2-fix">Pediu senha? A chave não foi cadastrada nessa VPS. “Connection timed out”? O IP está errado ou a máquina ainda está iniciando: espere um minuto.</p>
+</aside>
+<div class="actions"><button type="button" data-inema-read-toggle aria-pressed="false"><span class="inema-read-icon" aria-hidden="true">○</span><span class="inema-read-label" data-inema-read-label>Marcar como lido</span></button><button type="button" data-inema-doubt-toggle aria-pressed="false">? Tenho dúvida</button>
+</div>
+</section>
+<section class="topic inema-prose" id="topico-3" data-inema-topic="modulo-3-1#topico-3">
+<h2><span class="number">3</span>Mesma navegação, outros nomes</h2>
+<div class="cmdbox">
+<pre><code>mkdir -p ~/projetos
+cd ~/projetos
+ls
+pwd</code>
+</pre><button data-copy-prev>Copiar bloco</button>
+</div>
+<p class="see" data-inema-block="m3-1-t3-see"><strong>Você vê:</strong> pwd mostra /root/projetos — o caminho da pasta, como o cd mostrava no Windows.</p>
+<h3>O que é</h3>
+<p data-inema-block="m3-1-t3-p1">Na VPS: dir vira ls, cls vira clear, type vira cat, %USERPROFILE% vira ~ e a barra é / em vez de \. cd, cd .. e mkdir são iguais. Não há Explorador: o ls faz esse papel.</p>
+<h3>Por que aprender</h3>
+<p data-inema-block="m3-1-t3-p2">É por isso que o curso começa no Windows: quem entende pastas lá navega na VPS em minutos.</p>
+<h3>Conceitos-chave</h3>
+<p data-inema-block="m3-1-t3-p3">ls: lista a pasta. pwd: mostra onde você está. mkdir -p: cria a pasta e não reclama se ela já existe. Linux diferencia maiúsculas: Projetos e projetos são pastas diferentes.</p>
+<aside class="tip">
+<h4>Deu erro?</h4>
+<p data-inema-block="m3-1-t3-fix">“No such file or directory”? Confira maiúsculas e minúsculas e use Tab para completar o nome.</p>
+</aside>
+<figure class="module-figure"><svg class="w-full h-auto" viewBox="0 0 490 134" role="img" aria-label="Windows · VPS"><rect x="12.0" y="14" width="235.0" height="58" rx="9" fill="#152234" stroke="#c084fc"/><text x="24.0" y="40" fill="#f1f5f9" font-size="14" font-family="sans-serif">Windows</text><text x="24.0" y="59" fill="#94a3b8" font-size="11" font-family="sans-serif">dir · cls · type</text><rect x="255.0" y="14" width="235.0" height="58" rx="9" fill="#152234" stroke="#38bdf8"/><text x="267.0" y="40" fill="#f1f5f9" font-size="14" font-family="sans-serif">VPS</text><text x="267.0" y="59" fill="#94a3b8" font-size="11" font-family="sans-serif">ls · clear · cat</text><path d="M251.0 72v14" stroke="#475569" stroke-width="2"/><rect x="12.0" y="86" width="478.0" height="40" rx="9" fill="#152234" stroke="#475569"/><text x="24.0" y="111.0" fill="#f1f5f9" font-size="14" font-family="sans-serif">cd · cd .. · mkdir: iguais</text></svg><figcaption class="help-note">Mesma navegação, outros nomes. cd, cd .. e mkdir funcionam igual nos dois.</figcaption>
+</figure>
+<div class="actions"><button type="button" data-inema-read-toggle aria-pressed="false"><span class="inema-read-icon" aria-hidden="true">○</span><span class="inema-read-label" data-inema-read-label>Marcar como lido</span></button><button type="button" data-inema-doubt-toggle aria-pressed="false">? Tenho dúvida</button>
+</div>
+</section>
+<section class="topic inema-prose" id="topico-4" data-inema-topic="modulo-3-1#topico-4">
+<h2><span class="number">4</span>Traga o projeto do GitHub</h2>
+<div class="cmdbox">
+<pre><code>apt update &amp;&amp; apt install -y git
+cd ~/projetos
+git clone https://github.com/SEU-USUARIO/meu-site.git
+cd meu-site
+ls</code>
+</pre><button data-copy-prev>Copiar bloco</button>
+</div>
+<p class="see" data-inema-block="m3-1-t4-see"><strong>Você vê:</strong> index.html e AGENTS.md, os mesmos arquivos do seu Windows, agora na VPS.</p>
+<h3>O que é</h3>
+<p data-inema-block="m3-1-t4-p1">apt instala o Git no Ubuntu. git clone copia o repositório inteiro, com o histórico, para a pasta atual.</p>
+<h3>Por que aprender</h3>
+<p data-inema-block="m3-1-t4-p2">O GitHub é a ponte: o mesmo projeto vive no Windows e na VPS, e as versões passam de um lado para o outro.</p>
+<h3>Conceitos-chave</h3>
+<p data-inema-block="m3-1-t4-p3">apt: o instalador do Ubuntu (parecido com o winget). git clone: baixa um repositório pela primeira vez. &amp;&amp; : roda o segundo comando só se o primeiro deu certo.</p>
+<aside class="tip">
+<h4>Deu erro?</h4>
+<p data-inema-block="m3-1-t4-fix">Repositório privado pediu login? Instale o gh (apt install -y gh) e rode gh auth login, como no Windows; depois clone de novo.</p>
+</aside>
+<figure class="module-figure"><svg class="w-full h-auto" viewBox="0 0 490 76" role="img" aria-label="Windows · GitHub · VPS"><rect x="12.0" y="14" width="136.66666666666666" height="48" rx="9" fill="#152234" stroke="#c084fc"/><text x="24.0" y="40" fill="#f1f5f9" font-size="14" font-family="sans-serif">Windows</text><text x="24.0" y="59" fill="#94a3b8" font-size="11" font-family="sans-serif">git push</text><path d="M154.66666666666666 38.0h22" stroke="#475569" stroke-width="2"/><path d="M170.66666666666666 33.0l6 5-6 5" fill="none" stroke="#475569" stroke-width="2"/><rect x="182.66666666666666" y="14" width="136.66666666666666" height="48" rx="9" fill="#152234" stroke="#38bdf8"/><text x="194.66666666666666" y="40" fill="#f1f5f9" font-size="14" font-family="sans-serif">GitHub</text><text x="194.66666666666666" y="59" fill="#94a3b8" font-size="11" font-family="sans-serif">guarda</text><path d="M325.3333333333333 38.0h22" stroke="#475569" stroke-width="2"/><path d="M341.3333333333333 33.0l6 5-6 5" fill="none" stroke="#475569" stroke-width="2"/><rect x="353.3333333333333" y="14" width="136.66666666666666" height="48" rx="9" fill="#152234" stroke="#c084fc"/><text x="365.3333333333333" y="40" fill="#f1f5f9" font-size="14" font-family="sans-serif">VPS</text><text x="365.3333333333333" y="59" fill="#94a3b8" font-size="11" font-family="sans-serif">git pull</text></svg><figcaption class="help-note">O GitHub é a ponte: push de um lado, clone e pull do outro.</figcaption>
+</figure>
+<div class="actions"><button type="button" data-inema-read-toggle aria-pressed="false"><span class="inema-read-icon" aria-hidden="true">○</span><span class="inema-read-label" data-inema-read-label>Marcar como lido</span></button><button type="button" data-inema-doubt-toggle aria-pressed="false">? Tenho dúvida</button>
+</div>
+</section>
+<section class="topic inema-prose" id="topico-5" data-inema-topic="modulo-3-1#topico-5">
+<h2><span class="number">5</span>Instale o agente na VPS</h2>
+<div class="cmdbox">
+<pre><code>curl -fsSL https://claude.ai/install.sh | bash
+cd ~/projetos/meu-site
+claude</code>
+</pre><button data-copy-prev>Copiar bloco</button>
+</div>
+<p class="see" data-inema-block="m3-1-t5-see"><strong>Você vê:</strong> O Claude Code abre dentro da pasta meu-site da VPS. Para o Codex, instale o Node e use npm install -g @openai/codex.</p>
+<h3>O que é</h3>
+<p data-inema-block="m3-1-t5-p1">O comando de instalação para Linux é o da documentação oficial. No primeiro uso o agente mostra um endereço: abra no navegador do seu computador e entre com a assinatura.</p>
+<h3>Por que aprender</h3>
+<p data-inema-block="m3-1-t5-p2">Com o agente na VPS, o trabalho pode continuar no servidor, mesmo com o seu computador desligado.</p>
+<h3>Conceitos-chave</h3>
+<p data-inema-block="m3-1-t5-p3">install.sh: o instalador para Linux e Mac. | bash: entrega o instalador baixado para o terminal executar. Login sem tela: o agente mostra um link e um código para você autorizar de outro aparelho.</p>
+<aside class="tip">
+<h4>Deu erro?</h4>
+<p data-inema-block="m3-1-t5-fix">“claude: command not found” logo depois de instalar? Saia com exit, entre de novo com ssh e tente outra vez.</p>
+</aside>
+<div class="actions"><button type="button" data-inema-read-toggle aria-pressed="false"><span class="inema-read-icon" aria-hidden="true">○</span><span class="inema-read-label" data-inema-read-label>Marcar como lido</span></button><button type="button" data-inema-doubt-toggle aria-pressed="false">? Tenho dúvida</button>
+</div>
+</section>
+<section class="topic inema-prose" id="topico-6" data-inema-topic="modulo-3-1#topico-6">
+<h2><span class="number">6</span>Traga o que mudou e saia</h2>
+<div class="cmdbox">
+<pre><code>cd ~/projetos/meu-site
+git pull
+ls
+exit</code>
+</pre><button data-copy-prev>Copiar bloco</button>
+</div>
+<p class="see" data-inema-block="m3-1-t6-see"><strong>Você vê:</strong> git pull mostra os arquivos atualizados; exit volta para C:\Users\SeuNome&gt;.</p>
+<h3>O que é</h3>
+<p data-inema-block="m3-1-t6-p1">Mudou algo no Windows e deu push? Na VPS, git pull traz a mudança. Para voltar ao Windows, exit.</p>
+<h3>Por que aprender</h3>
+<p data-inema-block="m3-1-t6-p2">É a rotina entre as duas máquinas: push de um lado, pull do outro, sempre pelo GitHub.</p>
+<h3>Conceitos-chave</h3>
+<p data-inema-block="m3-1-t6-p3">git pull: traz as versões novas do GitHub. exit: encerra a conexão SSH. Voltar: ssh root@IP-DA-VPS e cd ~/projetos/meu-site.</p>
+<aside class="tip">
+<h4>Deu erro?</h4>
+<p data-inema-block="m3-1-t6-fix">git pull reclamou de mudanças locais? Você editou o mesmo arquivo na VPS. Rode git status e decida qual versão vale antes de continuar.</p>
+</aside>
+<div class="actions"><button type="button" data-inema-read-toggle aria-pressed="false"><span class="inema-read-icon" aria-hidden="true">○</span><span class="inema-read-label" data-inema-read-label>Marcar como lido</span></button><button type="button" data-inema-doubt-toggle aria-pressed="false">? Tenho dúvida</button>
+</div>
+</section>
+</div>
+<nav class="toc" data-inema-toc aria-label="NESTA AULA">
+<p class="kicker">NESTA AULA</p>
+<ul>
+<li><a class="inema-toc-link" href="#topico-1">1. Contrate a VPS com a sua chave</a>
+</li>
+<li><a class="inema-toc-link" href="#topico-2">2. Entre na VPS</a>
+</li>
+<li><a class="inema-toc-link" href="#topico-3">3. Mesma navegação, outros nomes</a>
+</li>
+<li><a class="inema-toc-link" href="#topico-4">4. Traga o projeto do GitHub</a>
+</li>
+<li><a class="inema-toc-link" href="#topico-5">5. Instale o agente na VPS</a>
+</li>
+<li><a class="inema-toc-link" href="#topico-6">6. Traga o que mudou e saia</a>
+</li>
+</ul><a href="#laboratorio">Laboratório final ↓</a>
+</nav>
+</div>
+<section class="lab" id="laboratorio">
+<p class="kicker">MÃO NA MASSA / ~20 MIN</p>
+<h2>Seu projeto rodando na VPS</h2>
+<p>Marque cada item quando ele funcionar de verdade na sua máquina, não quando terminar de ler.</p>
+<ol class="checklist">
+<li><label><input type="checkbox" data-task="3-1-1"><span>Colei a minha chave pública ao criar a VPS.</span></label>
+</li>
+<li><label><input type="checkbox" data-task="3-1-2"><span>ssh root@IP-DA-VPS entrou sem pedir senha.</span></label>
+</li>
+<li><label><input type="checkbox" data-task="3-1-3"><span>Naveguei com ls, cd e mkdir -p na VPS.</span></label>
+</li>
+<li><label><input type="checkbox" data-task="3-1-4"><span>git clone trouxe meu-site e ls mostra os arquivos.</span></label>
+</li>
+<li><label><input type="checkbox" data-task="3-1-5"><span>claude --version funciona na VPS.</span></label>
+</li>
+<li><label><input type="checkbox" data-task="3-1-6"><span>Mudei algo no Windows, dei push, e git pull trouxe a mudança na VPS.</span></label>
+</li>
+</ol>
+<h3>Cola da parte 3</h3>
+<pre><code>type %USERPROFILE%\.ssh\id_ed25519.pub
+ssh root@IP-DA-VPS
+mkdir -p ~/projetos
+cd ~/projetos
+ls
+pwd
+apt update &amp;&amp; apt install -y git
+cd ~/projetos
+git clone https://github.com/SEU-USUARIO/meu-site.git
+cd meu-site
+ls
+curl -fsSL https://claude.ai/install.sh | bash
+cd ~/projetos/meu-site
+claude
+cd ~/projetos/meu-site
+git pull
+ls
+exit</code>
+</pre><button data-copy-prev>Copiar bloco</button>
+<h3>Critério de pronto</h3>
+<p>Entrar numa VPS Ubuntu com a sua chave, navegar com os mesmos comandos e trazer o projeto do GitHub para lá.</p>
+</section>
+<section class="band">
+<h2>Confira o que ficou</h2>
+<p>No Windows você usa dir e cls. Quais são os equivalentes na VPS?</p>
+<details>
+<summary>Ver resposta comentada</summary>
+<p>ls para listar e clear para limpar a tela. cd, cd .. e mkdir funcionam igual; a pasta pessoal é ~ em vez de %USERPROFILE%.</p>
+</details>
+</section>
+<div class="actions"><a class="button" href="../../curso/trilha2/modulo-2-1.html">← Anterior</a><a class="button" href="index.html">Voltar à trilha</a><a class="button primary" href="../../curso/trilha4/modulo-4-1.html">Próximo módulo →</a>
+</div>
+</article>
+</main>
+<footer>
+<div class="wrap">OSWork Quick · na prática · INEMA.CLUB · v2.0.0<br>Comandos conferidos nas documentações oficiais em 07/10/2026. Progresso e notas ficam neste navegador; exporte na sua jornada.<br><a href="../../FONTES.md">Fontes</a>
+</div>
+</footer>
+<dialog id="module-dialog" aria-labelledby="modal-title">
+<div class="actions"><strong id="modal-title">Módulo completo</strong><button onclick="document.getElementById('module-dialog').close()">Fechar módulo</button>
+</div><iframe title="Conteúdo completo do módulo"></iframe>
+</dialog>
+<script src="../../assets/learn.js"></script><script src="../../assets/site.js"></script>
+</body>
+</html>

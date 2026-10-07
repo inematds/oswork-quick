@@ -1,0 +1,131 @@
+OSWORK QUICK — COLA DE COMANDOS
+
+## 1. Seu computador
+1. Abra o terminal
+   cd
+
+2. Crie a pasta projetos e a do primeiro projeto
+   cd %USERPROFILE%
+   mkdir projetos
+   cd projetos
+   mkdir meu-site
+   cd meu-site
+
+3. Veja no Windows onde tudo fica
+   explorer .
+
+4. Navegue com 6 comandos
+   cd ..
+   dir
+   cd meu-site
+   dir
+
+5. Instale Git, GitHub CLI e Node (uma vez)
+   winget install --id Git.Git -e
+   winget install --id GitHub.cli -e
+   winget install --id OpenJS.NodeJS.LTS -e
+
+6. Instale o agente: Claude Code ou Codex
+   curl -fsSL https://claude.ai/install.cmd -o install.cmd && install.cmd && del install.cmd
+   npm install -g @openai/codex
+
+7. Trabalhe dentro da pasta do projeto
+   cd %USERPROFILE%\projetos\meu-site
+   claude
+   dir
+   start index.html
+
+## 2. GitHub
+8. Diga ao Git quem é você
+   git config --global user.name "Seu Nome"
+   git config --global user.email "seu@email.com"
+   git config --global --list
+
+9. Crie a sua chave SSH
+   ssh-keygen -t ed25519 -C "seu@email.com"
+   explorer %USERPROFILE%\.ssh
+
+10. Conecte o gh à sua conta e envie a chave
+   gh auth login
+   ssh -T git@github.com
+
+11. Crie o repositório e envie o projeto
+   cd %USERPROFILE%\projetos\meu-site
+   git init
+   git add .
+   git commit -m "primeira versão"
+   git branch -M main
+   gh repo create meu-site --public --source=. --push
+
+12. Publique a página no GitHub Pages
+   gh api repos/{owner}/{repo}/pages -X POST -f "source[branch]=main" -f "source[path]=/"
+
+13. A rotina de todo dia
+   git status
+   git add .
+   git commit -m "o que mudou"
+   git push
+
+## 3. VPS
+14. Contrate a VPS com a sua chave
+   type %USERPROFILE%\.ssh\id_ed25519.pub
+
+15. Entre na VPS
+   ssh root@IP-DA-VPS
+
+16. Mesma navegação, outros nomes
+   mkdir -p ~/projetos
+   cd ~/projetos
+   ls
+   pwd
+
+17. Traga o projeto do GitHub
+   apt update && apt install -y git
+   cd ~/projetos
+   git clone https://github.com/SEU-USUARIO/meu-site.git
+   cd meu-site
+   ls
+
+18. Instale o agente na VPS
+   curl -fsSL https://claude.ai/install.sh | bash
+   cd ~/projetos/meu-site
+   claude
+
+19. Traga o que mudou e saia
+   cd ~/projetos/meu-site
+   git pull
+   ls
+   exit
+
+## 4. Visão: Vercel e Supabase
+20. O que a Vercel faz
+   git add .
+   git commit -m "nova versão"
+   git push
+
+21. Ligue o repositório na Vercel
+   gh repo view --web
+
+22. Cada push publica
+   git push
+
+23. Domínio próprio
+   nslookup seudominio.com.br
+
+24. O que o Supabase faz
+   type .gitignore
+
+25. Chaves fora do repositório
+   echo .env>>.gitignore
+   type .gitignore
+
+Windows e VPS lado a lado
+   dir                  ls               lista a pasta
+   cd nome / cd ..      cd nome / cd ..  entra / volta
+   mkdir nome           mkdir -p nome    cria pasta
+   cls                  clear            limpa a tela
+   type arquivo         cat arquivo      mostra o arquivo
+   %USERPROFILE%        ~                pasta pessoal
+   explorer .           ls               ver a pasta
+
+https://inematds.github.io/oswork-quick/

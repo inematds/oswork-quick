@@ -1,0 +1,735 @@
+{
+ "lang": "en",
+ "ui": {
+  "skip": "Skip to content",
+  "nav": "Main navigation",
+  "journey": "My journey",
+  "appearance": "Aa · Appearance",
+  "theme": "◐ Theme",
+  "theme_label": "Toggle light and dark themes",
+  "themes": [
+   "Dark",
+   "Light",
+   "Sepia",
+   "Focus",
+   "High contrast"
+  ],
+  "size": "Size",
+  "sans": "Sans serif",
+  "serif": "Serif",
+  "narrow": "Narrow column",
+  "wide": "Wide column",
+  "leading": "Comfortable line spacing",
+  "cheat": "Command cheat sheet",
+  "progress": "Progress",
+  "of": "of",
+  "footer": "OSWork Quick · hands-on · INEMA.CLUB · v2.0.0<br>Commands checked against official documentation on 10/07/2026. Progress and notes stay in this browser; export them from your journey.",
+  "sources": "Sources",
+  "home": "Home",
+  "module": "Module",
+  "track": "Track",
+  "topics": "topics",
+  "min": "min",
+  "steps_word": "steps",
+  "see": "What you see",
+  "what": "What it is",
+  "why": "Why learn it",
+  "keys": "Key concepts",
+  "fix": "Something went wrong?",
+  "copy": "Copy block",
+  "read": "Mark as read",
+  "doubt": "? I have a question",
+  "toc": "IN THIS LESSON",
+  "lab_link": "Final lab ↓",
+  "lab_kicker": "HANDS-ON",
+  "lab_note": "Check each item when it actually works on your computer, not when you finish reading.",
+  "ready": "Done criteria",
+  "check_title": "Review what you learned",
+  "answer": "View the explained answer",
+  "prev": "← Previous",
+  "back": "Back to track",
+  "next": "Next module →",
+  "finish": "Open the command cheat sheet →",
+  "detail": "Detailed content",
+  "map": "Track map",
+  "see_full": "View full version →",
+  "see_modal": "View in modal",
+  "close": "Close module",
+  "modal_title": "Complete module",
+  "modal_iframe": "Complete module content",
+  "explore": "Explore track →",
+  "resume": "Pick up where I left off",
+  "start": "Start with step 1 →",
+  "track_hero_caption": "Read the step, run the command, and check what appears on screen before continuing.",
+  "module_hero_caption": "The steps in this module, in the order you’ll type them.",
+  "breadcrumb_module": "Module",
+  "of_total": "OF",
+  "real_note": "Commands come from the official documentation (Claude Code, Codex, GitHub CLI) checked on 10/07/2026. Screens and versions can change: if something looks different, read the message carefully before running the command again."
+ },
+ "home": {
+  "kicker": "INEMA · OSWORK QUICK / HANDS-ON",
+  "title_a": "From the terminal to your live page, ",
+  "title_b": "one command at a time.",
+  "lead": "Open the Windows terminal, create your projects folder, see where everything lives, install Claude Code or Codex, save your work on GitHub with an SSH key, and move the project to a VPS. If you learn to navigate Windows, you can navigate a VPS the same way.",
+  "help": "No programming required. Copy, paste, and check. You need a computer running Windows 10 or 11 and a Claude or ChatGPT subscription for the agent.",
+  "hero_items": [
+   "CMD",
+   "FOLDERS",
+   "FILE EXPLORER",
+   "AGENT",
+   "GIT + GH",
+   "SSH KEY",
+   "GITHUB PAGES",
+   "VPS"
+  ],
+  "hero_caption": "The whole journey: from your computer to a server, using the same folders all the way.",
+  "stats": [
+   [
+    "4",
+    "parts"
+   ],
+   [
+    "25",
+    "steps with commands"
+   ],
+   [
+    "~75 min",
+    "doing, not reading"
+   ],
+   [
+    "3",
+    "languages"
+   ]
+  ],
+  "path_kicker": "YOUR PATH",
+  "path_title": "Four parts, in the order you’ll do them.",
+  "end_kicker": "BY THE END, YOU’LL HAVE",
+  "end_title": "Your own project, saved and published.",
+  "end_items": [
+   "The C:\\Users\\YourName\\projects\\my-site folder, which you can find in the terminal and File Explorer.",
+   "Claude Code or Codex working inside that folder.",
+   "The project on GitHub with an SSH key, and a page at YOUR-USER.github.io.",
+   "The same project on a VPS, navigated with the same commands."
+  ],
+  "old_title": "Looking for the previous edition?",
+  "old_text": "The first edition of Quick (organizing with AI without a terminal, seven lessons, and a video with Nei) is still available: the videos are on the videos page, and the course is in the repository version marked v1-sem-terminal.",
+  "old_link": "Videos from the previous edition"
+ },
+ "tracks": [
+  [
+   "Your computer",
+   "Terminal, folders, and the agent working in Windows."
+  ],
+  [
+   "GitHub",
+   "Git, gh, and SSH keys: save versions and publish a page."
+  ],
+  [
+   "VPS",
+   "The same project on a server, using the navigation you already know."
+  ],
+  [
+   "Overview: Vercel and Supabase",
+   "For when you want to connect your project to other systems."
+  ]
+ ],
+ "cheat": {
+  "kicker": "COMMAND CHEAT SHEET",
+  "title": "All commands, in order.",
+  "lead": "The same sequence as the course, ready to keep open while you work. Replace YourName, YOUR-USER, and VPS-IP with your own values.",
+  "download": "Download the cheat sheet (.txt)",
+  "table_title": "Windows and VPS side by side",
+  "table": [
+   [
+    "dir",
+    "ls",
+    "lists the folder"
+   ],
+   [
+    "cd name / cd ..",
+    "cd name / cd ..",
+    "go in / go back"
+   ],
+   [
+    "mkdir name",
+    "mkdir -p name",
+    "creates a folder"
+   ],
+   [
+    "cls",
+    "clear",
+    "clears the screen"
+   ],
+   [
+    "type file",
+    "cat file",
+    "shows the file"
+   ],
+   [
+    "%USERPROFILE%",
+    "~",
+    "home folder"
+   ],
+   [
+    "explorer .",
+    "ls",
+    "view the folder"
+   ]
+  ],
+  "cols": [
+   "Windows (cmd)",
+   "VPS (Ubuntu)",
+   "does"
+  ],
+  "back": "Back to the course"
+ },
+ "sources": [
+  [
+   "Claude Code — installation",
+   "https://code.claude.com/docs/en/setup"
+  ],
+  [
+   "Codex CLI",
+   "https://github.com/openai/codex"
+  ],
+  [
+   "GitHub CLI — gh auth login",
+   "https://cli.github.com/manual/gh_auth_login"
+  ],
+  [
+   "GitHub Pages",
+   "https://docs.github.com/pages"
+  ],
+  [
+   "winget",
+   "https://learn.microsoft.com/windows/package-manager/winget/"
+  ],
+  [
+   "Vercel — import a project",
+   "https://vercel.com/docs/getting-started-with-vercel/import"
+  ],
+  [
+   "Supabase",
+   "https://supabase.com/docs"
+  ]
+ ],
+ "modules": [
+  {
+   "title": "Terminal, folders, and an agent on Windows",
+   "goal": "Create the projects\\my-site folder with cmd, see the same folder in File Explorer, and have Claude Code or Codex work in it.",
+   "lab": "Your project folder, up and running",
+   "steps": [
+    "I opened cmd and saw C:\\Users\\YourName>.",
+    "I created projects\\my-site with mkdir and entered it with cd.",
+    "I ran explorer . and saw the same folder in File Explorer.",
+    "I navigated with cd .., dir, and cd my-site without getting lost.",
+    "git --version and gh --version show version numbers.",
+    "claude --version or codex --version show version numbers.",
+    "The agent created index.html and AGENTS.md, and start index.html opened the page."
+   ],
+   "snippet_title": "Part 1 cheat sheet",
+   "check": "You created a file with File Explorer inside my-site. Will it show up in dir in the terminal?",
+   "answer": "Yes. The terminal and File Explorer show the same folder on the disk. If it doesn't show up, you're in a different folder: type cd to see where you are.",
+   "topics": [
+    {
+     "title": "Open the terminal",
+     "cmd": "cd",
+     "see": "C:\\Users\\YourName — the path to the folder where the terminal is now.",
+     "what": "Press the Windows key, type cmd, and press Enter. A black window opens: Command Prompt. Running cd by itself shows which folder you're in.",
+     "why": "Everything in this course starts here. The terminal is just another window for the same folders you already see in Windows.",
+     "keys": "Terminal: a window where you type commands instead of clicking. cmd: the classic Windows terminal. Home folder: C:\\Users\\YourName, where Documents, Downloads, and now your projects are.",
+     "fix": "Did a blue window open with PS at the beginning? That's PowerShell. The commands in this course also work in it, except for the Claude Code installation command (use the PowerShell version in the official documentation) and %USERPROFILE% (replace it with ~)."
+    },
+    {
+     "title": "Create the projects folder and your first project folder",
+     "cmd": "cd %USERPROFILE%\nmkdir projects\ncd projects\nmkdir my-site\ncd my-site",
+     "see": "C:\\Users\\YourName\\projects\\my-site>",
+     "what": "Type one command at a time and press Enter after each one. mkdir creates a folder; cd enters it.",
+     "why": "One folder per project is the rule that keeps everything else organized: the agent, Git, and the VPS always work inside it.",
+     "keys": "%USERPROFILE%: a shortcut to your home folder that works on any computer. mkdir (make directory): creates a folder. cd (change directory): enters a folder.",
+     "fix": "Did “A subdirectory or file projects already exists” appear? Great, it already exists. Continue with the next command."
+    },
+    {
+     "title": "See where everything is in Windows",
+     "cmd": "explorer .",
+     "see": "File Explorer opened to my-site, inside projects, inside your home folder.",
+     "what": "explorer opens File Explorer; the period means “the folder where I am.” This is the most important step in the course.",
+     "why": "When you see both windows showing the same place, the terminal is no longer a mystery: what you create in one appears in the other.",
+     "keys": "File Explorer: the Windows folder window. Period (.): the current folder. Two periods (..): the folder above.",
+     "fix": "Did Documents or another folder open? You weren't in my-site. Type cd to see where you are, then repeat step 2."
+    },
+    {
+     "title": "Navigate with 6 commands",
+     "cmd": "cd ..\ndir\ncd my-site\ndir",
+     "see": "dir lists what's in each folder; after cd my-site the path ends in my-site again.",
+     "what": "Six commands are enough to move through folders: dir lists, cd name enters, cd .. goes up one folder, mkdir name creates, explorer . opens it in Windows, and cls clears the screen.",
+     "why": "With these six, you'll never get lost, and on the VPS you'll use the same commands with different names.",
+     "keys": "dir: lists files and folders. cd ..: goes up one folder. cls: clears the screen without deleting anything. Tab key: completes folder and file names as you type.",
+     "fix": "“The system cannot find the path specified”? The name is wrong or the folder isn't here. Run dir and copy the exact name."
+    },
+    {
+     "title": "Install Git, GitHub CLI, and Node (once)",
+     "cmd": "winget install --id Git.Git -e\nwinget install --id GitHub.cli -e\nwinget install --id OpenJS.NodeJS.LTS -e",
+     "see": "Download messages and “Successfully installed.” Then close cmd, open it again, and run git --version and gh --version: version numbers appear.",
+     "what": "winget is the program installer that comes with Windows 10 and 11. It downloads each program from its official source.",
+     "why": "Git saves versions, gh communicates with GitHub, and Node is needed to install Codex. Without them, parts 2 and 3 won't work.",
+     "keys": "winget: the Windows command-line installer. Git: a program that saves your project's history. gh (GitHub CLI): GitHub in the terminal. Node: an engine that runs JavaScript programs, such as Codex.",
+     "fix": "Did winget ask if you accept the source terms? Type Y and press Enter. “'git' is not recognized”? You didn't close and reopen cmd after installing."
+    },
+    {
+     "title": "Install the agent: Claude Code or Codex",
+     "cmd": "curl -fsSL https://claude.ai/install.cmd -o install.cmd && install.cmd && del install.cmd\nnpm install -g @openai/codex",
+     "see": "The first line installs Claude Code; the second installs Codex. In a new window, claude --version or codex --version shows the version.",
+     "what": "Choose one or both. The first time you open it, the agent asks you to sign in: use your subscription (Claude Pro or Max, ChatGPT Plus or Pro).",
+     "why": "The agent works for you inside the folder: it reads, creates, and changes files with your permission.",
+     "keys": "Agent: an AI that performs tasks on your computer, not just chats. Claude Code: Anthropic's agent. Codex: OpenAI's agent. Subscription: your account login, without an API key.",
+     "fix": "“'claude' is not recognized”? Close and reopen cmd. If it still happens, the official documentation has a Fix your PATH section. For Codex, first make sure node --version works."
+    },
+    {
+     "title": "Work inside the project folder",
+     "cmd": "cd %USERPROFILE%\\projects\\my-site\nclaude\ndir\nstart index.html",
+     "see": "Inside the agent, ask: Create an index.html with a simple page about me and an AGENTS.md with this project's rules. Exit with /exit. dir shows the new files, and start opens the page in your browser.",
+     "what": "Enter the folder and start the agent (claude or codex). It can only see the folder you're in. AGENTS.md saves the project rules for future conversations.",
+     "why": "This completes the cycle: you ask, the agent creates, and you check with dir, File Explorer, and the browser.",
+     "keys": "index.html: a website's main page. AGENTS.md: an instruction file the agent reads when it opens the folder. start: opens a file with the default Windows program.",
+     "fix": "Did the agent ask permission to create files? Read the request and approve only what you asked for. If it worked in the wrong folder, exit, use cd to go to my-site, and open it again."
+    }
+   ],
+   "figures": {
+    "2": {
+     "kind": "tree",
+     "caption": "The same place in both windows: the terminal shows the path, and File Explorer shows the folders.",
+     "items": [
+      [
+       "C:\\Users\\YourName\\",
+       0
+      ],
+      [
+       "projects\\",
+       1
+      ],
+      [
+       "my-site\\",
+       2
+      ],
+      [
+       "index.html",
+       3
+      ],
+      [
+       "AGENTS.md",
+       3
+      ]
+     ]
+    },
+    "3": {
+     "kind": "flow",
+     "caption": "From cmd to File Explorer with one command: the period means the folder where you are.",
+     "items": [
+      [
+       "cmd",
+       "the terminal"
+      ],
+      [
+       "cd my-site",
+       "enter"
+      ],
+      [
+       "explorer .",
+       "open in Windows"
+      ],
+      [
+       "File Explorer",
+       "the same folder"
+      ]
+     ]
+    },
+    "7": {
+     "kind": "flow",
+     "caption": "The work cycle: you ask, the agent works in the folder, and you check with your own eyes.",
+     "items": [
+      [
+       "You ask",
+       "the agent"
+      ],
+      [
+       "Agent creates",
+       "in the folder"
+      ],
+      [
+       "You check",
+       "dir · start"
+      ]
+     ]
+    }
+   }
+  },
+  {
+   "title": "Git, gh, and an SSH key on GitHub",
+   "goal": "Connect your computer to your GitHub account with an SSH key, create a repository (public or private), and publish the page.",
+   "lab": "Your project on GitHub and the live page",
+   "steps": [
+    "git config shows my name and email.",
+    "I saw id_ed25519 and id_ed25519.pub in File Explorer.",
+    "ssh -T git@github.com replied Hi YOUR-USER.",
+    "The my-site repository appears at github.com/YOUR-USER.",
+    "The page opens at https://YOUR-USER.github.io/my-site/.",
+    "I changed something, ran add, commit, and push, and the change appeared on GitHub."
+   ],
+   "snippet_title": "Cheat sheet for part 2",
+   "check": "Someone asked for your key to “set up access.” Which of the two files can you send?",
+   "answer": "Only id_ed25519.pub, the public key. id_ed25519, without .pub, is the private key: anyone with that file can log in as you.",
+   "topics": [
+    {
+     "title": "Tell Git who you are",
+     "cmd": "git config --global user.name \"Your Name\"\ngit config --global user.email \"you@email.com\"\ngit config --global --list",
+     "see": "user.name=Your Name and user.email=you@email.com in the list.",
+     "what": "Use the same email as your GitHub account. You only need to do this once per computer.",
+     "why": "Every saved version includes your name. GitHub uses your email to link versions to your account.",
+     "keys": "git config: configures Git. --global: applies to all projects on this computer. Commit: a saved version of the project, with an author and message.",
+     "fix": "Did you enter the wrong name or email? Run the same command again with the correct value; it replaces the previous one."
+    },
+    {
+     "title": "Create your SSH key",
+     "cmd": "ssh-keygen -t ed25519 -C \"you@email.com\"\nexplorer %USERPROFILE%\\.ssh",
+     "see": "In the .ssh folder: id_ed25519 (private key) and id_ed25519.pub (public key).",
+     "what": "Press Enter at all 3 prompts to accept the default location and continue without an extra password. Then explorer opens the folder where the keys were saved.",
+     "why": "An SSH key is your passwordless identity: GitHub and the VPS recognize your computer through it.",
+     "keys": "SSH: a secure way to connect two computers. Private key: stays on your machine and is never sent. Public key (.pub): the one you give to GitHub and the VPS.",
+     "fix": "Did it ask whether you want to overwrite (Overwrite)? You already have a key. Answer n and use the one you have."
+    },
+    {
+     "title": "Connect gh to your account and send the key",
+     "cmd": "gh auth login\nssh -T git@github.com",
+     "see": "Hi YOUR-USER! You've successfully authenticated.",
+     "what": "Answer: GitHub.com → SSH → choose id_ed25519.pub → Login with a web browser. Copy the code, paste it into your browser, and authorize. Then test the key; the first time, answer yes.",
+     "why": "One command logs you in and sends your public key to your account, without opening settings on the website.",
+     "keys": "gh auth login: signs in to your GitHub account from the terminal. SSH protocol: Git starts using your key instead of a password. ssh -T: tests the connection without opening anything.",
+     "fix": "Did gh show the key with a different name or offer to generate a new one? Choose the one ending in .pub in your .ssh folder. “Permission denied (publickey)”: the key wasn't sent; run gh auth login again and choose SSH."
+    },
+    {
+     "title": "Create the repository and upload the project",
+     "cmd": "cd %USERPROFILE%\\projects\\my-site\ngit init\ngit add .\ngit commit -m \"first version\"\ngit branch -M main\ngh repo create my-site --public --source=. --push",
+     "see": "The address https://github.com/YOUR-USER/my-site with your files.",
+     "what": "git init enables Git in the folder, add and commit save the first version, and gh creates the repository and uploads everything. For a private repository, replace --public with --private.",
+     "why": "Public: anyone can see it (required for free Pages). Private: only you and people you invite can see it. You decide for each project.",
+     "keys": "Repository: the project folder and its full history, stored on GitHub. Branch main: the main line of versions. Push: upload versions to GitHub.",
+     "fix": "“nothing to commit”? The folder is empty: go back to step 7 of part 1. “Name already exists”? You already have a repository with that name: choose another."
+    },
+    {
+     "title": "Publish the page on GitHub Pages",
+     "cmd": "gh api repos/{owner}/{repo}/pages -X POST -f \"source[branch]=main\" -f \"source[path]=/\"",
+     "see": "In a few minutes, the page opens at https://YOUR-USER.github.io/my-site/",
+     "what": "This command enables GitHub Pages for the repository in the current folder. You can also do it on the website: Settings → Pages → branch main → Save.",
+     "why": "You get a public link to the page the agent created, without paying for hosting.",
+     "keys": "GitHub Pages: free hosting for pages from a repository. {owner} and {repo}: gh automatically replaces these with your username and repository name.",
+     "fix": "Page shows 404 right away? Wait 2 to 10 minutes and reload. Error about the plan? Free Pages only works with a public repository."
+    },
+    {
+     "title": "Your daily routine",
+     "cmd": "git status\ngit add .\ngit commit -m \"what changed\"\ngit push",
+     "see": "git status lists what changed; after push, the change appears on GitHub and, within minutes, on the page.",
+     "what": "Did something change? See what changed, save a version with a short sentence, and upload it. Or ask the agent: save and upload to GitHub.",
+     "why": "Each commit is a restore point. If something breaks, you can recover the previous version.",
+     "keys": "git status: shows what changed since the last version. Commit message: a sentence that says what changed, so you can find it later.",
+     "fix": "Was push rejected with “fetch first”? Someone (or you on another computer) changed the repository. Run git pull and then git push."
+    }
+   ],
+   "figures": {
+    "2": {
+     "kind": "columns",
+     "caption": "Two keys, two destinations: the private key never leaves your computer; the public key goes to GitHub and the VPS.",
+     "items": [
+      [
+       "id_ed25519",
+       "private: stays"
+      ],
+      [
+       "id_ed25519.pub",
+       "public: share"
+      ]
+     ],
+     "base": [
+      "GitHub and the VPS only receive the .pub file"
+     ]
+    },
+    "4": {
+     "kind": "flow",
+     "caption": "Four commands from file to live page.",
+     "items": [
+      [
+       "git add",
+       "prepares"
+      ],
+      [
+       "git commit",
+       "saves"
+      ],
+      [
+       "git push",
+       "uploads"
+      ],
+      [
+       "Pages",
+       "publishes"
+      ]
+     ]
+    },
+    "6": {
+     "kind": "timeline",
+     "caption": "Each commit is a restore point. The daily routine just adds points to the timeline.",
+     "items": [
+      [
+       "first version",
+       "commit 1"
+      ],
+      [
+       "text edit",
+       "commit 2"
+      ],
+      [
+       "new section",
+       "commit 3"
+      ]
+     ]
+    }
+   }
+  },
+  {
+   "title": "VPS: the same, on a server",
+   "goal": "Connect to an Ubuntu VPS with your key, navigate with the same commands, and bring your GitHub project there.",
+   "lab": "Your project running on the VPS",
+   "steps": [
+    "I pasted my public key when creating the VPS.",
+    "ssh root@VPS-IP connected without asking for a password.",
+    "I navigated with ls, cd, and mkdir -p on the VPS.",
+    "git clone brought my-site over, and ls shows the files.",
+    "claude --version works on the VPS.",
+    "I changed something in Windows, pushed it, and git pull brought the change to the VPS."
+   ],
+   "snippet_title": "Cheat sheet for part 3",
+   "check": "On Windows, you use dir and cls. What are their equivalents on the VPS?",
+   "answer": "ls to list and clear to clear the screen. cd, cd .., and mkdir work the same; the home folder is ~ instead of %USERPROFILE%.",
+   "topics": [
+    {
+     "title": "Get a VPS with your key",
+     "cmd": "type %USERPROFILE%\\.ssh\\id_ed25519.pub",
+     "see": "A line starting with ssh-ed25519. Copy the entire line.",
+     "what": "Choose a provider and the Ubuntu operating system. During setup, it asks for an SSH key: paste the line this command displays. Make a note of the IP the provider gives you.",
+     "why": "With your key registered, you can connect without a password, and no one without your private key can get in.",
+     "keys": "VPS: a rented Linux computer that runs 24 hours a day. Ubuntu: the most widely used Linux version on servers. IP: the server's numeric address. type: displays the contents of a file in cmd.",
+     "fix": "The provider didn't ask for a key? Look for “SSH keys” in the dashboard and register it there before creating the machine, or use its web console to paste the key afterward."
+    },
+    {
+     "title": "Connect to the VPS",
+     "cmd": "ssh root@VPS-IP",
+     "see": "root@vps-name:~# — the terminal is now the server.",
+     "what": "Replace VPS-IP with the number from your provider. The first time, it asks whether you trust the server: answer yes. To disconnect, type exit.",
+     "why": "It's the same window as always, but connected to another machine. Everything you type now happens on the VPS.",
+     "keys": "ssh: opens a secure connection to another computer. root: the Linux administrator. ~: the user's home folder on the VPS. exit: closes the connection and returns to Windows.",
+     "fix": "It asked for a password? The key wasn't registered on this VPS. “Connection timed out”? The IP is wrong or the machine is still starting up: wait a minute."
+    },
+    {
+     "title": "Same navigation, different names",
+     "cmd": "mkdir -p ~/projects\ncd ~/projects\nls\npwd",
+     "see": "pwd shows /root/projects — the folder path, like cd showed in Windows.",
+     "what": "On the VPS: dir becomes ls, cls becomes clear, type becomes cat, %USERPROFILE% becomes ~, and the slash is / instead of \\. cd, cd .., and mkdir are the same. There's no File Explorer: ls does that job.",
+     "why": "That's why the course starts on Windows: anyone who understands folders there can navigate the VPS in minutes.",
+     "keys": "ls: lists the folder. pwd: shows where you are. mkdir -p: creates the folder and doesn't complain if it already exists. Linux is case-sensitive: Projects and projects are different folders.",
+     "fix": "“No such file or directory”? Check uppercase and lowercase letters, and use Tab to complete the name."
+    },
+    {
+     "title": "Bring your project from GitHub",
+     "cmd": "apt update && apt install -y git\ncd ~/projects\ngit clone https://github.com/YOUR-USER/my-site.git\ncd my-site\nls",
+     "see": "index.html and AGENTS.md, the same files as on your Windows computer, now on the VPS.",
+     "what": "apt installs Git on Ubuntu. git clone copies the entire repository, including its history, into the current folder.",
+     "why": "GitHub is the bridge: the same project lives on Windows and the VPS, and the versions move from one to the other.",
+     "keys": "apt: the Ubuntu installer (similar to winget). git clone: downloads a repository for the first time. && : runs the second command only if the first one succeeds.",
+     "fix": "A private repository asked you to log in? Install gh (apt install -y gh) and run gh auth login, as you did on Windows; then clone again."
+    },
+    {
+     "title": "Install the agent on the VPS",
+     "cmd": "curl -fsSL https://claude.ai/install.sh | bash\ncd ~/projects/my-site\nclaude",
+     "see": "Claude Code opens inside the my-site folder on the VPS. For Codex, install Node and use npm install -g @openai/codex.",
+     "what": "The Linux installation command is the one in the official documentation. The first time you use it, the agent shows an address: open it in your computer's browser and sign in with your subscription.",
+     "why": "With the agent on the VPS, work can continue on the server even when your computer is turned off.",
+     "keys": "install.sh: the installer for Linux and Mac. | bash: gives the downloaded installer to the terminal to run. Login without a screen: the agent shows a link and a code so you can authorize it from another device.",
+     "fix": "“claude: command not found” right after installing? Exit with exit, reconnect with ssh, and try again."
+    },
+    {
+     "title": "Get the changes and disconnect",
+     "cmd": "cd ~/projects/my-site\ngit pull\nls\nexit",
+     "see": "git pull shows the updated files; exit returns to C:\\Users\\YourName>.",
+     "what": "Changed something on Windows and pushed it? On the VPS, git pull brings in the change. To return to Windows, use exit.",
+     "why": "That's the routine between the two machines: push on one side, pull on the other, always through GitHub.",
+     "keys": "git pull: brings in the latest versions from GitHub. exit: closes the SSH connection. To reconnect: ssh root@VPS-IP and cd ~/projects/my-site.",
+     "fix": "git pull complained about local changes? You edited the same file on the VPS. Run git status and decide which version to keep before continuing."
+    }
+   ],
+   "figures": {
+    "3": {
+     "kind": "columns",
+     "caption": "Same navigation, different names. cd, cd .., and mkdir work the same in both.",
+     "items": [
+      [
+       "Windows",
+       "dir · cls · type"
+      ],
+      [
+       "VPS",
+       "ls · clear · cat"
+      ]
+     ],
+     "base": [
+      "cd · cd .. · mkdir: the same"
+     ]
+    },
+    "4": {
+     "kind": "flow",
+     "caption": "GitHub is the bridge: push from one side, clone and pull from the other.",
+     "items": [
+      [
+       "Windows",
+       "git push"
+      ],
+      [
+       "GitHub",
+       "stores"
+      ],
+      [
+       "VPS",
+       "git pull"
+      ]
+     ]
+    }
+   }
+  },
+  {
+   "title": "Vercel and Supabase: the overview",
+   "goal": "Know what Vercel and Supabase do and how your repository connects to them as the project grows.",
+   "lab": "Your next-step map",
+   "steps": [
+    "I can explain the difference between GitHub Pages and Vercel.",
+    "I know where the repository fits into Vercel (Add New → Project).",
+    "I know that each git push publishes to Vercel again.",
+    "I know what Supabase is for (database, login, files).",
+    ".env is in my project's .gitignore.",
+    "I have a prompt ready for the agent when I need Supabase."
+   ],
+   "snippet_title": "Cheat sheet for part 4",
+   "check": "You want a form that saves the contacts it receives. Can GitHub Pages do that on its own?",
+   "answer": "No. Pages only displays pages. Saving data requires a database, such as Supabase, and usually hosting such as Vercel.",
+   "topics": [
+    {
+     "title": "What Vercel does",
+     "cmd": "git add .\ngit commit -m \"new version\"\ngit push",
+     "see": "Once connected, each push creates a new deployment on Vercel with its own URL.",
+     "what": "Vercel publishes websites and apps directly from your GitHub repository. It's the next step after Pages when your project grows beyond a simple page.",
+     "why": "It runs code on the server, supports custom domains, and shows a preview of each change before it goes live.",
+     "keys": "Hosting: where a website is kept online. Deploy: publishing a version. Preview: a temporary URL to check a change.",
+     "fix": "Not sure whether to use Pages or Vercel? Simple page: Pages. Form, login, or database: Vercel."
+    },
+    {
+     "title": "Connect the repository to Vercel",
+     "cmd": "gh repo view --web",
+     "see": "The repository opens in your browser; in Vercel, Add New → Project → Import shows your list of repositories.",
+     "what": "Sign in to vercel.com with your GitHub account, click Add New → Project, and import the repository. Vercel detects the project type and publishes it.",
+     "why": "You only connect it once. After that, you don't need to open Vercel to publish.",
+     "keys": "Import: giving Vercel read access to the repository. Framework: the project type (simple page, Next.js, and others), which Vercel detects automatically.",
+     "fix": "Can't find the repository in the list? Grant it access in Adjust GitHub App Permissions on the import screen."
+    },
+    {
+     "title": "Each push publishes",
+     "cmd": "git push",
+     "see": "In Vercel, the Deployments list gets a new entry with each push.",
+     "what": "Once the repository is connected, keep using the same routine from part 2: add, commit, push. Vercel publishes automatically.",
+     "why": "You don't need to learn a new tool to publish: Git is still the gateway.",
+     "keys": "Automatic deployment: the service watches the repository and publishes when a new version arrives. Main branch: the one that goes to the official URL.",
+     "fix": "Did the deployment fail? Open it in Vercel and read the log; paste the error for the agent to explain."
+    },
+    {
+     "title": "Custom domain",
+     "cmd": "nslookup yourdomain.com",
+     "see": "The IP address your domain points to.",
+     "what": "In Vercel's Settings → Domains, add your domain. Vercel will show the DNS record to configure wherever you bought the domain.",
+     "why": "It replaces the .vercel.app address with your brand name.",
+     "keys": "Domain: the website's name (yourbusiness.com). DNS: the list that says where each domain points. nslookup: a lookup of where a domain points right now.",
+     "fix": "Does the domain still not open right away? A DNS change can take a few hours to take effect everywhere."
+    },
+    {
+     "title": "What Supabase does",
+     "cmd": "type .gitignore",
+     "see": "The contents of the project's .gitignore (if it doesn't exist, the next step creates it).",
+     "what": "Supabase gives your project a database, user login, and file storage without requiring you to install a server.",
+     "why": "It turns a page into a system that can save contacts, orders, and registrations.",
+     "keys": "Database: where records are stored. Login (authentication): identifying the user. Project key: the password your code uses to communicate with Supabase.",
+     "fix": "Before creating the project in Supabase, take the next step: keep keys out of the repository."
+    },
+    {
+     "title": "Keep keys out of the repository",
+     "cmd": "echo .env>>.gitignore\ntype .gitignore",
+     "see": ".env appears in the .gitignore list. Then ask the agent: Create a contact form that saves to Supabase; read the keys from the .env file and never write them in the code.",
+     "what": "Supabase keys go in a .env file, and .gitignore prevents Git from sending that file to GitHub.",
+     "why": "A published key is a leaked key: anyone can use your database. In a public repository, this can happen within minutes.",
+     "keys": ".env: a file with the project's keys and passwords. .gitignore: a list of what Git doesn't send. Environment variable: a way to pass a key to a program without writing it in the code.",
+     "fix": "Did you already send a key to GitHub? Change the key in the Supabase dashboard right away; deleting the file isn't enough because it remains in the history."
+    }
+   ],
+   "figures": {
+    "1": {
+     "kind": "flow",
+     "caption": "Once connected, Vercel publishes automatically with each push.",
+     "items": [
+      [
+       "git push",
+       "you"
+      ],
+      [
+       "Vercel",
+       "publishes"
+      ],
+      [
+       "Live site",
+       "your domain"
+      ]
+     ]
+    },
+    "5": {
+     "kind": "columns",
+     "caption": "Each service solves a different problem. Start with Pages and add more only when you need them.",
+     "items": [
+      [
+       "Pages",
+       "simple page"
+      ],
+      [
+       "Vercel",
+       "website and app"
+      ],
+      [
+       "Supabase",
+       "data and login"
+      ]
+     ]
+    },
+    "6": {
+     "kind": "columns",
+     "caption": ".gitignore is the boundary: what goes to GitHub and what never leaves your computer.",
+     "items": [
+      [
+       "Goes to GitHub",
+       "index.html, AGENTS.md"
+      ],
+      [
+       "Stays here",
+       ".env with the keys"
+      ]
+     ],
+     "base": [
+      ".gitignore separates the two"
+     ]
+    }
+   }
+  }
+ ]
+}

@@ -1,0 +1,735 @@
+{
+ "lang": "es",
+ "ui": {
+  "skip": "Saltar al contenido",
+  "nav": "Navegación principal",
+  "journey": "Mi recorrido",
+  "appearance": "Aa · Apariencia",
+  "theme": "◐ Tema",
+  "theme_label": "Alternar entre tema claro y oscuro",
+  "themes": [
+   "Oscuro",
+   "Claro",
+   "Sepia",
+   "Enfoque",
+   "Alto contraste"
+  ],
+  "size": "Tamaño",
+  "sans": "Sin serifas",
+  "serif": "Con serifas",
+  "narrow": "Columna estrecha",
+  "wide": "Columna amplia",
+  "leading": "Interlineado cómodo",
+  "cheat": "Chuleta de comandos",
+  "progress": "Progreso",
+  "of": "de",
+  "footer": "OSWork Quick · en la práctica · INEMA.CLUB · v2.0.0<br>Comandos verificados en la documentación oficial el 07/10/2026. El progreso y las notas se guardan en este navegador; expórtalos desde tu recorrido.",
+  "sources": "Fuentes",
+  "home": "Inicio",
+  "module": "Módulo",
+  "track": "Ruta",
+  "topics": "temas",
+  "min": "min",
+  "steps_word": "pasos",
+  "see": "Verás",
+  "what": "Qué es",
+  "why": "Por qué aprender",
+  "keys": "Conceptos clave",
+  "fix": "¿Hubo un error?",
+  "copy": "Copiar bloque",
+  "read": "Marcar como leído",
+  "doubt": "? Tengo una duda",
+  "toc": "EN ESTA CLASE",
+  "lab_link": "Laboratorio final ↓",
+  "lab_kicker": "MANOS A LA OBRA",
+  "lab_note": "Marca cada elemento cuando funcione de verdad en tu computadora, no cuando termines de leer.",
+  "ready": "Criterio para terminar",
+  "check_title": "Revisa lo que aprendiste",
+  "answer": "Ver respuesta comentada",
+  "prev": "← Anterior",
+  "back": "Volver a la ruta",
+  "next": "Siguiente módulo →",
+  "finish": "Abrir la chuleta de comandos →",
+  "detail": "Contenido detallado",
+  "map": "Mapa de la ruta",
+  "see_full": "Ver completo →",
+  "see_modal": "Ver en ventana modal",
+  "close": "Cerrar módulo",
+  "modal_title": "Módulo completo",
+  "modal_iframe": "Contenido completo del módulo",
+  "explore": "Explorar la ruta →",
+  "resume": "Continuar donde lo dejé",
+  "start": "Empezar por el paso 1 →",
+  "track_hero_caption": "Lee el paso, ejecuta el comando y revisa lo que aparece en la pantalla antes de continuar.",
+  "module_hero_caption": "Los pasos de este módulo, en el orden en que los vas a escribir.",
+  "breadcrumb_module": "Módulo",
+  "of_total": "DE",
+  "real_note": "Los comandos provienen de la documentación oficial (Claude Code, Codex, GitHub CLI), verificada el 07/10/2026. Las pantallas y las versiones pueden cambiar: si algo aparece distinto, lee el mensaje con calma antes de repetir el comando."
+ },
+ "home": {
+  "kicker": "INEMA · OSWORK QUICK / EN LA PRÁCTICA",
+  "title_a": "De la terminal a tu página en línea, ",
+  "title_b": "comando por comando.",
+  "lead": "Abre la terminal de Windows, crea tu carpeta de proyectos, descubre dónde está todo, instala Claude Code o Codex, guarda el proyecto en GitHub con una clave SSH y llévalo a una VPS. Quien aprende a navegar en Windows navega en la VPS de la misma manera.",
+  "help": "No necesitas saber programar. Copias, pegas y verificas. Necesitas una computadora con Windows 10 u 11 y una suscripción a Claude o ChatGPT para usar el agente.",
+  "hero_items": [
+   "CMD",
+   "CARPETAS",
+   "EXPLORADOR",
+   "AGENTE",
+   "GIT + GH",
+   "CLAVE SSH",
+   "GITHUB PAGES",
+   "VPS"
+  ],
+  "hero_caption": "Todo el recorrido: de tu computadora a un servidor, siempre usando las mismas carpetas.",
+  "stats": [
+   [
+    "4",
+    "partes"
+   ],
+   [
+    "25",
+    "pasos con comandos"
+   ],
+   [
+    "~75 min",
+    "haciendo, no leyendo"
+   ],
+   [
+    "3",
+    "idiomas"
+   ]
+  ],
+  "path_kicker": "TU RECORRIDO",
+  "path_title": "Cuatro partes, en el orden en que las harás.",
+  "end_kicker": "AL FINAL TENDRÁS",
+  "end_title": "Un proyecto propio, guardado y publicado.",
+  "end_items": [
+   "La carpeta C:\\Users\\TuNombre\\proyectos\\mi-sitio, que sabes encontrar desde la terminal y el Explorador de archivos.",
+   "Claude Code o Codex trabajando dentro de esa carpeta.",
+   "El proyecto en GitHub, con una clave SSH, y una página en TU-USUARIO.github.io.",
+   "El mismo proyecto en una VPS, usando los mismos comandos de navegación."
+  ],
+  "old_title": "¿Buscas la edición anterior?",
+  "old_text": "La primera edición de Quick (organización con IA sin terminal, siete clases y video con Nei) sigue disponible: los videos están en la página de videos y el curso está en la versión marcada v1-sem-terminal del repositorio.",
+  "old_link": "Videos de la edición anterior"
+ },
+ "tracks": [
+  [
+   "Tu computadora",
+   "Terminal, carpetas y el agente trabajando en Windows."
+  ],
+  [
+   "GitHub",
+   "Git, gh y clave SSH: guardar versiones y publicar una página."
+  ],
+  [
+   "VPS",
+   "El mismo proyecto en un servidor, con la navegación que ya conoces."
+  ],
+  [
+   "Panorama: Vercel y Supabase",
+   "Para cuando quieras conectar el proyecto con otros sistemas."
+  ]
+ ],
+ "cheat": {
+  "kicker": "CHULETA DE COMANDOS",
+  "title": "Todos los comandos, en orden.",
+  "lead": "La misma secuencia del curso, para tenerla abierta mientras trabajas. Cambia TuNombre, TU-USUARIO e IP-DE-LA-VPS por los tuyos.",
+  "download": "Descargar la chuleta (.txt)",
+  "table_title": "Windows y VPS, lado a lado",
+  "table": [
+   [
+    "dir",
+    "ls",
+    "lista la carpeta"
+   ],
+   [
+    "cd nombre / cd ..",
+    "cd nombre / cd ..",
+    "entra / vuelve"
+   ],
+   [
+    "mkdir nombre",
+    "mkdir -p nombre",
+    "crea una carpeta"
+   ],
+   [
+    "cls",
+    "clear",
+    "limpia la pantalla"
+   ],
+   [
+    "type archivo",
+    "cat archivo",
+    "muestra el archivo"
+   ],
+   [
+    "%USERPROFILE%",
+    "~",
+    "carpeta personal"
+   ],
+   [
+    "explorer .",
+    "ls",
+    "ver la carpeta"
+   ]
+  ],
+  "cols": [
+   "Windows (cmd)",
+   "VPS (Ubuntu)",
+   "hace"
+  ],
+  "back": "Volver al curso"
+ },
+ "sources": [
+  [
+   "Claude Code — instalación",
+   "https://code.claude.com/docs/en/setup"
+  ],
+  [
+   "Codex CLI",
+   "https://github.com/openai/codex"
+  ],
+  [
+   "GitHub CLI — gh auth login",
+   "https://cli.github.com/manual/gh_auth_login"
+  ],
+  [
+   "GitHub Pages",
+   "https://docs.github.com/pages"
+  ],
+  [
+   "winget",
+   "https://learn.microsoft.com/windows/package-manager/winget/"
+  ],
+  [
+   "Vercel — importar proyecto",
+   "https://vercel.com/docs/getting-started-with-vercel/import"
+  ],
+  [
+   "Supabase",
+   "https://supabase.com/docs"
+  ]
+ ],
+ "modules": [
+  {
+   "title": "Terminal, carpetas y agente en Windows",
+   "goal": "Crear la carpeta proyectos\\mi-sitio desde cmd, ver la misma carpeta en el Explorador de archivos y hacer que Claude Code o Codex trabajen en ella.",
+   "lab": "Tu carpeta de proyecto funcionando",
+   "steps": [
+    "Abrí cmd y vi C:\\Users\\TuNombre>.",
+    "Creé proyectos\\mi-sitio con mkdir y entré con cd.",
+    "Ejecuté explorer . y vi la misma carpeta en el Explorador de archivos.",
+    "Navegué con cd .., dir y cd mi-sitio sin perderme.",
+    "git --version y gh --version muestran números de versión.",
+    "claude --version o codex --version muestran números de versión.",
+    "El agente creó index.html y AGENTS.md, y start index.html abrió la página."
+   ],
+   "snippet_title": "Chuleta de la parte 1",
+   "check": "Creaste un archivo desde el Explorador de archivos dentro de mi-sitio. ¿Aparecerá en dir en la terminal?",
+   "answer": "Sí. La terminal y el Explorador de archivos muestran la misma carpeta del disco. Si no aparece, estás en otra carpeta: escribe cd para ver dónde estás.",
+   "topics": [
+    {
+     "title": "Abre la terminal",
+     "cmd": "cd",
+     "see": "C:\\Users\\TuNombre — la ruta de la carpeta donde está la terminal ahora.",
+     "what": "Presiona la tecla Windows, escribe cmd y presiona Enter. Se abre una ventana negra: el Símbolo del sistema. El comando cd por sí solo muestra en qué carpeta estás.",
+     "why": "Todo en este curso empieza aquí. La terminal es simplemente otra ventana para las mismas carpetas que ya ves en Windows.",
+     "keys": "Terminal: ventana donde escribes comandos en vez de hacer clic. cmd: la terminal clásica de Windows. Carpeta personal: C:\\Users\\TuNombre, donde están Documentos, Descargas y ahora tus proyectos.",
+     "fix": "¿Se abrió una ventana azul con PS al principio? Es PowerShell. Los comandos de este curso también funcionan allí, excepto el de instalación de Claude Code (usa la versión para PowerShell en la documentación oficial) y %USERPROFILE% (cámbialo por ~)."
+    },
+    {
+     "title": "Crea la carpeta proyectos y la del primer proyecto",
+     "cmd": "cd %USERPROFILE%\nmkdir proyectos\ncd proyectos\nmkdir mi-sitio\ncd mi-sitio",
+     "see": "C:\\Users\\TuNombre\\proyectos\\mi-sitio>",
+     "what": "Escribe un comando a la vez y presiona Enter después de cada uno. mkdir crea la carpeta; cd entra en ella.",
+     "why": "Una carpeta por proyecto es la regla que organiza todo lo demás: el agente, Git y la VPS siempre trabajan dentro de ella.",
+     "keys": "%USERPROFILE%: acceso directo a tu carpeta personal; funciona en cualquier computadora. mkdir (make directory): crea una carpeta. cd (change directory): entra en una carpeta.",
+     "fix": "¿Apareció “Ya existe el subdirectorio o el archivo proyectos”? Perfecto, ya existe. Continúa con el siguiente comando."
+    },
+    {
+     "title": "Mira en Windows dónde está todo",
+     "cmd": "explorer .",
+     "see": "El Explorador de archivos abierto en mi-sitio, dentro de proyectos, dentro de tu carpeta personal.",
+     "what": "explorer abre el Explorador de archivos; el punto significa “la carpeta donde estoy”. Es el paso más importante del curso.",
+     "why": "Cuando ves las dos ventanas mostrando el mismo lugar, la terminal deja de ser un misterio: lo que creas en una aparece en la otra.",
+     "keys": "Explorador de archivos: la ventana de carpetas de Windows. Punto (.): la carpeta actual. Dos puntos (..): la carpeta superior.",
+     "fix": "¿Se abrió la carpeta Documentos u otra? No estabas en mi-sitio. Escribe cd para ver dónde estás y repite el paso 2."
+    },
+    {
+     "title": "Navega con 6 comandos",
+     "cmd": "cd ..\ndir\ncd mi-sitio\ndir",
+     "see": "dir muestra lo que hay en cada carpeta; después de cd mi-sitio, la ruta vuelve a terminar en mi-sitio.",
+     "what": "Seis comandos bastan para moverte por las carpetas: dir muestra una lista, cd nombre entra, cd .. sube una carpeta, mkdir nombre crea una carpeta, explorer . la abre en Windows y cls limpia la pantalla.",
+     "why": "Con estos seis nunca te pierdes, y en la VPS usarás los mismos con otros nombres.",
+     "keys": "dir: muestra una lista de archivos y carpetas. cd ..: sube una carpeta. cls: limpia la pantalla sin borrar nada. Tecla Tab: completa el nombre de carpetas y archivos mientras escribes.",
+     "fix": "¿“El sistema no puede encontrar la ruta especificada”? El nombre está mal o la carpeta no existe aquí. Ejecuta dir y copia el nombre exacto."
+    },
+    {
+     "title": "Instala Git, GitHub CLI y Node (una vez)",
+     "cmd": "winget install --id Git.Git -e\nwinget install --id GitHub.cli -e\nwinget install --id OpenJS.NodeJS.LTS -e",
+     "see": "Mensajes de descarga y “Instalado correctamente”. Después cierra cmd, ábrelo de nuevo y ejecuta git --version y gh --version: aparecerán números de versión.",
+     "what": "winget es el instalador de programas que ya viene en Windows 10 y 11. Descarga cada programa de la fuente oficial.",
+     "why": "Git guarda versiones, gh se comunica con GitHub y Node es necesario para instalar Codex. Sin ellos, las partes 2 y 3 no funcionan.",
+     "keys": "winget: instalador de Windows por línea de comandos. Git: programa que guarda el historial del proyecto. gh (GitHub CLI): GitHub dentro de la terminal. Node: motor que ejecuta programas en JavaScript, como Codex.",
+     "fix": "¿winget preguntó si aceptas los términos de la fuente? Escribe Y y presiona Enter. ¿“git no se reconoce como un comando interno o externo”? No cerraste y volviste a abrir cmd después de instalarlo."
+    },
+    {
+     "title": "Instala el agente: Claude Code o Codex",
+     "cmd": "curl -fsSL https://claude.ai/install.cmd -o install.cmd && install.cmd && del install.cmd\nnpm install -g @openai/codex",
+     "see": "La primera línea instala Claude Code; la segunda, Codex. En una ventana nueva, claude --version o codex --version muestran la versión.",
+     "what": "Elige uno o los dos. La primera vez que lo abras, el agente te pedirá que inicies sesión: usa tu suscripción (Claude Pro o Max, ChatGPT Plus o Pro).",
+     "why": "El agente trabaja por ti dentro de la carpeta: lee, crea y modifica archivos con tu autorización.",
+     "keys": "Agente: una IA que ejecuta tareas en tu computadora, no solo conversa. Claude Code: el agente de Anthropic. Codex: el agente de OpenAI. Suscripción: el inicio de sesión de tu cuenta, sin clave de API.",
+     "fix": "¿“claude no se reconoce como un comando interno o externo”? Cierra y abre cmd. Si el problema continúa, la documentación oficial tiene la sección Fix your PATH. Para Codex, confirma primero que node --version funcione."
+    },
+    {
+     "title": "Trabaja dentro de la carpeta del proyecto",
+     "cmd": "cd %USERPROFILE%\\proyectos\\mi-sitio\nclaude\ndir\nstart index.html",
+     "see": "Dentro del agente, pídele: Crea un index.html con una página sencilla sobre mí y un AGENTS.md con las reglas de este proyecto. Sal con /exit. dir muestra los archivos nuevos y start abre la página en el navegador.",
+     "what": "Entra en la carpeta y ejecuta el agente (claude o codex). Solo puede ver la carpeta donde estás. AGENTS.md guarda las reglas del proyecto para las próximas conversaciones.",
+     "why": "Aquí se completa el ciclo: haces la solicitud, el agente crea los archivos y tú lo compruebas con dir, el Explorador de archivos y el navegador.",
+     "keys": "index.html: la página principal de un sitio web. AGENTS.md: archivo de instrucciones que el agente lee al abrir la carpeta. start: abre un archivo con el programa predeterminado de Windows.",
+     "fix": "¿El agente pidió permiso para crear archivos? Lee la solicitud y acepta solo lo que pediste. Si trabajó en la carpeta equivocada, sal, usa cd hasta mi-sitio y ábrelo de nuevo."
+    }
+   ],
+   "figures": {
+    "2": {
+     "kind": "tree",
+     "caption": "El mismo lugar en las dos ventanas: la terminal muestra la ruta y el Explorador de archivos muestra las carpetas.",
+     "items": [
+      [
+       "C:\\Users\\TuNombre\\",
+       0
+      ],
+      [
+       "proyectos\\",
+       1
+      ],
+      [
+       "mi-sitio\\",
+       2
+      ],
+      [
+       "index.html",
+       3
+      ],
+      [
+       "AGENTS.md",
+       3
+      ]
+     ]
+    },
+    "3": {
+     "kind": "flow",
+     "caption": "De cmd al Explorador de archivos con un comando: el punto significa la carpeta donde estás.",
+     "items": [
+      [
+       "cmd",
+       "la terminal"
+      ],
+      [
+       "cd mi-sitio",
+       "entrar"
+      ],
+      [
+       "explorer .",
+       "abrir en Windows"
+      ],
+      [
+       "Explorador de archivos",
+       "la misma carpeta"
+      ]
+     ]
+    },
+    "7": {
+     "kind": "flow",
+     "caption": "El ciclo de trabajo: haces la solicitud, el agente trabaja en la carpeta y tú lo compruebas con tus propios ojos.",
+     "items": [
+      [
+       "Tú lo pides",
+       "al agente"
+      ],
+      [
+       "El agente crea",
+       "en la carpeta"
+      ],
+      [
+       "Tú lo compruebas",
+       "dir · start"
+      ]
+     ]
+    }
+   }
+  },
+  {
+   "title": "Git, gh y clave SSH en GitHub",
+   "goal": "Conectar tu computadora a tu cuenta de GitHub con una clave SSH, crear el repositorio (público o privado) y publicar la página.",
+   "lab": "Tu proyecto en GitHub y la página en línea",
+   "steps": [
+    "git config muestra mi nombre y correo electrónico.",
+    "Vi id_ed25519 y id_ed25519.pub en el Explorador de archivos.",
+    "ssh -T git@github.com respondió Hi TU-USUARIO.",
+    "El repositorio mi-sitio aparece en github.com/TU-USUARIO.",
+    "La página se abre en https://TU-USUARIO.github.io/mi-sitio/.",
+    "Cambié algo, ejecuté add, commit y push, y el cambio apareció en GitHub."
+   ],
+   "snippet_title": "Chuleta de la parte 2",
+   "check": "Alguien te pidió tu clave para “configurar el acceso”. ¿Cuál de los dos archivos puedes enviar?",
+   "answer": "Solo id_ed25519.pub, la clave pública. id_ed25519, sin .pub, es la privada: quien tenga ese archivo puede entrar como tú.",
+   "topics": [
+    {
+     "title": "Dile a Git quién eres",
+     "cmd": "git config --global user.name \"Tu Nombre\"\ngit config --global user.email \"tu@correo.com\"\ngit config --global --list",
+     "see": "user.name=Tu Nombre y user.email=tu@correo.com en la lista.",
+     "what": "Usa el mismo correo electrónico de tu cuenta de GitHub. Se hace una vez por computadora.",
+     "why": "Cada versión guardada lleva tu nombre. GitHub usa el correo electrónico para vincular las versiones con tu cuenta.",
+     "keys": "git config: configura Git. --global: se aplica a todos los proyectos de esta computadora. Commit: una versión guardada del proyecto, con autor y mensaje.",
+     "fix": "¿Te equivocaste de nombre o correo electrónico? Ejecuta de nuevo el mismo comando con el valor correcto: reemplaza el anterior."
+    },
+    {
+     "title": "Crea tu clave SSH",
+     "cmd": "ssh-keygen -t ed25519 -C \"tu@correo.com\"\nexplorer %USERPROFILE%\\.ssh",
+     "see": "En la carpeta .ssh: id_ed25519 (clave privada) e id_ed25519.pub (clave pública).",
+     "what": "Presiona Enter en las 3 preguntas para aceptar la ubicación predeterminada y continuar sin contraseña adicional. Después, el Explorador de archivos abre la carpeta donde quedaron las claves.",
+     "why": "La clave SSH es tu identidad sin contraseña: GitHub y la VPS reconocen tu computadora por ella.",
+     "keys": "SSH: forma segura de conectar dos computadoras. Clave privada: se queda solo en tu máquina, nunca se envía. Clave pública (.pub): es la que entregas a GitHub y a la VPS.",
+     "fix": "¿Te preguntó si quieres sobrescribir (Overwrite)? Ya tienes una clave. Responde n y usa la que ya existe."
+    },
+    {
+     "title": "Conecta gh a tu cuenta y envía la clave",
+     "cmd": "gh auth login\nssh -T git@github.com",
+     "see": "Hi TU-USUARIO! You've successfully authenticated.",
+     "what": "Responde: GitHub.com → SSH → elige id_ed25519.pub → Login with a web browser. Copia el código, pégalo en el navegador y autoriza. Después prueba la clave; la primera vez responde yes.",
+     "why": "Un comando inicia sesión y envía tu clave pública a la cuenta, sin abrir la configuración del sitio.",
+     "keys": "gh auth login: inicia sesión en tu cuenta de GitHub desde la terminal. Protocolo SSH: Git empieza a usar tu clave en vez de una contraseña. ssh -T: prueba la conexión sin abrir nada.",
+     "fix": "¿gh mostró la clave con otro nombre o te ofreció generar una nueva? Elige la que termina en .pub en tu carpeta .ssh. “Permission denied (publickey)”: no se envió la clave; ejecuta gh auth login de nuevo y elige SSH."
+    },
+    {
+     "title": "Crea el repositorio y envía el proyecto",
+     "cmd": "cd %USERPROFILE%\\proyectos\\mi-sitio\ngit init\ngit add .\ngit commit -m \"primera versión\"\ngit branch -M main\ngh repo create mi-sitio --public --source=. --push",
+     "see": "La dirección https://github.com/TU-USUARIO/mi-sitio con tus archivos.",
+     "what": "git init activa Git en la carpeta, add y commit guardan la primera versión, y gh crea el repositorio y envía todo. Para que sea privado, cambia --public por --private.",
+     "why": "Público: cualquier persona puede verlo (necesario para Pages gratis). Privado: solo tú y las personas que invites. Tú decides en cada proyecto.",
+     "keys": "Repositorio: la carpeta del proyecto con todo el historial, guardada en GitHub. Branch main: la línea principal de versiones. Push: enviar las versiones a GitHub.",
+     "fix": "¿“nothing to commit”? La carpeta está vacía: vuelve al paso 7 de la parte 1. ¿“Name already exists”? Ya tienes un repositorio con ese nombre: elige otro."
+    },
+    {
+     "title": "Publica la página en GitHub Pages",
+     "cmd": "gh api repos/{owner}/{repo}/pages -X POST -f \"source[branch]=main\" -f \"source[path]=/\"",
+     "see": "En unos minutos se abre la página en https://TU-USUARIO.github.io/mi-sitio/",
+     "what": "Este comando activa GitHub Pages en el repositorio de la carpeta actual. También puedes hacerlo desde el sitio: Settings → Pages → branch main → Save.",
+     "why": "Obtienes un enlace público a la página que creó el agente, sin pagar por el alojamiento.",
+     "keys": "GitHub Pages: alojamiento gratis de páginas a partir de un repositorio. {owner} y {repo}: gh los reemplaza automáticamente por tu usuario y el nombre del repositorio.",
+     "fix": "¿Aparece un error 404 justo después? Espera de 2 a 10 minutos y vuelve a cargar la página. ¿Error sobre el plan? Pages gratis solo funciona en un repositorio público."
+    },
+    {
+     "title": "La rutina de todos los días",
+     "cmd": "git status\ngit add .\ngit commit -m \"qué cambió\"\ngit push",
+     "see": "git status muestra qué cambió; después del push, el cambio aparece en GitHub y, en unos minutos, en la página.",
+     "what": "¿Cambiaste algo? Revisa qué cambió, guarda una versión con una frase y envíala. O pídele al agente: guarda y envía a GitHub.",
+     "why": "Cada commit es un punto de regreso. Si algo se rompe, puedes recuperar la versión anterior.",
+     "keys": "git status: muestra qué cambió desde la última versión. Mensaje del commit: una frase que dice qué cambió, para que puedas encontrarlo después.",
+     "fix": "¿Se rechazó el push con “fetch first”? Alguien (o tú desde otra computadora) cambió el repositorio. Ejecuta git pull y después git push."
+    }
+   ],
+   "figures": {
+    "2": {
+     "kind": "columns",
+     "caption": "Dos claves, dos destinos: la privada nunca sale de tu computadora; la pública va a GitHub y a la VPS.",
+     "items": [
+      [
+       "id_ed25519",
+       "privada: se queda"
+      ],
+      [
+       "id_ed25519.pub",
+       "pública: se entrega"
+      ]
+     ],
+     "base": [
+      "GitHub y la VPS reciben solo la .pub"
+     ]
+    },
+    "4": {
+     "kind": "flow",
+     "caption": "Cuatro comandos desde el archivo hasta la página en línea.",
+     "items": [
+      [
+       "git add",
+       "prepara"
+      ],
+      [
+       "git commit",
+       "guarda"
+      ],
+      [
+       "git push",
+       "envía"
+      ],
+      [
+       "Pages",
+       "publica"
+      ]
+     ]
+    },
+    "6": {
+     "kind": "timeline",
+     "caption": "Cada commit es un punto de regreso. La rutina diaria solo agrega puntos a la línea.",
+     "items": [
+      [
+       "primera versión",
+       "commit 1"
+      ],
+      [
+       "ajuste del texto",
+       "commit 2"
+      ],
+      [
+       "nueva sección",
+       "commit 3"
+      ]
+     ]
+    }
+   }
+  },
+  {
+   "title": "VPS: lo mismo, en un servidor",
+   "goal": "Conectarte a una VPS con Ubuntu usando tu clave, navegar con los mismos comandos y llevar el proyecto de GitHub allí.",
+   "lab": "Tu proyecto funcionando en la VPS",
+   "steps": [
+    "Pegué mi clave pública al crear la VPS.",
+    "ssh root@IP-DE-LA-VPS se conectó sin pedir contraseña.",
+    "Navegué con ls, cd y mkdir -p en la VPS.",
+    "git clone trajo mi-sitio y ls muestra los archivos.",
+    "claude --version funciona en la VPS.",
+    "Cambié algo en Windows, hice push y git pull trajo el cambio a la VPS."
+   ],
+   "snippet_title": "Chuleta de la parte 3",
+   "check": "En Windows usas dir y cls. ¿Cuáles son sus equivalentes en la VPS?",
+   "answer": "ls para listar y clear para limpiar la pantalla. cd, cd .. y mkdir funcionan igual; la carpeta personal es ~ en vez de %USERPROFILE%.",
+   "topics": [
+    {
+     "title": "Contrata la VPS con tu clave",
+     "cmd": "type %USERPROFILE%\\.ssh\\id_ed25519.pub",
+     "see": "Una línea que empieza con ssh-ed25519. Copia la línea completa.",
+     "what": "Elige un proveedor y el sistema Ubuntu. Al crear la VPS, te pedirá una clave SSH: pega la línea que muestra este comando. Anota la IP que te indique el proveedor.",
+     "why": "Con la clave registrada, puedes entrar sin contraseña y nadie sin tu clave privada podrá entrar.",
+     "keys": "VPS: una computadora Linux alquilada que está encendida las 24 horas. Ubuntu: la versión de Linux más usada en servidores. IP: la dirección numérica del servidor. type: muestra el contenido de un archivo en cmd.",
+     "fix": "¿El proveedor no pidió una clave? Busca “SSH keys” en el panel y regístrala allí antes de crear la máquina, o usa su consola web para pegar la clave después."
+    },
+    {
+     "title": "Conéctate a la VPS",
+     "cmd": "ssh root@IP-DE-LA-VPS",
+     "see": "root@nombre-de-la-vps:~# — ahora la terminal es el servidor.",
+     "what": "Reemplaza IP-DE-LA-VPS por el número que te dio el proveedor. La primera vez te preguntará si confías en el servidor: responde yes. Para salir, escribe exit.",
+     "why": "Es la misma ventana de siempre, pero conectada a otra computadora. Todo lo que escribas ahora ocurre en la VPS.",
+     "keys": "ssh: abre una conexión segura con otra computadora. root: el administrador de Linux. ~: la carpeta personal del usuario en la VPS. exit: cierra la conexión y vuelve a Windows.",
+     "fix": "¿Te pidió una contraseña? La clave no está registrada en esa VPS. ¿“Connection timed out”? La IP es incorrecta o la máquina todavía está iniciando: espera un minuto."
+    },
+    {
+     "title": "La misma navegación, con otros nombres",
+     "cmd": "mkdir -p ~/proyectos\ncd ~/proyectos\nls\npwd",
+     "see": "pwd muestra /root/proyectos — la ruta de la carpeta, como cd la mostraba en Windows.",
+     "what": "En la VPS: dir se convierte en ls, cls en clear, type en cat, %USERPROFILE% en ~ y la barra es / en vez de \\. cd, cd .. y mkdir son iguales. No hay Explorador de archivos: ls cumple esa función.",
+     "why": "Por eso el curso empieza en Windows: quien entiende las carpetas allí puede navegar en la VPS en minutos.",
+     "keys": "ls: muestra la lista de la carpeta. pwd: muestra dónde estás. mkdir -p: crea la carpeta y no da error si ya existe. Linux distingue entre mayúsculas y minúsculas: Proyectos y proyectos son carpetas diferentes.",
+     "fix": "¿“No such file or directory”? Comprueba las mayúsculas y minúsculas y usa Tab para completar el nombre."
+    },
+    {
+     "title": "Lleva el proyecto de GitHub",
+     "cmd": "apt update && apt install -y git\ncd ~/proyectos\ngit clone https://github.com/TU-USUARIO/mi-sitio.git\ncd mi-sitio\nls",
+     "see": "index.html y AGENTS.md, los mismos archivos de Windows, ahora en la VPS.",
+     "what": "apt instala Git en Ubuntu. git clone copia todo el repositorio, incluido el historial, a la carpeta actual.",
+     "why": "GitHub es el puente: el mismo proyecto está en Windows y en la VPS, y las versiones pasan de un lado al otro.",
+     "keys": "apt: el instalador de Ubuntu (parecido a winget). git clone: descarga un repositorio por primera vez. && : ejecuta el segundo comando solo si el primero salió bien.",
+     "fix": "¿El repositorio privado te pidió iniciar sesión? Instala gh (apt install -y gh) y ejecuta gh auth login, como en Windows; después vuelve a clonar."
+    },
+    {
+     "title": "Instala el agente en la VPS",
+     "cmd": "curl -fsSL https://claude.ai/install.sh | bash\ncd ~/proyectos/mi-sitio\nclaude",
+     "see": "Claude Code se abre dentro de la carpeta mi-sitio de la VPS. Para Codex, instala Node y usa npm install -g @openai/codex.",
+     "what": "El comando de instalación para Linux es el de la documentación oficial. La primera vez, el agente muestra una dirección: ábrela en el navegador de tu computadora e inicia sesión con tu suscripción.",
+     "why": "Con el agente en la VPS, el trabajo puede continuar en el servidor aunque tu computadora esté apagada.",
+     "keys": "install.sh: el instalador para Linux y Mac. | bash: entrega el instalador descargado a la terminal para que lo ejecute. Inicio de sesión sin pantalla: el agente muestra un enlace y un código para que autorices desde otro dispositivo.",
+     "fix": "¿Aparece “claude: command not found” justo después de instalar? Sal con exit, vuelve a conectarte con ssh y prueba otra vez."
+    },
+    {
+     "title": "Trae los cambios y desconéctate",
+     "cmd": "cd ~/proyectos/mi-sitio\ngit pull\nls\nexit",
+     "see": "git pull muestra los archivos actualizados; exit te devuelve a C:\\Users\\TuNombre>.",
+     "what": "¿Cambiaste algo en Windows e hiciste push? En la VPS, git pull trae el cambio. Para volver a Windows, escribe exit.",
+     "why": "Es la rutina entre las dos computadoras: push de un lado, pull del otro, siempre a través de GitHub.",
+     "keys": "git pull: trae las versiones nuevas de GitHub. exit: cierra la conexión SSH. Para volver: ssh root@IP-DE-LA-VPS y cd ~/proyectos/mi-sitio.",
+     "fix": "¿git pull informó que hay cambios locales? Editaste el mismo archivo en la VPS. Ejecuta git status y decide qué versión conservar antes de continuar."
+    }
+   ],
+   "figures": {
+    "3": {
+     "kind": "columns",
+     "caption": "La misma navegación, con otros nombres. cd, cd .. y mkdir funcionan igual en ambos.",
+     "items": [
+      [
+       "Windows",
+       "dir · cls · type"
+      ],
+      [
+       "VPS",
+       "ls · clear · cat"
+      ]
+     ],
+     "base": [
+      "cd · cd .. · mkdir: iguales"
+     ]
+    },
+    "4": {
+     "kind": "flow",
+     "caption": "GitHub es el puente: push de un lado, clone y pull del otro.",
+     "items": [
+      [
+       "Windows",
+       "git push"
+      ],
+      [
+       "GitHub",
+       "guarda"
+      ],
+      [
+       "VPS",
+       "git pull"
+      ]
+     ]
+    }
+   }
+  },
+  {
+   "title": "Vercel y Supabase: una visión general",
+   "goal": "Saber qué hacen Vercel y Supabase y cómo se conecta tu repositorio con ellos cuando el proyecto crezca.",
+   "lab": "Tu mapa del siguiente paso",
+   "steps": [
+    "Sé explicar la diferencia entre GitHub Pages y Vercel.",
+    "Sé dónde se conecta el repositorio en Vercel (Add New → Project).",
+    "Sé que cada git push vuelve a publicar en Vercel.",
+    "Sé para qué sirve Supabase (base de datos, inicio de sesión, archivos).",
+    ".env está en el .gitignore de mi proyecto.",
+    "Tengo listo un pedido para el agente cuando necesite Supabase."
+   ],
+   "snippet_title": "Guía rápida de la parte 4",
+   "check": "Quieres un formulario que guarde los contactos recibidos. ¿GitHub Pages lo resuelve por sí solo?",
+   "answer": "No. Pages solo muestra páginas. Para guardar datos necesitas una base de datos, como Supabase, y normalmente un servicio de hosting como Vercel.",
+   "topics": [
+    {
+     "title": "Qué hace Vercel",
+     "cmd": "git add .\ngit commit -m \"nueva versión\"\ngit push",
+     "see": "Una vez conectado, cada push genera una nueva publicación en Vercel, con una dirección propia.",
+     "what": "Vercel publica sitios y aplicaciones directamente desde tu repositorio de GitHub. Es el siguiente paso después de Pages cuando el proyecto deja de ser una página simple.",
+     "why": "Ejecuta código en el servidor, acepta un dominio propio y muestra una vista previa de cada cambio antes de publicarlo.",
+     "keys": "Hosting: donde el sitio queda en línea. Deploy: la publicación de una versión. Vista previa (preview): una dirección temporal para revisar el cambio.",
+     "fix": "¿Dudas entre Pages y Vercel? Página simple, Pages. Formulario, inicio de sesión o base de datos, Vercel."
+    },
+    {
+     "title": "Conecta el repositorio a Vercel",
+     "cmd": "gh repo view --web",
+     "see": "El repositorio se abre en el navegador; en Vercel, Add New → Project → Import muestra la lista de tus repositorios.",
+     "what": "Entra en vercel.com con tu cuenta de GitHub, haz clic en Add New → Project e importa el repositorio. Vercel detecta el tipo de proyecto y lo publica.",
+     "why": "La conexión se hace una sola vez. Después ya no tienes que abrir Vercel para publicar.",
+     "keys": "Importar: dar a Vercel acceso de lectura al repositorio. Framework: el tipo de proyecto (página simple, Next.js y otros), que Vercel reconoce automáticamente.",
+     "fix": "¿El repositorio no aparece en la lista? Dale acceso en Adjust GitHub App Permissions, en la misma pantalla de importación."
+    },
+    {
+     "title": "Cada push publica",
+     "cmd": "git push",
+     "see": "En Vercel, la lista de Deployments agrega una nueva fila con cada push.",
+     "what": "Con el repositorio conectado, sigues con la misma rutina de la parte 2: add, commit, push. Vercel publica automáticamente.",
+     "why": "No necesitas aprender una herramienta nueva para publicar: Git sigue siendo la puerta de entrada.",
+     "keys": "Publicación automática: el servicio observa el repositorio y publica cuando llega una versión nueva. Branch main: la que se publica en la dirección oficial.",
+     "fix": "¿Falló la publicación? Abre el deployment en Vercel y lee el log; copia el error para que el agente te lo explique."
+    },
+    {
+     "title": "Dominio propio",
+     "cmd": "nslookup tudominio.com",
+     "see": "La dirección IP a la que apunta tu dominio.",
+     "what": "En Settings → Domains de Vercel agregas tu dominio y el servicio muestra el registro DNS que debes configurar donde lo compraste.",
+     "why": "Reemplaza la dirección .vercel.app por el nombre de tu marca.",
+     "keys": "Dominio: el nombre del sitio (tunegocio.com). DNS: la lista que indica a dónde apunta cada dominio. nslookup: consulta a dónde apunta un dominio en este momento.",
+     "fix": "¿El dominio no se abre enseguida? El cambio de DNS puede tardar algunas horas en aplicarse en todas partes."
+    },
+    {
+     "title": "Qué hace Supabase",
+     "cmd": "type .gitignore",
+     "see": "El contenido del .gitignore del proyecto (si no existe, el siguiente paso lo crea).",
+     "what": "Supabase le da a tu proyecto una base de datos, inicio de sesión de usuarios y almacenamiento de archivos, sin que tengas que instalar un servidor.",
+     "why": "Es lo que transforma una página en un sistema: guardar contactos, pedidos y registros.",
+     "keys": "Base de datos: donde se guardan los registros. Inicio de sesión (autenticación): saber quién es el usuario. Clave del proyecto: la contraseña que usa tu código para comunicarse con Supabase.",
+     "fix": "Antes de crear el proyecto en Supabase, asegúrate de dar el siguiente paso: mantener las claves fuera del repositorio."
+    },
+    {
+     "title": "Claves fuera del repositorio",
+     "cmd": "echo .env>>.gitignore\ntype .gitignore",
+     "see": ".env aparece en la lista de .gitignore. Después pídele al agente: Crea un formulario de contacto que guarde los datos en Supabase; lee las claves del archivo .env y nunca escribas las claves en el código.",
+     "what": "Las claves de Supabase van en un archivo .env, y .gitignore impide que Git envíe ese archivo a GitHub.",
+     "why": "Una clave publicada es una clave expuesta: cualquiera puede usar tu base de datos. En un repositorio público, esto puede pasar en cuestión de minutos.",
+     "keys": ".env: archivo con las claves y contraseñas del proyecto. .gitignore: lista de lo que Git no envía. Variable de entorno: la forma de pasar la clave al programa sin escribirla en el código.",
+     "fix": "¿Ya enviaste una clave a GitHub? Cámbiala de inmediato en el panel de Supabase; borrar el archivo no basta, porque queda en el historial."
+    }
+   ],
+   "figures": {
+    "1": {
+     "kind": "flow",
+     "caption": "Una vez conectado, Vercel publica automáticamente con cada push.",
+     "items": [
+      [
+       "git push",
+       "tú"
+      ],
+      [
+       "Vercel",
+       "publica"
+      ],
+      [
+       "Sitio en línea",
+       "tu dominio"
+      ]
+     ]
+    },
+    "5": {
+     "kind": "columns",
+     "caption": "Cada servicio resuelve una necesidad. Empieza con Pages y agrega otro solo cuando lo necesites.",
+     "items": [
+      [
+       "Pages",
+       "página simple"
+      ],
+      [
+       "Vercel",
+       "sitio y app"
+      ],
+      [
+       "Supabase",
+       "datos e inicio de sesión"
+      ]
+     ]
+    },
+    "6": {
+     "kind": "columns",
+     "caption": ".gitignore marca el límite: qué va a GitHub y qué nunca sale de tu computadora.",
+     "items": [
+      [
+       "Va a GitHub",
+       "index.html, AGENTS.md"
+      ],
+      [
+       "Se queda aquí",
+       ".env con las claves"
+      ]
+     ],
+     "base": [
+      ".gitignore separa ambos"
+     ]
+    }
+   }
+  }
+ ]
+}

@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="es" class="dark">
+<head><meta charset="utf-8"><script>(function(){try{var p=JSON.parse(localStorage.getItem('inema.prefs')||'{}'),d=document.documentElement;d.classList.toggle('dark',p.theme?p.theme!=='claro':true);if(p.theme)d.dataset.theme=p.theme;if(p.fontScale)d.style.setProperty('--fs-root',p.fontScale+'%');if(p.font)d.dataset.font=p.font;if(p.accent)d.dataset.accent=p.accent;if(p.lineWidth)d.style.setProperty('--measure',p.lineWidth+'ch');if(p.leading)d.style.setProperty('--leading',p.leading)}catch(e){document.documentElement.classList.add('dark')}})();</script>
+<meta name="viewport" content="width=device-width,initial-scale=1"><meta name="inema-course" content="oswork-quick-es"><title>Panorama: Vercel y Supabase · OSWork Quick</title><meta name="description" content="Abre la terminal de Windows, crea tu carpeta de proyectos, descubre dónde está todo, instala Claude Code o Codex, guarda el proyecto en GitHub con una clave SSH y llévalo a una VPS. Quien aprende a navegar en Windows navega en la VPS de la misma manera."><meta property="og:title" content="OSWork Quick — comando por comando."><meta property="og:image" content="https://inematds.github.io/oswork-quick/capa/capa.png">
+<link rel="canonical" href="https://inematds.github.io/oswork-quick/es/curso/trilha4/index.html"><link rel="alternate" hreflang="pt-BR" href="https://inematds.github.io/oswork-quick/curso/trilha4/index.html"><link rel="alternate" hreflang="en" href="https://inematds.github.io/oswork-quick/en/curso/trilha4/index.html"><link rel="alternate" hreflang="es" href="https://inematds.github.io/oswork-quick/es/curso/trilha4/index.html"><link rel="alternate" hreflang="x-default" href="https://inematds.github.io/oswork-quick/curso/trilha4/index.html">
+<script type="application/json" data-inema-manifest>{"course": "oswork-quick-es", "tracks": [{"n": "1", "title": "Tu computadora", "modules": [{"id": "1-1", "title": "Terminal, carpetas y agente en Windows", "topics": 7, "href": "../../curso/trilha1/modulo-1-1.html"}]}, {"n": "2", "title": "GitHub", "modules": [{"id": "2-1", "title": "Git, gh y clave SSH en GitHub", "topics": 6, "href": "../../curso/trilha2/modulo-2-1.html"}]}, {"n": "3", "title": "VPS", "modules": [{"id": "3-1", "title": "VPS: lo mismo, en un servidor", "topics": 6, "href": "../../curso/trilha3/modulo-3-1.html"}]}, {"n": "4", "title": "Panorama: Vercel y Supabase", "modules": [{"id": "4-1", "title": "Vercel y Supabase: una visión general", "topics": 6, "href": "../../curso/trilha4/modulo-4-1.html"}]}]}</script>
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../../assets/site.css"><link rel="stylesheet" href="../../assets/learn.css">
+<style>:root{--track:#fbbf24}html:not(.dark){--track:#92400e}pre code{white-space:pre-wrap}.see{border-left:3px solid var(--track);padding:6px 0 6px 14px;margin:12px 0}.cmdbox{margin:14px 0}.hero>*{min-width:0}pre{overflow-wrap:anywhere}</style>
+</head>
+<body>
+<a class="skip" href="#conteudo">Saltar al contenido</a>
+<nav class="topnav" aria-label="Navegación principal">
+<div class="wrap">
+<div class="nav-main"><a class="brand" href="../../index.html">OSWork Quick<span aria-hidden="true">_</span></a><span aria-hidden="true">/</span><a class="text-sky-400" href="https://inema.club">INEMA.CLUB</a><span aria-hidden="true">-</span><a class="text-amber-700 dark:text-slate-300" href="https://inema.pro">PRO</a><span class="spacer"></span><button data-inema-journey-open>Mi recorrido</button><button data-inema-appearance-toggle="#aparencia" aria-expanded="false">Aa · Apariencia</button><button onclick="toggleTheme()" aria-label="Alternar entre tema claro y oscuro">◐ Tema</button>
+</div>
+<div class="nav-tracks"><a href="../../curso/trilha1/index.html" >T1<span class="long"> · Tu computadora</span></a><a href="../../curso/trilha2/index.html" >T2<span class="long"> · GitHub</span></a><a href="../../curso/trilha3/index.html" >T3<span class="long"> · VPS</span></a><a href="../../curso/trilha4/index.html" aria-current="page">T4<span class="long"> · Panorama: Vercel y Supabase</span></a><a href="../../materiais/index.html">Chuleta de comandos</a>
+</div>
+<div class="language-nav" data-os-languages><a href="../../../curso/trilha4/index.html" hreflang="pt-BR" lang="pt-BR">Português</a><a href="../../../en/curso/trilha4/index.html" hreflang="en" lang="en">English</a><a href="index.html" hreflang="es" lang="es" aria-current="page">Español</a>
+</div>
+<div id="aparencia" class="appearance" data-inema-appearance hidden>
+<div class="row"><button type="button" data-inema-set-theme="inema-dark">Oscuro</button><button type="button" data-inema-set-theme="claro">Claro</button><button type="button" data-inema-set-theme="sepia">Sepia</button><button type="button" data-inema-set-theme="foco">Enfoque</button><button type="button" data-inema-set-theme="contraste">Alto contraste</button>
+</div>
+<div class="row"><span>Tamaño</span><button data-inema-set-fontscale="100">100%</button><button data-inema-set-fontscale="112">112%</button><button data-inema-set-fontscale="125">125%</button><button data-inema-set-font="inter">Sin serifas</button><button data-inema-set-font="leitura">Con serifas</button><button data-inema-set-linewidth="60">Columna estrecha</button><button data-inema-set-linewidth="75">Columna amplia</button><button data-inema-set-leading="1.7">Interlineado cómodo</button>
+</div>
+</div>
+</div>
+</nav>
+<main id="conteudo" class="wrap">
+<header class="hero">
+<div>
+<p class="kicker">RUTA 04 / OSWORK QUICK</p>
+<h1>Panorama: Vercel y Supabase</h1>
+<p>Para cuando quieras conectar el proyecto con otros sistemas.</p>
+<div class="meter" data-inema-meter="trilha:4" role="progressbar" aria-label="Progreso" aria-valuemin="0" aria-valuemax="100"><span class="inema-meter-pct" data-inema-meter-pct>0%</span><span class="inema-meter-count" data-inema-meter-frac>0 de 0</span>
+</div>
+</div>
+<figure class="hero-panel"><svg class="w-full h-auto" viewBox="0 0 490 320" role="img" aria-label="Qué hace Vercel → Conecta el repositorio a Vercel → Cada push publica → Dominio propio → Qué hace Supabase → Claves fuera del repositorio"><defs><filter id="glow"><feGaussianBlur stdDeviation="1"/></filter></defs><path d="M10 10H480V305H10Z" fill="none" stroke="#334155" stroke-dasharray="3 7"/><rect x="20" y="25" width="215" height="65" rx="10" fill="#152234" stroke="#fbbf24"/><text x="36" y="50" fill="#cbd5e1" font-size="10" font-family="monospace">01 / OSWORK</text><text x="36" y="72" fill="#f1f5f9" font-size="14" font-family="sans-serif">Qué hace Vercel</text><path d="M120 90v25" stroke="#fbbf24" stroke-width="2"/><rect x="255" y="25" width="215" height="65" rx="10" fill="#152234" stroke="#38bdf8"/><text x="271" y="50" fill="#cbd5e1" font-size="10" font-family="monospace">02 / OSWORK</text><text x="271" y="72" fill="#f1f5f9" font-size="14" font-family="sans-serif">Conecta el repositorio a Vercel</text><path d="M355 90v25" stroke="#fbbf24" stroke-width="2"/><rect x="20" y="115" width="215" height="65" rx="10" fill="#152234" stroke="#fbbf24"/><text x="36" y="140" fill="#cbd5e1" font-size="10" font-family="monospace">03 / OSWORK</text><text x="36" y="162" fill="#f1f5f9" font-size="14" font-family="sans-serif">Cada push publica</text><path d="M120 180v25" stroke="#fbbf24" stroke-width="2"/><rect x="255" y="115" width="215" height="65" rx="10" fill="#152234" stroke="#38bdf8"/><text x="271" y="140" fill="#cbd5e1" font-size="10" font-family="monospace">04 / OSWORK</text><text x="271" y="162" fill="#f1f5f9" font-size="14" font-family="sans-serif">Dominio propio</text><path d="M355 180v25" stroke="#fbbf24" stroke-width="2"/><rect x="20" y="205" width="215" height="65" rx="10" fill="#152234" stroke="#fbbf24"/><text x="36" y="230" fill="#cbd5e1" font-size="10" font-family="monospace">05 / OSWORK</text><text x="36" y="252" fill="#f1f5f9" font-size="14" font-family="sans-serif">Qué hace Supabase</text><rect x="255" y="205" width="215" height="65" rx="10" fill="#152234" stroke="#38bdf8"/><text x="271" y="230" fill="#cbd5e1" font-size="10" font-family="monospace">06 / OSWORK</text><text x="271" y="252" fill="#f1f5f9" font-size="14" font-family="sans-serif">Claves fuera del repositorio</text></svg><figcaption class="help-note">Lee el paso, ejecuta el comando y revisa lo que aparece en la pantalla antes de continuar.</figcaption>
+</figure>
+</header>
+<div class="stats">
+<div><strong>1</strong><span>módulo</span>
+</div>
+<div><strong>6</strong><span>pasos</span>
+</div>
+<div><strong>~10 min</strong><span>manos a la obra</span>
+</div>
+<div><strong>4/4</strong><span>ruta</span>
+</div>
+</div>
+<h2>Mapa de la ruta</h2>
+<div class="grid"><a class="card" href="#modulo-4-1">
+<div class="overline"><span>4.1</span><span>~10 min</span>
+</div>
+<h3>🧭 Vercel y Supabase: una visión general</h3>
+<p>Saber qué hacen Vercel y Supabase y cómo se conecta tu repositorio con ellos cuando el proyecto crezca.</p></a>
+</div>
+<section class="band">
+<h2 class="text-2xl font-bold">Contenido detallado</h2>
+<article class="module-card" id="modulo-4-1" data-inema-module="4-1" data-inema-track="4">
+<p class="kicker">MÓDULO 4.1</p>
+<h2 class="text-2xl font-bold">Vercel y Supabase: una visión general</h2>
+<p>Saber qué hacen Vercel y Supabase y cómo se conecta tu repositorio con ellos cuando el proyecto crezca.</p>
+<div class="meter" data-inema-meter="modulo:4-1" role="progressbar" aria-label="Progreso" aria-valuemin="0" aria-valuemax="100"><span class="inema-meter-pct" data-inema-meter-pct>0%</span><span class="inema-meter-count" data-inema-meter-frac>0 de 0</span>
+</div>
+<div class="topic-item"><button onclick="toggleTopic(this)" aria-expanded="false" aria-controls="p-4-1-1"><span class="number">1</span><span>Qué hace Vercel</span></button>
+<div class="topic-explanation" id="p-4-1-1">
+<h4>Qué es</h4>
+<p>Vercel publica sitios y aplicaciones directamente desde tu repositorio de GitHub. Es el siguiente paso después de Pages cuando el proyecto deja de ser una página simple.</p>
+<h4>Por qué aprender</h4>
+<p>Ejecuta código en el servidor, acepta un dominio propio y muestra una vista previa de cada cambio antes de publicarlo.</p>
+<h4>Conceptos clave</h4>
+<p>Hosting: donde el sitio queda en línea. Deploy: la publicación de una versión. Vista previa (preview): una dirección temporal para revisar el cambio.</p>
+</div>
+</div>
+<div class="topic-item"><button onclick="toggleTopic(this)" aria-expanded="false" aria-controls="p-4-1-2"><span class="number">2</span><span>Conecta el repositorio a Vercel</span></button>
+<div class="topic-explanation" id="p-4-1-2">
+<h4>Qué es</h4>
+<p>Entra en vercel.com con tu cuenta de GitHub, haz clic en Add New → Project e importa el repositorio. Vercel detecta el tipo de proyecto y lo publica.</p>
+<h4>Por qué aprender</h4>
+<p>La conexión se hace una sola vez. Después ya no tienes que abrir Vercel para publicar.</p>
+<h4>Conceptos clave</h4>
+<p>Importar: dar a Vercel acceso de lectura al repositorio. Framework: el tipo de proyecto (página simple, Next.js y otros), que Vercel reconoce automáticamente.</p>
+</div>
+</div>
+<div class="topic-item"><button onclick="toggleTopic(this)" aria-expanded="false" aria-controls="p-4-1-3"><span class="number">3</span><span>Cada push publica</span></button>
+<div class="topic-explanation" id="p-4-1-3">
+<h4>Qué es</h4>
+<p>Con el repositorio conectado, sigues con la misma rutina de la parte 2: add, commit, push. Vercel publica automáticamente.</p>
+<h4>Por qué aprender</h4>
+<p>No necesitas aprender una herramienta nueva para publicar: Git sigue siendo la puerta de entrada.</p>
+<h4>Conceptos clave</h4>
+<p>Publicación automática: el servicio observa el repositorio y publica cuando llega una versión nueva. Branch main: la que se publica en la dirección oficial.</p>
+</div>
+</div>
+<div class="topic-item"><button onclick="toggleTopic(this)" aria-expanded="false" aria-controls="p-4-1-4"><span class="number">4</span><span>Dominio propio</span></button>
+<div class="topic-explanation" id="p-4-1-4">
+<h4>Qué es</h4>
+<p>En Settings → Domains de Vercel agregas tu dominio y el servicio muestra el registro DNS que debes configurar donde lo compraste.</p>
+<h4>Por qué aprender</h4>
+<p>Reemplaza la dirección .vercel.app por el nombre de tu marca.</p>
+<h4>Conceptos clave</h4>
+<p>Dominio: el nombre del sitio (tunegocio.com). DNS: la lista que indica a dónde apunta cada dominio. nslookup: consulta a dónde apunta un dominio en este momento.</p>
+</div>
+</div>
+<div class="topic-item"><button onclick="toggleTopic(this)" aria-expanded="false" aria-controls="p-4-1-5"><span class="number">5</span><span>Qué hace Supabase</span></button>
+<div class="topic-explanation" id="p-4-1-5">
+<h4>Qué es</h4>
+<p>Supabase le da a tu proyecto una base de datos, inicio de sesión de usuarios y almacenamiento de archivos, sin que tengas que instalar un servidor.</p>
+<h4>Por qué aprender</h4>
+<p>Es lo que transforma una página en un sistema: guardar contactos, pedidos y registros.</p>
+<h4>Conceptos clave</h4>
+<p>Base de datos: donde se guardan los registros. Inicio de sesión (autenticación): saber quién es el usuario. Clave del proyecto: la contraseña que usa tu código para comunicarse con Supabase.</p>
+</div>
+</div>
+<div class="topic-item"><button onclick="toggleTopic(this)" aria-expanded="false" aria-controls="p-4-1-6"><span class="number">6</span><span>Claves fuera del repositorio</span></button>
+<div class="topic-explanation" id="p-4-1-6">
+<h4>Qué es</h4>
+<p>Las claves de Supabase van en un archivo .env, y .gitignore impide que Git envíe ese archivo a GitHub.</p>
+<h4>Por qué aprender</h4>
+<p>Una clave publicada es una clave expuesta: cualquiera puede usar tu base de datos. En un repositorio público, esto puede pasar en cuestión de minutos.</p>
+<h4>Conceptos clave</h4>
+<p>.env: archivo con las claves y contraseñas del proyecto. .gitignore: lista de lo que Git no envía. Variable de entorno: la forma de pasar la clave al programa sin escribirla en el código.</p>
+</div>
+</div>
+<div class="actions"><a class="button primary" href="modulo-4-1.html">Ver completo →</a><button data-modal-src="modulo-4-1.html">Ver en ventana modal</button>
+</div>
+</article>
+</section>
+</main>
+<footer>
+<div class="wrap">OSWork Quick · en la práctica · INEMA.CLUB · v2.0.0<br>Comandos verificados en la documentación oficial el 07/10/2026. El progreso y las notas se guardan en este navegador; expórtalos desde tu recorrido.<br><a href="../../FONTES.md">Fuentes</a>
+</div>
+</footer>
+<dialog id="module-dialog" aria-labelledby="modal-title">
+<div class="actions"><strong id="modal-title">Módulo completo</strong><button onclick="document.getElementById('module-dialog').close()">Cerrar módulo</button>
+</div><iframe title="Contenido completo del módulo"></iframe>
+</dialog>
+<script src="../../assets/learn.js"></script><script src="../../assets/site.js"></script>
+</body>
+</html>

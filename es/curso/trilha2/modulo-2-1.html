@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="es" class="dark">
+<head><meta charset="utf-8"><script>(function(){try{var p=JSON.parse(localStorage.getItem('inema.prefs')||'{}'),d=document.documentElement;d.classList.toggle('dark',p.theme?p.theme!=='claro':true);if(p.theme)d.dataset.theme=p.theme;if(p.fontScale)d.style.setProperty('--fs-root',p.fontScale+'%');if(p.font)d.dataset.font=p.font;if(p.accent)d.dataset.accent=p.accent;if(p.lineWidth)d.style.setProperty('--measure',p.lineWidth+'ch');if(p.leading)d.style.setProperty('--leading',p.leading)}catch(e){document.documentElement.classList.add('dark')}})();</script>
+<meta name="viewport" content="width=device-width,initial-scale=1"><meta name="inema-course" content="oswork-quick-es"><title>Git, gh y clave SSH en GitHub · OSWork Quick</title><meta name="description" content="Abre la terminal de Windows, crea tu carpeta de proyectos, descubre dónde está todo, instala Claude Code o Codex, guarda el proyecto en GitHub con una clave SSH y llévalo a una VPS. Quien aprende a navegar en Windows navega en la VPS de la misma manera."><meta property="og:title" content="OSWork Quick — comando por comando."><meta property="og:image" content="https://inematds.github.io/oswork-quick/capa/capa.png">
+<link rel="canonical" href="https://inematds.github.io/oswork-quick/es/curso/trilha2/modulo-2-1.html"><link rel="alternate" hreflang="pt-BR" href="https://inematds.github.io/oswork-quick/curso/trilha2/modulo-2-1.html"><link rel="alternate" hreflang="en" href="https://inematds.github.io/oswork-quick/en/curso/trilha2/modulo-2-1.html"><link rel="alternate" hreflang="es" href="https://inematds.github.io/oswork-quick/es/curso/trilha2/modulo-2-1.html"><link rel="alternate" hreflang="x-default" href="https://inematds.github.io/oswork-quick/curso/trilha2/modulo-2-1.html">
+<script type="application/json" data-inema-manifest>{"course": "oswork-quick-es", "tracks": [{"n": "1", "title": "Tu computadora", "modules": [{"id": "1-1", "title": "Terminal, carpetas y agente en Windows", "topics": 7, "href": "../../curso/trilha1/modulo-1-1.html"}]}, {"n": "2", "title": "GitHub", "modules": [{"id": "2-1", "title": "Git, gh y clave SSH en GitHub", "topics": 6, "href": "../../curso/trilha2/modulo-2-1.html"}]}, {"n": "3", "title": "VPS", "modules": [{"id": "3-1", "title": "VPS: lo mismo, en un servidor", "topics": 6, "href": "../../curso/trilha3/modulo-3-1.html"}]}, {"n": "4", "title": "Panorama: Vercel y Supabase", "modules": [{"id": "4-1", "title": "Vercel y Supabase: una visión general", "topics": 6, "href": "../../curso/trilha4/modulo-4-1.html"}]}]}</script>
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../../assets/site.css"><link rel="stylesheet" href="../../assets/learn.css">
+<style>:root{--track:#60a5fa}html:not(.dark){--track:#1d4ed8}pre code{white-space:pre-wrap}.see{border-left:3px solid var(--track);padding:6px 0 6px 14px;margin:12px 0}.cmdbox{margin:14px 0}.hero>*{min-width:0}pre{overflow-wrap:anywhere}</style>
+</head>
+<body>
+<a class="skip" href="#conteudo">Saltar al contenido</a>
+<nav class="topnav" aria-label="Navegación principal">
+<div class="wrap">
+<div class="nav-main"><a class="brand" href="../../index.html">OSWork Quick<span aria-hidden="true">_</span></a><span aria-hidden="true">/</span><a class="text-sky-400" href="https://inema.club">INEMA.CLUB</a><span aria-hidden="true">-</span><a class="text-amber-700 dark:text-slate-300" href="https://inema.pro">PRO</a><span class="spacer"></span><button data-inema-journey-open>Mi recorrido</button><button data-inema-appearance-toggle="#aparencia" aria-expanded="false">Aa · Apariencia</button><button onclick="toggleTheme()" aria-label="Alternar entre tema claro y oscuro">◐ Tema</button>
+</div>
+<div class="nav-tracks"><a href="../../curso/trilha1/index.html" >T1<span class="long"> · Tu computadora</span></a><a href="../../curso/trilha2/index.html" aria-current="page">T2<span class="long"> · GitHub</span></a><a href="../../curso/trilha3/index.html" >T3<span class="long"> · VPS</span></a><a href="../../curso/trilha4/index.html" >T4<span class="long"> · Panorama: Vercel y Supabase</span></a><a href="../../materiais/index.html">Chuleta de comandos</a>
+</div>
+<div class="language-nav" data-os-languages><a href="../../../curso/trilha2/modulo-2-1.html" hreflang="pt-BR" lang="pt-BR">Português</a><a href="../../../en/curso/trilha2/modulo-2-1.html" hreflang="en" lang="en">English</a><a href="modulo-2-1.html" hreflang="es" lang="es" aria-current="page">Español</a>
+</div>
+<div id="aparencia" class="appearance" data-inema-appearance hidden>
+<div class="row"><button type="button" data-inema-set-theme="inema-dark">Oscuro</button><button type="button" data-inema-set-theme="claro">Claro</button><button type="button" data-inema-set-theme="sepia">Sepia</button><button type="button" data-inema-set-theme="foco">Enfoque</button><button type="button" data-inema-set-theme="contraste">Alto contraste</button>
+</div>
+<div class="row"><span>Tamaño</span><button data-inema-set-fontscale="100">100%</button><button data-inema-set-fontscale="112">112%</button><button data-inema-set-fontscale="125">125%</button><button data-inema-set-font="inter">Sin serifas</button><button data-inema-set-font="leitura">Con serifas</button><button data-inema-set-linewidth="60">Columna estrecha</button><button data-inema-set-linewidth="75">Columna amplia</button><button data-inema-set-leading="1.7">Interlineado cómodo</button>
+</div>
+</div>
+</div>
+</nav>
+<main id="conteudo" class="wrap">
+<div class="breadcrumbs"><a href="../../index.html">Inicio</a> / <a href="index.html">GitHub</a> / Módulo 2.1</div>
+<article id="modulo-2-1" data-inema-module="2-1" data-inema-track="2">
+<header class="hero">
+<div>
+<p class="kicker">MÓDULO 2.1 / 2 DE 4</p>
+<h1>Git, gh y clave SSH en GitHub</h1>
+<p>Conectar tu computadora a tu cuenta de GitHub con una clave SSH, crear el repositorio (público o privado) y publicar la página.</p>
+<div class="meter" data-inema-meter="modulo:2-1" role="progressbar" aria-label="Progreso" aria-valuemin="0" aria-valuemax="100"><span class="inema-meter-pct" data-inema-meter-pct>0%</span><span class="inema-meter-count" data-inema-meter-frac>0 de 0</span>
+</div>
+</div>
+<figure class="hero-panel"><svg class="w-full h-auto" viewBox="0 0 490 320" role="img" aria-label="Dile a Git quién eres → Crea tu clave SSH → Conecta gh a tu cuenta y envía la clave → Crea el repositorio y envía el proyecto → Publica la página en GitHub Pages → La rutina de todos los días"><defs><filter id="glow"><feGaussianBlur stdDeviation="1"/></filter></defs><path d="M10 10H480V305H10Z" fill="none" stroke="#334155" stroke-dasharray="3 7"/><rect x="20" y="25" width="215" height="65" rx="10" fill="#152234" stroke="#60a5fa"/><text x="36" y="50" fill="#cbd5e1" font-size="10" font-family="monospace">01 / OSWORK</text><text x="36" y="72" fill="#f1f5f9" font-size="14" font-family="sans-serif">Dile a Git quién eres</text><path d="M120 90v25" stroke="#60a5fa" stroke-width="2"/><rect x="255" y="25" width="215" height="65" rx="10" fill="#152234" stroke="#38bdf8"/><text x="271" y="50" fill="#cbd5e1" font-size="10" font-family="monospace">02 / OSWORK</text><text x="271" y="72" fill="#f1f5f9" font-size="14" font-family="sans-serif">Crea tu clave SSH</text><path d="M355 90v25" stroke="#60a5fa" stroke-width="2"/><rect x="20" y="115" width="215" height="65" rx="10" fill="#152234" stroke="#60a5fa"/><text x="36" y="140" fill="#cbd5e1" font-size="10" font-family="monospace">03 / OSWORK</text><text x="36" y="162" fill="#f1f5f9" font-size="14" font-family="sans-serif">Conecta gh a tu cuenta y envía la clave</text><path d="M120 180v25" stroke="#60a5fa" stroke-width="2"/><rect x="255" y="115" width="215" height="65" rx="10" fill="#152234" stroke="#38bdf8"/><text x="271" y="140" fill="#cbd5e1" font-size="10" font-family="monospace">04 / OSWORK</text><text x="271" y="162" fill="#f1f5f9" font-size="14" font-family="sans-serif">Crea el repositorio y envía el proyecto</text><path d="M355 180v25" stroke="#60a5fa" stroke-width="2"/><rect x="20" y="205" width="215" height="65" rx="10" fill="#152234" stroke="#60a5fa"/><text x="36" y="230" fill="#cbd5e1" font-size="10" font-family="monospace">05 / OSWORK</text><text x="36" y="252" fill="#f1f5f9" font-size="14" font-family="sans-serif">Publica la página en GitHub Pages</text><rect x="255" y="205" width="215" height="65" rx="10" fill="#152234" stroke="#38bdf8"/><text x="271" y="230" fill="#cbd5e1" font-size="10" font-family="monospace">06 / OSWORK</text><text x="271" y="252" fill="#f1f5f9" font-size="14" font-family="sans-serif">La rutina de todos los días</text></svg><figcaption class="help-note">Los pasos de este módulo, en el orden en que los vas a escribir.</figcaption>
+</figure>
+</header>
+<div class="stats">
+<div><strong>6</strong><span>pasos</span>
+</div>
+<div><strong>~20 min</strong><span>manos a la obra</span>
+</div>
+<div><strong>2/4</strong><span>ruta</span>
+</div>
+<div><strong>3</strong><span>idiomas · languages</span>
+</div>
+</div>
+<div class="reading-layout">
+<div>
+<section class="topic inema-prose" id="topico-1" data-inema-topic="modulo-2-1#topico-1">
+<h2><span class="number">1</span>Dile a Git quién eres</h2>
+<div class="cmdbox">
+<pre><code>git config --global user.name &quot;Tu Nombre&quot;
+git config --global user.email &quot;tu@correo.com&quot;
+git config --global --list</code>
+</pre><button data-copy-prev>Copiar bloque</button>
+</div>
+<p class="see" data-inema-block="m2-1-t1-see"><strong>Verás:</strong> user.name=Tu Nombre y user.email=tu@correo.com en la lista.</p>
+<h3>Qué es</h3>
+<p data-inema-block="m2-1-t1-p1">Usa el mismo correo electrónico de tu cuenta de GitHub. Se hace una vez por computadora.</p>
+<h3>Por qué aprender</h3>
+<p data-inema-block="m2-1-t1-p2">Cada versión guardada lleva tu nombre. GitHub usa el correo electrónico para vincular las versiones con tu cuenta.</p>
+<h3>Conceptos clave</h3>
+<p data-inema-block="m2-1-t1-p3">git config: configura Git. --global: se aplica a todos los proyectos de esta computadora. Commit: una versión guardada del proyecto, con autor y mensaje.</p>
+<aside class="tip">
+<h4>¿Hubo un error?</h4>
+<p data-inema-block="m2-1-t1-fix">¿Te equivocaste de nombre o correo electrónico? Ejecuta de nuevo el mismo comando con el valor correcto: reemplaza el anterior.</p>
+</aside>
+<div class="actions"><button type="button" data-inema-read-toggle aria-pressed="false"><span class="inema-read-icon" aria-hidden="true">○</span><span class="inema-read-label" data-inema-read-label>Marcar como leído</span></button><button type="button" data-inema-doubt-toggle aria-pressed="false">? Tengo una duda</button>
+</div>
+</section>
+<section class="topic inema-prose" id="topico-2" data-inema-topic="modulo-2-1#topico-2">
+<h2><span class="number">2</span>Crea tu clave SSH</h2>
+<div class="cmdbox">
+<pre><code>ssh-keygen -t ed25519 -C &quot;tu@correo.com&quot;
+explorer %USERPROFILE%\.ssh</code>
+</pre><button data-copy-prev>Copiar bloque</button>
+</div>
+<p class="see" data-inema-block="m2-1-t2-see"><strong>Verás:</strong> En la carpeta .ssh: id_ed25519 (clave privada) e id_ed25519.pub (clave pública).</p>
+<h3>Qué es</h3>
+<p data-inema-block="m2-1-t2-p1">Presiona Enter en las 3 preguntas para aceptar la ubicación predeterminada y continuar sin contraseña adicional. Después, el Explorador de archivos abre la carpeta donde quedaron las claves.</p>
+<h3>Por qué aprender</h3>
+<p data-inema-block="m2-1-t2-p2">La clave SSH es tu identidad sin contraseña: GitHub y la VPS reconocen tu computadora por ella.</p>
+<h3>Conceptos clave</h3>
+<p data-inema-block="m2-1-t2-p3">SSH: forma segura de conectar dos computadoras. Clave privada: se queda solo en tu máquina, nunca se envía. Clave pública (.pub): es la que entregas a GitHub y a la VPS.</p>
+<aside class="tip">
+<h4>¿Hubo un error?</h4>
+<p data-inema-block="m2-1-t2-fix">¿Te preguntó si quieres sobrescribir (Overwrite)? Ya tienes una clave. Responde n y usa la que ya existe.</p>
+</aside>
+<figure class="module-figure"><svg class="w-full h-auto" viewBox="0 0 490 134" role="img" aria-label="id_ed25519 · id_ed25519.pub"><rect x="12.0" y="14" width="235.0" height="58" rx="9" fill="#152234" stroke="#60a5fa"/><text x="24.0" y="40" fill="#f1f5f9" font-size="14" font-family="sans-serif">id_ed25519</text><text x="24.0" y="59" fill="#94a3b8" font-size="11" font-family="sans-serif">privada: se queda</text><rect x="255.0" y="14" width="235.0" height="58" rx="9" fill="#152234" stroke="#34d399"/><text x="267.0" y="40" fill="#f1f5f9" font-size="14" font-family="sans-serif">id_ed25519.pub</text><text x="267.0" y="59" fill="#94a3b8" font-size="11" font-family="sans-serif">pública: se entrega</text><path d="M251.0 72v14" stroke="#475569" stroke-width="2"/><rect x="12.0" y="86" width="478.0" height="40" rx="9" fill="#152234" stroke="#475569"/><text x="24.0" y="111.0" fill="#f1f5f9" font-size="14" font-family="sans-serif">GitHub y la VPS reciben solo la .pub</text></svg><figcaption class="help-note">Dos claves, dos destinos: la privada nunca sale de tu computadora; la pública va a GitHub y a la VPS.</figcaption>
+</figure>
+<div class="actions"><button type="button" data-inema-read-toggle aria-pressed="false"><span class="inema-read-icon" aria-hidden="true">○</span><span class="inema-read-label" data-inema-read-label>Marcar como leído</span></button><button type="button" data-inema-doubt-toggle aria-pressed="false">? Tengo una duda</button>
+</div>
+</section>
+<section class="topic inema-prose" id="topico-3" data-inema-topic="modulo-2-1#topico-3">
+<h2><span class="number">3</span>Conecta gh a tu cuenta y envía la clave</h2>
+<div class="cmdbox">
+<pre><code>gh auth login
+ssh -T git@github.com</code>
+</pre><button data-copy-prev>Copiar bloque</button>
+</div>
+<p class="see" data-inema-block="m2-1-t3-see"><strong>Verás:</strong> Hi TU-USUARIO! You&#x27;ve successfully authenticated.</p>
+<h3>Qué es</h3>
+<p data-inema-block="m2-1-t3-p1">Responde: GitHub.com → SSH → elige id_ed25519.pub → Login with a web browser. Copia el código, pégalo en el navegador y autoriza. Después prueba la clave; la primera vez responde yes.</p>
+<h3>Por qué aprender</h3>
+<p data-inema-block="m2-1-t3-p2">Un comando inicia sesión y envía tu clave pública a la cuenta, sin abrir la configuración del sitio.</p>
+<h3>Conceptos clave</h3>
+<p data-inema-block="m2-1-t3-p3">gh auth login: inicia sesión en tu cuenta de GitHub desde la terminal. Protocolo SSH: Git empieza a usar tu clave en vez de una contraseña. ssh -T: prueba la conexión sin abrir nada.</p>
+<aside class="tip">
+<h4>¿Hubo un error?</h4>
+<p data-inema-block="m2-1-t3-fix">¿gh mostró la clave con otro nombre o te ofreció generar una nueva? Elige la que termina en .pub en tu carpeta .ssh. “Permission denied (publickey)”: no se envió la clave; ejecuta gh auth login de nuevo y elige SSH.</p>
+</aside>
+<div class="actions"><button type="button" data-inema-read-toggle aria-pressed="false"><span class="inema-read-icon" aria-hidden="true">○</span><span class="inema-read-label" data-inema-read-label>Marcar como leído</span></button><button type="button" data-inema-doubt-toggle aria-pressed="false">? Tengo una duda</button>
+</div>
+</section>
+<section class="topic inema-prose" id="topico-4" data-inema-topic="modulo-2-1#topico-4">
+<h2><span class="number">4</span>Crea el repositorio y envía el proyecto</h2>
+<div class="cmdbox">
+<pre><code>cd %USERPROFILE%\proyectos\mi-sitio
+git init
+git add .
+git commit -m &quot;primera versión&quot;
+git branch -M main
+gh repo create mi-sitio --public --source=. --push</code>
+</pre><button data-copy-prev>Copiar bloque</button>
+</div>
+<p class="see" data-inema-block="m2-1-t4-see"><strong>Verás:</strong> La dirección https://github.com/TU-USUARIO/mi-sitio con tus archivos.</p>
+<h3>Qué es</h3>
+<p data-inema-block="m2-1-t4-p1">git init activa Git en la carpeta, add y commit guardan la primera versión, y gh crea el repositorio y envía todo. Para que sea privado, cambia --public por --private.</p>
+<h3>Por qué aprender</h3>
+<p data-inema-block="m2-1-t4-p2">Público: cualquier persona puede verlo (necesario para Pages gratis). Privado: solo tú y las personas que invites. Tú decides en cada proyecto.</p>
+<h3>Conceptos clave</h3>
+<p data-inema-block="m2-1-t4-p3">Repositorio: la carpeta del proyecto con todo el historial, guardada en GitHub. Branch main: la línea principal de versiones. Push: enviar las versiones a GitHub.</p>
+<aside class="tip">
+<h4>¿Hubo un error?</h4>
+<p data-inema-block="m2-1-t4-fix">¿“nothing to commit”? La carpeta está vacía: vuelve al paso 7 de la parte 1. ¿“Name already exists”? Ya tienes un repositorio con ese nombre: elige otro.</p>
+</aside>
+<figure class="module-figure"><svg class="w-full h-auto" viewBox="0 0 490 154" role="img" aria-label="git add · git commit · git push · Pages"><rect x="12.0" y="14" width="222.0" height="48" rx="9" fill="#152234" stroke="#60a5fa"/><text x="24.0" y="40" fill="#f1f5f9" font-size="14" font-family="sans-serif">git add</text><text x="24.0" y="59" fill="#94a3b8" font-size="11" font-family="sans-serif">prepara</text><path d="M240.0 38.0h22" stroke="#475569" stroke-width="2"/><path d="M256.0 33.0l6 5-6 5" fill="none" stroke="#475569" stroke-width="2"/><rect x="268.0" y="14" width="222.0" height="48" rx="9" fill="#152234" stroke="#34d399"/><text x="280.0" y="40" fill="#f1f5f9" font-size="14" font-family="sans-serif">git commit</text><text x="280.0" y="59" fill="#94a3b8" font-size="11" font-family="sans-serif">guarda</text><path d="M379.0 66v10H123.0v10" fill="none" stroke="#475569" stroke-width="2"/><path d="M118.0 80l5 6 5-6" fill="none" stroke="#475569" stroke-width="2"/><rect x="12.0" y="92" width="222.0" height="48" rx="9" fill="#152234" stroke="#60a5fa"/><text x="24.0" y="118" fill="#f1f5f9" font-size="14" font-family="sans-serif">git push</text><text x="24.0" y="137" fill="#94a3b8" font-size="11" font-family="sans-serif">envía</text><path d="M240.0 116.0h22" stroke="#475569" stroke-width="2"/><path d="M256.0 111.0l6 5-6 5" fill="none" stroke="#475569" stroke-width="2"/><rect x="268.0" y="92" width="222.0" height="48" rx="9" fill="#152234" stroke="#34d399"/><text x="280.0" y="118" fill="#f1f5f9" font-size="14" font-family="sans-serif">Pages</text><text x="280.0" y="137" fill="#94a3b8" font-size="11" font-family="sans-serif">publica</text></svg><figcaption class="help-note">Cuatro comandos desde el archivo hasta la página en línea.</figcaption>
+</figure>
+<div class="actions"><button type="button" data-inema-read-toggle aria-pressed="false"><span class="inema-read-icon" aria-hidden="true">○</span><span class="inema-read-label" data-inema-read-label>Marcar como leído</span></button><button type="button" data-inema-doubt-toggle aria-pressed="false">? Tengo una duda</button>
+</div>
+</section>
+<section class="topic inema-prose" id="topico-5" data-inema-topic="modulo-2-1#topico-5">
+<h2><span class="number">5</span>Publica la página en GitHub Pages</h2>
+<div class="cmdbox">
+<pre><code>gh api repos/{owner}/{repo}/pages -X POST -f &quot;source[branch]=main&quot; -f &quot;source[path]=/&quot;</code>
+</pre><button data-copy-prev>Copiar bloque</button>
+</div>
+<p class="see" data-inema-block="m2-1-t5-see"><strong>Verás:</strong> En unos minutos se abre la página en https://TU-USUARIO.github.io/mi-sitio/</p>
+<h3>Qué es</h3>
+<p data-inema-block="m2-1-t5-p1">Este comando activa GitHub Pages en el repositorio de la carpeta actual. También puedes hacerlo desde el sitio: Settings → Pages → branch main → Save.</p>
+<h3>Por qué aprender</h3>
+<p data-inema-block="m2-1-t5-p2">Obtienes un enlace público a la página que creó el agente, sin pagar por el alojamiento.</p>
+<h3>Conceptos clave</h3>
+<p data-inema-block="m2-1-t5-p3">GitHub Pages: alojamiento gratis de páginas a partir de un repositorio. {owner} y {repo}: gh los reemplaza automáticamente por tu usuario y el nombre del repositorio.</p>
+<aside class="tip">
+<h4>¿Hubo un error?</h4>
+<p data-inema-block="m2-1-t5-fix">¿Aparece un error 404 justo después? Espera de 2 a 10 minutos y vuelve a cargar la página. ¿Error sobre el plan? Pages gratis solo funciona en un repositorio público.</p>
+</aside>
+<div class="actions"><button type="button" data-inema-read-toggle aria-pressed="false"><span class="inema-read-icon" aria-hidden="true">○</span><span class="inema-read-label" data-inema-read-label>Marcar como leído</span></button><button type="button" data-inema-doubt-toggle aria-pressed="false">? Tengo una duda</button>
+</div>
+</section>
+<section class="topic inema-prose" id="topico-6" data-inema-topic="modulo-2-1#topico-6">
+<h2><span class="number">6</span>La rutina de todos los días</h2>
+<div class="cmdbox">
+<pre><code>git status
+git add .
+git commit -m &quot;qué cambió&quot;
+git push</code>
+</pre><button data-copy-prev>Copiar bloque</button>
+</div>
+<p class="see" data-inema-block="m2-1-t6-see"><strong>Verás:</strong> git status muestra qué cambió; después del push, el cambio aparece en GitHub y, en unos minutos, en la página.</p>
+<h3>Qué es</h3>
+<p data-inema-block="m2-1-t6-p1">¿Cambiaste algo? Revisa qué cambió, guarda una versión con una frase y envíala. O pídele al agente: guarda y envía a GitHub.</p>
+<h3>Por qué aprender</h3>
+<p data-inema-block="m2-1-t6-p2">Cada commit es un punto de regreso. Si algo se rompe, puedes recuperar la versión anterior.</p>
+<h3>Conceptos clave</h3>
+<p data-inema-block="m2-1-t6-p3">git status: muestra qué cambió desde la última versión. Mensaje del commit: una frase que dice qué cambió, para que puedas encontrarlo después.</p>
+<aside class="tip">
+<h4>¿Hubo un error?</h4>
+<p data-inema-block="m2-1-t6-fix">¿Se rechazó el push con “fetch first”? Alguien (o tú desde otra computadora) cambió el repositorio. Ejecuta git pull y después git push.</p>
+</aside>
+<figure class="module-figure"><svg class="w-full h-auto" viewBox="0 0 490 88" role="img" aria-label="primera versión · ajuste del texto · nueva sección"><path d="M30 40h430" stroke="#475569" stroke-width="2"/><circle cx="30.0" cy="40" r="9" fill="#152234" stroke="#60a5fa" stroke-width="3"/><text x="30.0" y="72" text-anchor="start" fill="#f1f5f9" font-size="14" font-family="sans-serif">primera versión</text><text x="30.0" y="22" text-anchor="start" fill="#94a3b8" font-size="11" font-family="monospace">commit 1</text><circle cx="245.0" cy="40" r="9" fill="#152234" stroke="#38bdf8" stroke-width="3"/><text x="245.0" y="72" text-anchor="middle" fill="#f1f5f9" font-size="14" font-family="sans-serif">ajuste del texto</text><text x="245.0" y="22" text-anchor="middle" fill="#94a3b8" font-size="11" font-family="monospace">commit 2</text><circle cx="460.0" cy="40" r="9" fill="#152234" stroke="#60a5fa" stroke-width="3"/><text x="460.0" y="72" text-anchor="end" fill="#f1f5f9" font-size="14" font-family="sans-serif">nueva sección</text><text x="460.0" y="22" text-anchor="end" fill="#94a3b8" font-size="11" font-family="monospace">commit 3</text></svg><figcaption class="help-note">Cada commit es un punto de regreso. La rutina diaria solo agrega puntos a la línea.</figcaption>
+</figure>
+<div class="actions"><button type="button" data-inema-read-toggle aria-pressed="false"><span class="inema-read-icon" aria-hidden="true">○</span><span class="inema-read-label" data-inema-read-label>Marcar como leído</span></button><button type="button" data-inema-doubt-toggle aria-pressed="false">? Tengo una duda</button>
+</div>
+</section>
+</div>
+<nav class="toc" data-inema-toc aria-label="EN ESTA CLASE">
+<p class="kicker">EN ESTA CLASE</p>
+<ul>
+<li><a class="inema-toc-link" href="#topico-1">1. Dile a Git quién eres</a>
+</li>
+<li><a class="inema-toc-link" href="#topico-2">2. Crea tu clave SSH</a>
+</li>
+<li><a class="inema-toc-link" href="#topico-3">3. Conecta gh a tu cuenta y envía la clave</a>
+</li>
+<li><a class="inema-toc-link" href="#topico-4">4. Crea el repositorio y envía el proyecto</a>
+</li>
+<li><a class="inema-toc-link" href="#topico-5">5. Publica la página en GitHub Pages</a>
+</li>
+<li><a class="inema-toc-link" href="#topico-6">6. La rutina de todos los días</a>
+</li>
+</ul><a href="#laboratorio">Laboratorio final ↓</a>
+</nav>
+</div>
+<section class="lab" id="laboratorio">
+<p class="kicker">MANOS A LA OBRA / ~20 MIN</p>
+<h2>Tu proyecto en GitHub y la página en línea</h2>
+<p>Marca cada elemento cuando funcione de verdad en tu computadora, no cuando termines de leer.</p>
+<ol class="checklist">
+<li><label><input type="checkbox" data-task="2-1-1"><span>git config muestra mi nombre y correo electrónico.</span></label>
+</li>
+<li><label><input type="checkbox" data-task="2-1-2"><span>Vi id_ed25519 y id_ed25519.pub en el Explorador de archivos.</span></label>
+</li>
+<li><label><input type="checkbox" data-task="2-1-3"><span>ssh -T git@github.com respondió Hi TU-USUARIO.</span></label>
+</li>
+<li><label><input type="checkbox" data-task="2-1-4"><span>El repositorio mi-sitio aparece en github.com/TU-USUARIO.</span></label>
+</li>
+<li><label><input type="checkbox" data-task="2-1-5"><span>La página se abre en https://TU-USUARIO.github.io/mi-sitio/.</span></label>
+</li>
+<li><label><input type="checkbox" data-task="2-1-6"><span>Cambié algo, ejecuté add, commit y push, y el cambio apareció en GitHub.</span></label>
+</li>
+</ol>
+<h3>Chuleta de la parte 2</h3>
+<pre><code>git config --global user.name &quot;Tu Nombre&quot;
+git config --global user.email &quot;tu@correo.com&quot;
+git config --global --list
+ssh-keygen -t ed25519 -C &quot;tu@correo.com&quot;
+explorer %USERPROFILE%\.ssh
+gh auth login
+ssh -T git@github.com
+cd %USERPROFILE%\proyectos\mi-sitio
+git init
+git add .
+git commit -m &quot;primera versión&quot;
+git branch -M main
+gh repo create mi-sitio --public --source=. --push
+gh api repos/{owner}/{repo}/pages -X POST -f &quot;source[branch]=main&quot; -f &quot;source[path]=/&quot;
+git status
+git add .
+git commit -m &quot;qué cambió&quot;
+git push</code>
+</pre><button data-copy-prev>Copiar bloque</button>
+<h3>Criterio para terminar</h3>
+<p>Conectar tu computadora a tu cuenta de GitHub con una clave SSH, crear el repositorio (público o privado) y publicar la página.</p>
+</section>
+<section class="band">
+<h2>Revisa lo que aprendiste</h2>
+<p>Alguien te pidió tu clave para “configurar el acceso”. ¿Cuál de los dos archivos puedes enviar?</p>
+<details>
+<summary>Ver respuesta comentada</summary>
+<p>Solo id_ed25519.pub, la clave pública. id_ed25519, sin .pub, es la privada: quien tenga ese archivo puede entrar como tú.</p>
+</details>
+</section>
+<div class="actions"><a class="button" href="../../curso/trilha1/modulo-1-1.html">← Anterior</a><a class="button" href="index.html">Volver a la ruta</a><a class="button primary" href="../../curso/trilha3/modulo-3-1.html">Siguiente módulo →</a>
+</div>
+</article>
+</main>
+<footer>
+<div class="wrap">OSWork Quick · en la práctica · INEMA.CLUB · v2.0.0<br>Comandos verificados en la documentación oficial el 07/10/2026. El progreso y las notas se guardan en este navegador; expórtalos desde tu recorrido.<br><a href="../../FONTES.md">Fuentes</a>
+</div>
+</footer>
+<dialog id="module-dialog" aria-labelledby="modal-title">
+<div class="actions"><strong id="modal-title">Módulo completo</strong><button onclick="document.getElementById('module-dialog').close()">Cerrar módulo</button>
+</div><iframe title="Contenido completo del módulo"></iframe>
+</dialog>
+<script src="../../assets/learn.js"></script><script src="../../assets/site.js"></script>
+</body>
+</html>

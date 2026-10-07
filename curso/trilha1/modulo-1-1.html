@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="pt-BR" class="dark">
+<head><meta charset="utf-8"><script>(function(){try{var p=JSON.parse(localStorage.getItem('inema.prefs')||'{}'),d=document.documentElement;d.classList.toggle('dark',p.theme?p.theme!=='claro':true);if(p.theme)d.dataset.theme=p.theme;if(p.fontScale)d.style.setProperty('--fs-root',p.fontScale+'%');if(p.font)d.dataset.font=p.font;if(p.accent)d.dataset.accent=p.accent;if(p.lineWidth)d.style.setProperty('--measure',p.lineWidth+'ch');if(p.leading)d.style.setProperty('--leading',p.leading)}catch(e){document.documentElement.classList.add('dark')}})();</script>
+<meta name="viewport" content="width=device-width,initial-scale=1"><meta name="inema-course" content="oswork-quick"><title>Terminal, pastas e agente no Windows · OSWork Quick</title><meta name="description" content="Abra o terminal do Windows, crie a sua pasta de projetos, veja onde tudo fica, instale o Claude Code ou o Codex, guarde no GitHub com chave SSH e leve o projeto para uma VPS. Quem aprende a navegar no Windows navega na VPS do mesmo jeito."><meta property="og:title" content="OSWork Quick — comando por comando."><meta property="og:image" content="https://inematds.github.io/oswork-quick/capa/capa.png">
+<link rel="canonical" href="https://inematds.github.io/oswork-quick/curso/trilha1/modulo-1-1.html"><link rel="alternate" hreflang="pt-BR" href="https://inematds.github.io/oswork-quick/curso/trilha1/modulo-1-1.html"><link rel="alternate" hreflang="en" href="https://inematds.github.io/oswork-quick/en/curso/trilha1/modulo-1-1.html"><link rel="alternate" hreflang="es" href="https://inematds.github.io/oswork-quick/es/curso/trilha1/modulo-1-1.html"><link rel="alternate" hreflang="x-default" href="https://inematds.github.io/oswork-quick/curso/trilha1/modulo-1-1.html">
+<script type="application/json" data-inema-manifest>{"course": "oswork-quick", "tracks": [{"n": "1", "title": "Seu computador", "modules": [{"id": "1-1", "title": "Terminal, pastas e agente no Windows", "topics": 7, "href": "../../curso/trilha1/modulo-1-1.html"}]}, {"n": "2", "title": "GitHub", "modules": [{"id": "2-1", "title": "Git, gh e chave SSH no GitHub", "topics": 6, "href": "../../curso/trilha2/modulo-2-1.html"}]}, {"n": "3", "title": "VPS", "modules": [{"id": "3-1", "title": "VPS: o mesmo, num servidor", "topics": 6, "href": "../../curso/trilha3/modulo-3-1.html"}]}, {"n": "4", "title": "Visão: Vercel e Supabase", "modules": [{"id": "4-1", "title": "Vercel e Supabase: a visão", "topics": 6, "href": "../../curso/trilha4/modulo-4-1.html"}]}]}</script>
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../../assets/site.css"><link rel="stylesheet" href="../../assets/learn.css">
+<style>:root{--track:#34d399}html:not(.dark){--track:#047857}pre code{white-space:pre-wrap}.see{border-left:3px solid var(--track);padding:6px 0 6px 14px;margin:12px 0}.cmdbox{margin:14px 0}.hero>*{min-width:0}pre{overflow-wrap:anywhere}</style>
+</head>
+<body>
+<a class="skip" href="#conteudo">Pular para conteúdo</a>
+<nav class="topnav" aria-label="Navegação principal">
+<div class="wrap">
+<div class="nav-main"><a class="brand" href="../../index.html">OSWork Quick<span aria-hidden="true">_</span></a><span aria-hidden="true">/</span><a class="text-sky-400" href="https://inema.club">INEMA.CLUB</a><span aria-hidden="true">-</span><a class="text-amber-700 dark:text-slate-300" href="https://inema.pro">PRO</a><span class="spacer"></span><button data-inema-journey-open>Minha jornada</button><button data-inema-appearance-toggle="#aparencia" aria-expanded="false">Aa · Aparência</button><button onclick="toggleTheme()" aria-label="Alternar tema claro e escuro">◐ Tema</button>
+</div>
+<div class="nav-tracks"><a href="../../curso/trilha1/index.html" aria-current="page">T1<span class="long"> · Seu computador</span></a><a href="../../curso/trilha2/index.html" >T2<span class="long"> · GitHub</span></a><a href="../../curso/trilha3/index.html" >T3<span class="long"> · VPS</span></a><a href="../../curso/trilha4/index.html" >T4<span class="long"> · Visão: Vercel e Supabase</span></a><a href="../../materiais/index.html">Cola de comandos</a>
+</div>
+<div class="language-nav" data-os-languages><a href="modulo-1-1.html" hreflang="pt-BR" lang="pt-BR" aria-current="page">Português</a><a href="../../en/curso/trilha1/modulo-1-1.html" hreflang="en" lang="en">English</a><a href="../../es/curso/trilha1/modulo-1-1.html" hreflang="es" lang="es">Español</a>
+</div>
+<div id="aparencia" class="appearance" data-inema-appearance hidden>
+<div class="row"><button type="button" data-inema-set-theme="inema-dark">Escuro</button><button type="button" data-inema-set-theme="claro">Claro</button><button type="button" data-inema-set-theme="sepia">Sépia</button><button type="button" data-inema-set-theme="foco">Foco</button><button type="button" data-inema-set-theme="contraste">Alto contraste</button>
+</div>
+<div class="row"><span>Tamanho</span><button data-inema-set-fontscale="100">100%</button><button data-inema-set-fontscale="112">112%</button><button data-inema-set-fontscale="125">125%</button><button data-inema-set-font="inter">Sem serifa</button><button data-inema-set-font="leitura">Serifa</button><button data-inema-set-linewidth="60">Coluna estreita</button><button data-inema-set-linewidth="75">Coluna ampla</button><button data-inema-set-leading="1.7">Entrelinha confortável</button>
+</div>
+</div>
+</div>
+</nav>
+<main id="conteudo" class="wrap">
+<div class="breadcrumbs"><a href="../../index.html">Início</a> / <a href="index.html">Seu computador</a> / Módulo 1.1</div>
+<article id="modulo-1-1" data-inema-module="1-1" data-inema-track="1">
+<header class="hero">
+<div>
+<p class="kicker">MÓDULO 1.1 / 1 DE 4</p>
+<h1>Terminal, pastas e agente no Windows</h1>
+<p>Criar a pasta projetos\meu-site pelo cmd, ver a mesma pasta no Explorador e pôr o Claude Code ou o Codex para trabalhar nela.</p>
+<div class="meter" data-inema-meter="modulo:1-1" role="progressbar" aria-label="Progresso" aria-valuemin="0" aria-valuemax="100"><span class="inema-meter-pct" data-inema-meter-pct>0%</span><span class="inema-meter-count" data-inema-meter-frac>0 de 0</span>
+</div>
+</div>
+<figure class="hero-panel"><svg class="w-full h-auto" viewBox="0 0 490 320" role="img" aria-label="Abra o terminal → Crie a pasta projetos e a do primeiro projeto → Veja no Windows onde tudo fica → Navegue com 6 comandos → Instale Git, GitHub CLI e Node (uma vez) → Instale o agente: Claude Code ou Codex"><defs><filter id="glow"><feGaussianBlur stdDeviation="1"/></filter></defs><path d="M10 10H480V305H10Z" fill="none" stroke="#334155" stroke-dasharray="3 7"/><rect x="20" y="25" width="215" height="65" rx="10" fill="#152234" stroke="#34d399"/><text x="36" y="50" fill="#cbd5e1" font-size="10" font-family="monospace">01 / OSWORK</text><text x="36" y="72" fill="#f1f5f9" font-size="14" font-family="sans-serif">Abra o terminal</text><path d="M120 90v25" stroke="#34d399" stroke-width="2"/><rect x="255" y="25" width="215" height="65" rx="10" fill="#152234" stroke="#38bdf8"/><text x="271" y="50" fill="#cbd5e1" font-size="10" font-family="monospace">02 / OSWORK</text><text x="271" y="72" fill="#f1f5f9" font-size="14" font-family="sans-serif">Crie a pasta projetos e a do primeiro projeto</text><path d="M355 90v25" stroke="#34d399" stroke-width="2"/><rect x="20" y="115" width="215" height="65" rx="10" fill="#152234" stroke="#34d399"/><text x="36" y="140" fill="#cbd5e1" font-size="10" font-family="monospace">03 / OSWORK</text><text x="36" y="162" fill="#f1f5f9" font-size="14" font-family="sans-serif">Veja no Windows onde tudo fica</text><path d="M120 180v25" stroke="#34d399" stroke-width="2"/><rect x="255" y="115" width="215" height="65" rx="10" fill="#152234" stroke="#38bdf8"/><text x="271" y="140" fill="#cbd5e1" font-size="10" font-family="monospace">04 / OSWORK</text><text x="271" y="162" fill="#f1f5f9" font-size="14" font-family="sans-serif">Navegue com 6 comandos</text><path d="M355 180v25" stroke="#34d399" stroke-width="2"/><rect x="20" y="205" width="215" height="65" rx="10" fill="#152234" stroke="#34d399"/><text x="36" y="230" fill="#cbd5e1" font-size="10" font-family="monospace">05 / OSWORK</text><text x="36" y="252" fill="#f1f5f9" font-size="14" font-family="sans-serif">Instale Git, GitHub CLI e Node (uma vez)</text><rect x="255" y="205" width="215" height="65" rx="10" fill="#152234" stroke="#38bdf8"/><text x="271" y="230" fill="#cbd5e1" font-size="10" font-family="monospace">06 / OSWORK</text><text x="271" y="252" fill="#f1f5f9" font-size="14" font-family="sans-serif">Instale o agente: Claude Code ou Codex</text></svg><figcaption class="help-note">Os passos deste módulo, na ordem em que você vai digitar.</figcaption>
+</figure>
+</header>
+<div class="stats">
+<div><strong>7</strong><span>passos</span>
+</div>
+<div><strong>~25 min</strong><span>mão na massa</span>
+</div>
+<div><strong>1/4</strong><span>trilha</span>
+</div>
+<div><strong>3</strong><span>idiomas · languages</span>
+</div>
+</div>
+<div class="reading-layout">
+<div>
+<section class="topic inema-prose" id="topico-1" data-inema-topic="modulo-1-1#topico-1">
+<h2><span class="number">1</span>Abra o terminal</h2>
+<div class="cmdbox">
+<pre><code>cd</code>
+</pre><button data-copy-prev>Copiar bloco</button>
+</div>
+<p class="see" data-inema-block="m1-1-t1-see"><strong>Você vê:</strong> C:\Users\SeuNome — o caminho da pasta onde o terminal está agora.</p>
+<h3>O que é</h3>
+<p data-inema-block="m1-1-t1-p1">Aperte a tecla Windows, digite cmd e aperte Enter. Abre uma janela preta: o Prompt de Comando. O cd sozinho mostra em que pasta você está.</p>
+<h3>Por que aprender</h3>
+<p data-inema-block="m1-1-t1-p2">Tudo neste curso começa aqui. O terminal é só outra janela para as mesmas pastas que você já vê no Windows.</p>
+<h3>Conceitos-chave</h3>
+<p data-inema-block="m1-1-t1-p3">Terminal: janela onde você escreve comandos em vez de clicar. cmd: o terminal clássico do Windows. Pasta pessoal: C:\Users\SeuNome, onde ficam Documentos, Downloads e agora os seus projetos.</p>
+<aside class="tip">
+<h4>Deu erro?</h4>
+<p data-inema-block="m1-1-t1-fix">Abriu uma janela azul com PS no começo? É o PowerShell. Os comandos deste curso funcionam nele também, menos o de instalação do Claude Code (use a versão para PowerShell na documentação oficial) e o %USERPROFILE% (troque por ~).</p>
+</aside>
+<div class="actions"><button type="button" data-inema-read-toggle aria-pressed="false"><span class="inema-read-icon" aria-hidden="true">○</span><span class="inema-read-label" data-inema-read-label>Marcar como lido</span></button><button type="button" data-inema-doubt-toggle aria-pressed="false">? Tenho dúvida</button>
+</div>
+</section>
+<section class="topic inema-prose" id="topico-2" data-inema-topic="modulo-1-1#topico-2">
+<h2><span class="number">2</span>Crie a pasta projetos e a do primeiro projeto</h2>
+<div class="cmdbox">
+<pre><code>cd %USERPROFILE%
+mkdir projetos
+cd projetos
+mkdir meu-site
+cd meu-site</code>
+</pre><button data-copy-prev>Copiar bloco</button>
+</div>
+<p class="see" data-inema-block="m1-1-t2-see"><strong>Você vê:</strong> C:\Users\SeuNome\projetos\meu-site&gt;</p>
+<h3>O que é</h3>
+<p data-inema-block="m1-1-t2-p1">Digite um comando por vez e aperte Enter depois de cada um. mkdir cria a pasta; cd entra nela.</p>
+<h3>Por que aprender</h3>
+<p data-inema-block="m1-1-t2-p2">Uma pasta por projeto é a regra que organiza todo o resto: o agente, o Git e a VPS trabalham sempre dentro dela.</p>
+<h3>Conceitos-chave</h3>
+<p data-inema-block="m1-1-t2-p3">%USERPROFILE%: atalho para a sua pasta pessoal, vale em qualquer computador. mkdir (make directory): cria uma pasta. cd (change directory): entra numa pasta.</p>
+<aside class="tip">
+<h4>Deu erro?</h4>
+<p data-inema-block="m1-1-t2-fix">Apareceu “Já existe uma subpasta ou um arquivo projetos”? Ótimo, ela já existe. Siga para o próximo comando.</p>
+</aside>
+<figure class="module-figure"><svg class="w-full h-auto" viewBox="0 0 490 152" role="img" aria-label="C:\Users\SeuNome\ · projetos\ · meu-site\ · index.html · AGENTS.md"><rect x="4" y="8" width="482" height="138" rx="10" fill="#152234" stroke="#34d399"/><text x="16" y="26" fill="#f1f5f9" font-size="14" font-family="monospace">C:\Users\SeuNome\</text><text x="42" y="52" fill="#f1f5f9" font-size="14" font-family="monospace">projetos\</text><text x="68" y="78" fill="#94a3b8" font-size="14" font-family="monospace">meu-site\</text><text x="94" y="104" fill="#94a3b8" font-size="14" font-family="monospace">index.html</text><text x="94" y="130" fill="#94a3b8" font-size="14" font-family="monospace">AGENTS.md</text></svg><figcaption class="help-note">O mesmo lugar nas duas janelas: o terminal mostra o caminho, o Explorador mostra as pastas.</figcaption>
+</figure>
+<div class="actions"><button type="button" data-inema-read-toggle aria-pressed="false"><span class="inema-read-icon" aria-hidden="true">○</span><span class="inema-read-label" data-inema-read-label>Marcar como lido</span></button><button type="button" data-inema-doubt-toggle aria-pressed="false">? Tenho dúvida</button>
+</div>
+</section>
+<section class="topic inema-prose" id="topico-3" data-inema-topic="modulo-1-1#topico-3">
+<h2><span class="number">3</span>Veja no Windows onde tudo fica</h2>
+<div class="cmdbox">
+<pre><code>explorer .</code>
+</pre><button data-copy-prev>Copiar bloco</button>
+</div>
+<p class="see" data-inema-block="m1-1-t3-see"><strong>Você vê:</strong> O Explorador de Arquivos aberto em meu-site, dentro de projetos, dentro da sua pasta pessoal.</p>
+<h3>O que é</h3>
+<p data-inema-block="m1-1-t3-p1">explorer abre o Explorador de Arquivos; o ponto quer dizer “a pasta onde eu estou”. É o passo mais importante do curso.</p>
+<h3>Por que aprender</h3>
+<p data-inema-block="m1-1-t3-p2">Quando você vê as duas janelas mostrando o mesmo lugar, o terminal deixa de ser mistério: o que você cria num aparece no outro.</p>
+<h3>Conceitos-chave</h3>
+<p data-inema-block="m1-1-t3-p3">Explorador de Arquivos: a janela de pastas do Windows. Ponto (.): a pasta atual. Dois pontos (..): a pasta de cima.</p>
+<aside class="tip">
+<h4>Deu erro?</h4>
+<p data-inema-block="m1-1-t3-fix">Abriu a pasta Documentos ou outra? Você não estava em meu-site. Digite cd para ver onde está e repita o passo 2.</p>
+</aside>
+<figure class="module-figure"><svg class="w-full h-auto" viewBox="0 0 490 154" role="img" aria-label="cmd · cd meu-site · explorer . · Explorador"><rect x="12.0" y="14" width="222.0" height="48" rx="9" fill="#152234" stroke="#34d399"/><text x="24.0" y="40" fill="#f1f5f9" font-size="14" font-family="sans-serif">cmd</text><text x="24.0" y="59" fill="#94a3b8" font-size="11" font-family="sans-serif">o terminal</text><path d="M240.0 38.0h22" stroke="#475569" stroke-width="2"/><path d="M256.0 33.0l6 5-6 5" fill="none" stroke="#475569" stroke-width="2"/><rect x="268.0" y="14" width="222.0" height="48" rx="9" fill="#152234" stroke="#38bdf8"/><text x="280.0" y="40" fill="#f1f5f9" font-size="14" font-family="sans-serif">cd meu-site</text><text x="280.0" y="59" fill="#94a3b8" font-size="11" font-family="sans-serif">entrar</text><path d="M379.0 66v10H123.0v10" fill="none" stroke="#475569" stroke-width="2"/><path d="M118.0 80l5 6 5-6" fill="none" stroke="#475569" stroke-width="2"/><rect x="12.0" y="92" width="222.0" height="48" rx="9" fill="#152234" stroke="#34d399"/><text x="24.0" y="118" fill="#f1f5f9" font-size="14" font-family="sans-serif">explorer .</text><text x="24.0" y="137" fill="#94a3b8" font-size="11" font-family="sans-serif">abrir no Windows</text><path d="M240.0 116.0h22" stroke="#475569" stroke-width="2"/><path d="M256.0 111.0l6 5-6 5" fill="none" stroke="#475569" stroke-width="2"/><rect x="268.0" y="92" width="222.0" height="48" rx="9" fill="#152234" stroke="#38bdf8"/><text x="280.0" y="118" fill="#f1f5f9" font-size="14" font-family="sans-serif">Explorador</text><text x="280.0" y="137" fill="#94a3b8" font-size="11" font-family="sans-serif">a mesma pasta</text></svg><figcaption class="help-note">Do cmd ao Explorador em um comando: o ponto quer dizer a pasta onde você está.</figcaption>
+</figure>
+<div class="actions"><button type="button" data-inema-read-toggle aria-pressed="false"><span class="inema-read-icon" aria-hidden="true">○</span><span class="inema-read-label" data-inema-read-label>Marcar como lido</span></button><button type="button" data-inema-doubt-toggle aria-pressed="false">? Tenho dúvida</button>
+</div>
+</section>
+<section class="topic inema-prose" id="topico-4" data-inema-topic="modulo-1-1#topico-4">
+<h2><span class="number">4</span>Navegue com 6 comandos</h2>
+<div class="cmdbox">
+<pre><code>cd ..
+dir
+cd meu-site
+dir</code>
+</pre><button data-copy-prev>Copiar bloco</button>
+</div>
+<p class="see" data-inema-block="m1-1-t4-see"><strong>Você vê:</strong> O dir lista o que tem em cada pasta; depois do cd meu-site o caminho volta a terminar em meu-site.</p>
+<h3>O que é</h3>
+<p data-inema-block="m1-1-t4-p1">Seis comandos bastam para andar pelas pastas: dir lista, cd nome entra, cd .. volta uma pasta, mkdir nome cria, explorer . abre no Windows e cls limpa a tela.</p>
+<h3>Por que aprender</h3>
+<p data-inema-block="m1-1-t4-p2">Com esses seis você nunca se perde, e na VPS vai usar os mesmos com outros nomes.</p>
+<h3>Conceitos-chave</h3>
+<p data-inema-block="m1-1-t4-p3">dir: lista arquivos e pastas. cd ..: sobe uma pasta. cls: limpa a tela sem apagar nada. Tecla Tab: completa o nome de pastas e arquivos enquanto você digita.</p>
+<aside class="tip">
+<h4>Deu erro?</h4>
+<p data-inema-block="m1-1-t4-fix">“O sistema não pode encontrar o caminho especificado”? O nome está errado ou a pasta não existe aqui. Rode dir e copie o nome exato.</p>
+</aside>
+<div class="actions"><button type="button" data-inema-read-toggle aria-pressed="false"><span class="inema-read-icon" aria-hidden="true">○</span><span class="inema-read-label" data-inema-read-label>Marcar como lido</span></button><button type="button" data-inema-doubt-toggle aria-pressed="false">? Tenho dúvida</button>
+</div>
+</section>
+<section class="topic inema-prose" id="topico-5" data-inema-topic="modulo-1-1#topico-5">
+<h2><span class="number">5</span>Instale Git, GitHub CLI e Node (uma vez)</h2>
+<div class="cmdbox">
+<pre><code>winget install --id Git.Git -e
+winget install --id GitHub.cli -e
+winget install --id OpenJS.NodeJS.LTS -e</code>
+</pre><button data-copy-prev>Copiar bloco</button>
+</div>
+<p class="see" data-inema-block="m1-1-t5-see"><strong>Você vê:</strong> Mensagens de download e “Instalado com êxito”. Depois feche o cmd, abra de novo e rode git --version e gh --version: aparecem números de versão.</p>
+<h3>O que é</h3>
+<p data-inema-block="m1-1-t5-p1">O winget é o instalador de programas que já vem no Windows 10 e 11. Ele baixa cada programa da fonte oficial.</p>
+<h3>Por que aprender</h3>
+<p data-inema-block="m1-1-t5-p2">Git guarda versões, gh conversa com o GitHub e Node é necessário para instalar o Codex. Sem eles as partes 2 e 3 não funcionam.</p>
+<h3>Conceitos-chave</h3>
+<p data-inema-block="m1-1-t5-p3">winget: instalador do Windows por linha de comando. Git: programa que guarda o histórico do projeto. gh (GitHub CLI): o GitHub dentro do terminal. Node: motor que roda programas em JavaScript, como o Codex.</p>
+<aside class="tip">
+<h4>Deu erro?</h4>
+<p data-inema-block="m1-1-t5-fix">O winget perguntou se você aceita os termos da origem? Digite Y e Enter. “git não é reconhecido”? Você não fechou e reabriu o cmd depois de instalar.</p>
+</aside>
+<div class="actions"><button type="button" data-inema-read-toggle aria-pressed="false"><span class="inema-read-icon" aria-hidden="true">○</span><span class="inema-read-label" data-inema-read-label>Marcar como lido</span></button><button type="button" data-inema-doubt-toggle aria-pressed="false">? Tenho dúvida</button>
+</div>
+</section>
+<section class="topic inema-prose" id="topico-6" data-inema-topic="modulo-1-1#topico-6">
+<h2><span class="number">6</span>Instale o agente: Claude Code ou Codex</h2>
+<div class="cmdbox">
+<pre><code>curl -fsSL https://claude.ai/install.cmd -o install.cmd &amp;&amp; install.cmd &amp;&amp; del install.cmd
+npm install -g @openai/codex</code>
+</pre><button data-copy-prev>Copiar bloco</button>
+</div>
+<p class="see" data-inema-block="m1-1-t6-see"><strong>Você vê:</strong> A primeira linha instala o Claude Code; a segunda, o Codex. Numa janela nova, claude --version ou codex --version mostram a versão.</p>
+<h3>O que é</h3>
+<p data-inema-block="m1-1-t6-p1">Escolha um, ou os dois. Na primeira vez que abrir, o agente pede para entrar: use a sua assinatura (Claude Pro ou Max, ChatGPT Plus ou Pro).</p>
+<h3>Por que aprender</h3>
+<p data-inema-block="m1-1-t6-p2">O agente é quem trabalha por você dentro da pasta: lê, cria e altera arquivos com a sua autorização.</p>
+<h3>Conceitos-chave</h3>
+<p data-inema-block="m1-1-t6-p3">Agente: uma IA que executa tarefas no seu computador, não só conversa. Claude Code: o agente da Anthropic. Codex: o agente da OpenAI. Assinatura: o login da sua conta, sem chave de API.</p>
+<aside class="tip">
+<h4>Deu erro?</h4>
+<p data-inema-block="m1-1-t6-fix">“claude não é reconhecido”? Feche e abra o cmd. Se continuar, a documentação oficial tem a seção Fix your PATH. Para o Codex, confirme antes que node --version funciona.</p>
+</aside>
+<div class="actions"><button type="button" data-inema-read-toggle aria-pressed="false"><span class="inema-read-icon" aria-hidden="true">○</span><span class="inema-read-label" data-inema-read-label>Marcar como lido</span></button><button type="button" data-inema-doubt-toggle aria-pressed="false">? Tenho dúvida</button>
+</div>
+</section>
+<section class="topic inema-prose" id="topico-7" data-inema-topic="modulo-1-1#topico-7">
+<h2><span class="number">7</span>Trabalhe dentro da pasta do projeto</h2>
+<div class="cmdbox">
+<pre><code>cd %USERPROFILE%\projetos\meu-site
+claude
+dir
+start index.html</code>
+</pre><button data-copy-prev>Copiar bloco</button>
+</div>
+<p class="see" data-inema-block="m1-1-t7-see"><strong>Você vê:</strong> Dentro do agente, peça: Crie um index.html com uma página simples sobre mim e um AGENTS.md com as regras deste projeto. Saia com /exit. O dir mostra os arquivos novos e o start abre a página no navegador.</p>
+<h3>O que é</h3>
+<p data-inema-block="m1-1-t7-p1">Entre na pasta e chame o agente (claude ou codex). Ele só enxerga a pasta onde você está. O AGENTS.md guarda as regras do projeto para as próximas conversas.</p>
+<h3>Por que aprender</h3>
+<p data-inema-block="m1-1-t7-p2">Aqui o ciclo fecha: você pede, o agente cria, e você confere no dir, no Explorador e no navegador.</p>
+<h3>Conceitos-chave</h3>
+<p data-inema-block="m1-1-t7-p3">index.html: a página principal de um site. AGENTS.md: arquivo de instruções que o agente lê ao abrir a pasta. start: abre um arquivo com o programa padrão do Windows.</p>
+<aside class="tip">
+<h4>Deu erro?</h4>
+<p data-inema-block="m1-1-t7-fix">O agente pediu permissão para criar arquivos? Leia e aceite só o que você pediu. Se ele trabalhou na pasta errada, saia, faça cd até meu-site e abra de novo.</p>
+</aside>
+<figure class="module-figure"><svg class="w-full h-auto" viewBox="0 0 490 76" role="img" aria-label="Você pede · Agente cria · Você confere"><rect x="12.0" y="14" width="136.66666666666666" height="48" rx="9" fill="#152234" stroke="#34d399"/><text x="24.0" y="40" fill="#f1f5f9" font-size="14" font-family="sans-serif">Você pede</text><text x="24.0" y="59" fill="#94a3b8" font-size="11" font-family="sans-serif">no agente</text><path d="M154.66666666666666 38.0h22" stroke="#475569" stroke-width="2"/><path d="M170.66666666666666 33.0l6 5-6 5" fill="none" stroke="#475569" stroke-width="2"/><rect x="182.66666666666666" y="14" width="136.66666666666666" height="48" rx="9" fill="#152234" stroke="#38bdf8"/><text x="194.66666666666666" y="40" fill="#f1f5f9" font-size="14" font-family="sans-serif">Agente cria</text><text x="194.66666666666666" y="59" fill="#94a3b8" font-size="11" font-family="sans-serif">na pasta</text><path d="M325.3333333333333 38.0h22" stroke="#475569" stroke-width="2"/><path d="M341.3333333333333 33.0l6 5-6 5" fill="none" stroke="#475569" stroke-width="2"/><rect x="353.3333333333333" y="14" width="136.66666666666666" height="48" rx="9" fill="#152234" stroke="#34d399"/><text x="365.3333333333333" y="40" fill="#f1f5f9" font-size="13" font-family="sans-serif">Você confere</text><text x="365.3333333333333" y="59" fill="#94a3b8" font-size="11" font-family="sans-serif">dir · start</text></svg><figcaption class="help-note">O ciclo de trabalho: você pede, o agente faz na pasta, você confere com os próprios olhos.</figcaption>
+</figure>
+<div class="actions"><button type="button" data-inema-read-toggle aria-pressed="false"><span class="inema-read-icon" aria-hidden="true">○</span><span class="inema-read-label" data-inema-read-label>Marcar como lido</span></button><button type="button" data-inema-doubt-toggle aria-pressed="false">? Tenho dúvida</button>
+</div>
+</section>
+</div>
+<nav class="toc" data-inema-toc aria-label="NESTA AULA">
+<p class="kicker">NESTA AULA</p>
+<ul>
+<li><a class="inema-toc-link" href="#topico-1">1. Abra o terminal</a>
+</li>
+<li><a class="inema-toc-link" href="#topico-2">2. Crie a pasta projetos e a do primeiro projeto</a>
+</li>
+<li><a class="inema-toc-link" href="#topico-3">3. Veja no Windows onde tudo fica</a>
+</li>
+<li><a class="inema-toc-link" href="#topico-4">4. Navegue com 6 comandos</a>
+</li>
+<li><a class="inema-toc-link" href="#topico-5">5. Instale Git, GitHub CLI e Node (uma vez)</a>
+</li>
+<li><a class="inema-toc-link" href="#topico-6">6. Instale o agente: Claude Code ou Codex</a>
+</li>
+<li><a class="inema-toc-link" href="#topico-7">7. Trabalhe dentro da pasta do projeto</a>
+</li>
+</ul><a href="#laboratorio">Laboratório final ↓</a>
+</nav>
+</div>
+<section class="lab" id="laboratorio">
+<p class="kicker">MÃO NA MASSA / ~25 MIN</p>
+<h2>Sua pasta de projeto funcionando</h2>
+<p>Marque cada item quando ele funcionar de verdade na sua máquina, não quando terminar de ler.</p>
+<ol class="checklist">
+<li><label><input type="checkbox" data-task="1-1-1"><span>Abri o cmd e vi C:\Users\SeuNome&gt;.</span></label>
+</li>
+<li><label><input type="checkbox" data-task="1-1-2"><span>Criei projetos\meu-site com mkdir e entrei nela com cd.</span></label>
+</li>
+<li><label><input type="checkbox" data-task="1-1-3"><span>Rodei explorer . e vi a mesma pasta no Explorador.</span></label>
+</li>
+<li><label><input type="checkbox" data-task="1-1-4"><span>Naveguei com cd .., dir e cd meu-site sem me perder.</span></label>
+</li>
+<li><label><input type="checkbox" data-task="1-1-5"><span>git --version e gh --version mostram números de versão.</span></label>
+</li>
+<li><label><input type="checkbox" data-task="1-1-6"><span>claude --version ou codex --version mostram números de versão.</span></label>
+</li>
+<li><label><input type="checkbox" data-task="1-1-7"><span>O agente criou index.html e AGENTS.md, e start index.html abriu a página.</span></label>
+</li>
+</ol>
+<h3>Cola da parte 1</h3>
+<pre><code>cd
+cd %USERPROFILE%
+mkdir projetos
+cd projetos
+mkdir meu-site
+cd meu-site
+explorer .
+cd ..
+dir
+cd meu-site
+dir
+winget install --id Git.Git -e
+winget install --id GitHub.cli -e
+winget install --id OpenJS.NodeJS.LTS -e
+curl -fsSL https://claude.ai/install.cmd -o install.cmd &amp;&amp; install.cmd &amp;&amp; del install.cmd
+npm install -g @openai/codex
+cd %USERPROFILE%\projetos\meu-site
+claude
+dir
+start index.html</code>
+</pre><button data-copy-prev>Copiar bloco</button>
+<h3>Critério de pronto</h3>
+<p>Criar a pasta projetos\meu-site pelo cmd, ver a mesma pasta no Explorador e pôr o Claude Code ou o Codex para trabalhar nela.</p>
+</section>
+<section class="band">
+<h2>Confira o que ficou</h2>
+<p>Você criou um arquivo pelo Explorador dentro de meu-site. Ele vai aparecer no dir do terminal?</p>
+<details>
+<summary>Ver resposta comentada</summary>
+<p>Sim. Terminal e Explorador mostram a mesma pasta do disco. Se não aparecer, você está noutra pasta: digite cd para ver onde está.</p>
+</details>
+</section>
+<div class="actions"><a class="button" href="../../index.html">← Anterior</a><a class="button" href="index.html">Voltar à trilha</a><a class="button primary" href="../../curso/trilha2/modulo-2-1.html">Próximo módulo →</a>
+</div>
+</article>
+</main>
+<footer>
+<div class="wrap">OSWork Quick · na prática · INEMA.CLUB · v2.0.0<br>Comandos conferidos nas documentações oficiais em 07/10/2026. Progresso e notas ficam neste navegador; exporte na sua jornada.<br><a href="../../FONTES.md">Fontes</a>
+</div>
+</footer>
+<dialog id="module-dialog" aria-labelledby="modal-title">
+<div class="actions"><strong id="modal-title">Módulo completo</strong><button onclick="document.getElementById('module-dialog').close()">Fechar módulo</button>
+</div><iframe title="Conteúdo completo do módulo"></iframe>
+</dialog>
+<script src="../../assets/learn.js"></script><script src="../../assets/site.js"></script>
+</body>
+</html>

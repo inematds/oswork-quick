@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en" class="dark">
+<head><meta charset="utf-8"><script>(function(){try{var p=JSON.parse(localStorage.getItem('inema.prefs')||'{}'),d=document.documentElement;d.classList.toggle('dark',p.theme?p.theme!=='claro':true);if(p.theme)d.dataset.theme=p.theme;if(p.fontScale)d.style.setProperty('--fs-root',p.fontScale+'%');if(p.font)d.dataset.font=p.font;if(p.accent)d.dataset.accent=p.accent;if(p.lineWidth)d.style.setProperty('--measure',p.lineWidth+'ch');if(p.leading)d.style.setProperty('--leading',p.leading)}catch(e){document.documentElement.classList.add('dark')}})();</script>
+<meta name="viewport" content="width=device-width,initial-scale=1"><meta name="inema-course" content="oswork-quick-en"><title>Your computer · OSWork Quick</title><meta name="description" content="Open the Windows terminal, create your projects folder, see where everything lives, install Claude Code or Codex, save your work on GitHub with an SSH key, and move the project to a VPS. If you learn to navigate Windows, you can navigate a VPS the same way."><meta property="og:title" content="OSWork Quick — one command at a time."><meta property="og:image" content="https://inematds.github.io/oswork-quick/capa/capa.png">
+<link rel="canonical" href="https://inematds.github.io/oswork-quick/en/curso/trilha1/index.html"><link rel="alternate" hreflang="pt-BR" href="https://inematds.github.io/oswork-quick/curso/trilha1/index.html"><link rel="alternate" hreflang="en" href="https://inematds.github.io/oswork-quick/en/curso/trilha1/index.html"><link rel="alternate" hreflang="es" href="https://inematds.github.io/oswork-quick/es/curso/trilha1/index.html"><link rel="alternate" hreflang="x-default" href="https://inematds.github.io/oswork-quick/curso/trilha1/index.html">
+<script type="application/json" data-inema-manifest>{"course": "oswork-quick-en", "tracks": [{"n": "1", "title": "Your computer", "modules": [{"id": "1-1", "title": "Terminal, folders, and an agent on Windows", "topics": 7, "href": "../../curso/trilha1/modulo-1-1.html"}]}, {"n": "2", "title": "GitHub", "modules": [{"id": "2-1", "title": "Git, gh, and an SSH key on GitHub", "topics": 6, "href": "../../curso/trilha2/modulo-2-1.html"}]}, {"n": "3", "title": "VPS", "modules": [{"id": "3-1", "title": "VPS: the same, on a server", "topics": 6, "href": "../../curso/trilha3/modulo-3-1.html"}]}, {"n": "4", "title": "Overview: Vercel and Supabase", "modules": [{"id": "4-1", "title": "Vercel and Supabase: the overview", "topics": 6, "href": "../../curso/trilha4/modulo-4-1.html"}]}]}</script>
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../../assets/site.css"><link rel="stylesheet" href="../../assets/learn.css">
+<style>:root{--track:#34d399}html:not(.dark){--track:#047857}pre code{white-space:pre-wrap}.see{border-left:3px solid var(--track);padding:6px 0 6px 14px;margin:12px 0}.cmdbox{margin:14px 0}.hero>*{min-width:0}pre{overflow-wrap:anywhere}</style>
+</head>
+<body>
+<a class="skip" href="#conteudo">Skip to content</a>
+<nav class="topnav" aria-label="Main navigation">
+<div class="wrap">
+<div class="nav-main"><a class="brand" href="../../index.html">OSWork Quick<span aria-hidden="true">_</span></a><span aria-hidden="true">/</span><a class="text-sky-400" href="https://inema.club">INEMA.CLUB</a><span aria-hidden="true">-</span><a class="text-amber-700 dark:text-slate-300" href="https://inema.pro">PRO</a><span class="spacer"></span><button data-inema-journey-open>My journey</button><button data-inema-appearance-toggle="#aparencia" aria-expanded="false">Aa · Appearance</button><button onclick="toggleTheme()" aria-label="Toggle light and dark themes">◐ Theme</button>
+</div>
+<div class="nav-tracks"><a href="../../curso/trilha1/index.html" aria-current="page">T1<span class="long"> · Your computer</span></a><a href="../../curso/trilha2/index.html" >T2<span class="long"> · GitHub</span></a><a href="../../curso/trilha3/index.html" >T3<span class="long"> · VPS</span></a><a href="../../curso/trilha4/index.html" >T4<span class="long"> · Overview: Vercel and Supabase</span></a><a href="../../materiais/index.html">Command cheat sheet</a>
+</div>
+<div class="language-nav" data-os-languages><a href="../../../curso/trilha1/index.html" hreflang="pt-BR" lang="pt-BR">Português</a><a href="index.html" hreflang="en" lang="en" aria-current="page">English</a><a href="../../../es/curso/trilha1/index.html" hreflang="es" lang="es">Español</a>
+</div>
+<div id="aparencia" class="appearance" data-inema-appearance hidden>
+<div class="row"><button type="button" data-inema-set-theme="inema-dark">Dark</button><button type="button" data-inema-set-theme="claro">Light</button><button type="button" data-inema-set-theme="sepia">Sepia</button><button type="button" data-inema-set-theme="foco">Focus</button><button type="button" data-inema-set-theme="contraste">High contrast</button>
+</div>
+<div class="row"><span>Size</span><button data-inema-set-fontscale="100">100%</button><button data-inema-set-fontscale="112">112%</button><button data-inema-set-fontscale="125">125%</button><button data-inema-set-font="inter">Sans serif</button><button data-inema-set-font="leitura">Serif</button><button data-inema-set-linewidth="60">Narrow column</button><button data-inema-set-linewidth="75">Wide column</button><button data-inema-set-leading="1.7">Comfortable line spacing</button>
+</div>
+</div>
+</div>
+</nav>
+<main id="conteudo" class="wrap">
+<header class="hero">
+<div>
+<p class="kicker">TRACK 01 / OSWORK QUICK</p>
+<h1>Your computer</h1>
+<p>Terminal, folders, and the agent working in Windows.</p>
+<div class="meter" data-inema-meter="trilha:1" role="progressbar" aria-label="Progress" aria-valuemin="0" aria-valuemax="100"><span class="inema-meter-pct" data-inema-meter-pct>0%</span><span class="inema-meter-count" data-inema-meter-frac>0 of 0</span>
+</div>
+</div>
+<figure class="hero-panel"><svg class="w-full h-auto" viewBox="0 0 490 320" role="img" aria-label="Open the terminal → Create the projects folder and your first project folder → See where everything is in Windows → Navigate with 6 commands → Install Git, GitHub CLI, and Node (once) → Install the agent: Claude Code or Codex"><defs><filter id="glow"><feGaussianBlur stdDeviation="1"/></filter></defs><path d="M10 10H480V305H10Z" fill="none" stroke="#334155" stroke-dasharray="3 7"/><rect x="20" y="25" width="215" height="65" rx="10" fill="#152234" stroke="#34d399"/><text x="36" y="50" fill="#cbd5e1" font-size="10" font-family="monospace">01 / OSWORK</text><text x="36" y="72" fill="#f1f5f9" font-size="14" font-family="sans-serif">Open the terminal</text><path d="M120 90v25" stroke="#34d399" stroke-width="2"/><rect x="255" y="25" width="215" height="65" rx="10" fill="#152234" stroke="#38bdf8"/><text x="271" y="50" fill="#cbd5e1" font-size="10" font-family="monospace">02 / OSWORK</text><text x="271" y="72" fill="#f1f5f9" font-size="14" font-family="sans-serif">Create the projects folder and your first project folder</text><path d="M355 90v25" stroke="#34d399" stroke-width="2"/><rect x="20" y="115" width="215" height="65" rx="10" fill="#152234" stroke="#34d399"/><text x="36" y="140" fill="#cbd5e1" font-size="10" font-family="monospace">03 / OSWORK</text><text x="36" y="162" fill="#f1f5f9" font-size="14" font-family="sans-serif">See where everything is in Windows</text><path d="M120 180v25" stroke="#34d399" stroke-width="2"/><rect x="255" y="115" width="215" height="65" rx="10" fill="#152234" stroke="#38bdf8"/><text x="271" y="140" fill="#cbd5e1" font-size="10" font-family="monospace">04 / OSWORK</text><text x="271" y="162" fill="#f1f5f9" font-size="14" font-family="sans-serif">Navigate with 6 commands</text><path d="M355 180v25" stroke="#34d399" stroke-width="2"/><rect x="20" y="205" width="215" height="65" rx="10" fill="#152234" stroke="#34d399"/><text x="36" y="230" fill="#cbd5e1" font-size="10" font-family="monospace">05 / OSWORK</text><text x="36" y="252" fill="#f1f5f9" font-size="14" font-family="sans-serif">Install Git, GitHub CLI, and Node (once)</text><rect x="255" y="205" width="215" height="65" rx="10" fill="#152234" stroke="#38bdf8"/><text x="271" y="230" fill="#cbd5e1" font-size="10" font-family="monospace">06 / OSWORK</text><text x="271" y="252" fill="#f1f5f9" font-size="14" font-family="sans-serif">Install the agent: Claude Code or Codex</text></svg><figcaption class="help-note">Read the step, run the command, and check what appears on screen before continuing.</figcaption>
+</figure>
+</header>
+<div class="stats">
+<div><strong>1</strong><span>module</span>
+</div>
+<div><strong>7</strong><span>steps</span>
+</div>
+<div><strong>~25 min</strong><span>hands-on</span>
+</div>
+<div><strong>1/4</strong><span>track</span>
+</div>
+</div>
+<h2>Track map</h2>
+<div class="grid"><a class="card" href="#modulo-1-1">
+<div class="overline"><span>1.1</span><span>~25 min</span>
+</div>
+<h3>🧭 Terminal, folders, and an agent on Windows</h3>
+<p>Create the projects\my-site folder with cmd, see the same folder in File Explorer, and have Claude Code or Codex work in it.</p></a>
+</div>
+<section class="band">
+<h2 class="text-2xl font-bold">Detailed content</h2>
+<article class="module-card" id="modulo-1-1" data-inema-module="1-1" data-inema-track="1">
+<p class="kicker">MODULE 1.1</p>
+<h2 class="text-2xl font-bold">Terminal, folders, and an agent on Windows</h2>
+<p>Create the projects\my-site folder with cmd, see the same folder in File Explorer, and have Claude Code or Codex work in it.</p>
+<div class="meter" data-inema-meter="modulo:1-1" role="progressbar" aria-label="Progress" aria-valuemin="0" aria-valuemax="100"><span class="inema-meter-pct" data-inema-meter-pct>0%</span><span class="inema-meter-count" data-inema-meter-frac>0 of 0</span>
+</div>
+<div class="topic-item"><button onclick="toggleTopic(this)" aria-expanded="false" aria-controls="p-1-1-1"><span class="number">1</span><span>Open the terminal</span></button>
+<div class="topic-explanation" id="p-1-1-1">
+<h4>What it is</h4>
+<p>Press the Windows key, type cmd, and press Enter. A black window opens: Command Prompt. Running cd by itself shows which folder you&#x27;re in.</p>
+<h4>Why learn it</h4>
+<p>Everything in this course starts here. The terminal is just another window for the same folders you already see in Windows.</p>
+<h4>Key concepts</h4>
+<p>Terminal: a window where you type commands instead of clicking. cmd: the classic Windows terminal. Home folder: C:\Users\YourName, where Documents, Downloads, and now your projects are.</p>
+</div>
+</div>
+<div class="topic-item"><button onclick="toggleTopic(this)" aria-expanded="false" aria-controls="p-1-1-2"><span class="number">2</span><span>Create the projects folder and your first project folder</span></button>
+<div class="topic-explanation" id="p-1-1-2">
+<h4>What it is</h4>
+<p>Type one command at a time and press Enter after each one. mkdir creates a folder; cd enters it.</p>
+<h4>Why learn it</h4>
+<p>One folder per project is the rule that keeps everything else organized: the agent, Git, and the VPS always work inside it.</p>
+<h4>Key concepts</h4>
+<p>%USERPROFILE%: a shortcut to your home folder that works on any computer. mkdir (make directory): creates a folder. cd (change directory): enters a folder.</p>
+</div>
+</div>
+<div class="topic-item"><button onclick="toggleTopic(this)" aria-expanded="false" aria-controls="p-1-1-3"><span class="number">3</span><span>See where everything is in Windows</span></button>
+<div class="topic-explanation" id="p-1-1-3">
+<h4>What it is</h4>
+<p>explorer opens File Explorer; the period means “the folder where I am.” This is the most important step in the course.</p>
+<h4>Why learn it</h4>
+<p>When you see both windows showing the same place, the terminal is no longer a mystery: what you create in one appears in the other.</p>
+<h4>Key concepts</h4>
+<p>File Explorer: the Windows folder window. Period (.): the current folder. Two periods (..): the folder above.</p>
+</div>
+</div>
+<div class="topic-item"><button onclick="toggleTopic(this)" aria-expanded="false" aria-controls="p-1-1-4"><span class="number">4</span><span>Navigate with 6 commands</span></button>
+<div class="topic-explanation" id="p-1-1-4">
+<h4>What it is</h4>
+<p>Six commands are enough to move through folders: dir lists, cd name enters, cd .. goes up one folder, mkdir name creates, explorer . opens it in Windows, and cls clears the screen.</p>
+<h4>Why learn it</h4>
+<p>With these six, you&#x27;ll never get lost, and on the VPS you&#x27;ll use the same commands with different names.</p>
+<h4>Key concepts</h4>
+<p>dir: lists files and folders. cd ..: goes up one folder. cls: clears the screen without deleting anything. Tab key: completes folder and file names as you type.</p>
+</div>
+</div>
+<div class="topic-item"><button onclick="toggleTopic(this)" aria-expanded="false" aria-controls="p-1-1-5"><span class="number">5</span><span>Install Git, GitHub CLI, and Node (once)</span></button>
+<div class="topic-explanation" id="p-1-1-5">
+<h4>What it is</h4>
+<p>winget is the program installer that comes with Windows 10 and 11. It downloads each program from its official source.</p>
+<h4>Why learn it</h4>
+<p>Git saves versions, gh communicates with GitHub, and Node is needed to install Codex. Without them, parts 2 and 3 won&#x27;t work.</p>
+<h4>Key concepts</h4>
+<p>winget: the Windows command-line installer. Git: a program that saves your project&#x27;s history. gh (GitHub CLI): GitHub in the terminal. Node: an engine that runs JavaScript programs, such as Codex.</p>
+</div>
+</div>
+<div class="topic-item"><button onclick="toggleTopic(this)" aria-expanded="false" aria-controls="p-1-1-6"><span class="number">6</span><span>Install the agent: Claude Code or Codex</span></button>
+<div class="topic-explanation" id="p-1-1-6">
+<h4>What it is</h4>
+<p>Choose one or both. The first time you open it, the agent asks you to sign in: use your subscription (Claude Pro or Max, ChatGPT Plus or Pro).</p>
+<h4>Why learn it</h4>
+<p>The agent works for you inside the folder: it reads, creates, and changes files with your permission.</p>
+<h4>Key concepts</h4>
+<p>Agent: an AI that performs tasks on your computer, not just chats. Claude Code: Anthropic&#x27;s agent. Codex: OpenAI&#x27;s agent. Subscription: your account login, without an API key.</p>
+</div>
+</div>
+<div class="topic-item"><button onclick="toggleTopic(this)" aria-expanded="false" aria-controls="p-1-1-7"><span class="number">7</span><span>Work inside the project folder</span></button>
+<div class="topic-explanation" id="p-1-1-7">
+<h4>What it is</h4>
+<p>Enter the folder and start the agent (claude or codex). It can only see the folder you&#x27;re in. AGENTS.md saves the project rules for future conversations.</p>
+<h4>Why learn it</h4>
+<p>This completes the cycle: you ask, the agent creates, and you check with dir, File Explorer, and the browser.</p>
+<h4>Key concepts</h4>
+<p>index.html: a website&#x27;s main page. AGENTS.md: an instruction file the agent reads when it opens the folder. start: opens a file with the default Windows program.</p>
+</div>
+</div>
+<div class="actions"><a class="button primary" href="modulo-1-1.html">View full version →</a><button data-modal-src="modulo-1-1.html">View in modal</button>
+</div>
+</article>
+</section>
+</main>
+<footer>
+<div class="wrap">OSWork Quick · hands-on · INEMA.CLUB · v2.0.0<br>Commands checked against official documentation on 10/07/2026. Progress and notes stay in this browser; export them from your journey.<br><a href="../../FONTES.md">Sources</a>
+</div>
+</footer>
+<dialog id="module-dialog" aria-labelledby="modal-title">
+<div class="actions"><strong id="modal-title">Complete module</strong><button onclick="document.getElementById('module-dialog').close()">Close module</button>
+</div><iframe title="Complete module content"></iframe>
+</dialog>
+<script src="../../assets/learn.js"></script><script src="../../assets/site.js"></script>
+</body>
+</html>

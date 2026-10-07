@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="en" class="dark">
+<head><meta charset="utf-8"><script>(function(){try{var p=JSON.parse(localStorage.getItem('inema.prefs')||'{}'),d=document.documentElement;d.classList.toggle('dark',p.theme?p.theme!=='claro':true);if(p.theme)d.dataset.theme=p.theme;if(p.fontScale)d.style.setProperty('--fs-root',p.fontScale+'%');if(p.font)d.dataset.font=p.font;if(p.accent)d.dataset.accent=p.accent;if(p.lineWidth)d.style.setProperty('--measure',p.lineWidth+'ch');if(p.leading)d.style.setProperty('--leading',p.leading)}catch(e){document.documentElement.classList.add('dark')}})();</script>
+<meta name="viewport" content="width=device-width,initial-scale=1"><meta name="inema-course" content="oswork-quick-en"><title>Terminal, folders, and an agent on Windows · OSWork Quick</title><meta name="description" content="Open the Windows terminal, create your projects folder, see where everything lives, install Claude Code or Codex, save your work on GitHub with an SSH key, and move the project to a VPS. If you learn to navigate Windows, you can navigate a VPS the same way."><meta property="og:title" content="OSWork Quick — one command at a time."><meta property="og:image" content="https://inematds.github.io/oswork-quick/capa/capa.png">
+<link rel="canonical" href="https://inematds.github.io/oswork-quick/en/curso/trilha1/modulo-1-1.html"><link rel="alternate" hreflang="pt-BR" href="https://inematds.github.io/oswork-quick/curso/trilha1/modulo-1-1.html"><link rel="alternate" hreflang="en" href="https://inematds.github.io/oswork-quick/en/curso/trilha1/modulo-1-1.html"><link rel="alternate" hreflang="es" href="https://inematds.github.io/oswork-quick/es/curso/trilha1/modulo-1-1.html"><link rel="alternate" hreflang="x-default" href="https://inematds.github.io/oswork-quick/curso/trilha1/modulo-1-1.html">
+<script type="application/json" data-inema-manifest>{"course": "oswork-quick-en", "tracks": [{"n": "1", "title": "Your computer", "modules": [{"id": "1-1", "title": "Terminal, folders, and an agent on Windows", "topics": 7, "href": "../../curso/trilha1/modulo-1-1.html"}]}, {"n": "2", "title": "GitHub", "modules": [{"id": "2-1", "title": "Git, gh, and an SSH key on GitHub", "topics": 6, "href": "../../curso/trilha2/modulo-2-1.html"}]}, {"n": "3", "title": "VPS", "modules": [{"id": "3-1", "title": "VPS: the same, on a server", "topics": 6, "href": "../../curso/trilha3/modulo-3-1.html"}]}, {"n": "4", "title": "Overview: Vercel and Supabase", "modules": [{"id": "4-1", "title": "Vercel and Supabase: the overview", "topics": 6, "href": "../../curso/trilha4/modulo-4-1.html"}]}]}</script>
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../../assets/site.css"><link rel="stylesheet" href="../../assets/learn.css">
+<style>:root{--track:#34d399}html:not(.dark){--track:#047857}pre code{white-space:pre-wrap}.see{border-left:3px solid var(--track);padding:6px 0 6px 14px;margin:12px 0}.cmdbox{margin:14px 0}.hero>*{min-width:0}pre{overflow-wrap:anywhere}</style>
+</head>
+<body>
+<a class="skip" href="#conteudo">Skip to content</a>
+<nav class="topnav" aria-label="Main navigation">
+<div class="wrap">
+<div class="nav-main"><a class="brand" href="../../index.html">OSWork Quick<span aria-hidden="true">_</span></a><span aria-hidden="true">/</span><a class="text-sky-400" href="https://inema.club">INEMA.CLUB</a><span aria-hidden="true">-</span><a class="text-amber-700 dark:text-slate-300" href="https://inema.pro">PRO</a><span class="spacer"></span><button data-inema-journey-open>My journey</button><button data-inema-appearance-toggle="#aparencia" aria-expanded="false">Aa · Appearance</button><button onclick="toggleTheme()" aria-label="Toggle light and dark themes">◐ Theme</button>
+</div>
+<div class="nav-tracks"><a href="../../curso/trilha1/index.html" aria-current="page">T1<span class="long"> · Your computer</span></a><a href="../../curso/trilha2/index.html" >T2<span class="long"> · GitHub</span></a><a href="../../curso/trilha3/index.html" >T3<span class="long"> · VPS</span></a><a href="../../curso/trilha4/index.html" >T4<span class="long"> · Overview: Vercel and Supabase</span></a><a href="../../materiais/index.html">Command cheat sheet</a>
+</div>
+<div class="language-nav" data-os-languages><a href="../../../curso/trilha1/modulo-1-1.html" hreflang="pt-BR" lang="pt-BR">Português</a><a href="modulo-1-1.html" hreflang="en" lang="en" aria-current="page">English</a><a href="../../../es/curso/trilha1/modulo-1-1.html" hreflang="es" lang="es">Español</a>
+</div>
+<div id="aparencia" class="appearance" data-inema-appearance hidden>
+<div class="row"><button type="button" data-inema-set-theme="inema-dark">Dark</button><button type="button" data-inema-set-theme="claro">Light</button><button type="button" data-inema-set-theme="sepia">Sepia</button><button type="button" data-inema-set-theme="foco">Focus</button><button type="button" data-inema-set-theme="contraste">High contrast</button>
+</div>
+<div class="row"><span>Size</span><button data-inema-set-fontscale="100">100%</button><button data-inema-set-fontscale="112">112%</button><button data-inema-set-fontscale="125">125%</button><button data-inema-set-font="inter">Sans serif</button><button data-inema-set-font="leitura">Serif</button><button data-inema-set-linewidth="60">Narrow column</button><button data-inema-set-linewidth="75">Wide column</button><button data-inema-set-leading="1.7">Comfortable line spacing</button>
+</div>
+</div>
+</div>
+</nav>
+<main id="conteudo" class="wrap">
+<div class="breadcrumbs"><a href="../../index.html">Home</a> / <a href="index.html">Your computer</a> / Module 1.1</div>
+<article id="modulo-1-1" data-inema-module="1-1" data-inema-track="1">
+<header class="hero">
+<div>
+<p class="kicker">MODULE 1.1 / 1 OF 4</p>
+<h1>Terminal, folders, and an agent on Windows</h1>
+<p>Create the projects\my-site folder with cmd, see the same folder in File Explorer, and have Claude Code or Codex work in it.</p>
+<div class="meter" data-inema-meter="modulo:1-1" role="progressbar" aria-label="Progress" aria-valuemin="0" aria-valuemax="100"><span class="inema-meter-pct" data-inema-meter-pct>0%</span><span class="inema-meter-count" data-inema-meter-frac>0 of 0</span>
+</div>
+</div>
+<figure class="hero-panel"><svg class="w-full h-auto" viewBox="0 0 490 320" role="img" aria-label="Open the terminal → Create the projects folder and your first project folder → See where everything is in Windows → Navigate with 6 commands → Install Git, GitHub CLI, and Node (once) → Install the agent: Claude Code or Codex"><defs><filter id="glow"><feGaussianBlur stdDeviation="1"/></filter></defs><path d="M10 10H480V305H10Z" fill="none" stroke="#334155" stroke-dasharray="3 7"/><rect x="20" y="25" width="215" height="65" rx="10" fill="#152234" stroke="#34d399"/><text x="36" y="50" fill="#cbd5e1" font-size="10" font-family="monospace">01 / OSWORK</text><text x="36" y="72" fill="#f1f5f9" font-size="14" font-family="sans-serif">Open the terminal</text><path d="M120 90v25" stroke="#34d399" stroke-width="2"/><rect x="255" y="25" width="215" height="65" rx="10" fill="#152234" stroke="#38bdf8"/><text x="271" y="50" fill="#cbd5e1" font-size="10" font-family="monospace">02 / OSWORK</text><text x="271" y="72" fill="#f1f5f9" font-size="14" font-family="sans-serif">Create the projects folder and your first project folder</text><path d="M355 90v25" stroke="#34d399" stroke-width="2"/><rect x="20" y="115" width="215" height="65" rx="10" fill="#152234" stroke="#34d399"/><text x="36" y="140" fill="#cbd5e1" font-size="10" font-family="monospace">03 / OSWORK</text><text x="36" y="162" fill="#f1f5f9" font-size="14" font-family="sans-serif">See where everything is in Windows</text><path d="M120 180v25" stroke="#34d399" stroke-width="2"/><rect x="255" y="115" width="215" height="65" rx="10" fill="#152234" stroke="#38bdf8"/><text x="271" y="140" fill="#cbd5e1" font-size="10" font-family="monospace">04 / OSWORK</text><text x="271" y="162" fill="#f1f5f9" font-size="14" font-family="sans-serif">Navigate with 6 commands</text><path d="M355 180v25" stroke="#34d399" stroke-width="2"/><rect x="20" y="205" width="215" height="65" rx="10" fill="#152234" stroke="#34d399"/><text x="36" y="230" fill="#cbd5e1" font-size="10" font-family="monospace">05 / OSWORK</text><text x="36" y="252" fill="#f1f5f9" font-size="14" font-family="sans-serif">Install Git, GitHub CLI, and Node (once)</text><rect x="255" y="205" width="215" height="65" rx="10" fill="#152234" stroke="#38bdf8"/><text x="271" y="230" fill="#cbd5e1" font-size="10" font-family="monospace">06 / OSWORK</text><text x="271" y="252" fill="#f1f5f9" font-size="14" font-family="sans-serif">Install the agent: Claude Code or Codex</text></svg><figcaption class="help-note">The steps in this module, in the order you’ll type them.</figcaption>
+</figure>
+</header>
+<div class="stats">
+<div><strong>7</strong><span>steps</span>
+</div>
+<div><strong>~25 min</strong><span>hands-on</span>
+</div>
+<div><strong>1/4</strong><span>track</span>
+</div>
+<div><strong>3</strong><span>idiomas · languages</span>
+</div>
+</div>
+<div class="reading-layout">
+<div>
+<section class="topic inema-prose" id="topico-1" data-inema-topic="modulo-1-1#topico-1">
+<h2><span class="number">1</span>Open the terminal</h2>
+<div class="cmdbox">
+<pre><code>cd</code>
+</pre><button data-copy-prev>Copy block</button>
+</div>
+<p class="see" data-inema-block="m1-1-t1-see"><strong>What you see:</strong> C:\Users\YourName — the path to the folder where the terminal is now.</p>
+<h3>What it is</h3>
+<p data-inema-block="m1-1-t1-p1">Press the Windows key, type cmd, and press Enter. A black window opens: Command Prompt. Running cd by itself shows which folder you&#x27;re in.</p>
+<h3>Why learn it</h3>
+<p data-inema-block="m1-1-t1-p2">Everything in this course starts here. The terminal is just another window for the same folders you already see in Windows.</p>
+<h3>Key concepts</h3>
+<p data-inema-block="m1-1-t1-p3">Terminal: a window where you type commands instead of clicking. cmd: the classic Windows terminal. Home folder: C:\Users\YourName, where Documents, Downloads, and now your projects are.</p>
+<aside class="tip">
+<h4>Something went wrong?</h4>
+<p data-inema-block="m1-1-t1-fix">Did a blue window open with PS at the beginning? That&#x27;s PowerShell. The commands in this course also work in it, except for the Claude Code installation command (use the PowerShell version in the official documentation) and %USERPROFILE% (replace it with ~).</p>
+</aside>
+<div class="actions"><button type="button" data-inema-read-toggle aria-pressed="false"><span class="inema-read-icon" aria-hidden="true">○</span><span class="inema-read-label" data-inema-read-label>Mark as read</span></button><button type="button" data-inema-doubt-toggle aria-pressed="false">? I have a question</button>
+</div>
+</section>
+<section class="topic inema-prose" id="topico-2" data-inema-topic="modulo-1-1#topico-2">
+<h2><span class="number">2</span>Create the projects folder and your first project folder</h2>
+<div class="cmdbox">
+<pre><code>cd %USERPROFILE%
+mkdir projects
+cd projects
+mkdir my-site
+cd my-site</code>
+</pre><button data-copy-prev>Copy block</button>
+</div>
+<p class="see" data-inema-block="m1-1-t2-see"><strong>What you see:</strong> C:\Users\YourName\projects\my-site&gt;</p>
+<h3>What it is</h3>
+<p data-inema-block="m1-1-t2-p1">Type one command at a time and press Enter after each one. mkdir creates a folder; cd enters it.</p>
+<h3>Why learn it</h3>
+<p data-inema-block="m1-1-t2-p2">One folder per project is the rule that keeps everything else organized: the agent, Git, and the VPS always work inside it.</p>
+<h3>Key concepts</h3>
+<p data-inema-block="m1-1-t2-p3">%USERPROFILE%: a shortcut to your home folder that works on any computer. mkdir (make directory): creates a folder. cd (change directory): enters a folder.</p>
+<aside class="tip">
+<h4>Something went wrong?</h4>
+<p data-inema-block="m1-1-t2-fix">Did “A subdirectory or file projects already exists” appear? Great, it already exists. Continue with the next command.</p>
+</aside>
+<figure class="module-figure"><svg class="w-full h-auto" viewBox="0 0 490 152" role="img" aria-label="C:\Users\YourName\ · projects\ · my-site\ · index.html · AGENTS.md"><rect x="4" y="8" width="482" height="138" rx="10" fill="#152234" stroke="#34d399"/><text x="16" y="26" fill="#f1f5f9" font-size="14" font-family="monospace">C:\Users\YourName\</text><text x="42" y="52" fill="#f1f5f9" font-size="14" font-family="monospace">projects\</text><text x="68" y="78" fill="#94a3b8" font-size="14" font-family="monospace">my-site\</text><text x="94" y="104" fill="#94a3b8" font-size="14" font-family="monospace">index.html</text><text x="94" y="130" fill="#94a3b8" font-size="14" font-family="monospace">AGENTS.md</text></svg><figcaption class="help-note">The same place in both windows: the terminal shows the path, and File Explorer shows the folders.</figcaption>
+</figure>
+<div class="actions"><button type="button" data-inema-read-toggle aria-pressed="false"><span class="inema-read-icon" aria-hidden="true">○</span><span class="inema-read-label" data-inema-read-label>Mark as read</span></button><button type="button" data-inema-doubt-toggle aria-pressed="false">? I have a question</button>
+</div>
+</section>
+<section class="topic inema-prose" id="topico-3" data-inema-topic="modulo-1-1#topico-3">
+<h2><span class="number">3</span>See where everything is in Windows</h2>
+<div class="cmdbox">
+<pre><code>explorer .</code>
+</pre><button data-copy-prev>Copy block</button>
+</div>
+<p class="see" data-inema-block="m1-1-t3-see"><strong>What you see:</strong> File Explorer opened to my-site, inside projects, inside your home folder.</p>
+<h3>What it is</h3>
+<p data-inema-block="m1-1-t3-p1">explorer opens File Explorer; the period means “the folder where I am.” This is the most important step in the course.</p>
+<h3>Why learn it</h3>
+<p data-inema-block="m1-1-t3-p2">When you see both windows showing the same place, the terminal is no longer a mystery: what you create in one appears in the other.</p>
+<h3>Key concepts</h3>
+<p data-inema-block="m1-1-t3-p3">File Explorer: the Windows folder window. Period (.): the current folder. Two periods (..): the folder above.</p>
+<aside class="tip">
+<h4>Something went wrong?</h4>
+<p data-inema-block="m1-1-t3-fix">Did Documents or another folder open? You weren&#x27;t in my-site. Type cd to see where you are, then repeat step 2.</p>
+</aside>
+<figure class="module-figure"><svg class="w-full h-auto" viewBox="0 0 490 154" role="img" aria-label="cmd · cd my-site · explorer . · File Explorer"><rect x="12.0" y="14" width="222.0" height="48" rx="9" fill="#152234" stroke="#34d399"/><text x="24.0" y="40" fill="#f1f5f9" font-size="14" font-family="sans-serif">cmd</text><text x="24.0" y="59" fill="#94a3b8" font-size="11" font-family="sans-serif">the terminal</text><path d="M240.0 38.0h22" stroke="#475569" stroke-width="2"/><path d="M256.0 33.0l6 5-6 5" fill="none" stroke="#475569" stroke-width="2"/><rect x="268.0" y="14" width="222.0" height="48" rx="9" fill="#152234" stroke="#38bdf8"/><text x="280.0" y="40" fill="#f1f5f9" font-size="14" font-family="sans-serif">cd my-site</text><text x="280.0" y="59" fill="#94a3b8" font-size="11" font-family="sans-serif">enter</text><path d="M379.0 66v10H123.0v10" fill="none" stroke="#475569" stroke-width="2"/><path d="M118.0 80l5 6 5-6" fill="none" stroke="#475569" stroke-width="2"/><rect x="12.0" y="92" width="222.0" height="48" rx="9" fill="#152234" stroke="#34d399"/><text x="24.0" y="118" fill="#f1f5f9" font-size="14" font-family="sans-serif">explorer .</text><text x="24.0" y="137" fill="#94a3b8" font-size="11" font-family="sans-serif">open in Windows</text><path d="M240.0 116.0h22" stroke="#475569" stroke-width="2"/><path d="M256.0 111.0l6 5-6 5" fill="none" stroke="#475569" stroke-width="2"/><rect x="268.0" y="92" width="222.0" height="48" rx="9" fill="#152234" stroke="#38bdf8"/><text x="280.0" y="118" fill="#f1f5f9" font-size="14" font-family="sans-serif">File Explorer</text><text x="280.0" y="137" fill="#94a3b8" font-size="11" font-family="sans-serif">the same folder</text></svg><figcaption class="help-note">From cmd to File Explorer with one command: the period means the folder where you are.</figcaption>
+</figure>
+<div class="actions"><button type="button" data-inema-read-toggle aria-pressed="false"><span class="inema-read-icon" aria-hidden="true">○</span><span class="inema-read-label" data-inema-read-label>Mark as read</span></button><button type="button" data-inema-doubt-toggle aria-pressed="false">? I have a question</button>
+</div>
+</section>
+<section class="topic inema-prose" id="topico-4" data-inema-topic="modulo-1-1#topico-4">
+<h2><span class="number">4</span>Navigate with 6 commands</h2>
+<div class="cmdbox">
+<pre><code>cd ..
+dir
+cd my-site
+dir</code>
+</pre><button data-copy-prev>Copy block</button>
+</div>
+<p class="see" data-inema-block="m1-1-t4-see"><strong>What you see:</strong> dir lists what&#x27;s in each folder; after cd my-site the path ends in my-site again.</p>
+<h3>What it is</h3>
+<p data-inema-block="m1-1-t4-p1">Six commands are enough to move through folders: dir lists, cd name enters, cd .. goes up one folder, mkdir name creates, explorer . opens it in Windows, and cls clears the screen.</p>
+<h3>Why learn it</h3>
+<p data-inema-block="m1-1-t4-p2">With these six, you&#x27;ll never get lost, and on the VPS you&#x27;ll use the same commands with different names.</p>
+<h3>Key concepts</h3>
+<p data-inema-block="m1-1-t4-p3">dir: lists files and folders. cd ..: goes up one folder. cls: clears the screen without deleting anything. Tab key: completes folder and file names as you type.</p>
+<aside class="tip">
+<h4>Something went wrong?</h4>
+<p data-inema-block="m1-1-t4-fix">“The system cannot find the path specified”? The name is wrong or the folder isn&#x27;t here. Run dir and copy the exact name.</p>
+</aside>
+<div class="actions"><button type="button" data-inema-read-toggle aria-pressed="false"><span class="inema-read-icon" aria-hidden="true">○</span><span class="inema-read-label" data-inema-read-label>Mark as read</span></button><button type="button" data-inema-doubt-toggle aria-pressed="false">? I have a question</button>
+</div>
+</section>
+<section class="topic inema-prose" id="topico-5" data-inema-topic="modulo-1-1#topico-5">
+<h2><span class="number">5</span>Install Git, GitHub CLI, and Node (once)</h2>
+<div class="cmdbox">
+<pre><code>winget install --id Git.Git -e
+winget install --id GitHub.cli -e
+winget install --id OpenJS.NodeJS.LTS -e</code>
+</pre><button data-copy-prev>Copy block</button>
+</div>
+<p class="see" data-inema-block="m1-1-t5-see"><strong>What you see:</strong> Download messages and “Successfully installed.” Then close cmd, open it again, and run git --version and gh --version: version numbers appear.</p>
+<h3>What it is</h3>
+<p data-inema-block="m1-1-t5-p1">winget is the program installer that comes with Windows 10 and 11. It downloads each program from its official source.</p>
+<h3>Why learn it</h3>
+<p data-inema-block="m1-1-t5-p2">Git saves versions, gh communicates with GitHub, and Node is needed to install Codex. Without them, parts 2 and 3 won&#x27;t work.</p>
+<h3>Key concepts</h3>
+<p data-inema-block="m1-1-t5-p3">winget: the Windows command-line installer. Git: a program that saves your project&#x27;s history. gh (GitHub CLI): GitHub in the terminal. Node: an engine that runs JavaScript programs, such as Codex.</p>
+<aside class="tip">
+<h4>Something went wrong?</h4>
+<p data-inema-block="m1-1-t5-fix">Did winget ask if you accept the source terms? Type Y and press Enter. “&#x27;git&#x27; is not recognized”? You didn&#x27;t close and reopen cmd after installing.</p>
+</aside>
+<div class="actions"><button type="button" data-inema-read-toggle aria-pressed="false"><span class="inema-read-icon" aria-hidden="true">○</span><span class="inema-read-label" data-inema-read-label>Mark as read</span></button><button type="button" data-inema-doubt-toggle aria-pressed="false">? I have a question</button>
+</div>
+</section>
+<section class="topic inema-prose" id="topico-6" data-inema-topic="modulo-1-1#topico-6">
+<h2><span class="number">6</span>Install the agent: Claude Code or Codex</h2>
+<div class="cmdbox">
+<pre><code>curl -fsSL https://claude.ai/install.cmd -o install.cmd &amp;&amp; install.cmd &amp;&amp; del install.cmd
+npm install -g @openai/codex</code>
+</pre><button data-copy-prev>Copy block</button>
+</div>
+<p class="see" data-inema-block="m1-1-t6-see"><strong>What you see:</strong> The first line installs Claude Code; the second installs Codex. In a new window, claude --version or codex --version shows the version.</p>
+<h3>What it is</h3>
+<p data-inema-block="m1-1-t6-p1">Choose one or both. The first time you open it, the agent asks you to sign in: use your subscription (Claude Pro or Max, ChatGPT Plus or Pro).</p>
+<h3>Why learn it</h3>
+<p data-inema-block="m1-1-t6-p2">The agent works for you inside the folder: it reads, creates, and changes files with your permission.</p>
+<h3>Key concepts</h3>
+<p data-inema-block="m1-1-t6-p3">Agent: an AI that performs tasks on your computer, not just chats. Claude Code: Anthropic&#x27;s agent. Codex: OpenAI&#x27;s agent. Subscription: your account login, without an API key.</p>
+<aside class="tip">
+<h4>Something went wrong?</h4>
+<p data-inema-block="m1-1-t6-fix">“&#x27;claude&#x27; is not recognized”? Close and reopen cmd. If it still happens, the official documentation has a Fix your PATH section. For Codex, first make sure node --version works.</p>
+</aside>
+<div class="actions"><button type="button" data-inema-read-toggle aria-pressed="false"><span class="inema-read-icon" aria-hidden="true">○</span><span class="inema-read-label" data-inema-read-label>Mark as read</span></button><button type="button" data-inema-doubt-toggle aria-pressed="false">? I have a question</button>
+</div>
+</section>
+<section class="topic inema-prose" id="topico-7" data-inema-topic="modulo-1-1#topico-7">
+<h2><span class="number">7</span>Work inside the project folder</h2>
+<div class="cmdbox">
+<pre><code>cd %USERPROFILE%\projects\my-site
+claude
+dir
+start index.html</code>
+</pre><button data-copy-prev>Copy block</button>
+</div>
+<p class="see" data-inema-block="m1-1-t7-see"><strong>What you see:</strong> Inside the agent, ask: Create an index.html with a simple page about me and an AGENTS.md with this project&#x27;s rules. Exit with /exit. dir shows the new files, and start opens the page in your browser.</p>
+<h3>What it is</h3>
+<p data-inema-block="m1-1-t7-p1">Enter the folder and start the agent (claude or codex). It can only see the folder you&#x27;re in. AGENTS.md saves the project rules for future conversations.</p>
+<h3>Why learn it</h3>
+<p data-inema-block="m1-1-t7-p2">This completes the cycle: you ask, the agent creates, and you check with dir, File Explorer, and the browser.</p>
+<h3>Key concepts</h3>
+<p data-inema-block="m1-1-t7-p3">index.html: a website&#x27;s main page. AGENTS.md: an instruction file the agent reads when it opens the folder. start: opens a file with the default Windows program.</p>
+<aside class="tip">
+<h4>Something went wrong?</h4>
+<p data-inema-block="m1-1-t7-fix">Did the agent ask permission to create files? Read the request and approve only what you asked for. If it worked in the wrong folder, exit, use cd to go to my-site, and open it again.</p>
+</aside>
+<figure class="module-figure"><svg class="w-full h-auto" viewBox="0 0 490 76" role="img" aria-label="You ask · Agent creates · You check"><rect x="12.0" y="14" width="136.66666666666666" height="48" rx="9" fill="#152234" stroke="#34d399"/><text x="24.0" y="40" fill="#f1f5f9" font-size="14" font-family="sans-serif">You ask</text><text x="24.0" y="59" fill="#94a3b8" font-size="11" font-family="sans-serif">the agent</text><path d="M154.66666666666666 38.0h22" stroke="#475569" stroke-width="2"/><path d="M170.66666666666666 33.0l6 5-6 5" fill="none" stroke="#475569" stroke-width="2"/><rect x="182.66666666666666" y="14" width="136.66666666666666" height="48" rx="9" fill="#152234" stroke="#38bdf8"/><text x="194.66666666666666" y="40" fill="#f1f5f9" font-size="12" font-family="sans-serif">Agent creates</text><text x="194.66666666666666" y="59" fill="#94a3b8" font-size="11" font-family="sans-serif">in the folder</text><path d="M325.3333333333333 38.0h22" stroke="#475569" stroke-width="2"/><path d="M341.3333333333333 33.0l6 5-6 5" fill="none" stroke="#475569" stroke-width="2"/><rect x="353.3333333333333" y="14" width="136.66666666666666" height="48" rx="9" fill="#152234" stroke="#34d399"/><text x="365.3333333333333" y="40" fill="#f1f5f9" font-size="14" font-family="sans-serif">You check</text><text x="365.3333333333333" y="59" fill="#94a3b8" font-size="11" font-family="sans-serif">dir · start</text></svg><figcaption class="help-note">The work cycle: you ask, the agent works in the folder, and you check with your own eyes.</figcaption>
+</figure>
+<div class="actions"><button type="button" data-inema-read-toggle aria-pressed="false"><span class="inema-read-icon" aria-hidden="true">○</span><span class="inema-read-label" data-inema-read-label>Mark as read</span></button><button type="button" data-inema-doubt-toggle aria-pressed="false">? I have a question</button>
+</div>
+</section>
+</div>
+<nav class="toc" data-inema-toc aria-label="IN THIS LESSON">
+<p class="kicker">IN THIS LESSON</p>
+<ul>
+<li><a class="inema-toc-link" href="#topico-1">1. Open the terminal</a>
+</li>
+<li><a class="inema-toc-link" href="#topico-2">2. Create the projects folder and your first project folder</a>
+</li>
+<li><a class="inema-toc-link" href="#topico-3">3. See where everything is in Windows</a>
+</li>
+<li><a class="inema-toc-link" href="#topico-4">4. Navigate with 6 commands</a>
+</li>
+<li><a class="inema-toc-link" href="#topico-5">5. Install Git, GitHub CLI, and Node (once)</a>
+</li>
+<li><a class="inema-toc-link" href="#topico-6">6. Install the agent: Claude Code or Codex</a>
+</li>
+<li><a class="inema-toc-link" href="#topico-7">7. Work inside the project folder</a>
+</li>
+</ul><a href="#laboratorio">Final lab ↓</a>
+</nav>
+</div>
+<section class="lab" id="laboratorio">
+<p class="kicker">HANDS-ON / ~25 MIN</p>
+<h2>Your project folder, up and running</h2>
+<p>Check each item when it actually works on your computer, not when you finish reading.</p>
+<ol class="checklist">
+<li><label><input type="checkbox" data-task="1-1-1"><span>I opened cmd and saw C:\Users\YourName&gt;.</span></label>
+</li>
+<li><label><input type="checkbox" data-task="1-1-2"><span>I created projects\my-site with mkdir and entered it with cd.</span></label>
+</li>
+<li><label><input type="checkbox" data-task="1-1-3"><span>I ran explorer . and saw the same folder in File Explorer.</span></label>
+</li>
+<li><label><input type="checkbox" data-task="1-1-4"><span>I navigated with cd .., dir, and cd my-site without getting lost.</span></label>
+</li>
+<li><label><input type="checkbox" data-task="1-1-5"><span>git --version and gh --version show version numbers.</span></label>
+</li>
+<li><label><input type="checkbox" data-task="1-1-6"><span>claude --version or codex --version show version numbers.</span></label>
+</li>
+<li><label><input type="checkbox" data-task="1-1-7"><span>The agent created index.html and AGENTS.md, and start index.html opened the page.</span></label>
+</li>
+</ol>
+<h3>Part 1 cheat sheet</h3>
+<pre><code>cd
+cd %USERPROFILE%
+mkdir projects
+cd projects
+mkdir my-site
+cd my-site
+explorer .
+cd ..
+dir
+cd my-site
+dir
+winget install --id Git.Git -e
+winget install --id GitHub.cli -e
+winget install --id OpenJS.NodeJS.LTS -e
+curl -fsSL https://claude.ai/install.cmd -o install.cmd &amp;&amp; install.cmd &amp;&amp; del install.cmd
+npm install -g @openai/codex
+cd %USERPROFILE%\projects\my-site
+claude
+dir
+start index.html</code>
+</pre><button data-copy-prev>Copy block</button>
+<h3>Done criteria</h3>
+<p>Create the projects\my-site folder with cmd, see the same folder in File Explorer, and have Claude Code or Codex work in it.</p>
+</section>
+<section class="band">
+<h2>Review what you learned</h2>
+<p>You created a file with File Explorer inside my-site. Will it show up in dir in the terminal?</p>
+<details>
+<summary>View the explained answer</summary>
+<p>Yes. The terminal and File Explorer show the same folder on the disk. If it doesn&#x27;t show up, you&#x27;re in a different folder: type cd to see where you are.</p>
+</details>
+</section>
+<div class="actions"><a class="button" href="../../index.html">← Previous</a><a class="button" href="index.html">Back to track</a><a class="button primary" href="../../curso/trilha2/modulo-2-1.html">Next module →</a>
+</div>
+</article>
+</main>
+<footer>
+<div class="wrap">OSWork Quick · hands-on · INEMA.CLUB · v2.0.0<br>Commands checked against official documentation on 10/07/2026. Progress and notes stay in this browser; export them from your journey.<br><a href="../../FONTES.md">Sources</a>
+</div>
+</footer>
+<dialog id="module-dialog" aria-labelledby="modal-title">
+<div class="actions"><strong id="modal-title">Complete module</strong><button onclick="document.getElementById('module-dialog').close()">Close module</button>
+</div><iframe title="Complete module content"></iframe>
+</dialog>
+<script src="../../assets/learn.js"></script><script src="../../assets/site.js"></script>
+</body>
+</html>

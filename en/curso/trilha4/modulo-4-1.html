@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="en" class="dark">
+<head><meta charset="utf-8"><script>(function(){try{var p=JSON.parse(localStorage.getItem('inema.prefs')||'{}'),d=document.documentElement;d.classList.toggle('dark',p.theme?p.theme!=='claro':true);if(p.theme)d.dataset.theme=p.theme;if(p.fontScale)d.style.setProperty('--fs-root',p.fontScale+'%');if(p.font)d.dataset.font=p.font;if(p.accent)d.dataset.accent=p.accent;if(p.lineWidth)d.style.setProperty('--measure',p.lineWidth+'ch');if(p.leading)d.style.setProperty('--leading',p.leading)}catch(e){document.documentElement.classList.add('dark')}})();</script>
+<meta name="viewport" content="width=device-width,initial-scale=1"><meta name="inema-course" content="oswork-quick-en"><title>Vercel and Supabase: the overview · OSWork Quick</title><meta name="description" content="Open the Windows terminal, create your projects folder, see where everything lives, install Claude Code or Codex, save your work on GitHub with an SSH key, and move the project to a VPS. If you learn to navigate Windows, you can navigate a VPS the same way."><meta property="og:title" content="OSWork Quick — one command at a time."><meta property="og:image" content="https://inematds.github.io/oswork-quick/capa/capa.png">
+<link rel="canonical" href="https://inematds.github.io/oswork-quick/en/curso/trilha4/modulo-4-1.html"><link rel="alternate" hreflang="pt-BR" href="https://inematds.github.io/oswork-quick/curso/trilha4/modulo-4-1.html"><link rel="alternate" hreflang="en" href="https://inematds.github.io/oswork-quick/en/curso/trilha4/modulo-4-1.html"><link rel="alternate" hreflang="es" href="https://inematds.github.io/oswork-quick/es/curso/trilha4/modulo-4-1.html"><link rel="alternate" hreflang="x-default" href="https://inematds.github.io/oswork-quick/curso/trilha4/modulo-4-1.html">
+<script type="application/json" data-inema-manifest>{"course": "oswork-quick-en", "tracks": [{"n": "1", "title": "Your computer", "modules": [{"id": "1-1", "title": "Terminal, folders, and an agent on Windows", "topics": 7, "href": "../../curso/trilha1/modulo-1-1.html"}]}, {"n": "2", "title": "GitHub", "modules": [{"id": "2-1", "title": "Git, gh, and an SSH key on GitHub", "topics": 6, "href": "../../curso/trilha2/modulo-2-1.html"}]}, {"n": "3", "title": "VPS", "modules": [{"id": "3-1", "title": "VPS: the same, on a server", "topics": 6, "href": "../../curso/trilha3/modulo-3-1.html"}]}, {"n": "4", "title": "Overview: Vercel and Supabase", "modules": [{"id": "4-1", "title": "Vercel and Supabase: the overview", "topics": 6, "href": "../../curso/trilha4/modulo-4-1.html"}]}]}</script>
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../../assets/site.css"><link rel="stylesheet" href="../../assets/learn.css">
+<style>:root{--track:#fbbf24}html:not(.dark){--track:#92400e}pre code{white-space:pre-wrap}.see{border-left:3px solid var(--track);padding:6px 0 6px 14px;margin:12px 0}.cmdbox{margin:14px 0}.hero>*{min-width:0}pre{overflow-wrap:anywhere}</style>
+</head>
+<body>
+<a class="skip" href="#conteudo">Skip to content</a>
+<nav class="topnav" aria-label="Main navigation">
+<div class="wrap">
+<div class="nav-main"><a class="brand" href="../../index.html">OSWork Quick<span aria-hidden="true">_</span></a><span aria-hidden="true">/</span><a class="text-sky-400" href="https://inema.club">INEMA.CLUB</a><span aria-hidden="true">-</span><a class="text-amber-700 dark:text-slate-300" href="https://inema.pro">PRO</a><span class="spacer"></span><button data-inema-journey-open>My journey</button><button data-inema-appearance-toggle="#aparencia" aria-expanded="false">Aa · Appearance</button><button onclick="toggleTheme()" aria-label="Toggle light and dark themes">◐ Theme</button>
+</div>
+<div class="nav-tracks"><a href="../../curso/trilha1/index.html" >T1<span class="long"> · Your computer</span></a><a href="../../curso/trilha2/index.html" >T2<span class="long"> · GitHub</span></a><a href="../../curso/trilha3/index.html" >T3<span class="long"> · VPS</span></a><a href="../../curso/trilha4/index.html" aria-current="page">T4<span class="long"> · Overview: Vercel and Supabase</span></a><a href="../../materiais/index.html">Command cheat sheet</a>
+</div>
+<div class="language-nav" data-os-languages><a href="../../../curso/trilha4/modulo-4-1.html" hreflang="pt-BR" lang="pt-BR">Português</a><a href="modulo-4-1.html" hreflang="en" lang="en" aria-current="page">English</a><a href="../../../es/curso/trilha4/modulo-4-1.html" hreflang="es" lang="es">Español</a>
+</div>
+<div id="aparencia" class="appearance" data-inema-appearance hidden>
+<div class="row"><button type="button" data-inema-set-theme="inema-dark">Dark</button><button type="button" data-inema-set-theme="claro">Light</button><button type="button" data-inema-set-theme="sepia">Sepia</button><button type="button" data-inema-set-theme="foco">Focus</button><button type="button" data-inema-set-theme="contraste">High contrast</button>
+</div>
+<div class="row"><span>Size</span><button data-inema-set-fontscale="100">100%</button><button data-inema-set-fontscale="112">112%</button><button data-inema-set-fontscale="125">125%</button><button data-inema-set-font="inter">Sans serif</button><button data-inema-set-font="leitura">Serif</button><button data-inema-set-linewidth="60">Narrow column</button><button data-inema-set-linewidth="75">Wide column</button><button data-inema-set-leading="1.7">Comfortable line spacing</button>
+</div>
+</div>
+</div>
+</nav>
+<main id="conteudo" class="wrap">
+<div class="breadcrumbs"><a href="../../index.html">Home</a> / <a href="index.html">Overview: Vercel and Supabase</a> / Module 4.1</div>
+<article id="modulo-4-1" data-inema-module="4-1" data-inema-track="4">
+<header class="hero">
+<div>
+<p class="kicker">MODULE 4.1 / 4 OF 4</p>
+<h1>Vercel and Supabase: the overview</h1>
+<p>Know what Vercel and Supabase do and how your repository connects to them as the project grows.</p>
+<div class="meter" data-inema-meter="modulo:4-1" role="progressbar" aria-label="Progress" aria-valuemin="0" aria-valuemax="100"><span class="inema-meter-pct" data-inema-meter-pct>0%</span><span class="inema-meter-count" data-inema-meter-frac>0 of 0</span>
+</div>
+</div>
+<figure class="hero-panel"><svg class="w-full h-auto" viewBox="0 0 490 320" role="img" aria-label="What Vercel does → Connect the repository to Vercel → Each push publishes → Custom domain → What Supabase does → Keep keys out of the repository"><defs><filter id="glow"><feGaussianBlur stdDeviation="1"/></filter></defs><path d="M10 10H480V305H10Z" fill="none" stroke="#334155" stroke-dasharray="3 7"/><rect x="20" y="25" width="215" height="65" rx="10" fill="#152234" stroke="#fbbf24"/><text x="36" y="50" fill="#cbd5e1" font-size="10" font-family="monospace">01 / OSWORK</text><text x="36" y="72" fill="#f1f5f9" font-size="14" font-family="sans-serif">What Vercel does</text><path d="M120 90v25" stroke="#fbbf24" stroke-width="2"/><rect x="255" y="25" width="215" height="65" rx="10" fill="#152234" stroke="#38bdf8"/><text x="271" y="50" fill="#cbd5e1" font-size="10" font-family="monospace">02 / OSWORK</text><text x="271" y="72" fill="#f1f5f9" font-size="14" font-family="sans-serif">Connect the repository to Vercel</text><path d="M355 90v25" stroke="#fbbf24" stroke-width="2"/><rect x="20" y="115" width="215" height="65" rx="10" fill="#152234" stroke="#fbbf24"/><text x="36" y="140" fill="#cbd5e1" font-size="10" font-family="monospace">03 / OSWORK</text><text x="36" y="162" fill="#f1f5f9" font-size="14" font-family="sans-serif">Each push publishes</text><path d="M120 180v25" stroke="#fbbf24" stroke-width="2"/><rect x="255" y="115" width="215" height="65" rx="10" fill="#152234" stroke="#38bdf8"/><text x="271" y="140" fill="#cbd5e1" font-size="10" font-family="monospace">04 / OSWORK</text><text x="271" y="162" fill="#f1f5f9" font-size="14" font-family="sans-serif">Custom domain</text><path d="M355 180v25" stroke="#fbbf24" stroke-width="2"/><rect x="20" y="205" width="215" height="65" rx="10" fill="#152234" stroke="#fbbf24"/><text x="36" y="230" fill="#cbd5e1" font-size="10" font-family="monospace">05 / OSWORK</text><text x="36" y="252" fill="#f1f5f9" font-size="14" font-family="sans-serif">What Supabase does</text><rect x="255" y="205" width="215" height="65" rx="10" fill="#152234" stroke="#38bdf8"/><text x="271" y="230" fill="#cbd5e1" font-size="10" font-family="monospace">06 / OSWORK</text><text x="271" y="252" fill="#f1f5f9" font-size="14" font-family="sans-serif">Keep keys out of the repository</text></svg><figcaption class="help-note">The steps in this module, in the order you’ll type them.</figcaption>
+</figure>
+</header>
+<div class="stats">
+<div><strong>6</strong><span>steps</span>
+</div>
+<div><strong>~10 min</strong><span>hands-on</span>
+</div>
+<div><strong>4/4</strong><span>track</span>
+</div>
+<div><strong>3</strong><span>idiomas · languages</span>
+</div>
+</div>
+<div class="reading-layout">
+<div>
+<section class="topic inema-prose" id="topico-1" data-inema-topic="modulo-4-1#topico-1">
+<h2><span class="number">1</span>What Vercel does</h2>
+<div class="cmdbox">
+<pre><code>git add .
+git commit -m &quot;new version&quot;
+git push</code>
+</pre><button data-copy-prev>Copy block</button>
+</div>
+<p class="see" data-inema-block="m4-1-t1-see"><strong>What you see:</strong> Once connected, each push creates a new deployment on Vercel with its own URL.</p>
+<h3>What it is</h3>
+<p data-inema-block="m4-1-t1-p1">Vercel publishes websites and apps directly from your GitHub repository. It&#x27;s the next step after Pages when your project grows beyond a simple page.</p>
+<h3>Why learn it</h3>
+<p data-inema-block="m4-1-t1-p2">It runs code on the server, supports custom domains, and shows a preview of each change before it goes live.</p>
+<h3>Key concepts</h3>
+<p data-inema-block="m4-1-t1-p3">Hosting: where a website is kept online. Deploy: publishing a version. Preview: a temporary URL to check a change.</p>
+<aside class="tip">
+<h4>Something went wrong?</h4>
+<p data-inema-block="m4-1-t1-fix">Not sure whether to use Pages or Vercel? Simple page: Pages. Form, login, or database: Vercel.</p>
+</aside>
+<figure class="module-figure"><svg class="w-full h-auto" viewBox="0 0 490 76" role="img" aria-label="git push · Vercel · Live site"><rect x="12.0" y="14" width="136.66666666666666" height="48" rx="9" fill="#152234" stroke="#fbbf24"/><text x="24.0" y="40" fill="#f1f5f9" font-size="14" font-family="sans-serif">git push</text><text x="24.0" y="59" fill="#94a3b8" font-size="11" font-family="sans-serif">you</text><path d="M154.66666666666666 38.0h22" stroke="#475569" stroke-width="2"/><path d="M170.66666666666666 33.0l6 5-6 5" fill="none" stroke="#475569" stroke-width="2"/><rect x="182.66666666666666" y="14" width="136.66666666666666" height="48" rx="9" fill="#152234" stroke="#38bdf8"/><text x="194.66666666666666" y="40" fill="#f1f5f9" font-size="14" font-family="sans-serif">Vercel</text><text x="194.66666666666666" y="59" fill="#94a3b8" font-size="11" font-family="sans-serif">publishes</text><path d="M325.3333333333333 38.0h22" stroke="#475569" stroke-width="2"/><path d="M341.3333333333333 33.0l6 5-6 5" fill="none" stroke="#475569" stroke-width="2"/><rect x="353.3333333333333" y="14" width="136.66666666666666" height="48" rx="9" fill="#152234" stroke="#fbbf24"/><text x="365.3333333333333" y="40" fill="#f1f5f9" font-size="14" font-family="sans-serif">Live site</text><text x="365.3333333333333" y="59" fill="#94a3b8" font-size="11" font-family="sans-serif">your domain</text></svg><figcaption class="help-note">Once connected, Vercel publishes automatically with each push.</figcaption>
+</figure>
+<div class="actions"><button type="button" data-inema-read-toggle aria-pressed="false"><span class="inema-read-icon" aria-hidden="true">○</span><span class="inema-read-label" data-inema-read-label>Mark as read</span></button><button type="button" data-inema-doubt-toggle aria-pressed="false">? I have a question</button>
+</div>
+</section>
+<section class="topic inema-prose" id="topico-2" data-inema-topic="modulo-4-1#topico-2">
+<h2><span class="number">2</span>Connect the repository to Vercel</h2>
+<div class="cmdbox">
+<pre><code>gh repo view --web</code>
+</pre><button data-copy-prev>Copy block</button>
+</div>
+<p class="see" data-inema-block="m4-1-t2-see"><strong>What you see:</strong> The repository opens in your browser; in Vercel, Add New → Project → Import shows your list of repositories.</p>
+<h3>What it is</h3>
+<p data-inema-block="m4-1-t2-p1">Sign in to vercel.com with your GitHub account, click Add New → Project, and import the repository. Vercel detects the project type and publishes it.</p>
+<h3>Why learn it</h3>
+<p data-inema-block="m4-1-t2-p2">You only connect it once. After that, you don&#x27;t need to open Vercel to publish.</p>
+<h3>Key concepts</h3>
+<p data-inema-block="m4-1-t2-p3">Import: giving Vercel read access to the repository. Framework: the project type (simple page, Next.js, and others), which Vercel detects automatically.</p>
+<aside class="tip">
+<h4>Something went wrong?</h4>
+<p data-inema-block="m4-1-t2-fix">Can&#x27;t find the repository in the list? Grant it access in Adjust GitHub App Permissions on the import screen.</p>
+</aside>
+<div class="actions"><button type="button" data-inema-read-toggle aria-pressed="false"><span class="inema-read-icon" aria-hidden="true">○</span><span class="inema-read-label" data-inema-read-label>Mark as read</span></button><button type="button" data-inema-doubt-toggle aria-pressed="false">? I have a question</button>
+</div>
+</section>
+<section class="topic inema-prose" id="topico-3" data-inema-topic="modulo-4-1#topico-3">
+<h2><span class="number">3</span>Each push publishes</h2>
+<div class="cmdbox">
+<pre><code>git push</code>
+</pre><button data-copy-prev>Copy block</button>
+</div>
+<p class="see" data-inema-block="m4-1-t3-see"><strong>What you see:</strong> In Vercel, the Deployments list gets a new entry with each push.</p>
+<h3>What it is</h3>
+<p data-inema-block="m4-1-t3-p1">Once the repository is connected, keep using the same routine from part 2: add, commit, push. Vercel publishes automatically.</p>
+<h3>Why learn it</h3>
+<p data-inema-block="m4-1-t3-p2">You don&#x27;t need to learn a new tool to publish: Git is still the gateway.</p>
+<h3>Key concepts</h3>
+<p data-inema-block="m4-1-t3-p3">Automatic deployment: the service watches the repository and publishes when a new version arrives. Main branch: the one that goes to the official URL.</p>
+<aside class="tip">
+<h4>Something went wrong?</h4>
+<p data-inema-block="m4-1-t3-fix">Did the deployment fail? Open it in Vercel and read the log; paste the error for the agent to explain.</p>
+</aside>
+<div class="actions"><button type="button" data-inema-read-toggle aria-pressed="false"><span class="inema-read-icon" aria-hidden="true">○</span><span class="inema-read-label" data-inema-read-label>Mark as read</span></button><button type="button" data-inema-doubt-toggle aria-pressed="false">? I have a question</button>
+</div>
+</section>
+<section class="topic inema-prose" id="topico-4" data-inema-topic="modulo-4-1#topico-4">
+<h2><span class="number">4</span>Custom domain</h2>
+<div class="cmdbox">
+<pre><code>nslookup yourdomain.com</code>
+</pre><button data-copy-prev>Copy block</button>
+</div>
+<p class="see" data-inema-block="m4-1-t4-see"><strong>What you see:</strong> The IP address your domain points to.</p>
+<h3>What it is</h3>
+<p data-inema-block="m4-1-t4-p1">In Vercel&#x27;s Settings → Domains, add your domain. Vercel will show the DNS record to configure wherever you bought the domain.</p>
+<h3>Why learn it</h3>
+<p data-inema-block="m4-1-t4-p2">It replaces the .vercel.app address with your brand name.</p>
+<h3>Key concepts</h3>
+<p data-inema-block="m4-1-t4-p3">Domain: the website&#x27;s name (yourbusiness.com). DNS: the list that says where each domain points. nslookup: a lookup of where a domain points right now.</p>
+<aside class="tip">
+<h4>Something went wrong?</h4>
+<p data-inema-block="m4-1-t4-fix">Does the domain still not open right away? A DNS change can take a few hours to take effect everywhere.</p>
+</aside>
+<div class="actions"><button type="button" data-inema-read-toggle aria-pressed="false"><span class="inema-read-icon" aria-hidden="true">○</span><span class="inema-read-label" data-inema-read-label>Mark as read</span></button><button type="button" data-inema-doubt-toggle aria-pressed="false">? I have a question</button>
+</div>
+</section>
+<section class="topic inema-prose" id="topico-5" data-inema-topic="modulo-4-1#topico-5">
+<h2><span class="number">5</span>What Supabase does</h2>
+<div class="cmdbox">
+<pre><code>type .gitignore</code>
+</pre><button data-copy-prev>Copy block</button>
+</div>
+<p class="see" data-inema-block="m4-1-t5-see"><strong>What you see:</strong> The contents of the project&#x27;s .gitignore (if it doesn&#x27;t exist, the next step creates it).</p>
+<h3>What it is</h3>
+<p data-inema-block="m4-1-t5-p1">Supabase gives your project a database, user login, and file storage without requiring you to install a server.</p>
+<h3>Why learn it</h3>
+<p data-inema-block="m4-1-t5-p2">It turns a page into a system that can save contacts, orders, and registrations.</p>
+<h3>Key concepts</h3>
+<p data-inema-block="m4-1-t5-p3">Database: where records are stored. Login (authentication): identifying the user. Project key: the password your code uses to communicate with Supabase.</p>
+<aside class="tip">
+<h4>Something went wrong?</h4>
+<p data-inema-block="m4-1-t5-fix">Before creating the project in Supabase, take the next step: keep keys out of the repository.</p>
+</aside>
+<figure class="module-figure"><svg class="w-full h-auto" viewBox="0 0 490 86" role="img" aria-label="Pages · Vercel · Supabase"><rect x="12.0" y="14" width="154.0" height="58" rx="9" fill="#152234" stroke="#fbbf24"/><text x="24.0" y="40" fill="#f1f5f9" font-size="14" font-family="sans-serif">Pages</text><text x="24.0" y="59" fill="#94a3b8" font-size="11" font-family="sans-serif">simple page</text><rect x="174.0" y="14" width="154.0" height="58" rx="9" fill="#152234" stroke="#38bdf8"/><text x="186.0" y="40" fill="#f1f5f9" font-size="14" font-family="sans-serif">Vercel</text><text x="186.0" y="59" fill="#94a3b8" font-size="11" font-family="sans-serif">website and app</text><rect x="336.0" y="14" width="154.0" height="58" rx="9" fill="#152234" stroke="#fbbf24"/><text x="348.0" y="40" fill="#f1f5f9" font-size="14" font-family="sans-serif">Supabase</text><text x="348.0" y="59" fill="#94a3b8" font-size="11" font-family="sans-serif">data and login</text></svg><figcaption class="help-note">Each service solves a different problem. Start with Pages and add more only when you need them.</figcaption>
+</figure>
+<div class="actions"><button type="button" data-inema-read-toggle aria-pressed="false"><span class="inema-read-icon" aria-hidden="true">○</span><span class="inema-read-label" data-inema-read-label>Mark as read</span></button><button type="button" data-inema-doubt-toggle aria-pressed="false">? I have a question</button>
+</div>
+</section>
+<section class="topic inema-prose" id="topico-6" data-inema-topic="modulo-4-1#topico-6">
+<h2><span class="number">6</span>Keep keys out of the repository</h2>
+<div class="cmdbox">
+<pre><code>echo .env&gt;&gt;.gitignore
+type .gitignore</code>
+</pre><button data-copy-prev>Copy block</button>
+</div>
+<p class="see" data-inema-block="m4-1-t6-see"><strong>What you see:</strong> .env appears in the .gitignore list. Then ask the agent: Create a contact form that saves to Supabase; read the keys from the .env file and never write them in the code.</p>
+<h3>What it is</h3>
+<p data-inema-block="m4-1-t6-p1">Supabase keys go in a .env file, and .gitignore prevents Git from sending that file to GitHub.</p>
+<h3>Why learn it</h3>
+<p data-inema-block="m4-1-t6-p2">A published key is a leaked key: anyone can use your database. In a public repository, this can happen within minutes.</p>
+<h3>Key concepts</h3>
+<p data-inema-block="m4-1-t6-p3">.env: a file with the project&#x27;s keys and passwords. .gitignore: a list of what Git doesn&#x27;t send. Environment variable: a way to pass a key to a program without writing it in the code.</p>
+<aside class="tip">
+<h4>Something went wrong?</h4>
+<p data-inema-block="m4-1-t6-fix">Did you already send a key to GitHub? Change the key in the Supabase dashboard right away; deleting the file isn&#x27;t enough because it remains in the history.</p>
+</aside>
+<figure class="module-figure"><svg class="w-full h-auto" viewBox="0 0 490 134" role="img" aria-label="Goes to GitHub · Stays here"><rect x="12.0" y="14" width="235.0" height="58" rx="9" fill="#152234" stroke="#fbbf24"/><text x="24.0" y="40" fill="#f1f5f9" font-size="14" font-family="sans-serif">Goes to GitHub</text><text x="24.0" y="59" fill="#94a3b8" font-size="11" font-family="sans-serif">index.html, AGENTS.md</text><rect x="255.0" y="14" width="235.0" height="58" rx="9" fill="#152234" stroke="#38bdf8"/><text x="267.0" y="40" fill="#f1f5f9" font-size="14" font-family="sans-serif">Stays here</text><text x="267.0" y="59" fill="#94a3b8" font-size="11" font-family="sans-serif">.env with the keys</text><path d="M251.0 72v14" stroke="#475569" stroke-width="2"/><rect x="12.0" y="86" width="478.0" height="40" rx="9" fill="#152234" stroke="#475569"/><text x="24.0" y="111.0" fill="#f1f5f9" font-size="14" font-family="sans-serif">.gitignore separates the two</text></svg><figcaption class="help-note">.gitignore is the boundary: what goes to GitHub and what never leaves your computer.</figcaption>
+</figure>
+<div class="actions"><button type="button" data-inema-read-toggle aria-pressed="false"><span class="inema-read-icon" aria-hidden="true">○</span><span class="inema-read-label" data-inema-read-label>Mark as read</span></button><button type="button" data-inema-doubt-toggle aria-pressed="false">? I have a question</button>
+</div>
+</section>
+</div>
+<nav class="toc" data-inema-toc aria-label="IN THIS LESSON">
+<p class="kicker">IN THIS LESSON</p>
+<ul>
+<li><a class="inema-toc-link" href="#topico-1">1. What Vercel does</a>
+</li>
+<li><a class="inema-toc-link" href="#topico-2">2. Connect the repository to Vercel</a>
+</li>
+<li><a class="inema-toc-link" href="#topico-3">3. Each push publishes</a>
+</li>
+<li><a class="inema-toc-link" href="#topico-4">4. Custom domain</a>
+</li>
+<li><a class="inema-toc-link" href="#topico-5">5. What Supabase does</a>
+</li>
+<li><a class="inema-toc-link" href="#topico-6">6. Keep keys out of the repository</a>
+</li>
+</ul><a href="#laboratorio">Final lab ↓</a>
+</nav>
+</div>
+<section class="lab" id="laboratorio">
+<p class="kicker">HANDS-ON / ~10 MIN</p>
+<h2>Your next-step map</h2>
+<p>Check each item when it actually works on your computer, not when you finish reading.</p>
+<ol class="checklist">
+<li><label><input type="checkbox" data-task="4-1-1"><span>I can explain the difference between GitHub Pages and Vercel.</span></label>
+</li>
+<li><label><input type="checkbox" data-task="4-1-2"><span>I know where the repository fits into Vercel (Add New → Project).</span></label>
+</li>
+<li><label><input type="checkbox" data-task="4-1-3"><span>I know that each git push publishes to Vercel again.</span></label>
+</li>
+<li><label><input type="checkbox" data-task="4-1-4"><span>I know what Supabase is for (database, login, files).</span></label>
+</li>
+<li><label><input type="checkbox" data-task="4-1-5"><span>.env is in my project&#x27;s .gitignore.</span></label>
+</li>
+<li><label><input type="checkbox" data-task="4-1-6"><span>I have a prompt ready for the agent when I need Supabase.</span></label>
+</li>
+</ol>
+<h3>Cheat sheet for part 4</h3>
+<pre><code>git add .
+git commit -m &quot;new version&quot;
+git push
+gh repo view --web
+git push
+nslookup yourdomain.com
+type .gitignore
+echo .env&gt;&gt;.gitignore
+type .gitignore</code>
+</pre><button data-copy-prev>Copy block</button>
+<h3>Done criteria</h3>
+<p>Know what Vercel and Supabase do and how your repository connects to them as the project grows.</p>
+</section>
+<section class="band">
+<h2>Review what you learned</h2>
+<p>You want a form that saves the contacts it receives. Can GitHub Pages do that on its own?</p>
+<details>
+<summary>View the explained answer</summary>
+<p>No. Pages only displays pages. Saving data requires a database, such as Supabase, and usually hosting such as Vercel.</p>
+</details>
+</section>
+<div class="actions"><a class="button" href="../../curso/trilha3/modulo-3-1.html">← Previous</a><a class="button" href="index.html">Back to track</a><a class="button primary" href="../../materiais/index.html">Open the command cheat sheet →</a>
+</div>
+</article>
+</main>
+<footer>
+<div class="wrap">OSWork Quick · hands-on · INEMA.CLUB · v2.0.0<br>Commands checked against official documentation on 10/07/2026. Progress and notes stay in this browser; export them from your journey.<br><a href="../../FONTES.md">Sources</a>
+</div>
+</footer>
+<dialog id="module-dialog" aria-labelledby="modal-title">
+<div class="actions"><strong id="modal-title">Complete module</strong><button onclick="document.getElementById('module-dialog').close()">Close module</button>
+</div><iframe title="Complete module content"></iframe>
+</dialog>
+<script src="../../assets/learn.js"></script><script src="../../assets/site.js"></script>
+</body>
+</html>

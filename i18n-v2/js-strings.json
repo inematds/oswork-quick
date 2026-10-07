@@ -1,0 +1,4596 @@
+{
+  "assets/learn.js": [
+    {
+      "value": "use strict",
+      "start": 1075,
+      "end": 1087
+    },
+    {
+      "value": "--inema-font-scale",
+      "start": 1531,
+      "end": 1551
+    },
+    {
+      "value": "--measure",
+      "start": 1612,
+      "end": 1623
+    },
+    {
+      "value": "--lh-body",
+      "start": 1676,
+      "end": 1687
+    },
+    {
+      "value": "--font-body",
+      "start": 1758,
+      "end": 1771
+    },
+    {
+      "value": "--accent-h",
+      "start": 1816,
+      "end": 1828
+    },
+    {
+      "value": "--accent-s",
+      "start": 1843,
+      "end": 1855
+    },
+    {
+      "value": "--accent-l",
+      "start": 1870,
+      "end": 1882
+    },
+    {
+      "value": "--accent",
+      "start": 1896,
+      "end": 1906
+    },
+    {
+      "value": "inema-dark",
+      "start": 2049,
+      "end": 2061
+    },
+    {
+      "value": "inter",
+      "start": 2126,
+      "end": 2133
+    },
+    {
+      "value": "emerald",
+      "start": 2327,
+      "end": 2336
+    },
+    {
+      "value": "inema-dark",
+      "start": 2612,
+      "end": 2624
+    },
+    {
+      "value": "dark",
+      "start": 2665,
+      "end": 2671
+    },
+    {
+      "value": "claro",
+      "start": 2679,
+      "end": 2686
+    },
+    {
+      "value": "light",
+      "start": 2728,
+      "end": 2735
+    },
+    {
+      "value": "sepia",
+      "start": 2743,
+      "end": 2750
+    },
+    {
+      "value": "sepia",
+      "start": 2773,
+      "end": 2780
+    },
+    {
+      "value": "light",
+      "start": 2795,
+      "end": 2802
+    },
+    {
+      "value": "foco",
+      "start": 2810,
+      "end": 2816
+    },
+    {
+      "value": "inherit",
+      "start": 2826,
+      "end": 2835
+    },
+    {
+      "value": "foco",
+      "start": 2843,
+      "end": 2849
+    },
+    {
+      "value": "inherit",
+      "start": 2864,
+      "end": 2873
+    },
+    {
+      "value": "contraste",
+      "start": 2914,
+      "end": 2925
+    },
+    {
+      "value": "contraste",
+      "start": 2947,
+      "end": 2958
+    },
+    {
+      "value": "dark",
+      "start": 2973,
+      "end": 2979
+    },
+    {
+      "value": "inter",
+      "start": 3003,
+      "end": 3010
+    },
+    {
+      "value": "system",
+      "start": 3012,
+      "end": 3020
+    },
+    {
+      "value": "leitura",
+      "start": 3022,
+      "end": 3031
+    },
+    {
+      "value": "emerald",
+      "start": 3486,
+      "end": 3495
+    },
+    {
+      "value": "blue",
+      "start": 3497,
+      "end": 3503
+    },
+    {
+      "value": "purple",
+      "start": 3505,
+      "end": 3513
+    },
+    {
+      "value": "amber",
+      "start": 3515,
+      "end": 3522
+    },
+    {
+      "value": "teal",
+      "start": 3524,
+      "end": 3530
+    },
+    {
+      "value": "rose",
+      "start": 3532,
+      "end": 3538
+    },
+    {
+      "value": "yellow",
+      "start": 3559,
+      "end": 3567
+    },
+    {
+      "value": "green",
+      "start": 3569,
+      "end": 3576
+    },
+    {
+      "value": "blue",
+      "start": 3578,
+      "end": 3584
+    },
+    {
+      "value": "pink",
+      "start": 3586,
+      "end": 3592
+    },
+    {
+      "value": "doubt",
+      "start": 3594,
+      "end": 3601
+    },
+    {
+      "value": "string",
+      "start": 4707,
+      "end": 4715
+    },
+    {
+      "value": "[INEMA] JSON corrompido, usando fallback:",
+      "start": 4840,
+      "end": 4883
+    },
+    {
+      "value": "__inema_probe__",
+      "start": 5118,
+      "end": 5135
+    },
+    {
+      "value": "1",
+      "start": 5157,
+      "end": 5160
+    },
+    {
+      "value": "1",
+      "start": 5196,
+      "end": 5199
+    },
+    {
+      "value": "[INEMA] getItem falhou:",
+      "start": 5594,
+      "end": 5619
+    },
+    {
+      "value": "[INEMA] setItem falhou (cota?):",
+      "start": 6102,
+      "end": 6135
+    },
+    {
+      "value": "Armazenamento cheio. Exporte sua jornada para nao perder dados.",
+      "start": 6154,
+      "end": 6219
+    },
+    {
+      "value": "warn",
+      "start": 6221,
+      "end": 6227
+    },
+    {
+      "value": "[INEMA] removeItem falhou:",
+      "start": 6488,
+      "end": 6516
+    },
+    {
+      "value": "[INEMA] JSON.stringify falhou:",
+      "start": 7201,
+      "end": 7233
+    },
+    {
+      "value": "[INEMA] debounce cb erro:",
+      "start": 7567,
+      "end": 7594
+    },
+    {
+      "value": "inema-toast-host",
+      "start": 7775,
+      "end": 7793
+    },
+    {
+      "value": "div",
+      "start": 7853,
+      "end": 7858
+    },
+    {
+      "value": "inema-toast-host",
+      "start": 7879,
+      "end": 7897
+    },
+    {
+      "value": "aria-live",
+      "start": 7925,
+      "end": 7936
+    },
+    {
+      "value": "polite",
+      "start": 7938,
+      "end": 7946
+    },
+    {
+      "value": "inema-toast-host",
+      "start": 7974,
+      "end": 7992
+    },
+    {
+      "value": "div",
+      "start": 8110,
+      "end": 8115
+    },
+    {
+      "value": "inema-toast",
+      "start": 8138,
+      "end": 8151
+    },
+    {
+      "value": " inema-toast--",
+      "start": 8162,
+      "end": 8178
+    },
+    {
+      "value": "",
+      "start": 8188,
+      "end": 8190
+    },
+    {
+      "value": "data-open",
+      "start": 8214,
+      "end": 8225
+    },
+    {
+      "value": "false",
+      "start": 8227,
+      "end": 8234
+    },
+    {
+      "value": "data-open",
+      "start": 8551,
+      "end": 8562
+    },
+    {
+      "value": "true",
+      "start": 8564,
+      "end": 8570
+    },
+    {
+      "value": "data-open",
+      "start": 8627,
+      "end": 8638
+    },
+    {
+      "value": "true",
+      "start": 8640,
+      "end": 8646
+    },
+    {
+      "value": "data-open",
+      "start": 8786,
+      "end": 8797
+    },
+    {
+      "value": "false",
+      "start": 8799,
+      "end": 8806
+    },
+    {
+      "value": "[INEMA] notify:",
+      "start": 8953,
+      "end": 8970
+    },
+    {
+      "value": "n_",
+      "start": 9100,
+      "end": 9104
+    },
+    {
+      "value": "_",
+      "start": 9120,
+      "end": 9123
+    },
+    {
+      "value": "\\$&",
+      "start": 9295,
+      "end": 9301
+    },
+    {
+      "value": "(prefers-reduced-motion: reduce)",
+      "start": 9536,
+      "end": 9570
+    },
+    {
+      "value": "inema:",
+      "start": 9717,
+      "end": 9725
+    },
+    {
+      "value": "CustomEvent",
+      "start": 9857,
+      "end": 9870
+    },
+    {
+      "value": "inema:",
+      "start": 9900,
+      "end": 9908
+    },
+    {
+      "value": "[INEMA] emit falhou:",
+      "start": 10022,
+      "end": 10044
+    },
+    {
+      "value": "meta[name=\"inema-course\"]",
+      "start": 10333,
+      "end": 10360
+    },
+    {
+      "value": "content",
+      "start": 10393,
+      "end": 10402
+    },
+    {
+      "value": "content",
+      "start": 10425,
+      "end": 10434
+    },
+    {
+      "value": "",
+      "start": 10613,
+      "end": 10615
+    },
+    {
+      "value": "/",
+      "start": 10623,
+      "end": 10626
+    },
+    {
+      "value": "",
+      "start": 10755,
+      "end": 10757
+    },
+    {
+      "value": "curso",
+      "start": 10781,
+      "end": 10788
+    },
+    {
+      "value": "-",
+      "start": 10816,
+      "end": 10819
+    },
+    {
+      "value": "curso",
+      "start": 10862,
+      "end": 10869
+    },
+    {
+      "value": "curso",
+      "start": 10896,
+      "end": 10903
+    },
+    {
+      "value": "inema.",
+      "start": 10944,
+      "end": 10952
+    },
+    {
+      "value": ".",
+      "start": 10968,
+      "end": 10971
+    },
+    {
+      "value": "read",
+      "start": 11030,
+      "end": 11036
+    },
+    {
+      "value": "doubts",
+      "start": 11099,
+      "end": 11107
+    },
+    {
+      "value": "notes",
+      "start": 11169,
+      "end": 11176
+    },
+    {
+      "value": "checks",
+      "start": 11239,
+      "end": 11247
+    },
+    {
+      "value": "meta",
+      "start": 11308,
+      "end": 11314
+    },
+    {
+      "value": "read",
+      "start": 11377,
+      "end": 11383
+    },
+    {
+      "value": "doubts",
+      "start": 11440,
+      "end": 11448
+    },
+    {
+      "value": "notes",
+      "start": 11504,
+      "end": 11511
+    },
+    {
+      "value": "checks",
+      "start": 11568,
+      "end": 11576
+    },
+    {
+      "value": "meta",
+      "start": 11631,
+      "end": 11637
+    },
+    {
+      "value": "object",
+      "start": 12075,
+      "end": 12083
+    },
+    {
+      "value": "inema.prefs",
+      "start": 13125,
+      "end": 13138
+    },
+    {
+      "value": "theme",
+      "start": 13307,
+      "end": 13314
+    },
+    {
+      "value": "light",
+      "start": 13500,
+      "end": 13507
+    },
+    {
+      "value": "claro",
+      "start": 13522,
+      "end": 13529
+    },
+    {
+      "value": "dark",
+      "start": 13557,
+      "end": 13563
+    },
+    {
+      "value": "inema-dark",
+      "start": 13578,
+      "end": 13590
+    },
+    {
+      "value": "inema.prefs",
+      "start": 13744,
+      "end": 13757
+    },
+    {
+      "value": "theme",
+      "start": 13934,
+      "end": 13941
+    },
+    {
+      "value": "dark",
+      "start": 13943,
+      "end": 13949
+    },
+    {
+      "value": "theme",
+      "start": 13997,
+      "end": 14004
+    },
+    {
+      "value": "light",
+      "start": 14006,
+      "end": 14013
+    },
+    {
+      "value": "dark",
+      "start": 14458,
+      "end": 14464
+    },
+    {
+      "value": "dark",
+      "start": 14522,
+      "end": 14528
+    },
+    {
+      "value": "data-theme",
+      "start": 14690,
+      "end": 14702
+    },
+    {
+      "value": "data-theme",
+      "start": 14745,
+      "end": 14757
+    },
+    {
+      "value": "inherit",
+      "start": 14876,
+      "end": 14885
+    },
+    {
+      "value": "dark",
+      "start": 15009,
+      "end": 15015
+    },
+    {
+      "value": "dark",
+      "start": 15019,
+      "end": 15025
+    },
+    {
+      "value": "light",
+      "start": 15028,
+      "end": 15035
+    },
+    {
+      "value": "data-font",
+      "start": 15148,
+      "end": 15159
+    },
+    {
+      "value": "data-accent",
+      "start": 15194,
+      "end": 15207
+    },
+    {
+      "value": "font-size",
+      "start": 15444,
+      "end": 15455
+    },
+    {
+      "value": "%",
+      "start": 15471,
+      "end": 15474
+    },
+    {
+      "value": "ch",
+      "start": 15530,
+      "end": 15534
+    },
+    {
+      "value": "data-line-width",
+      "start": 15906,
+      "end": 15923
+    },
+    {
+      "value": "data-leading",
+      "start": 16005,
+      "end": 16019
+    },
+    {
+      "value": "compacto",
+      "start": 16040,
+      "end": 16050
+    },
+    {
+      "value": "confortavel",
+      "start": 16053,
+      "end": 16066
+    },
+    {
+      "value": "system",
+      "start": 16096,
+      "end": 16104
+    },
+    {
+      "value": "system-ui, -apple-system, \"Segoe UI\", Roboto, sans-serif",
+      "start": 16115,
+      "end": 16173
+    },
+    {
+      "value": "leitura",
+      "start": 16196,
+      "end": 16205
+    },
+    {
+      "value": "\"Atkinson Hyperlegible\", \"Inter\", system-ui, sans-serif",
+      "start": 16218,
+      "end": 16275
+    },
+    {
+      "value": "\"Inter\", system-ui, sans-serif",
+      "start": 16288,
+      "end": 16320
+    },
+    {
+      "value": "",
+      "start": 16517,
+      "end": 16519
+    },
+    {
+      "value": "%",
+      "start": 16567,
+      "end": 16570
+    },
+    {
+      "value": "%",
+      "start": 16618,
+      "end": 16621
+    },
+    {
+      "value": "hsl(",
+      "start": 16662,
+      "end": 16668
+    },
+    {
+      "value": " ",
+      "start": 16677,
+      "end": 16680
+    },
+    {
+      "value": "% ",
+      "start": 16689,
+      "end": 16693
+    },
+    {
+      "value": "%)",
+      "start": 16702,
+      "end": 16706
+    },
+    {
+      "value": "data-reduced-motion",
+      "start": 16860,
+      "end": 16881
+    },
+    {
+      "value": "reduce",
+      "start": 16883,
+      "end": 16891
+    },
+    {
+      "value": "data-reduced-motion",
+      "start": 16926,
+      "end": 16947
+    },
+    {
+      "value": "[INEMA] applyPrefs:",
+      "start": 16979,
+      "end": 17000
+    },
+    {
+      "value": "[INEMA] setPref: chave desconhecida",
+      "start": 17163,
+      "end": 17200
+    },
+    {
+      "value": "progress",
+      "start": 17382,
+      "end": 17392
+    },
+    {
+      "value": "prefs",
+      "start": 17402,
+      "end": 17409
+    },
+    {
+      "value": "theme",
+      "start": 17546,
+      "end": 17553
+    },
+    {
+      "value": "font",
+      "start": 17602,
+      "end": 17608
+    },
+    {
+      "value": "fontScale",
+      "start": 17643,
+      "end": 17654
+    },
+    {
+      "value": "lineWidth",
+      "start": 17695,
+      "end": 17706
+    },
+    {
+      "value": "leading",
+      "start": 17747,
+      "end": 17756
+    },
+    {
+      "value": "accent",
+      "start": 17794,
+      "end": 17802
+    },
+    {
+      "value": "[INEMA] cyclePref: chave nao-ciclavel",
+      "start": 17847,
+      "end": 17886
+    },
+    {
+      "value": "number",
+      "start": 17958,
+      "end": 17966
+    },
+    {
+      "value": "[data-inema-topic]",
+      "start": 18439,
+      "end": 18459
+    },
+    {
+      "value": "curso",
+      "start": 18674,
+      "end": 18681
+    },
+    {
+      "value": "[data-inema-track]",
+      "start": 18845,
+      "end": 18865
+    },
+    {
+      "value": "data-inema-track",
+      "start": 18913,
+      "end": 18931
+    },
+    {
+      "value": "data-inema-topic",
+      "start": 19098,
+      "end": 19116
+    },
+    {
+      "value": "",
+      "start": 19121,
+      "end": 19123
+    },
+    {
+      "value": "modulo-",
+      "start": 19237,
+      "end": 19246
+    },
+    {
+      "value": "#",
+      "start": 19255,
+      "end": 19258
+    },
+    {
+      "value": "[data-inema-module]",
+      "start": 19312,
+      "end": 19333
+    },
+    {
+      "value": "data-inema-module",
+      "start": 19381,
+      "end": 19400
+    },
+    {
+      "value": "data-inema-topic",
+      "start": 19693,
+      "end": 19711
+    },
+    {
+      "value": "object",
+      "start": 20465,
+      "end": 20473
+    },
+    {
+      "value": "script[data-inema-manifest]",
+      "start": 20574,
+      "end": 20603
+    },
+    {
+      "value": "",
+      "start": 21088,
+      "end": 21090
+    },
+    {
+      "value": "Modulo ",
+      "start": 21298,
+      "end": 21307
+    },
+    {
+      "value": "curso",
+      "start": 21597,
+      "end": 21604
+    },
+    {
+      "value": "",
+      "start": 22217,
+      "end": 22219
+    },
+    {
+      "value": "-",
+      "start": 22302,
+      "end": 22305
+    },
+    {
+      "value": "curso",
+      "start": 22564,
+      "end": 22571
+    },
+    {
+      "value": "curso",
+      "start": 22958,
+      "end": 22965
+    },
+    {
+      "value": "read",
+      "start": 24225,
+      "end": 24231
+    },
+    {
+      "value": "curso",
+      "start": 24277,
+      "end": 24284
+    },
+    {
+      "value": "progress",
+      "start": 24299,
+      "end": 24309
+    },
+    {
+      "value": "read",
+      "start": 24319,
+      "end": 24325
+    },
+    {
+      "value": "curso",
+      "start": 24358,
+      "end": 24365
+    },
+    {
+      "value": "[data-inema-read-toggle]",
+      "start": 24546,
+      "end": 24572
+    },
+    {
+      "value": "[data-inema-topic]",
+      "start": 24674,
+      "end": 24694
+    },
+    {
+      "value": "data-inema-topic",
+      "start": 24737,
+      "end": 24755
+    },
+    {
+      "value": "data-inema-read-toggle",
+      "start": 24774,
+      "end": 24798
+    },
+    {
+      "value": "[INEMA] paintReadControls:",
+      "start": 24912,
+      "end": 24940
+    },
+    {
+      "value": "aria-pressed",
+      "start": 25023,
+      "end": 25037
+    },
+    {
+      "value": "true",
+      "start": 25046,
+      "end": 25052
+    },
+    {
+      "value": "false",
+      "start": 25055,
+      "end": 25062
+    },
+    {
+      "value": "is-read",
+      "start": 25090,
+      "end": 25099
+    },
+    {
+      "value": ".inema-read-icon",
+      "start": 25141,
+      "end": 25159
+    },
+    {
+      "value": "●",
+      "start": 25202,
+      "end": 25205
+    },
+    {
+      "value": "○",
+      "start": 25208,
+      "end": 25211
+    },
+    {
+      "value": "[data-inema-read-label]",
+      "start": 25318,
+      "end": 25343
+    },
+    {
+      "value": "Lido",
+      "start": 25384,
+      "end": 25390
+    },
+    {
+      "value": "Marcar como lido",
+      "start": 25393,
+      "end": 25411
+    },
+    {
+      "value": "svg",
+      "start": 25445,
+      "end": 25450
+    },
+    {
+      "value": "Lido",
+      "start": 25510,
+      "end": 25516
+    },
+    {
+      "value": "Marcar como lido",
+      "start": 25519,
+      "end": 25537
+    },
+    {
+      "value": "is-read",
+      "start": 25579,
+      "end": 25588
+    },
+    {
+      "value": "[data-inema-meter]",
+      "start": 25756,
+      "end": 25776
+    },
+    {
+      "value": "data-inema-meter",
+      "start": 25891,
+      "end": 25909
+    },
+    {
+      "value": "curso",
+      "start": 25914,
+      "end": 25921
+    },
+    {
+      "value": "[INEMA] renderMeters:",
+      "start": 26016,
+      "end": 26039
+    },
+    {
+      "value": "role",
+      "start": 26157,
+      "end": 26163
+    },
+    {
+      "value": "role",
+      "start": 26181,
+      "end": 26187
+    },
+    {
+      "value": "progressbar",
+      "start": 26192,
+      "end": 26205
+    },
+    {
+      "value": "aria-valuemin",
+      "start": 26228,
+      "end": 26243
+    },
+    {
+      "value": "0",
+      "start": 26245,
+      "end": 26248
+    },
+    {
+      "value": "aria-valuemax",
+      "start": 26271,
+      "end": 26286
+    },
+    {
+      "value": "100",
+      "start": 26288,
+      "end": 26293
+    },
+    {
+      "value": "aria-valuenow",
+      "start": 26316,
+      "end": 26331
+    },
+    {
+      "value": "aria-valuetext",
+      "start": 26370,
+      "end": 26386
+    },
+    {
+      "value": " de ",
+      "start": 26398,
+      "end": 26404
+    },
+    {
+      "value": " (",
+      "start": 26418,
+      "end": 26422
+    },
+    {
+      "value": "%)",
+      "start": 26434,
+      "end": 26438
+    },
+    {
+      "value": "--inema-pct",
+      "start": 26541,
+      "end": 26554
+    },
+    {
+      "value": "--inema-pct-num",
+      "start": 26598,
+      "end": 26615
+    },
+    {
+      "value": "data-complete",
+      "start": 26734,
+      "end": 26749
+    },
+    {
+      "value": "true",
+      "start": 26792,
+      "end": 26798
+    },
+    {
+      "value": "false",
+      "start": 26801,
+      "end": 26808
+    },
+    {
+      "value": "[data-inema-meter-pct]",
+      "start": 26880,
+      "end": 26904
+    },
+    {
+      "value": "%",
+      "start": 26955,
+      "end": 26958
+    },
+    {
+      "value": "[data-inema-meter-frac]",
+      "start": 26996,
+      "end": 27021
+    },
+    {
+      "value": " de ",
+      "start": 27075,
+      "end": 27081
+    },
+    {
+      "value": "[data-inema-meter-fill]",
+      "start": 27166,
+      "end": 27191
+    },
+    {
+      "value": "%",
+      "start": 27236,
+      "end": 27239
+    },
+    {
+      "value": "[data-inema-ring]",
+      "start": 27349,
+      "end": 27368
+    },
+    {
+      "value": "r",
+      "start": 27444,
+      "end": 27447
+    },
+    {
+      "value": " ",
+      "start": 27530,
+      "end": 27533
+    },
+    {
+      "value": "curso",
+      "start": 27698,
+      "end": 27705
+    },
+    {
+      "value": "Curso concluido. Parabens pelo esforco.",
+      "start": 27906,
+      "end": 27947
+    },
+    {
+      "value": "ok",
+      "start": 27949,
+      "end": 27953
+    },
+    {
+      "value": "doubt",
+      "start": 28418,
+      "end": 28425
+    },
+    {
+      "value": "doubt",
+      "start": 28717,
+      "end": 28724
+    },
+    {
+      "value": "[data-inema-doubt-toggle]",
+      "start": 28887,
+      "end": 28914
+    },
+    {
+      "value": "[data-inema-topic]",
+      "start": 29016,
+      "end": 29036
+    },
+    {
+      "value": "data-inema-topic",
+      "start": 29079,
+      "end": 29097
+    },
+    {
+      "value": "data-inema-doubt-toggle",
+      "start": 29116,
+      "end": 29141
+    },
+    {
+      "value": "aria-pressed",
+      "start": 29204,
+      "end": 29218
+    },
+    {
+      "value": "true",
+      "start": 29227,
+      "end": 29233
+    },
+    {
+      "value": "false",
+      "start": 29236,
+      "end": 29243
+    },
+    {
+      "value": "is-doubt",
+      "start": 29273,
+      "end": 29283
+    },
+    {
+      "value": "has-doubt",
+      "start": 29330,
+      "end": 29341
+    },
+    {
+      "value": "topic",
+      "start": 29644,
+      "end": 29651
+    },
+    {
+      "value": "doubt",
+      "start": 30027,
+      "end": 30034
+    },
+    {
+      "value": "duvida",
+      "start": 30064,
+      "end": 30072
+    },
+    {
+      "value": "note",
+      "start": 30150,
+      "end": 30156
+    },
+    {
+      "value": "",
+      "start": 30228,
+      "end": 30230
+    },
+    {
+      "value": "[data-inema-block]",
+      "start": 30882,
+      "end": 30902
+    },
+    {
+      "value": "mark.inema-hl",
+      "start": 31993,
+      "end": 32008
+    },
+    {
+      "value": "mark",
+      "start": 32798,
+      "end": 32804
+    },
+    {
+      "value": "inema-hl inema-hl--",
+      "start": 32830,
+      "end": 32851
+    },
+    {
+      "value": "yellow",
+      "start": 32869,
+      "end": 32877
+    },
+    {
+      "value": "data-inema-note",
+      "start": 32904,
+      "end": 32921
+    },
+    {
+      "value": "data-inema-color",
+      "start": 32957,
+      "end": 32975
+    },
+    {
+      "value": "yellow",
+      "start": 32991,
+      "end": 32999
+    },
+    {
+      "value": "data-hl",
+      "start": 33026,
+      "end": 33035
+    },
+    {
+      "value": "yellow",
+      "start": 33051,
+      "end": 33059
+    },
+    {
+      "value": "data-has-note",
+      "start": 33101,
+      "end": 33116
+    },
+    {
+      "value": "true",
+      "start": 33118,
+      "end": 33124
+    },
+    {
+      "value": "",
+      "start": 33596,
+      "end": 33598
+    },
+    {
+      "value": "Selecione dentro de um paragrafo anotavel.",
+      "start": 33870,
+      "end": 33914
+    },
+    {
+      "value": "warn",
+      "start": 33916,
+      "end": 33922
+    },
+    {
+      "value": "Selecao limitada a um paragrafo.",
+      "start": 34066,
+      "end": 34100
+    },
+    {
+      "value": "warn",
+      "start": 34102,
+      "end": 34108
+    },
+    {
+      "value": "data-inema-block",
+      "start": 34154,
+      "end": 34172
+    },
+    {
+      "value": "Este trecho nao e anotavel.",
+      "start": 34202,
+      "end": 34231
+    },
+    {
+      "value": "warn",
+      "start": 34233,
+      "end": 34239
+    },
+    {
+      "value": "[INEMA] offsets falharam:",
+      "start": 34685,
+      "end": 34712
+    },
+    {
+      "value": "yellow",
+      "start": 34887,
+      "end": 34895
+    },
+    {
+      "value": "doubt",
+      "start": 34987,
+      "end": 34994
+    },
+    {
+      "value": "duvida",
+      "start": 35011,
+      "end": 35019
+    },
+    {
+      "value": "duvida",
+      "start": 35039,
+      "end": 35047
+    },
+    {
+      "value": "",
+      "start": 35214,
+      "end": 35216
+    },
+    {
+      "value": "note",
+      "start": 35770,
+      "end": 35776
+    },
+    {
+      "value": "doubt",
+      "start": 35880,
+      "end": 35887
+    },
+    {
+      "value": "doubt",
+      "start": 35894,
+      "end": 35901
+    },
+    {
+      "value": "note",
+      "start": 35937,
+      "end": 35943
+    },
+    {
+      "value": "",
+      "start": 36109,
+      "end": 36111
+    },
+    {
+      "value": "",
+      "start": 36824,
+      "end": 36826
+    },
+    {
+      "value": "mark[data-inema-note=\"",
+      "start": 36978,
+      "end": 37002
+    },
+    {
+      "value": "\"]",
+      "start": 37022,
+      "end": 37026
+    },
+    {
+      "value": "data-has-note",
+      "start": 37096,
+      "end": 37111
+    },
+    {
+      "value": "true",
+      "start": 37113,
+      "end": 37119
+    },
+    {
+      "value": "note",
+      "start": 37150,
+      "end": 37156
+    },
+    {
+      "value": "mark[data-inema-note=\"",
+      "start": 37544,
+      "end": 37568
+    },
+    {
+      "value": "\"]",
+      "start": 37588,
+      "end": 37592
+    },
+    {
+      "value": "",
+      "start": 37692,
+      "end": 37694
+    },
+    {
+      "value": "data-has-note",
+      "start": 37719,
+      "end": 37734
+    },
+    {
+      "value": "true",
+      "start": 37736,
+      "end": 37742
+    },
+    {
+      "value": "data-has-note",
+      "start": 37786,
+      "end": 37801
+    },
+    {
+      "value": "mark[data-inema-note=\"",
+      "start": 38007,
+      "end": 38031
+    },
+    {
+      "value": "\"]",
+      "start": 38051,
+      "end": 38055
+    },
+    {
+      "value": "inema-hl inema-hl--",
+      "start": 38138,
+      "end": 38159
+    },
+    {
+      "value": "data-inema-color",
+      "start": 38205,
+      "end": 38223
+    },
+    {
+      "value": "data-hl",
+      "start": 38269,
+      "end": 38278
+    },
+    {
+      "value": "doubt",
+      "start": 38450,
+      "end": 38457
+    },
+    {
+      "value": "duvida",
+      "start": 38478,
+      "end": 38486
+    },
+    {
+      "value": "duvida",
+      "start": 38510,
+      "end": 38518
+    },
+    {
+      "value": "note",
+      "start": 38590,
+      "end": 38596
+    },
+    {
+      "value": "mark[data-inema-note=\"",
+      "start": 38837,
+      "end": 38861
+    },
+    {
+      "value": "\"]",
+      "start": 38881,
+      "end": 38885
+    },
+    {
+      "value": "[INEMA] removeNote DOM:",
+      "start": 39355,
+      "end": 39380
+    },
+    {
+      "value": "note",
+      "start": 39576,
+      "end": 39582
+    },
+    {
+      "value": "[data-inema-block=\"",
+      "start": 40040,
+      "end": 40061
+    },
+    {
+      "value": "\"]",
+      "start": 40086,
+      "end": 40090
+    },
+    {
+      "value": "mark[data-inema-note=\"",
+      "start": 40582,
+      "end": 40606
+    },
+    {
+      "value": "\"]",
+      "start": 40630,
+      "end": 40634
+    },
+    {
+      "value": "main",
+      "start": 41057,
+      "end": 41063
+    },
+    {
+      "value": "[INEMA] renderHighlights nota orfa:",
+      "start": 41442,
+      "end": 41479
+    },
+    {
+      "value": "[data-inema-block]",
+      "start": 41765,
+      "end": 41785
+    },
+    {
+      "value": "",
+      "start": 41874,
+      "end": 41876
+    },
+    {
+      "value": "div",
+      "start": 42202,
+      "end": 42207
+    },
+    {
+      "value": "inema-selpop",
+      "start": 42230,
+      "end": 42244
+    },
+    {
+      "value": "role",
+      "start": 42267,
+      "end": 42273
+    },
+    {
+      "value": "toolbar",
+      "start": 42275,
+      "end": 42284
+    },
+    {
+      "value": "aria-label",
+      "start": 42308,
+      "end": 42320
+    },
+    {
+      "value": "Anotar selecao",
+      "start": 42322,
+      "end": 42338
+    },
+    {
+      "value": "absolute",
+      "start": 42366,
+      "end": 42376
+    },
+    {
+      "value": "none",
+      "start": 42402,
+      "end": 42408
+    },
+    {
+      "value": "60",
+      "start": 42433,
+      "end": 42437
+    },
+    {
+      "value": "data-open",
+      "start": 42460,
+      "end": 42471
+    },
+    {
+      "value": "false",
+      "start": 42473,
+      "end": 42480
+    },
+    {
+      "value": "button",
+      "start": 42596,
+      "end": 42604
+    },
+    {
+      "value": "button",
+      "start": 42622,
+      "end": 42630
+    },
+    {
+      "value": "inema-swatch inema-swatch--",
+      "start": 42652,
+      "end": 42681
+    },
+    {
+      "value": "data-inema-swatch",
+      "start": 42708,
+      "end": 42727
+    },
+    {
+      "value": "data-hl",
+      "start": 42754,
+      "end": 42763
+    },
+    {
+      "value": "aria-label",
+      "start": 42790,
+      "end": 42802
+    },
+    {
+      "value": "doubt",
+      "start": 42810,
+      "end": 42817
+    },
+    {
+      "value": "Marcar como duvida",
+      "start": 42820,
+      "end": 42840
+    },
+    {
+      "value": "Marcar com cor ",
+      "start": 42844,
+      "end": 42861
+    },
+    {
+      "value": "doubt",
+      "start": 42897,
+      "end": 42904
+    },
+    {
+      "value": "?",
+      "start": 42907,
+      "end": 42910
+    },
+    {
+      "value": "",
+      "start": 42913,
+      "end": 42915
+    },
+    {
+      "value": "button",
+      "start": 42992,
+      "end": 43000
+    },
+    {
+      "value": "button",
+      "start": 43021,
+      "end": 43029
+    },
+    {
+      "value": "inema-selpop__action",
+      "start": 43054,
+      "end": 43076
+    },
+    {
+      "value": "data-inema-act",
+      "start": 43102,
+      "end": 43118
+    },
+    {
+      "value": "note",
+      "start": 43120,
+      "end": 43126
+    },
+    {
+      "value": "Adicionar nota",
+      "start": 43154,
+      "end": 43170
+    },
+    {
+      "value": "button",
+      "start": 43243,
+      "end": 43251
+    },
+    {
+      "value": "button",
+      "start": 43273,
+      "end": 43281
+    },
+    {
+      "value": "inema-selpop__action",
+      "start": 43307,
+      "end": 43329
+    },
+    {
+      "value": "data-inema-act",
+      "start": 43356,
+      "end": 43372
+    },
+    {
+      "value": "copy",
+      "start": 43374,
+      "end": 43380
+    },
+    {
+      "value": "Copiar",
+      "start": 43409,
+      "end": 43417
+    },
+    {
+      "value": "data-open",
+      "start": 43653,
+      "end": 43664
+    },
+    {
+      "value": "false",
+      "start": 43666,
+      "end": 43673
+    },
+    {
+      "value": "none",
+      "start": 43711,
+      "end": 43717
+    },
+    {
+      "value": "flex",
+      "start": 43994,
+      "end": 44000
+    },
+    {
+      "value": "data-open",
+      "start": 44023,
+      "end": 44034
+    },
+    {
+      "value": "true",
+      "start": 44036,
+      "end": 44042
+    },
+    {
+      "value": "px",
+      "start": 44609,
+      "end": 44613
+    },
+    {
+      "value": "px",
+      "start": 44643,
+      "end": 44647
+    },
+    {
+      "value": "Copiado.",
+      "start": 45437,
+      "end": 45447
+    },
+    {
+      "value": "ok",
+      "start": 45449,
+      "end": 45453
+    },
+    {
+      "value": "textarea",
+      "start": 45657,
+      "end": 45667
+    },
+    {
+      "value": "readonly",
+      "start": 45715,
+      "end": 45725
+    },
+    {
+      "value": "",
+      "start": 45727,
+      "end": 45729
+    },
+    {
+      "value": "fixed",
+      "start": 45758,
+      "end": 45765
+    },
+    {
+      "value": "-9999px",
+      "start": 45789,
+      "end": 45798
+    },
+    {
+      "value": "copy",
+      "start": 45946,
+      "end": 45952
+    },
+    {
+      "value": "Copiado.",
+      "start": 46025,
+      "end": 46035
+    },
+    {
+      "value": "Nao foi possivel copiar.",
+      "start": 46038,
+      "end": 46064
+    },
+    {
+      "value": "ok",
+      "start": 46071,
+      "end": 46075
+    },
+    {
+      "value": "warn",
+      "start": 46078,
+      "end": 46084
+    },
+    {
+      "value": "Nao foi possivel copiar.",
+      "start": 46118,
+      "end": 46144
+    },
+    {
+      "value": "warn",
+      "start": 46146,
+      "end": 46152
+    },
+    {
+      "value": "a[href],button:not([disabled]),input:not([disabled]),select:not([disabled]),textarea:not([disabled]),[tabindex]:not([tabindex=\"-1\"])",
+      "start": 46400,
+      "end": 46534
+    },
+    {
+      "value": "inema-toast-host",
+      "start": 46944,
+      "end": 46962
+    },
+    {
+      "value": "data-inema-prev-inert",
+      "start": 47021,
+      "end": 47044
+    },
+    {
+      "value": "data-inema-prev-inert",
+      "start": 47084,
+      "end": 47107
+    },
+    {
+      "value": "inert",
+      "start": 47124,
+      "end": 47131
+    },
+    {
+      "value": "1",
+      "start": 47135,
+      "end": 47138
+    },
+    {
+      "value": "0",
+      "start": 47141,
+      "end": 47144
+    },
+    {
+      "value": "inert",
+      "start": 47184,
+      "end": 47191
+    },
+    {
+      "value": "",
+      "start": 47193,
+      "end": 47195
+    },
+    {
+      "value": "aria-hidden",
+      "start": 47223,
+      "end": 47236
+    },
+    {
+      "value": "true",
+      "start": 47238,
+      "end": 47244
+    },
+    {
+      "value": "data-inema-prev-inert",
+      "start": 47300,
+      "end": 47323
+    },
+    {
+      "value": "0",
+      "start": 47349,
+      "end": 47352
+    },
+    {
+      "value": "inert",
+      "start": 47390,
+      "end": 47397
+    },
+    {
+      "value": "aria-hidden",
+      "start": 47418,
+      "end": 47431
+    },
+    {
+      "value": "data-inema-prev-inert",
+      "start": 47464,
+      "end": 47487
+    },
+    {
+      "value": "div",
+      "start": 47682,
+      "end": 47687
+    },
+    {
+      "value": "inema-journey-backdrop",
+      "start": 47715,
+      "end": 47739
+    },
+    {
+      "value": "mousedown",
+      "start": 47771,
+      "end": 47782
+    },
+    {
+      "value": "div",
+      "start": 47897,
+      "end": 47902
+    },
+    {
+      "value": "inema-journey",
+      "start": 47928,
+      "end": 47943
+    },
+    {
+      "value": "role",
+      "start": 47969,
+      "end": 47975
+    },
+    {
+      "value": "dialog",
+      "start": 47977,
+      "end": 47985
+    },
+    {
+      "value": "aria-modal",
+      "start": 48012,
+      "end": 48024
+    },
+    {
+      "value": "true",
+      "start": 48026,
+      "end": 48032
+    },
+    {
+      "value": "aria-labelledby",
+      "start": 48059,
+      "end": 48076
+    },
+    {
+      "value": "inema-journey-title",
+      "start": 48078,
+      "end": 48099
+    },
+    {
+      "value": "tabindex",
+      "start": 48126,
+      "end": 48136
+    },
+    {
+      "value": "-1",
+      "start": 48138,
+      "end": 48142
+    },
+    {
+      "value": "data-open",
+      "start": 48578,
+      "end": 48589
+    },
+    {
+      "value": "true",
+      "start": 48591,
+      "end": 48597
+    },
+    {
+      "value": "data-open",
+      "start": 48630,
+      "end": 48641
+    },
+    {
+      "value": "true",
+      "start": 48643,
+      "end": 48649
+    },
+    {
+      "value": "data-open",
+      "start": 48706,
+      "end": 48717
+    },
+    {
+      "value": "true",
+      "start": 48719,
+      "end": 48725
+    },
+    {
+      "value": "data-open",
+      "start": 48756,
+      "end": 48767
+    },
+    {
+      "value": "true",
+      "start": 48769,
+      "end": 48775
+    },
+    {
+      "value": "keydown",
+      "start": 48853,
+      "end": 48862
+    },
+    {
+      "value": "Escape",
+      "start": 48935,
+      "end": 48943
+    },
+    {
+      "value": "Tab",
+      "start": 49053,
+      "end": 49058
+    },
+    {
+      "value": ".inema-journey",
+      "start": 49140,
+      "end": 49156
+    },
+    {
+      "value": ".inema-journey",
+      "start": 49685,
+      "end": 49701
+    },
+    {
+      "value": "keydown",
+      "start": 49776,
+      "end": 49785
+    },
+    {
+      "value": "data-open",
+      "start": 49929,
+      "end": 49940
+    },
+    {
+      "value": "false",
+      "start": 49942,
+      "end": 49949
+    },
+    {
+      "value": "data-open",
+      "start": 49993,
+      "end": 50004
+    },
+    {
+      "value": "false",
+      "start": 50006,
+      "end": 50013
+    },
+    {
+      "value": "transitionend",
+      "start": 50343,
+      "end": 50358
+    },
+    {
+      "value": "",
+      "start": 50957,
+      "end": 50959
+    },
+    {
+      "value": "div",
+      "start": 50994,
+      "end": 50999
+    },
+    {
+      "value": "inema-journey__header",
+      "start": 51001,
+      "end": 51024
+    },
+    {
+      "value": "h2",
+      "start": 51042,
+      "end": 51046
+    },
+    {
+      "value": "inema-journey__title",
+      "start": 51048,
+      "end": 51070
+    },
+    {
+      "value": "Minha jornada",
+      "start": 51072,
+      "end": 51087
+    },
+    {
+      "value": "inema-journey-title",
+      "start": 51101,
+      "end": 51122
+    },
+    {
+      "value": "button",
+      "start": 51169,
+      "end": 51177
+    },
+    {
+      "value": "inema-journey__close",
+      "start": 51179,
+      "end": 51201
+    },
+    {
+      "value": "Fechar",
+      "start": 51203,
+      "end": 51211
+    },
+    {
+      "value": "button",
+      "start": 51232,
+      "end": 51240
+    },
+    {
+      "value": "aria-label",
+      "start": 51266,
+      "end": 51278
+    },
+    {
+      "value": "Fechar minha jornada",
+      "start": 51280,
+      "end": 51302
+    },
+    {
+      "value": "click",
+      "start": 51333,
+      "end": 51340
+    },
+    {
+      "value": "div",
+      "start": 51437,
+      "end": 51442
+    },
+    {
+      "value": "inema-journey__body",
+      "start": 51444,
+      "end": 51465
+    },
+    {
+      "value": "section",
+      "start": 51569,
+      "end": 51578
+    },
+    {
+      "value": "inema-journey-sec",
+      "start": 51580,
+      "end": 51599
+    },
+    {
+      "value": "h3",
+      "start": 51626,
+      "end": 51630
+    },
+    {
+      "value": "inema-journey__section-title",
+      "start": 51632,
+      "end": 51662
+    },
+    {
+      "value": "Progresso",
+      "start": 51664,
+      "end": 51675
+    },
+    {
+      "value": "curso",
+      "start": 51702,
+      "end": 51709
+    },
+    {
+      "value": "Curso",
+      "start": 51770,
+      "end": 51777
+    },
+    {
+      "value": "Trilha ",
+      "start": 52157,
+      "end": 52166
+    },
+    {
+      "value": "trilha:",
+      "start": 52184,
+      "end": 52193
+    },
+    {
+      "value": "Modulo ",
+      "start": 52304,
+      "end": 52313
+    },
+    {
+      "value": "modulo:",
+      "start": 52333,
+      "end": 52342
+    },
+    {
+      "value": "[data-inema-track]",
+      "start": 52420,
+      "end": 52440
+    },
+    {
+      "value": "data-inema-track",
+      "start": 52442,
+      "end": 52460
+    },
+    {
+      "value": "Trilha ",
+      "start": 52534,
+      "end": 52543
+    },
+    {
+      "value": "trilha:",
+      "start": 52559,
+      "end": 52568
+    },
+    {
+      "value": "[data-inema-module]",
+      "start": 52616,
+      "end": 52637
+    },
+    {
+      "value": "data-inema-module",
+      "start": 52639,
+      "end": 52658
+    },
+    {
+      "value": "Modulo ",
+      "start": 52730,
+      "end": 52739
+    },
+    {
+      "value": "modulo:",
+      "start": 52755,
+      "end": 52764
+    },
+    {
+      "value": "section",
+      "start": 52933,
+      "end": 52942
+    },
+    {
+      "value": "inema-journey-sec",
+      "start": 52944,
+      "end": 52963
+    },
+    {
+      "value": "h3",
+      "start": 52992,
+      "end": 52996
+    },
+    {
+      "value": "inema-journey__section-title",
+      "start": 52998,
+      "end": 53028
+    },
+    {
+      "value": "Continuar de onde parei",
+      "start": 53030,
+      "end": 53055
+    },
+    {
+      "value": "button",
+      "start": 53084,
+      "end": 53092
+    },
+    {
+      "value": "inema-journey__resume",
+      "start": 53094,
+      "end": 53117
+    },
+    {
+      "value": "Voltar ao ultimo ponto",
+      "start": 53119,
+      "end": 53143
+    },
+    {
+      "value": "button",
+      "start": 53169,
+      "end": 53177
+    },
+    {
+      "value": "click",
+      "start": 53212,
+      "end": 53219
+    },
+    {
+      "value": "section",
+      "start": 53442,
+      "end": 53451
+    },
+    {
+      "value": "inema-journey-sec",
+      "start": 53453,
+      "end": 53472
+    },
+    {
+      "value": "h3",
+      "start": 53499,
+      "end": 53503
+    },
+    {
+      "value": "inema-journey__section-title",
+      "start": 53505,
+      "end": 53535
+    },
+    {
+      "value": "Duvidas (",
+      "start": 53537,
+      "end": 53548
+    },
+    {
+      "value": ")",
+      "start": 53567,
+      "end": 53570
+    },
+    {
+      "value": "div",
+      "start": 53598,
+      "end": 53603
+    },
+    {
+      "value": "inema-journey__filters",
+      "start": 53605,
+      "end": 53629
+    },
+    {
+      "value": "label",
+      "start": 53654,
+      "end": 53661
+    },
+    {
+      "value": "input",
+      "start": 53712,
+      "end": 53719
+    },
+    {
+      "value": "checkbox",
+      "start": 53732,
+      "end": 53742
+    },
+    {
+      "value": " so nao resolvidas",
+      "start": 53819,
+      "end": 53839
+    },
+    {
+      "value": "ul",
+      "start": 53938,
+      "end": 53942
+    },
+    {
+      "value": "inema-journey__list",
+      "start": 53944,
+      "end": 53965
+    },
+    {
+      "value": "",
+      "start": 54058,
+      "end": 54060
+    },
+    {
+      "value": "li",
+      "start": 54164,
+      "end": 54168
+    },
+    {
+      "value": "inema-journey__item",
+      "start": 54170,
+      "end": 54191
+    },
+    {
+      "value": " is-resolved",
+      "start": 54208,
+      "end": 54222
+    },
+    {
+      "value": "",
+      "start": 54225,
+      "end": 54227
+    },
+    {
+      "value": "topic",
+      "start": 54262,
+      "end": 54269
+    },
+    {
+      "value": "Topico: ",
+      "start": 54283,
+      "end": 54293
+    },
+    {
+      "value": "\"",
+      "start": 54326,
+      "end": 54329
+    },
+    {
+      "value": "\"",
+      "start": 54356,
+      "end": 54359
+    },
+    {
+      "value": "Trecho marcado",
+      "start": 54363,
+      "end": 54379
+    },
+    {
+      "value": "a",
+      "start": 54401,
+      "end": 54404
+    },
+    {
+      "value": "inema-journey-link",
+      "start": 54406,
+      "end": 54426
+    },
+    {
+      "value": "#",
+      "start": 54453,
+      "end": 54456
+    },
+    {
+      "value": "click",
+      "start": 54485,
+      "end": 54492
+    },
+    {
+      "value": "span",
+      "start": 54628,
+      "end": 54634
+    },
+    {
+      "value": "inema-journey__tag",
+      "start": 54636,
+      "end": 54656
+    },
+    {
+      "value": "duvida",
+      "start": 54658,
+      "end": 54666
+    },
+    {
+      "value": "data-tag",
+      "start": 54694,
+      "end": 54704
+    },
+    {
+      "value": "duvida",
+      "start": 54706,
+      "end": 54714
+    },
+    {
+      "value": "p",
+      "start": 54784,
+      "end": 54787
+    },
+    {
+      "value": "inema-journey__note",
+      "start": 54789,
+      "end": 54810
+    },
+    {
+      "value": "topic",
+      "start": 54845,
+      "end": 54852
+    },
+    {
+      "value": "button",
+      "start": 54878,
+      "end": 54886
+    },
+    {
+      "value": "inema-btn inema-btn--ghost",
+      "start": 54888,
+      "end": 54916
+    },
+    {
+      "value": "Reabrir",
+      "start": 54931,
+      "end": 54940
+    },
+    {
+      "value": "Marcar resolvida",
+      "start": 54943,
+      "end": 54961
+    },
+    {
+      "value": "button",
+      "start": 54984,
+      "end": 54992
+    },
+    {
+      "value": "click",
+      "start": 55024,
+      "end": 55031
+    },
+    {
+      "value": "li",
+      "start": 55299,
+      "end": 55303
+    },
+    {
+      "value": "inema-journey-empty",
+      "start": 55305,
+      "end": 55326
+    },
+    {
+      "value": "Nenhuma duvida.",
+      "start": 55328,
+      "end": 55345
+    },
+    {
+      "value": "change",
+      "start": 55379,
+      "end": 55387
+    },
+    {
+      "value": "section",
+      "start": 55553,
+      "end": 55562
+    },
+    {
+      "value": "inema-journey-sec",
+      "start": 55564,
+      "end": 55583
+    },
+    {
+      "value": "h3",
+      "start": 55610,
+      "end": 55614
+    },
+    {
+      "value": "inema-journey__section-title",
+      "start": 55616,
+      "end": 55646
+    },
+    {
+      "value": "Notas e marcacoes (",
+      "start": 55648,
+      "end": 55669
+    },
+    {
+      "value": ")",
+      "start": 55690,
+      "end": 55693
+    },
+    {
+      "value": "div",
+      "start": 55718,
+      "end": 55723
+    },
+    {
+      "value": "inema-journey__filters",
+      "start": 55725,
+      "end": 55749
+    },
+    {
+      "value": "select",
+      "start": 55794,
+      "end": 55802
+    },
+    {
+      "value": "todas",
+      "start": 55810,
+      "end": 55817
+    },
+    {
+      "value": "option",
+      "start": 55896,
+      "end": 55904
+    },
+    {
+      "value": "span",
+      "start": 55999,
+      "end": 56005
+    },
+    {
+      "value": "Cor: ",
+      "start": 56013,
+      "end": 56020
+    },
+    {
+      "value": "ul",
+      "start": 56112,
+      "end": 56116
+    },
+    {
+      "value": "inema-journey__list",
+      "start": 56118,
+      "end": 56139
+    },
+    {
+      "value": "",
+      "start": 56229,
+      "end": 56231
+    },
+    {
+      "value": "todas",
+      "start": 56302,
+      "end": 56309
+    },
+    {
+      "value": "li",
+      "start": 56369,
+      "end": 56373
+    },
+    {
+      "value": "inema-journey__item inema-color--",
+      "start": 56375,
+      "end": 56410
+    },
+    {
+      "value": " is-orphan",
+      "start": 56435,
+      "end": 56447
+    },
+    {
+      "value": "",
+      "start": 56450,
+      "end": 56452
+    },
+    {
+      "value": "blockquote",
+      "start": 56495,
+      "end": 56507
+    },
+    {
+      "value": "inema-journey__quote",
+      "start": 56509,
+      "end": 56531
+    },
+    {
+      "value": "p",
+      "start": 56597,
+      "end": 56600
+    },
+    {
+      "value": "inema-journey__note",
+      "start": 56602,
+      "end": 56623
+    },
+    {
+      "value": "doubt",
+      "start": 56659,
+      "end": 56666
+    },
+    {
+      "value": "span",
+      "start": 56694,
+      "end": 56700
+    },
+    {
+      "value": "inema-journey__tag",
+      "start": 56702,
+      "end": 56722
+    },
+    {
+      "value": "duvida",
+      "start": 56724,
+      "end": 56732
+    },
+    {
+      "value": "data-tag",
+      "start": 56763,
+      "end": 56773
+    },
+    {
+      "value": "duvida",
+      "start": 56775,
+      "end": 56783
+    },
+    {
+      "value": "span",
+      "start": 56868,
+      "end": 56874
+    },
+    {
+      "value": "inema-journey-orphan",
+      "start": 56876,
+      "end": 56898
+    },
+    {
+      "value": "nota sem ancora",
+      "start": 56900,
+      "end": 56917
+    },
+    {
+      "value": "div",
+      "start": 56946,
+      "end": 56951
+    },
+    {
+      "value": "inema-journey-actions",
+      "start": 56953,
+      "end": 56976
+    },
+    {
+      "value": "button",
+      "start": 57026,
+      "end": 57034
+    },
+    {
+      "value": "inema-btn inema-btn--ghost",
+      "start": 57036,
+      "end": 57064
+    },
+    {
+      "value": "Ir ao trecho",
+      "start": 57066,
+      "end": 57080
+    },
+    {
+      "value": "button",
+      "start": 57103,
+      "end": 57111
+    },
+    {
+      "value": "click",
+      "start": 57143,
+      "end": 57150
+    },
+    {
+      "value": "note",
+      "start": 57197,
+      "end": 57203
+    },
+    {
+      "value": "button",
+      "start": 57308,
+      "end": 57316
+    },
+    {
+      "value": "inema-btn inema-btn--ghost",
+      "start": 57318,
+      "end": 57346
+    },
+    {
+      "value": "Excluir",
+      "start": 57348,
+      "end": 57357
+    },
+    {
+      "value": "button",
+      "start": 57379,
+      "end": 57387
+    },
+    {
+      "value": "click",
+      "start": 57418,
+      "end": 57425
+    },
+    {
+      "value": "li",
+      "start": 57701,
+      "end": 57705
+    },
+    {
+      "value": "inema-journey-empty",
+      "start": 57707,
+      "end": 57728
+    },
+    {
+      "value": "Nenhuma nota.",
+      "start": 57730,
+      "end": 57745
+    },
+    {
+      "value": "change",
+      "start": 57785,
+      "end": 57793
+    },
+    {
+      "value": "section",
+      "start": 57914,
+      "end": 57923
+    },
+    {
+      "value": "inema-journey-sec",
+      "start": 57925,
+      "end": 57944
+    },
+    {
+      "value": "h3",
+      "start": 57971,
+      "end": 57975
+    },
+    {
+      "value": "inema-journey__section-title",
+      "start": 57977,
+      "end": 58007
+    },
+    {
+      "value": "Backup",
+      "start": 58009,
+      "end": 58017
+    },
+    {
+      "value": "div",
+      "start": 58038,
+      "end": 58043
+    },
+    {
+      "value": "inema-journey__footer",
+      "start": 58045,
+      "end": 58068
+    },
+    {
+      "value": "button",
+      "start": 58092,
+      "end": 58100
+    },
+    {
+      "value": "inema-btn",
+      "start": 58102,
+      "end": 58113
+    },
+    {
+      "value": "Exportar .json",
+      "start": 58115,
+      "end": 58131
+    },
+    {
+      "value": "button",
+      "start": 58152,
+      "end": 58160
+    },
+    {
+      "value": "click",
+      "start": 58190,
+      "end": 58197
+    },
+    {
+      "value": "label",
+      "start": 58266,
+      "end": 58273
+    },
+    {
+      "value": "inema-btn",
+      "start": 58275,
+      "end": 58286
+    },
+    {
+      "value": "Importar .json",
+      "start": 58288,
+      "end": 58304
+    },
+    {
+      "value": "input",
+      "start": 58349,
+      "end": 58356
+    },
+    {
+      "value": "file",
+      "start": 58379,
+      "end": 58385
+    },
+    {
+      "value": "application/json,.json",
+      "start": 58405,
+      "end": 58429
+    },
+    {
+      "value": "none",
+      "start": 58460,
+      "end": 58466
+    },
+    {
+      "value": "change",
+      "start": 58498,
+      "end": 58506
+    },
+    {
+      "value": "merge",
+      "start": 58734,
+      "end": 58741
+    },
+    {
+      "value": "Importado: ",
+      "start": 58785,
+      "end": 58798
+    },
+    {
+      "value": " itens.",
+      "start": 58815,
+      "end": 58824
+    },
+    {
+      "value": "ok",
+      "start": 58826,
+      "end": 58830
+    },
+    {
+      "value": "Arquivo invalido. Nada foi alterado.",
+      "start": 58927,
+      "end": 58965
+    },
+    {
+      "value": "warn",
+      "start": 58967,
+      "end": 58973
+    },
+    {
+      "value": "button",
+      "start": 59124,
+      "end": 59132
+    },
+    {
+      "value": "inema-btn inema-danger",
+      "start": 59134,
+      "end": 59158
+    },
+    {
+      "value": "Apagar tudo",
+      "start": 59160,
+      "end": 59173
+    },
+    {
+      "value": "button",
+      "start": 59196,
+      "end": 59204
+    },
+    {
+      "value": "click",
+      "start": 59236,
+      "end": 59243
+    },
+    {
+      "value": "Apagar TODO o progresso, duvidas e notas deste curso? Esta acao nao pode ser desfeita.",
+      "start": 59284,
+      "end": 59372
+    },
+    {
+      "value": "Estado do curso apagado.",
+      "start": 59471,
+      "end": 59497
+    },
+    {
+      "value": "ok",
+      "start": 59499,
+      "end": 59503
+    },
+    {
+      "value": "div",
+      "start": 59664,
+      "end": 59669
+    },
+    {
+      "value": "inema-journey-meter",
+      "start": 59671,
+      "end": 59692
+    },
+    {
+      "value": "span",
+      "start": 59718,
+      "end": 59724
+    },
+    {
+      "value": "inema-journey-meter-label",
+      "start": 59726,
+      "end": 59753
+    },
+    {
+      "value": "div",
+      "start": 59781,
+      "end": 59786
+    },
+    {
+      "value": "inema-bar",
+      "start": 59788,
+      "end": 59799
+    },
+    {
+      "value": "role",
+      "start": 59823,
+      "end": 59829
+    },
+    {
+      "value": "progressbar",
+      "start": 59831,
+      "end": 59844
+    },
+    {
+      "value": "aria-valuemin",
+      "start": 59868,
+      "end": 59883
+    },
+    {
+      "value": "0",
+      "start": 59885,
+      "end": 59888
+    },
+    {
+      "value": "aria-valuemax",
+      "start": 59912,
+      "end": 59927
+    },
+    {
+      "value": "100",
+      "start": 59929,
+      "end": 59934
+    },
+    {
+      "value": "aria-valuenow",
+      "start": 59958,
+      "end": 59973
+    },
+    {
+      "value": "aria-valuetext",
+      "start": 60013,
+      "end": 60029
+    },
+    {
+      "value": " de ",
+      "start": 60041,
+      "end": 60047
+    },
+    {
+      "value": " (",
+      "start": 60061,
+      "end": 60065
+    },
+    {
+      "value": "%)",
+      "start": 60077,
+      "end": 60081
+    },
+    {
+      "value": "div",
+      "start": 60102,
+      "end": 60107
+    },
+    {
+      "value": "inema-bar__fill",
+      "start": 60109,
+      "end": 60126
+    },
+    {
+      "value": "%",
+      "start": 60161,
+      "end": 60164
+    },
+    {
+      "value": "span",
+      "start": 60242,
+      "end": 60248
+    },
+    {
+      "value": "inema-journey-meter-frac",
+      "start": 60250,
+      "end": 60276
+    },
+    {
+      "value": " de ",
+      "start": 60288,
+      "end": 60294
+    },
+    {
+      "value": " (",
+      "start": 60308,
+      "end": 60312
+    },
+    {
+      "value": "%)",
+      "start": 60324,
+      "end": 60328
+    },
+    {
+      "value": "",
+      "start": 60700,
+      "end": 60702
+    },
+    {
+      "value": "…",
+      "start": 61310,
+      "end": 61313
+    },
+    {
+      "value": "topic",
+      "start": 61454,
+      "end": 61461
+    },
+    {
+      "value": "[data-inema-topic=\"",
+      "start": 61509,
+      "end": 61530
+    },
+    {
+      "value": "\"]",
+      "start": 61555,
+      "end": 61559
+    },
+    {
+      "value": "note",
+      "start": 61606,
+      "end": 61612
+    },
+    {
+      "value": "mark[data-inema-note=\"",
+      "start": 61660,
+      "end": 61684
+    },
+    {
+      "value": "\"]",
+      "start": 61709,
+      "end": 61713
+    },
+    {
+      "value": "[data-inema-block=\"",
+      "start": 61814,
+      "end": 61835
+    },
+    {
+      "value": "\"]",
+      "start": 61865,
+      "end": 61869
+    },
+    {
+      "value": "auto",
+      "start": 62078,
+      "end": 62084
+    },
+    {
+      "value": "smooth",
+      "start": 62087,
+      "end": 62095
+    },
+    {
+      "value": "start",
+      "start": 62104,
+      "end": 62111
+    },
+    {
+      "value": "",
+      "start": 62192,
+      "end": 62194
+    },
+    {
+      "value": "topico-",
+      "start": 62404,
+      "end": 62413
+    },
+    {
+      "value": ".topic-explanation",
+      "start": 63235,
+      "end": 63255
+    },
+    {
+      "value": "active",
+      "start": 63282,
+      "end": 63290
+    },
+    {
+      "value": "active",
+      "start": 63321,
+      "end": 63329
+    },
+    {
+      "value": "DETAILS",
+      "start": 63368,
+      "end": 63377
+    },
+    {
+      "value": "inema-flash",
+      "start": 63566,
+      "end": 63579
+    },
+    {
+      "value": "inema-flash",
+      "start": 63637,
+      "end": 63650
+    },
+    {
+      "value": "data-inema-topic",
+      "start": 64744,
+      "end": 64762
+    },
+    {
+      "value": "[data-inema-topic=\"",
+      "start": 64951,
+      "end": 64972
+    },
+    {
+      "value": "\"]",
+      "start": 64996,
+      "end": 65000
+    },
+    {
+      "value": "auto",
+      "start": 65136,
+      "end": 65142
+    },
+    {
+      "value": "start",
+      "start": 65151,
+      "end": 65158
+    },
+    {
+      "value": "",
+      "start": 65295,
+      "end": 65297
+    },
+    {
+      "value": "inema.",
+      "start": 65695,
+      "end": 65703
+    },
+    {
+      "value": ".extra",
+      "start": 65719,
+      "end": 65727
+    },
+    {
+      "value": "{\"schemaVersion\":",
+      "start": 66186,
+      "end": 66205
+    },
+    {
+      "value": ",\"courseId\":\"",
+      "start": 66225,
+      "end": 66240
+    },
+    {
+      "value": "\",\"read\":{},\"doubts\":{},\"notes\":{},\"checks\":{},\"meta\":{}}",
+      "start": 66256,
+      "end": 66315
+    },
+    {
+      "value": "application/json",
+      "start": 66447,
+      "end": 66465
+    },
+    {
+      "value": "a",
+      "start": 66550,
+      "end": 66553
+    },
+    {
+      "value": "inema-",
+      "start": 66595,
+      "end": 66603
+    },
+    {
+      "value": "-",
+      "start": 66619,
+      "end": 66622
+    },
+    {
+      "value": ".json",
+      "start": 66665,
+      "end": 66672
+    },
+    {
+      "value": "[INEMA] download falhou, fallback data-uri:",
+      "start": 66917,
+      "end": 66962
+    },
+    {
+      "value": "a",
+      "start": 67020,
+      "end": 67023
+    },
+    {
+      "value": "data:application/json;charset=utf-8,",
+      "start": 67044,
+      "end": 67082
+    },
+    {
+      "value": "inema-",
+      "start": 67132,
+      "end": 67140
+    },
+    {
+      "value": ".json",
+      "start": 67156,
+      "end": 67163
+    },
+    {
+      "value": "Nao foi possivel exportar.",
+      "start": 67213,
+      "end": 67241
+    },
+    {
+      "value": "warn",
+      "start": 67243,
+      "end": 67249
+    },
+    {
+      "value": "object",
+      "start": 67480,
+      "end": 67488
+    },
+    {
+      "value": "object",
+      "start": 67772,
+      "end": 67780
+    },
+    {
+      "value": "object",
+      "start": 67849,
+      "end": 67857
+    },
+    {
+      "value": "object",
+      "start": 67926,
+      "end": 67934
+    },
+    {
+      "value": "object",
+      "start": 68004,
+      "end": 68012
+    },
+    {
+      "value": "object",
+      "start": 68079,
+      "end": 68087
+    },
+    {
+      "value": "replace",
+      "start": 68213,
+      "end": 68222
+    },
+    {
+      "value": "replace",
+      "start": 68225,
+      "end": 68234
+    },
+    {
+      "value": "merge",
+      "start": 68237,
+      "end": 68244
+    },
+    {
+      "value": "object",
+      "start": 68472,
+      "end": 68480
+    },
+    {
+      "value": "JSON invalido ou ilegivel.",
+      "start": 68525,
+      "end": 68553
+    },
+    {
+      "value": "Este arquivo pertence a outro curso.",
+      "start": 68663,
+      "end": 68701
+    },
+    {
+      "value": "number",
+      "start": 68882,
+      "end": 68890
+    },
+    {
+      "value": "schemaVersion ausente.",
+      "start": 68918,
+      "end": 68942
+    },
+    {
+      "value": "schemaVersion ",
+      "start": 69070,
+      "end": 69086
+    },
+    {
+      "value": " mais nova que a suportada (",
+      "start": 69112,
+      "end": 69142
+    },
+    {
+      "value": ").",
+      "start": 69162,
+      "end": 69166
+    },
+    {
+      "value": "object",
+      "start": 69256,
+      "end": 69264
+    },
+    {
+      "value": "read",
+      "start": 69311,
+      "end": 69317
+    },
+    {
+      "value": "doubts",
+      "start": 69319,
+      "end": 69327
+    },
+    {
+      "value": "notes",
+      "start": 69329,
+      "end": 69336
+    },
+    {
+      "value": "checks",
+      "start": 69338,
+      "end": 69346
+    },
+    {
+      "value": "meta",
+      "start": 69348,
+      "end": 69354
+    },
+    {
+      "value": "boolean",
+      "start": 69554,
+      "end": 69563
+    },
+    {
+      "value": "string",
+      "start": 69761,
+      "end": 69769
+    },
+    {
+      "value": "string",
+      "start": 69795,
+      "end": 69803
+    },
+    {
+      "value": "Estrutura de dados inválida.",
+      "start": 69837,
+      "end": 69867
+    },
+    {
+      "value": "inema.",
+      "start": 69916,
+      "end": 69924
+    },
+    {
+      "value": ".extra",
+      "start": 69940,
+      "end": 69948
+    },
+    {
+      "value": "schemaVersion",
+      "start": 70029,
+      "end": 70044
+    },
+    {
+      "value": "courseId",
+      "start": 70046,
+      "end": 70056
+    },
+    {
+      "value": "exportedAt",
+      "start": 70058,
+      "end": 70070
+    },
+    {
+      "value": "__proto__",
+      "start": 70072,
+      "end": 70083
+    },
+    {
+      "value": "constructor",
+      "start": 70085,
+      "end": 70098
+    },
+    {
+      "value": "prototype",
+      "start": 70100,
+      "end": 70111
+    },
+    {
+      "value": "replace",
+      "start": 70225,
+      "end": 70234
+    },
+    {
+      "value": "Substituir TODO o estado atual pelo arquivo importado? O progresso atual sera perdido.",
+      "start": 70301,
+      "end": 70389
+    },
+    {
+      "value": "cancelado pelo usuario",
+      "start": 70427,
+      "end": 70451
+    },
+    {
+      "value": "inema.",
+      "start": 70725,
+      "end": 70733
+    },
+    {
+      "value": ".extra",
+      "start": 70749,
+      "end": 70757
+    },
+    {
+      "value": "inema.",
+      "start": 72411,
+      "end": 72419
+    },
+    {
+      "value": ".extra",
+      "start": 72435,
+      "end": 72443
+    },
+    {
+      "value": "read",
+      "start": 72848,
+      "end": 72854
+    },
+    {
+      "value": "doubts",
+      "start": 72876,
+      "end": 72884
+    },
+    {
+      "value": "notes",
+      "start": 72906,
+      "end": 72913
+    },
+    {
+      "value": "checks",
+      "start": 72935,
+      "end": 72943
+    },
+    {
+      "value": "meta",
+      "start": 72965,
+      "end": 72971
+    },
+    {
+      "value": "",
+      "start": 73278,
+      "end": 73280
+    },
+    {
+      "value": "progress",
+      "start": 73808,
+      "end": 73818
+    },
+    {
+      "value": "check",
+      "start": 73828,
+      "end": 73835
+    },
+    {
+      "value": "[data-inema-check=\"",
+      "start": 74012,
+      "end": 74033
+    },
+    {
+      "value": "\"]",
+      "start": 74053,
+      "end": 74057
+    },
+    {
+      "value": "[data-inema-check-feedback]",
+      "start": 74119,
+      "end": 74148
+    },
+    {
+      "value": "div",
+      "start": 74184,
+      "end": 74189
+    },
+    {
+      "value": "inema-check-feedback",
+      "start": 74191,
+      "end": 74213
+    },
+    {
+      "value": "data-inema-check-feedback",
+      "start": 74240,
+      "end": 74267
+    },
+    {
+      "value": "",
+      "start": 74269,
+      "end": 74271
+    },
+    {
+      "value": "",
+      "start": 74333,
+      "end": 74335
+    },
+    {
+      "value": "is-correct",
+      "start": 74363,
+      "end": 74375
+    },
+    {
+      "value": "is-wrong",
+      "start": 74413,
+      "end": 74423
+    },
+    {
+      "value": "Correto. ",
+      "start": 74462,
+      "end": 74473
+    },
+    {
+      "value": "Reveja: ",
+      "start": 74476,
+      "end": 74486
+    },
+    {
+      "value": "",
+      "start": 74573,
+      "end": 74575
+    },
+    {
+      "value": "p",
+      "start": 74601,
+      "end": 74604
+    },
+    {
+      "value": "[data-inema-check-option]",
+      "start": 74699,
+      "end": 74726
+    },
+    {
+      "value": "data-inema-check-option",
+      "start": 74812,
+      "end": 74837
+    },
+    {
+      "value": "is-chosen",
+      "start": 74873,
+      "end": 74884
+    },
+    {
+      "value": "is-answer",
+      "start": 74950,
+      "end": 74961
+    },
+    {
+      "value": "[INEMA] check feedback:",
+      "start": 75036,
+      "end": 75061
+    },
+    {
+      "value": "[data-inema-appearance]",
+      "start": 75451,
+      "end": 75476
+    },
+    {
+      "value": "[data-inema-set-theme]",
+      "start": 75584,
+      "end": 75608
+    },
+    {
+      "value": "data-inema-set-theme",
+      "start": 75610,
+      "end": 75632
+    },
+    {
+      "value": "[data-inema-set-font]",
+      "start": 75670,
+      "end": 75693
+    },
+    {
+      "value": "data-inema-set-font",
+      "start": 75695,
+      "end": 75716
+    },
+    {
+      "value": "[data-inema-set-fontscale]",
+      "start": 75753,
+      "end": 75781
+    },
+    {
+      "value": "data-inema-set-fontscale",
+      "start": 75783,
+      "end": 75809
+    },
+    {
+      "value": "[data-inema-set-linewidth]",
+      "start": 75859,
+      "end": 75887
+    },
+    {
+      "value": "data-inema-set-linewidth",
+      "start": 75889,
+      "end": 75915
+    },
+    {
+      "value": "[data-inema-set-leading]",
+      "start": 75965,
+      "end": 75991
+    },
+    {
+      "value": "data-inema-set-leading",
+      "start": 75993,
+      "end": 76017
+    },
+    {
+      "value": "[data-inema-set-accent]",
+      "start": 76065,
+      "end": 76090
+    },
+    {
+      "value": "data-inema-set-accent",
+      "start": 76092,
+      "end": 76115
+    },
+    {
+      "value": "aria-pressed",
+      "start": 76472,
+      "end": 76486
+    },
+    {
+      "value": "true",
+      "start": 76493,
+      "end": 76499
+    },
+    {
+      "value": "false",
+      "start": 76502,
+      "end": 76509
+    },
+    {
+      "value": "is-active",
+      "start": 76543,
+      "end": 76554
+    },
+    {
+      "value": "theme-toggle-dark-icon",
+      "start": 76651,
+      "end": 76675
+    },
+    {
+      "value": "theme-toggle-light-icon",
+      "start": 76722,
+      "end": 76747
+    },
+    {
+      "value": "dark",
+      "start": 76852,
+      "end": 76858
+    },
+    {
+      "value": "hidden",
+      "start": 76951,
+      "end": 76959
+    },
+    {
+      "value": "hidden",
+      "start": 76989,
+      "end": 76997
+    },
+    {
+      "value": "hidden",
+      "start": 77037,
+      "end": 77045
+    },
+    {
+      "value": "hidden",
+      "start": 77074,
+      "end": 77082
+    },
+    {
+      "value": "[data-inema-read-toggle]",
+      "start": 77417,
+      "end": 77443
+    },
+    {
+      "value": "[data-inema-topic]",
+      "start": 77487,
+      "end": 77507
+    },
+    {
+      "value": "data-inema-topic",
+      "start": 77548,
+      "end": 77566
+    },
+    {
+      "value": "data-inema-read-toggle",
+      "start": 77586,
+      "end": 77610
+    },
+    {
+      "value": "[data-inema-doubt-toggle]",
+      "start": 77722,
+      "end": 77749
+    },
+    {
+      "value": "[data-inema-topic]",
+      "start": 77794,
+      "end": 77814
+    },
+    {
+      "value": "data-inema-topic",
+      "start": 77858,
+      "end": 77876
+    },
+    {
+      "value": "data-inema-doubt-toggle",
+      "start": 77896,
+      "end": 77921
+    },
+    {
+      "value": "[data-inema-journey-open]",
+      "start": 78021,
+      "end": 78048
+    },
+    {
+      "value": "mark.inema-hl",
+      "start": 78205,
+      "end": 78220
+    },
+    {
+      "value": "[data-inema-check-option]",
+      "start": 78414,
+      "end": 78441
+    },
+    {
+      "value": "[data-inema-check]",
+      "start": 78493,
+      "end": 78513
+    },
+    {
+      "value": "data-inema-check",
+      "start": 78580,
+      "end": 78598
+    },
+    {
+      "value": "data-inema-check-option",
+      "start": 78643,
+      "end": 78668
+    },
+    {
+      "value": "data-inema-set-theme",
+      "start": 78766,
+      "end": 78788
+    },
+    {
+      "value": "theme",
+      "start": 78790,
+      "end": 78797
+    },
+    {
+      "value": "data-inema-set-font",
+      "start": 78807,
+      "end": 78828
+    },
+    {
+      "value": "font",
+      "start": 78830,
+      "end": 78836
+    },
+    {
+      "value": "data-inema-set-fontscale",
+      "start": 78846,
+      "end": 78872
+    },
+    {
+      "value": "fontScale",
+      "start": 78874,
+      "end": 78885
+    },
+    {
+      "value": "data-inema-set-linewidth",
+      "start": 78895,
+      "end": 78921
+    },
+    {
+      "value": "lineWidth",
+      "start": 78923,
+      "end": 78934
+    },
+    {
+      "value": "data-inema-set-leading",
+      "start": 78944,
+      "end": 78968
+    },
+    {
+      "value": "leading",
+      "start": 78970,
+      "end": 78979
+    },
+    {
+      "value": "data-inema-set-accent",
+      "start": 78989,
+      "end": 79012
+    },
+    {
+      "value": "accent",
+      "start": 79014,
+      "end": 79022
+    },
+    {
+      "value": "[",
+      "start": 79100,
+      "end": 79103
+    },
+    {
+      "value": "]",
+      "start": 79118,
+      "end": 79121
+    },
+    {
+      "value": "fontScale",
+      "start": 79252,
+      "end": 79263
+    },
+    {
+      "value": "lineWidth",
+      "start": 79279,
+      "end": 79290
+    },
+    {
+      "value": "leading",
+      "start": 79337,
+      "end": 79346
+    },
+    {
+      "value": "[data-inema-cycle]",
+      "start": 79486,
+      "end": 79506
+    },
+    {
+      "value": "data-inema-cycle",
+      "start": 79551,
+      "end": 79569
+    },
+    {
+      "value": "[data-inema-appearance-toggle]",
+      "start": 79655,
+      "end": 79687
+    },
+    {
+      "value": "data-inema-appearance-toggle",
+      "start": 79756,
+      "end": 79786
+    },
+    {
+      "value": "[data-inema-appearance]",
+      "start": 79878,
+      "end": 79903
+    },
+    {
+      "value": "data-open",
+      "start": 79963,
+      "end": 79974
+    },
+    {
+      "value": "true",
+      "start": 79980,
+      "end": 79986
+    },
+    {
+      "value": "data-open",
+      "start": 80015,
+      "end": 80026
+    },
+    {
+      "value": "true",
+      "start": 80035,
+      "end": 80041
+    },
+    {
+      "value": "false",
+      "start": 80044,
+      "end": 80051
+    },
+    {
+      "value": "aria-expanded",
+      "start": 80115,
+      "end": 80130
+    },
+    {
+      "value": "true",
+      "start": 80139,
+      "end": 80145
+    },
+    {
+      "value": "false",
+      "start": 80148,
+      "end": 80155
+    },
+    {
+      "value": "data-inema-note",
+      "start": 80279,
+      "end": 80296
+    },
+    {
+      "value": "inema-mark-menu",
+      "start": 80402,
+      "end": 80419
+    },
+    {
+      "value": "div",
+      "start": 80524,
+      "end": 80529
+    },
+    {
+      "value": "inema-mark-menu",
+      "start": 80531,
+      "end": 80548
+    },
+    {
+      "value": "inema-mark-menu",
+      "start": 80565,
+      "end": 80582
+    },
+    {
+      "value": "absolute",
+      "start": 80610,
+      "end": 80620
+    },
+    {
+      "value": "px",
+      "start": 80726,
+      "end": 80730
+    },
+    {
+      "value": "px",
+      "start": 80789,
+      "end": 80793
+    },
+    {
+      "value": "button",
+      "start": 80817,
+      "end": 80825
+    },
+    {
+      "value": "inema-btn inema-btn--ghost",
+      "start": 80827,
+      "end": 80855
+    },
+    {
+      "value": "Nota",
+      "start": 80857,
+      "end": 80863
+    },
+    {
+      "value": "button",
+      "start": 80885,
+      "end": 80893
+    },
+    {
+      "value": "click",
+      "start": 80924,
+      "end": 80931
+    },
+    {
+      "value": "",
+      "start": 81022,
+      "end": 81024
+    },
+    {
+      "value": "Sua anotacao:",
+      "start": 81056,
+      "end": 81071
+    },
+    {
+      "value": "button",
+      "start": 81211,
+      "end": 81219
+    },
+    {
+      "value": "inema-btn inema-btn--ghost",
+      "start": 81221,
+      "end": 81249
+    },
+    {
+      "value": "Excluir",
+      "start": 81251,
+      "end": 81260
+    },
+    {
+      "value": "button",
+      "start": 81281,
+      "end": 81289
+    },
+    {
+      "value": "click",
+      "start": 81319,
+      "end": 81326
+    },
+    {
+      "value": "inema-mark-menu",
+      "start": 81549,
+      "end": 81566
+    },
+    {
+      "value": "[data-inema-swatch]",
+      "start": 81797,
+      "end": 81818
+    },
+    {
+      "value": "data-inema-swatch",
+      "start": 81869,
+      "end": 81888
+    },
+    {
+      "value": "[data-inema-act]",
+      "start": 82041,
+      "end": 82059
+    },
+    {
+      "value": "data-inema-act",
+      "start": 82108,
+      "end": 82124
+    },
+    {
+      "value": "copy",
+      "start": 82175,
+      "end": 82181
+    },
+    {
+      "value": "note",
+      "start": 82269,
+      "end": 82275
+    },
+    {
+      "value": "Sua anotacao:",
+      "start": 82318,
+      "end": 82333
+    },
+    {
+      "value": "",
+      "start": 82335,
+      "end": 82337
+    },
+    {
+      "value": "yellow",
+      "start": 82382,
+      "end": 82390
+    },
+    {
+      "value": "",
+      "start": 82438,
+      "end": 82440
+    },
+    {
+      "value": "[data-inema-toc]",
+      "start": 82771,
+      "end": 82789
+    },
+    {
+      "value": "[data-inema-section-counter]",
+      "start": 82926,
+      "end": 82956
+    },
+    {
+      "value": "IntersectionObserver",
+      "start": 82969,
+      "end": 82991
+    },
+    {
+      "value": "data-inema-topic",
+      "start": 83270,
+      "end": 83288
+    },
+    {
+      "value": "a[href]",
+      "start": 83353,
+      "end": 83362
+    },
+    {
+      "value": "href",
+      "start": 83461,
+      "end": 83467
+    },
+    {
+      "value": "",
+      "start": 83472,
+      "end": 83474
+    },
+    {
+      "value": "is-active",
+      "start": 83586,
+      "end": 83597
+    },
+    {
+      "value": "aria-current",
+      "start": 83648,
+      "end": 83662
+    },
+    {
+      "value": "true",
+      "start": 83664,
+      "end": 83670
+    },
+    {
+      "value": "aria-current",
+      "start": 83715,
+      "end": 83729
+    },
+    {
+      "value": "Secao ",
+      "start": 83856,
+      "end": 83864
+    },
+    {
+      "value": " de ",
+      "start": 83879,
+      "end": 83885
+    },
+    {
+      "value": "-40% 0px -55% 0px",
+      "start": 83944,
+      "end": 83963
+    },
+    {
+      "value": "[data-inema-read-toggle]",
+      "start": 84304,
+      "end": 84330
+    },
+    {
+      "value": "[data-inema-topic]",
+      "start": 84413,
+      "end": 84433
+    },
+    {
+      "value": "data-inema-topic",
+      "start": 84477,
+      "end": 84495
+    },
+    {
+      "value": "data-inema-read-toggle",
+      "start": 84520,
+      "end": 84544
+    },
+    {
+      "value": "[data-inema-doubt-toggle]",
+      "start": 84739,
+      "end": 84766
+    },
+    {
+      "value": "[data-inema-topic]",
+      "start": 84852,
+      "end": 84872
+    },
+    {
+      "value": "data-inema-topic",
+      "start": 84918,
+      "end": 84936
+    },
+    {
+      "value": "data-inema-doubt-toggle",
+      "start": 84962,
+      "end": 84987
+    },
+    {
+      "value": "[data-inema-journey-badge]",
+      "start": 85343,
+      "end": 85371
+    },
+    {
+      "value": "curso",
+      "start": 85517,
+      "end": 85524
+    },
+    {
+      "value": "inema-journey-badge",
+      "start": 85607,
+      "end": 85628
+    },
+    {
+      "value": "data-doubts",
+      "start": 85710,
+      "end": 85723
+    },
+    {
+      "value": "data-count",
+      "start": 85853,
+      "end": 85865
+    },
+    {
+      "value": "main",
+      "start": 86014,
+      "end": 86020
+    },
+    {
+      "value": "click",
+      "start": 86128,
+      "end": 86135
+    },
+    {
+      "value": "mouseup",
+      "start": 86294,
+      "end": 86303
+    },
+    {
+      "value": "selend",
+      "start": 86391,
+      "end": 86399
+    },
+    {
+      "value": "touchend",
+      "start": 86460,
+      "end": 86470
+    },
+    {
+      "value": "selend",
+      "start": 86501,
+      "end": 86509
+    },
+    {
+      "value": "mousedown",
+      "start": 86627,
+      "end": 86638
+    },
+    {
+      "value": "none",
+      "start": 86712,
+      "end": 86718
+    },
+    {
+      "value": ".inema-selpop",
+      "start": 86773,
+      "end": 86788
+    },
+    {
+      "value": "#inema-mark-menu",
+      "start": 87046,
+      "end": 87064
+    },
+    {
+      "value": "click",
+      "start": 87183,
+      "end": 87190
+    },
+    {
+      "value": "visibilitychange",
+      "start": 87313,
+      "end": 87331
+    },
+    {
+      "value": "hidden",
+      "start": 87386,
+      "end": 87394
+    },
+    {
+      "value": "pagehide",
+      "start": 87450,
+      "end": 87460
+    },
+    {
+      "value": "keydown",
+      "start": 87564,
+      "end": 87573
+    },
+    {
+      "value": "Escape",
+      "start": 87610,
+      "end": 87618
+    },
+    {
+      "value": "Modo leitura: seu progresso nao sera salvo neste navegador.",
+      "start": 88126,
+      "end": 88187
+    },
+    {
+      "value": "warn",
+      "start": 88189,
+      "end": 88195
+    },
+    {
+      "value": "progress",
+      "start": 88625,
+      "end": 88635
+    },
+    {
+      "value": "init",
+      "start": 88645,
+      "end": 88651
+    },
+    {
+      "value": "curso",
+      "start": 88672,
+      "end": 88679
+    },
+    {
+      "value": "loading",
+      "start": 90406,
+      "end": 90415
+    },
+    {
+      "value": "DOMContentLoaded",
+      "start": 90451,
+      "end": 90469
+    }
+  ],
+  "assets/site.js": [
+    {
+      "value": "aria-controls",
+      "start": 69,
+      "end": 84
+    },
+    {
+      "value": "aria-expanded",
+      "start": 107,
+      "end": 122
+    },
+    {
+      "value": "true",
+      "start": 126,
+      "end": 132
+    },
+    {
+      "value": ".module-card",
+      "start": 143,
+      "end": 157
+    },
+    {
+      "value": ".topic-item>button",
+      "start": 176,
+      "end": 196
+    },
+    {
+      "value": "aria-expanded",
+      "start": 225,
+      "end": 240
+    },
+    {
+      "value": "false",
+      "start": 241,
+      "end": 248
+    },
+    {
+      "value": "aria-controls",
+      "start": 289,
+      "end": 304
+    },
+    {
+      "value": "aria-expanded",
+      "start": 351,
+      "end": 366
+    },
+    {
+      "value": "theme",
+      "start": 435,
+      "end": 442
+    },
+    {
+      "value": "dark",
+      "start": 487,
+      "end": 493
+    },
+    {
+      "value": "claro",
+      "start": 495,
+      "end": 502
+    },
+    {
+      "value": "inema-dark",
+      "start": 503,
+      "end": 515
+    },
+    {
+      "value": "DOMContentLoaded",
+      "start": 544,
+      "end": 562
+    },
+    {
+      "value": ".topic-explanation",
+      "start": 627,
+      "end": 647
+    },
+    {
+      "value": "[data-modal-src]",
+      "start": 703,
+      "end": 721
+    },
+    {
+      "value": "click",
+      "start": 753,
+      "end": 760
+    },
+    {
+      "value": "module-dialog",
+      "start": 798,
+      "end": 813
+    },
+    {
+      "value": "iframe",
+      "start": 831,
+      "end": 839
+    },
+    {
+      "value": "[data-os-resume]",
+      "start": 909,
+      "end": 927
+    },
+    {
+      "value": "click",
+      "start": 959,
+      "end": 966
+    },
+    {
+      "value": "inema.oswork-v2.meta",
+      "start": 1016,
+      "end": 1038
+    },
+    {
+      "value": "{}",
+      "start": 1041,
+      "end": 1045
+    },
+    {
+      "value": "",
+      "start": 1174,
+      "end": 1176
+    },
+    {
+      "value": "#",
+      "start": 1184,
+      "end": 1187
+    },
+    {
+      "value": "",
+      "start": 1193,
+      "end": 1195
+    },
+    {
+      "value": "curso/trilha1/modulo-1-1.html",
+      "start": 1250,
+      "end": 1281
+    },
+    {
+      "value": "[data-task]",
+      "start": 1313,
+      "end": 1326
+    },
+    {
+      "value": "oswork.task.",
+      "start": 1375,
+      "end": 1389
+    },
+    {
+      "value": "true",
+      "start": 1408,
+      "end": 1414
+    },
+    {
+      "value": "change",
+      "start": 1444,
+      "end": 1452
+    },
+    {
+      "value": "oswork.task.",
+      "start": 1483,
+      "end": 1497
+    },
+    {
+      "value": "[data-copy-prev]",
+      "start": 1575,
+      "end": 1593
+    },
+    {
+      "value": "click",
+      "start": 1625,
+      "end": 1632
+    },
+    {
+      "value": "Copiado",
+      "start": 1749,
+      "end": 1758
+    },
+    {
+      "value": "Selecione o bloco e copie manualmente",
+      "start": 1782,
+      "end": 1821
+    }
+  ]
+}

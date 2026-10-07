@@ -1,92 +1,50 @@
-# OSWork Quick — edição direta e visual
+# OSWork Quick — na prática (v2.0.0)
 
-Versão curta do OSWork para profissionais 40+. **Mesmos assuntos da edição longa, menos
-texto.** Repositório independente: a edição longa vive em `../oswork-v5`, a edição técnica
-em `../oswork`. Nenhum dos três compartilha código ou estado.
+Atalho do OSWork, comando por comando: terminal do Windows (cmd) → pasta `projetos\meu-site`
+→ ver a mesma pasta no Explorador → Claude Code ou Codex trabalhando nela → Git, gh e chave
+SSH → repositório público/privado e GitHub Pages → a mesma navegação numa VPS → visão de
+Vercel e Supabase. Quatro trilhas de um módulo cada, 25 passos.
 
 - **Conta e autoria:** `inematds <inematds@gmail.com>`, author e committer.
-- **Base:** formato `formato-curso-v5` com **uma divergência declarada** (abaixo).
-  Motor `assets/curso.js` + `assets/aula.css`, herdados sem alteração.
-- **Desenhos:** SVG inline, feitos com Fable. Zero raster no corpo da aula.
+- **Formato:** `formato-curso-v2` (camada de aprendizagem: progresso, dúvida, notas, jornada,
+  temas, manifesto em toda página). Motor `assets/learn.*` + `assets/site.*` herdado do
+  OSWork v2 (`../oswork`) sem alteração; desenhos SVG em `scripts/figures.py`, também herdados.
+- **A edição anterior** (organização com IA sem terminal, formato v5, sete aulas e vídeos)
+  está na tag `v1-sem-terminal`. Os vídeos dela continuam em `videos/` e na release v1.1.0.
 
-## A divergência
+## Fonte única
 
-O contrato `formato-curso-v5` exige **≥60% de prosa por seção**. O Quick rompe essa regra
-de propósito: aqui a figura ensina e o texto amarra. Em troca, cada step carrega **duas**
-peças visuais (diagrama no trilho + figura inline `.colfig` na coluna) e o texto tem teto
-de **820 palavras por aula**. Todos os demais portões do v5 continuam valendo e são
-conferidos mecanicamente por `scripts/validate.py`.
-
-## Estrutura
-
-- `curso.html` — **artefato montado**. Não edite as aulas aqui.
-- `aulas/aula-N.html` — fragmento fonte de cada uma das 7 aulas. É onde se edita.
-- `context/spec-quick.md` — o que o Quick é e como cortar sem perder tópico.
-- `scripts/build.py` — remonta `curso.html` e **sincroniza o tempo do card da trilha com o
-  `data-tempo` da própria aula** (fonte única). Idempotente.
-- `scripts/validate.py` — o portão. Além das regras do v5, cobra o teto de 820 palavras e
-  a figura inline `.colfig` com `<figcaption>` em 100% dos steps.
-- `scripts/browser-test.cjs` — 16 grupos em `file://`, incluindo AAA nos 3 temas.
+- `conteudo/pt.json` — conteúdo autoral: textos da interface, início, trilhas, módulos,
+  tópicos (`cmd`, `see`, `what`, `why`, `keys`, `fix`), laboratório, figuras e fontes.
+- `conteudo/en.json`, `conteudo/es.json` — traduções revisáveis do mesmo JSON. **Os campos
+  `cmd` de EN/ES são gerados no build a partir do PT** (`localize_cmd` em `build.py`): só os
+  nomes de exemplo mudam (`projetos`, `meu-site`, `SeuNome`, `SEU-USUARIO`, `IP-DA-VPS`…).
+  Nunca edite um comando só num idioma.
+- HTML em `index.html`, `curso/`, `materiais/` (e `en/`, `es/`) é **gerado**. Não edite à mão.
 
 ## Fluxo
 
 ```bash
-python3 scripts/build.py
-python3 scripts/validate.py
-node scripts/browser-test.cjs
+python3 scripts/build.py      # gera PT, EN e ES (30 páginas) + cola .txt + FONTES.md
+python3 scripts/validate.py   # portão: meta, manifesto, links, âncoras, SVG, comandos iguais entre idiomas, sem sobras de PT
+python3 -m http.server 8080   # e em outro terminal:
+BASE_URL=http://localhost:8080 node scripts/browser-test.cjs
 ```
 
-Editar uma aula = editar `aulas/aula-N.html`, remontar, revalidar. `build.py` sobrescreve
-o que estiver montado em `curso.html`.
+Mudou texto em PT? Atualize o mesmo campo em `en.json` e `es.json` (tradução pelo Codex na
+assinatura, por módulo, nunca o arquivo inteiro de uma vez; sem API paga) e rode os três
+comandos. `assets-src/` guarda `learn.js`/`site.js` originais: o build gera `assets/*.js`
+de cada idioma a partir deles, com os textos de `i18n-v2/` (offsets em `js-strings.json`).
 
-## Regras que o portão cobra
+## Regras de conteúdo
 
-- Jargão-sentinela zero no texto do aluno: terminal, instalar, script, servidor,
-  repositório, commit, branch, Git, JSON, pipeline, "arquivo de configuração", API,
-  deploy, CLI, diretório, plugin, encoding. Use *pasta*, nunca *diretório*.
-- `<p data-ex="gestora|professor">` em 100% dos steps — e só essas duas profissões.
-- `.colfig` com `<figcaption>` que ensina em 100% dos steps; `.fig` do trilho com
-  `data-cap`. `.herofig` é metáfora do mundo real; trilho e coluna são diagrama de
-  mecanismo. Nunca trocados.
-- Cartões nunca repetem ≥6 palavras seguidas do `.recap-autor` (frente e verso).
-- Manifesto de completude por aula, 13 linhas, zero `[AUSENTE]`. `teste-se-FUND` reflete a
-  **obrigação**: `[OK]` só em FUNDAMENTO, `[N/A]` nas demais.
-- Zero emoji, zero exclamação dupla, zero gamificação.
+- Comando primeiro, depois "Você vê", "O que é", "Por que aprender", "Conceitos-chave" e
+  "Deu erro?". Todo termo novo definido na primeira vez (cmd, winget, chave pública, repositório…).
+- Comandos só de fonte oficial e com data: ver `FONTES.md`. Nenhum comando foi executado num
+  Windows real por este repo; quem testar e achar diferença, corrija o `pt.json` e registre em `FALHAS.md`.
+- `scripts/browser-locales.cjs` e `scripts/i18n_translate.py` são da edição anterior (tinham
+  mudanças locais não commitadas em 07/10/2026); não fazem parte do build novo.
 
 ## Publicação
 
 Por git, GitHub Pages na raiz de `main`. Não usar Vercel.
-
-## Idiomas (EN e ES)
-
-PT na raiz, inglês em `en/`, espanhol em `es/`. Progresso e cartões são **isolados por
-idioma** (`<meta name="curso">` vira `osworkq-en` / `osworkq-es`): os cartões guardam o
-texto no estado do aluno, então compartilhar o progresso misturaria idiomas na revisão.
-
-```bash
-python3 scripts/i18n_extract.py      # PT -> i18n/source.json (+ js-offsets.json)
-python3 scripts/i18n_translate.py    # traduz o que falta; cache em i18n/<lang>.json
-python3 scripts/i18n_repair.py       # conserta espaço de borda e markup inventado
-python3 scripts/build_locales.py     # monta en/ e es/. OFFLINE, não chama API
-python3 scripts/validate-locales.py  # portão: paridade com o PT + jargão traduzido
-node scripts/browser-locales.cjs     # navegador nos dois idiomas
-```
-
-Rota de tradução: **OpenRouter + `gpt-5.4-nano`** (a `GROQ_API_KEY` devolveu 403 em
-21/09 — ver `~/projetos/wifi/LIMITES.md`). Chave lida em runtime dos `.env`, nunca
-copiada para o repo. Unidade sem tradução **interrompe o build**.
-
-### Quatro superfícies, não uma
-
-Traduzir só o HTML deixa o curso meio em português, sem erro nenhum aparecer:
-
-1. **HTML** — texto, atributos lidos pelo aluno, e os cartões em JSON.
-2. **`assets/curso.js`** — os rótulos do motor, recortados por **deslocamento**. Cada
-   idioma tem a sua cópia em `<lang>/assets/curso.js`; essa é a única que **não** sobe
-   para `../assets/`, senão a página traduzida carrega o motor em português.
-3. **CSS `content:`** — `PROMESSA` e `✓ seguro — ` são gerados pelo CSS. Vão para
-   `<lang>/assets/i18n.css`, carregado depois do `aula.css` compartilhado.
-4. **Texto dentro dos SVG** — os rótulos dos desenhos são nós de texto e entram no (1).
-
-O que **não** se traduz: `data-ex` (marcador de profissão), `data-answer`/`data-k`,
-`data-tempo`, nomes de classe, ids, e o nome OSWork.

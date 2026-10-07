@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en" class="dark">
+<head><meta charset="utf-8"><script>(function(){try{var p=JSON.parse(localStorage.getItem('inema.prefs')||'{}'),d=document.documentElement;d.classList.toggle('dark',p.theme?p.theme!=='claro':true);if(p.theme)d.dataset.theme=p.theme;if(p.fontScale)d.style.setProperty('--fs-root',p.fontScale+'%');if(p.font)d.dataset.font=p.font;if(p.accent)d.dataset.accent=p.accent;if(p.lineWidth)d.style.setProperty('--measure',p.lineWidth+'ch');if(p.leading)d.style.setProperty('--leading',p.leading)}catch(e){document.documentElement.classList.add('dark')}})();</script>
+<meta name="viewport" content="width=device-width,initial-scale=1"><meta name="inema-course" content="oswork-quick-en"><title>Overview: Vercel and Supabase · OSWork Quick</title><meta name="description" content="Open the Windows terminal, create your projects folder, see where everything lives, install Claude Code or Codex, save your work on GitHub with an SSH key, and move the project to a VPS. If you learn to navigate Windows, you can navigate a VPS the same way."><meta property="og:title" content="OSWork Quick — one command at a time."><meta property="og:image" content="https://inematds.github.io/oswork-quick/capa/capa.png">
+<link rel="canonical" href="https://inematds.github.io/oswork-quick/en/curso/trilha4/index.html"><link rel="alternate" hreflang="pt-BR" href="https://inematds.github.io/oswork-quick/curso/trilha4/index.html"><link rel="alternate" hreflang="en" href="https://inematds.github.io/oswork-quick/en/curso/trilha4/index.html"><link rel="alternate" hreflang="es" href="https://inematds.github.io/oswork-quick/es/curso/trilha4/index.html"><link rel="alternate" hreflang="x-default" href="https://inematds.github.io/oswork-quick/curso/trilha4/index.html">
+<script type="application/json" data-inema-manifest>{"course": "oswork-quick-en", "tracks": [{"n": "1", "title": "Your computer", "modules": [{"id": "1-1", "title": "Terminal, folders, and an agent on Windows", "topics": 7, "href": "../../curso/trilha1/modulo-1-1.html"}]}, {"n": "2", "title": "GitHub", "modules": [{"id": "2-1", "title": "Git, gh, and an SSH key on GitHub", "topics": 6, "href": "../../curso/trilha2/modulo-2-1.html"}]}, {"n": "3", "title": "VPS", "modules": [{"id": "3-1", "title": "VPS: the same, on a server", "topics": 6, "href": "../../curso/trilha3/modulo-3-1.html"}]}, {"n": "4", "title": "Overview: Vercel and Supabase", "modules": [{"id": "4-1", "title": "Vercel and Supabase: the overview", "topics": 6, "href": "../../curso/trilha4/modulo-4-1.html"}]}]}</script>
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../../assets/site.css"><link rel="stylesheet" href="../../assets/learn.css">
+<style>:root{--track:#fbbf24}html:not(.dark){--track:#92400e}pre code{white-space:pre-wrap}.see{border-left:3px solid var(--track);padding:6px 0 6px 14px;margin:12px 0}.cmdbox{margin:14px 0}.hero>*{min-width:0}pre{overflow-wrap:anywhere}</style>
+</head>
+<body>
+<a class="skip" href="#conteudo">Skip to content</a>
+<nav class="topnav" aria-label="Main navigation">
+<div class="wrap">
+<div class="nav-main"><a class="brand" href="../../index.html">OSWork Quick<span aria-hidden="true">_</span></a><span aria-hidden="true">/</span><a class="text-sky-400" href="https://inema.club">INEMA.CLUB</a><span aria-hidden="true">-</span><a class="text-amber-700 dark:text-slate-300" href="https://inema.pro">PRO</a><span class="spacer"></span><button data-inema-journey-open>My journey</button><button data-inema-appearance-toggle="#aparencia" aria-expanded="false">Aa · Appearance</button><button onclick="toggleTheme()" aria-label="Toggle light and dark themes">◐ Theme</button>
+</div>
+<div class="nav-tracks"><a href="../../curso/trilha1/index.html" >T1<span class="long"> · Your computer</span></a><a href="../../curso/trilha2/index.html" >T2<span class="long"> · GitHub</span></a><a href="../../curso/trilha3/index.html" >T3<span class="long"> · VPS</span></a><a href="../../curso/trilha4/index.html" aria-current="page">T4<span class="long"> · Overview: Vercel and Supabase</span></a><a href="../../materiais/index.html">Command cheat sheet</a>
+</div>
+<div class="language-nav" data-os-languages><a href="../../../curso/trilha4/index.html" hreflang="pt-BR" lang="pt-BR">Português</a><a href="index.html" hreflang="en" lang="en" aria-current="page">English</a><a href="../../../es/curso/trilha4/index.html" hreflang="es" lang="es">Español</a>
+</div>
+<div id="aparencia" class="appearance" data-inema-appearance hidden>
+<div class="row"><button type="button" data-inema-set-theme="inema-dark">Dark</button><button type="button" data-inema-set-theme="claro">Light</button><button type="button" data-inema-set-theme="sepia">Sepia</button><button type="button" data-inema-set-theme="foco">Focus</button><button type="button" data-inema-set-theme="contraste">High contrast</button>
+</div>
+<div class="row"><span>Size</span><button data-inema-set-fontscale="100">100%</button><button data-inema-set-fontscale="112">112%</button><button data-inema-set-fontscale="125">125%</button><button data-inema-set-font="inter">Sans serif</button><button data-inema-set-font="leitura">Serif</button><button data-inema-set-linewidth="60">Narrow column</button><button data-inema-set-linewidth="75">Wide column</button><button data-inema-set-leading="1.7">Comfortable line spacing</button>
+</div>
+</div>
+</div>
+</nav>
+<main id="conteudo" class="wrap">
+<header class="hero">
+<div>
+<p class="kicker">TRACK 04 / OSWORK QUICK</p>
+<h1>Overview: Vercel and Supabase</h1>
+<p>For when you want to connect your project to other systems.</p>
+<div class="meter" data-inema-meter="trilha:4" role="progressbar" aria-label="Progress" aria-valuemin="0" aria-valuemax="100"><span class="inema-meter-pct" data-inema-meter-pct>0%</span><span class="inema-meter-count" data-inema-meter-frac>0 of 0</span>
+</div>
+</div>
+<figure class="hero-panel"><svg class="w-full h-auto" viewBox="0 0 490 320" role="img" aria-label="What Vercel does → Connect the repository to Vercel → Each push publishes → Custom domain → What Supabase does → Keep keys out of the repository"><defs><filter id="glow"><feGaussianBlur stdDeviation="1"/></filter></defs><path d="M10 10H480V305H10Z" fill="none" stroke="#334155" stroke-dasharray="3 7"/><rect x="20" y="25" width="215" height="65" rx="10" fill="#152234" stroke="#fbbf24"/><text x="36" y="50" fill="#cbd5e1" font-size="10" font-family="monospace">01 / OSWORK</text><text x="36" y="72" fill="#f1f5f9" font-size="14" font-family="sans-serif">What Vercel does</text><path d="M120 90v25" stroke="#fbbf24" stroke-width="2"/><rect x="255" y="25" width="215" height="65" rx="10" fill="#152234" stroke="#38bdf8"/><text x="271" y="50" fill="#cbd5e1" font-size="10" font-family="monospace">02 / OSWORK</text><text x="271" y="72" fill="#f1f5f9" font-size="14" font-family="sans-serif">Connect the repository to Vercel</text><path d="M355 90v25" stroke="#fbbf24" stroke-width="2"/><rect x="20" y="115" width="215" height="65" rx="10" fill="#152234" stroke="#fbbf24"/><text x="36" y="140" fill="#cbd5e1" font-size="10" font-family="monospace">03 / OSWORK</text><text x="36" y="162" fill="#f1f5f9" font-size="14" font-family="sans-serif">Each push publishes</text><path d="M120 180v25" stroke="#fbbf24" stroke-width="2"/><rect x="255" y="115" width="215" height="65" rx="10" fill="#152234" stroke="#38bdf8"/><text x="271" y="140" fill="#cbd5e1" font-size="10" font-family="monospace">04 / OSWORK</text><text x="271" y="162" fill="#f1f5f9" font-size="14" font-family="sans-serif">Custom domain</text><path d="M355 180v25" stroke="#fbbf24" stroke-width="2"/><rect x="20" y="205" width="215" height="65" rx="10" fill="#152234" stroke="#fbbf24"/><text x="36" y="230" fill="#cbd5e1" font-size="10" font-family="monospace">05 / OSWORK</text><text x="36" y="252" fill="#f1f5f9" font-size="14" font-family="sans-serif">What Supabase does</text><rect x="255" y="205" width="215" height="65" rx="10" fill="#152234" stroke="#38bdf8"/><text x="271" y="230" fill="#cbd5e1" font-size="10" font-family="monospace">06 / OSWORK</text><text x="271" y="252" fill="#f1f5f9" font-size="14" font-family="sans-serif">Keep keys out of the repository</text></svg><figcaption class="help-note">Read the step, run the command, and check what appears on screen before continuing.</figcaption>
+</figure>
+</header>
+<div class="stats">
+<div><strong>1</strong><span>module</span>
+</div>
+<div><strong>6</strong><span>steps</span>
+</div>
+<div><strong>~10 min</strong><span>hands-on</span>
+</div>
+<div><strong>4/4</strong><span>track</span>
+</div>
+</div>
+<h2>Track map</h2>
+<div class="grid"><a class="card" href="#modulo-4-1">
+<div class="overline"><span>4.1</span><span>~10 min</span>
+</div>
+<h3>🧭 Vercel and Supabase: the overview</h3>
+<p>Know what Vercel and Supabase do and how your repository connects to them as the project grows.</p></a>
+</div>
+<section class="band">
+<h2 class="text-2xl font-bold">Detailed content</h2>
+<article class="module-card" id="modulo-4-1" data-inema-module="4-1" data-inema-track="4">
+<p class="kicker">MODULE 4.1</p>
+<h2 class="text-2xl font-bold">Vercel and Supabase: the overview</h2>
+<p>Know what Vercel and Supabase do and how your repository connects to them as the project grows.</p>
+<div class="meter" data-inema-meter="modulo:4-1" role="progressbar" aria-label="Progress" aria-valuemin="0" aria-valuemax="100"><span class="inema-meter-pct" data-inema-meter-pct>0%</span><span class="inema-meter-count" data-inema-meter-frac>0 of 0</span>
+</div>
+<div class="topic-item"><button onclick="toggleTopic(this)" aria-expanded="false" aria-controls="p-4-1-1"><span class="number">1</span><span>What Vercel does</span></button>
+<div class="topic-explanation" id="p-4-1-1">
+<h4>What it is</h4>
+<p>Vercel publishes websites and apps directly from your GitHub repository. It&#x27;s the next step after Pages when your project grows beyond a simple page.</p>
+<h4>Why learn it</h4>
+<p>It runs code on the server, supports custom domains, and shows a preview of each change before it goes live.</p>
+<h4>Key concepts</h4>
+<p>Hosting: where a website is kept online. Deploy: publishing a version. Preview: a temporary URL to check a change.</p>
+</div>
+</div>
+<div class="topic-item"><button onclick="toggleTopic(this)" aria-expanded="false" aria-controls="p-4-1-2"><span class="number">2</span><span>Connect the repository to Vercel</span></button>
+<div class="topic-explanation" id="p-4-1-2">
+<h4>What it is</h4>
+<p>Sign in to vercel.com with your GitHub account, click Add New → Project, and import the repository. Vercel detects the project type and publishes it.</p>
+<h4>Why learn it</h4>
+<p>You only connect it once. After that, you don&#x27;t need to open Vercel to publish.</p>
+<h4>Key concepts</h4>
+<p>Import: giving Vercel read access to the repository. Framework: the project type (simple page, Next.js, and others), which Vercel detects automatically.</p>
+</div>
+</div>
+<div class="topic-item"><button onclick="toggleTopic(this)" aria-expanded="false" aria-controls="p-4-1-3"><span class="number">3</span><span>Each push publishes</span></button>
+<div class="topic-explanation" id="p-4-1-3">
+<h4>What it is</h4>
+<p>Once the repository is connected, keep using the same routine from part 2: add, commit, push. Vercel publishes automatically.</p>
+<h4>Why learn it</h4>
+<p>You don&#x27;t need to learn a new tool to publish: Git is still the gateway.</p>
+<h4>Key concepts</h4>
+<p>Automatic deployment: the service watches the repository and publishes when a new version arrives. Main branch: the one that goes to the official URL.</p>
+</div>
+</div>
+<div class="topic-item"><button onclick="toggleTopic(this)" aria-expanded="false" aria-controls="p-4-1-4"><span class="number">4</span><span>Custom domain</span></button>
+<div class="topic-explanation" id="p-4-1-4">
+<h4>What it is</h4>
+<p>In Vercel&#x27;s Settings → Domains, add your domain. Vercel will show the DNS record to configure wherever you bought the domain.</p>
+<h4>Why learn it</h4>
+<p>It replaces the .vercel.app address with your brand name.</p>
+<h4>Key concepts</h4>
+<p>Domain: the website&#x27;s name (yourbusiness.com). DNS: the list that says where each domain points. nslookup: a lookup of where a domain points right now.</p>
+</div>
+</div>
+<div class="topic-item"><button onclick="toggleTopic(this)" aria-expanded="false" aria-controls="p-4-1-5"><span class="number">5</span><span>What Supabase does</span></button>
+<div class="topic-explanation" id="p-4-1-5">
+<h4>What it is</h4>
+<p>Supabase gives your project a database, user login, and file storage without requiring you to install a server.</p>
+<h4>Why learn it</h4>
+<p>It turns a page into a system that can save contacts, orders, and registrations.</p>
+<h4>Key concepts</h4>
+<p>Database: where records are stored. Login (authentication): identifying the user. Project key: the password your code uses to communicate with Supabase.</p>
+</div>
+</div>
+<div class="topic-item"><button onclick="toggleTopic(this)" aria-expanded="false" aria-controls="p-4-1-6"><span class="number">6</span><span>Keep keys out of the repository</span></button>
+<div class="topic-explanation" id="p-4-1-6">
+<h4>What it is</h4>
+<p>Supabase keys go in a .env file, and .gitignore prevents Git from sending that file to GitHub.</p>
+<h4>Why learn it</h4>
+<p>A published key is a leaked key: anyone can use your database. In a public repository, this can happen within minutes.</p>
+<h4>Key concepts</h4>
+<p>.env: a file with the project&#x27;s keys and passwords. .gitignore: a list of what Git doesn&#x27;t send. Environment variable: a way to pass a key to a program without writing it in the code.</p>
+</div>
+</div>
+<div class="actions"><a class="button primary" href="modulo-4-1.html">View full version →</a><button data-modal-src="modulo-4-1.html">View in modal</button>
+</div>
+</article>
+</section>
+</main>
+<footer>
+<div class="wrap">OSWork Quick · hands-on · INEMA.CLUB · v2.0.0<br>Commands checked against official documentation on 10/07/2026. Progress and notes stay in this browser; export them from your journey.<br><a href="../../FONTES.md">Sources</a>
+</div>
+</footer>
+<dialog id="module-dialog" aria-labelledby="modal-title">
+<div class="actions"><strong id="modal-title">Complete module</strong><button onclick="document.getElementById('module-dialog').close()">Close module</button>
+</div><iframe title="Complete module content"></iframe>
+</dialog>
+<script src="../../assets/learn.js"></script><script src="../../assets/site.js"></script>
+</body>
+</html>

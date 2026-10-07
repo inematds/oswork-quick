@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="pt-BR" class="dark">
+<head><meta charset="utf-8"><script>(function(){try{var p=JSON.parse(localStorage.getItem('inema.prefs')||'{}'),d=document.documentElement;d.classList.toggle('dark',p.theme?p.theme!=='claro':true);if(p.theme)d.dataset.theme=p.theme;if(p.fontScale)d.style.setProperty('--fs-root',p.fontScale+'%');if(p.font)d.dataset.font=p.font;if(p.accent)d.dataset.accent=p.accent;if(p.lineWidth)d.style.setProperty('--measure',p.lineWidth+'ch');if(p.leading)d.style.setProperty('--leading',p.leading)}catch(e){document.documentElement.classList.add('dark')}})();</script>
+<meta name="viewport" content="width=device-width,initial-scale=1"><meta name="inema-course" content="oswork-quick"><title>Cola de comandos · OSWork Quick</title><meta name="description" content="Abra o terminal do Windows, crie a sua pasta de projetos, veja onde tudo fica, instale o Claude Code ou o Codex, guarde no GitHub com chave SSH e leve o projeto para uma VPS. Quem aprende a navegar no Windows navega na VPS do mesmo jeito."><meta property="og:title" content="OSWork Quick — comando por comando."><meta property="og:image" content="https://inematds.github.io/oswork-quick/capa/capa.png">
+<link rel="canonical" href="https://inematds.github.io/oswork-quick/materiais/index.html"><link rel="alternate" hreflang="pt-BR" href="https://inematds.github.io/oswork-quick/materiais/index.html"><link rel="alternate" hreflang="en" href="https://inematds.github.io/oswork-quick/en/materiais/index.html"><link rel="alternate" hreflang="es" href="https://inematds.github.io/oswork-quick/es/materiais/index.html"><link rel="alternate" hreflang="x-default" href="https://inematds.github.io/oswork-quick/materiais/index.html">
+<script type="application/json" data-inema-manifest>{"course": "oswork-quick", "tracks": [{"n": "1", "title": "Seu computador", "modules": [{"id": "1-1", "title": "Terminal, pastas e agente no Windows", "topics": 7, "href": "../curso/trilha1/modulo-1-1.html"}]}, {"n": "2", "title": "GitHub", "modules": [{"id": "2-1", "title": "Git, gh e chave SSH no GitHub", "topics": 6, "href": "../curso/trilha2/modulo-2-1.html"}]}, {"n": "3", "title": "VPS", "modules": [{"id": "3-1", "title": "VPS: o mesmo, num servidor", "topics": 6, "href": "../curso/trilha3/modulo-3-1.html"}]}, {"n": "4", "title": "Visão: Vercel e Supabase", "modules": [{"id": "4-1", "title": "Vercel e Supabase: a visão", "topics": 6, "href": "../curso/trilha4/modulo-4-1.html"}]}]}</script>
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../assets/site.css"><link rel="stylesheet" href="../assets/learn.css">
+<style>:root{--track:#34d399}html:not(.dark){--track:#047857}pre code{white-space:pre-wrap}.see{border-left:3px solid var(--track);padding:6px 0 6px 14px;margin:12px 0}.cmdbox{margin:14px 0}.hero>*{min-width:0}pre{overflow-wrap:anywhere}</style>
+</head>
+<body>
+<a class="skip" href="#conteudo">Pular para conteúdo</a>
+<nav class="topnav" aria-label="Navegação principal">
+<div class="wrap">
+<div class="nav-main"><a class="brand" href="../index.html">OSWork Quick<span aria-hidden="true">_</span></a><span aria-hidden="true">/</span><a class="text-sky-400" href="https://inema.club">INEMA.CLUB</a><span aria-hidden="true">-</span><a class="text-amber-700 dark:text-slate-300" href="https://inema.pro">PRO</a><span class="spacer"></span><button data-inema-journey-open>Minha jornada</button><button data-inema-appearance-toggle="#aparencia" aria-expanded="false">Aa · Aparência</button><button onclick="toggleTheme()" aria-label="Alternar tema claro e escuro">◐ Tema</button>
+</div>
+<div class="nav-tracks"><a href="../curso/trilha1/index.html" aria-current="page">T1<span class="long"> · Seu computador</span></a><a href="../curso/trilha2/index.html" >T2<span class="long"> · GitHub</span></a><a href="../curso/trilha3/index.html" >T3<span class="long"> · VPS</span></a><a href="../curso/trilha4/index.html" >T4<span class="long"> · Visão: Vercel e Supabase</span></a><a href="../materiais/index.html">Cola de comandos</a>
+</div>
+<div class="language-nav" data-os-languages><a href="index.html" hreflang="pt-BR" lang="pt-BR" aria-current="page">Português</a><a href="../en/materiais/index.html" hreflang="en" lang="en">English</a><a href="../es/materiais/index.html" hreflang="es" lang="es">Español</a>
+</div>
+<div id="aparencia" class="appearance" data-inema-appearance hidden>
+<div class="row"><button type="button" data-inema-set-theme="inema-dark">Escuro</button><button type="button" data-inema-set-theme="claro">Claro</button><button type="button" data-inema-set-theme="sepia">Sépia</button><button type="button" data-inema-set-theme="foco">Foco</button><button type="button" data-inema-set-theme="contraste">Alto contraste</button>
+</div>
+<div class="row"><span>Tamanho</span><button data-inema-set-fontscale="100">100%</button><button data-inema-set-fontscale="112">112%</button><button data-inema-set-fontscale="125">125%</button><button data-inema-set-font="inter">Sem serifa</button><button data-inema-set-font="leitura">Serifa</button><button data-inema-set-linewidth="60">Coluna estreita</button><button data-inema-set-linewidth="75">Coluna ampla</button><button data-inema-set-leading="1.7">Entrelinha confortável</button>
+</div>
+</div>
+</div>
+</nav>
+<main id="conteudo" class="wrap">
+<header class="hero">
+<div>
+<p class="kicker">COLA DE COMANDOS</p>
+<h1>Todos os comandos, na ordem.</h1>
+<p>A mesma sequência do curso, para ter aberta enquanto você faz. Troque SeuNome, SEU-USUARIO e IP-DA-VPS pelos seus.</p><a class="button primary" href="oswork-quick-pt.txt" download>Baixar a cola (.txt)</a>
+</div>
+<div class="card">
+<h2>Windows e VPS lado a lado</h2>
+<div class="table-scroll">
+<table><thead>
+<tr><th>Windows (cmd)</th><th>VPS (Ubuntu)</th><th>faz</th>
+</tr></thead><tbody>
+<tr><td><code>dir</code></td><td><code>ls</code></td><td>lista a pasta</td>
+</tr>
+<tr><td><code>cd nome / cd ..</code></td><td><code>cd nome / cd ..</code></td><td>entra / volta</td>
+</tr>
+<tr><td><code>mkdir nome</code></td><td><code>mkdir -p nome</code></td><td>cria pasta</td>
+</tr>
+<tr><td><code>cls</code></td><td><code>clear</code></td><td>limpa a tela</td>
+</tr>
+<tr><td><code>type arquivo</code></td><td><code>cat arquivo</code></td><td>mostra o arquivo</td>
+</tr>
+<tr><td><code>%USERPROFILE%</code></td><td><code>~</code></td><td>pasta pessoal</td>
+</tr>
+<tr><td><code>explorer .</code></td><td><code>ls</code></td><td>ver a pasta</td>
+</tr></tbody>
+</table>
+</div>
+</div>
+</header>
+<section class="band">
+<h2>1. Seu computador</h2>
+<h3>Abra o terminal</h3>
+<pre><code>cd</code>
+</pre><button data-copy-prev>Copiar bloco</button>
+<h3>Crie a pasta projetos e a do primeiro projeto</h3>
+<pre><code>cd %USERPROFILE%
+mkdir projetos
+cd projetos
+mkdir meu-site
+cd meu-site</code>
+</pre><button data-copy-prev>Copiar bloco</button>
+<h3>Veja no Windows onde tudo fica</h3>
+<pre><code>explorer .</code>
+</pre><button data-copy-prev>Copiar bloco</button>
+<h3>Navegue com 6 comandos</h3>
+<pre><code>cd ..
+dir
+cd meu-site
+dir</code>
+</pre><button data-copy-prev>Copiar bloco</button>
+<h3>Instale Git, GitHub CLI e Node (uma vez)</h3>
+<pre><code>winget install --id Git.Git -e
+winget install --id GitHub.cli -e
+winget install --id OpenJS.NodeJS.LTS -e</code>
+</pre><button data-copy-prev>Copiar bloco</button>
+<h3>Instale o agente: Claude Code ou Codex</h3>
+<pre><code>curl -fsSL https://claude.ai/install.cmd -o install.cmd &amp;&amp; install.cmd &amp;&amp; del install.cmd
+npm install -g @openai/codex</code>
+</pre><button data-copy-prev>Copiar bloco</button>
+<h3>Trabalhe dentro da pasta do projeto</h3>
+<pre><code>cd %USERPROFILE%\projetos\meu-site
+claude
+dir
+start index.html</code>
+</pre><button data-copy-prev>Copiar bloco</button>
+</section>
+<section class="band">
+<h2>2. GitHub</h2>
+<h3>Diga ao Git quem é você</h3>
+<pre><code>git config --global user.name &quot;Seu Nome&quot;
+git config --global user.email &quot;seu@email.com&quot;
+git config --global --list</code>
+</pre><button data-copy-prev>Copiar bloco</button>
+<h3>Crie a sua chave SSH</h3>
+<pre><code>ssh-keygen -t ed25519 -C &quot;seu@email.com&quot;
+explorer %USERPROFILE%\.ssh</code>
+</pre><button data-copy-prev>Copiar bloco</button>
+<h3>Conecte o gh à sua conta e envie a chave</h3>
+<pre><code>gh auth login
+ssh -T git@github.com</code>
+</pre><button data-copy-prev>Copiar bloco</button>
+<h3>Crie o repositório e envie o projeto</h3>
+<pre><code>cd %USERPROFILE%\projetos\meu-site
+git init
+git add .
+git commit -m &quot;primeira versão&quot;
+git branch -M main
+gh repo create meu-site --public --source=. --push</code>
+</pre><button data-copy-prev>Copiar bloco</button>
+<h3>Publique a página no GitHub Pages</h3>
+<pre><code>gh api repos/{owner}/{repo}/pages -X POST -f &quot;source[branch]=main&quot; -f &quot;source[path]=/&quot;</code>
+</pre><button data-copy-prev>Copiar bloco</button>
+<h3>A rotina de todo dia</h3>
+<pre><code>git status
+git add .
+git commit -m &quot;o que mudou&quot;
+git push</code>
+</pre><button data-copy-prev>Copiar bloco</button>
+</section>
+<section class="band">
+<h2>3. VPS</h2>
+<h3>Contrate a VPS com a sua chave</h3>
+<pre><code>type %USERPROFILE%\.ssh\id_ed25519.pub</code>
+</pre><button data-copy-prev>Copiar bloco</button>
+<h3>Entre na VPS</h3>
+<pre><code>ssh root@IP-DA-VPS</code>
+</pre><button data-copy-prev>Copiar bloco</button>
+<h3>Mesma navegação, outros nomes</h3>
+<pre><code>mkdir -p ~/projetos
+cd ~/projetos
+ls
+pwd</code>
+</pre><button data-copy-prev>Copiar bloco</button>
+<h3>Traga o projeto do GitHub</h3>
+<pre><code>apt update &amp;&amp; apt install -y git
+cd ~/projetos
+git clone https://github.com/SEU-USUARIO/meu-site.git
+cd meu-site
+ls</code>
+</pre><button data-copy-prev>Copiar bloco</button>
+<h3>Instale o agente na VPS</h3>
+<pre><code>curl -fsSL https://claude.ai/install.sh | bash
+cd ~/projetos/meu-site
+claude</code>
+</pre><button data-copy-prev>Copiar bloco</button>
+<h3>Traga o que mudou e saia</h3>
+<pre><code>cd ~/projetos/meu-site
+git pull
+ls
+exit</code>
+</pre><button data-copy-prev>Copiar bloco</button>
+</section>
+<section class="band">
+<h2>4. Visão: Vercel e Supabase</h2>
+<h3>O que a Vercel faz</h3>
+<pre><code>git add .
+git commit -m &quot;nova versão&quot;
+git push</code>
+</pre><button data-copy-prev>Copiar bloco</button>
+<h3>Ligue o repositório na Vercel</h3>
+<pre><code>gh repo view --web</code>
+</pre><button data-copy-prev>Copiar bloco</button>
+<h3>Cada push publica</h3>
+<pre><code>git push</code>
+</pre><button data-copy-prev>Copiar bloco</button>
+<h3>Domínio próprio</h3>
+<pre><code>nslookup seudominio.com.br</code>
+</pre><button data-copy-prev>Copiar bloco</button>
+<h3>O que o Supabase faz</h3>
+<pre><code>type .gitignore</code>
+</pre><button data-copy-prev>Copiar bloco</button>
+<h3>Chaves fora do repositório</h3>
+<pre><code>echo .env&gt;&gt;.gitignore
+type .gitignore</code>
+</pre><button data-copy-prev>Copiar bloco</button>
+</section>
+<p><a href="../index.html">Voltar ao curso</a>
+</p>
+</main>
+<footer>
+<div class="wrap">OSWork Quick · na prática · INEMA.CLUB · v2.0.0<br>Comandos conferidos nas documentações oficiais em 07/10/2026. Progresso e notas ficam neste navegador; exporte na sua jornada.<br><a href="../FONTES.md">Fontes</a>
+</div>
+</footer>
+<dialog id="module-dialog" aria-labelledby="modal-title">
+<div class="actions"><strong id="modal-title">Módulo completo</strong><button onclick="document.getElementById('module-dialog').close()">Fechar módulo</button>
+</div><iframe title="Conteúdo completo do módulo"></iframe>
+</dialog>
+<script src="../assets/learn.js"></script><script src="../assets/site.js"></script>
+</body>
+</html>

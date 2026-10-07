@@ -1,12 +1,104 @@
 <!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta http-equiv="refresh" content="0; url=landing.html">
-<link rel="canonical" href="landing.html">
-<title>OSWork Quick</title>
+<html lang="en" class="dark">
+<head><meta charset="utf-8"><script>(function(){try{var p=JSON.parse(localStorage.getItem('inema.prefs')||'{}'),d=document.documentElement;d.classList.toggle('dark',p.theme?p.theme!=='claro':true);if(p.theme)d.dataset.theme=p.theme;if(p.fontScale)d.style.setProperty('--fs-root',p.fontScale+'%');if(p.font)d.dataset.font=p.font;if(p.accent)d.dataset.accent=p.accent;if(p.lineWidth)d.style.setProperty('--measure',p.lineWidth+'ch');if(p.leading)d.style.setProperty('--leading',p.leading)}catch(e){document.documentElement.classList.add('dark')}})();</script>
+<meta name="viewport" content="width=device-width,initial-scale=1"><meta name="inema-course" content="oswork-quick-en"><title>OSWork Quick · OSWork Quick</title><meta name="description" content="Open the Windows terminal, create your projects folder, see where everything lives, install Claude Code or Codex, save your work on GitHub with an SSH key, and move the project to a VPS. If you learn to navigate Windows, you can navigate a VPS the same way."><meta property="og:title" content="OSWork Quick — one command at a time."><meta property="og:image" content="https://inematds.github.io/oswork-quick/capa/capa.png">
+<link rel="canonical" href="https://inematds.github.io/oswork-quick/en/index.html"><link rel="alternate" hreflang="pt-BR" href="https://inematds.github.io/oswork-quick/index.html"><link rel="alternate" hreflang="en" href="https://inematds.github.io/oswork-quick/en/index.html"><link rel="alternate" hreflang="es" href="https://inematds.github.io/oswork-quick/es/index.html"><link rel="alternate" hreflang="x-default" href="https://inematds.github.io/oswork-quick/index.html">
+<script type="application/json" data-inema-manifest>{"course": "oswork-quick-en", "tracks": [{"n": "1", "title": "Your computer", "modules": [{"id": "1-1", "title": "Terminal, folders, and an agent on Windows", "topics": 7, "href": "curso/trilha1/modulo-1-1.html"}]}, {"n": "2", "title": "GitHub", "modules": [{"id": "2-1", "title": "Git, gh, and an SSH key on GitHub", "topics": 6, "href": "curso/trilha2/modulo-2-1.html"}]}, {"n": "3", "title": "VPS", "modules": [{"id": "3-1", "title": "VPS: the same, on a server", "topics": 6, "href": "curso/trilha3/modulo-3-1.html"}]}, {"n": "4", "title": "Overview: Vercel and Supabase", "modules": [{"id": "4-1", "title": "Vercel and Supabase: the overview", "topics": 6, "href": "curso/trilha4/modulo-4-1.html"}]}]}</script>
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="assets/site.css"><link rel="stylesheet" href="assets/learn.css">
+<style>:root{--track:#34d399}html:not(.dark){--track:#047857}pre code{white-space:pre-wrap}.see{border-left:3px solid var(--track);padding:6px 0 6px 14px;margin:12px 0}.cmdbox{margin:14px 0}.hero>*{min-width:0}pre{overflow-wrap:anywhere}</style>
 </head>
 <body>
-<p><a href="landing.html">OSWork Quick</a></p>
+<a class="skip" href="#conteudo">Skip to content</a>
+<nav class="topnav" aria-label="Main navigation">
+<div class="wrap">
+<div class="nav-main"><a class="brand" href="index.html">OSWork Quick<span aria-hidden="true">_</span></a><span aria-hidden="true">/</span><a class="text-sky-400" href="https://inema.club">INEMA.CLUB</a><span aria-hidden="true">-</span><a class="text-amber-700 dark:text-slate-300" href="https://inema.pro">PRO</a><span class="spacer"></span><button data-inema-journey-open>My journey</button><button data-inema-appearance-toggle="#aparencia" aria-expanded="false">Aa · Appearance</button><button onclick="toggleTheme()" aria-label="Toggle light and dark themes">◐ Theme</button>
+</div>
+<div class="nav-tracks"><a href="curso/trilha1/index.html" aria-current="page">T1<span class="long"> · Your computer</span></a><a href="curso/trilha2/index.html" >T2<span class="long"> · GitHub</span></a><a href="curso/trilha3/index.html" >T3<span class="long"> · VPS</span></a><a href="curso/trilha4/index.html" >T4<span class="long"> · Overview: Vercel and Supabase</span></a><a href="materiais/index.html">Command cheat sheet</a>
+</div>
+<div class="language-nav" data-os-languages><a href="../index.html" hreflang="pt-BR" lang="pt-BR">Português</a><a href="index.html" hreflang="en" lang="en" aria-current="page">English</a><a href="../es/index.html" hreflang="es" lang="es">Español</a>
+</div>
+<div id="aparencia" class="appearance" data-inema-appearance hidden>
+<div class="row"><button type="button" data-inema-set-theme="inema-dark">Dark</button><button type="button" data-inema-set-theme="claro">Light</button><button type="button" data-inema-set-theme="sepia">Sepia</button><button type="button" data-inema-set-theme="foco">Focus</button><button type="button" data-inema-set-theme="contraste">High contrast</button>
+</div>
+<div class="row"><span>Size</span><button data-inema-set-fontscale="100">100%</button><button data-inema-set-fontscale="112">112%</button><button data-inema-set-fontscale="125">125%</button><button data-inema-set-font="inter">Sans serif</button><button data-inema-set-font="leitura">Serif</button><button data-inema-set-linewidth="60">Narrow column</button><button data-inema-set-linewidth="75">Wide column</button><button data-inema-set-leading="1.7">Comfortable line spacing</button>
+</div>
+</div>
+</div>
+</nav>
+<main id="conteudo" class="wrap">
+<header class="hero">
+<div>
+<p class="kicker">INEMA · OSWORK QUICK / HANDS-ON</p>
+<h1>From the terminal to your live page, <span class="accent">one command at a time.</span>
+</h1>
+<p>Open the Windows terminal, create your projects folder, see where everything lives, install Claude Code or Codex, save your work on GitHub with an SSH key, and move the project to a VPS. If you learn to navigate Windows, you can navigate a VPS the same way.</p>
+<div class="actions"><a class="button primary" href="curso/trilha1/modulo-1-1.html">Start with step 1 →</a><button data-os-resume>Pick up where I left off</button><a class="button" href="materiais/index.html">Command cheat sheet</a>
+</div>
+<div class="meter" data-inema-meter="curso" role="progressbar" aria-label="Progress" aria-valuemin="0" aria-valuemax="100"><span class="inema-meter-pct" data-inema-meter-pct>0%</span><span class="inema-meter-count" data-inema-meter-frac>0 of 0</span>
+</div>
+<p class="help-note">No programming required. Copy, paste, and check. You need a computer running Windows 10 or 11 and a Claude or ChatGPT subscription for the agent.</p>
+</div>
+<figure class="hero-panel"><svg class="w-full h-auto" viewBox="0 0 490 410" role="img" aria-label="CMD → FOLDERS → FILE EXPLORER → AGENT → GIT + GH → SSH KEY → GITHUB PAGES → VPS"><defs><filter id="glow"><feGaussianBlur stdDeviation="1"/></filter></defs><path d="M10 10H480V395H10Z" fill="none" stroke="#334155" stroke-dasharray="3 7"/><rect x="20" y="25" width="215" height="65" rx="10" fill="#152234" stroke="#34d399"/><text x="36" y="50" fill="#cbd5e1" font-size="10" font-family="monospace">01 / OSWORK</text><text x="36" y="72" fill="#f1f5f9" font-size="14" font-family="sans-serif">CMD</text><path d="M120 90v25" stroke="#34d399" stroke-width="2"/><rect x="255" y="25" width="215" height="65" rx="10" fill="#152234" stroke="#38bdf8"/><text x="271" y="50" fill="#cbd5e1" font-size="10" font-family="monospace">02 / OSWORK</text><text x="271" y="72" fill="#f1f5f9" font-size="14" font-family="sans-serif">FOLDERS</text><path d="M355 90v25" stroke="#34d399" stroke-width="2"/><rect x="20" y="115" width="215" height="65" rx="10" fill="#152234" stroke="#34d399"/><text x="36" y="140" fill="#cbd5e1" font-size="10" font-family="monospace">03 / OSWORK</text><text x="36" y="162" fill="#f1f5f9" font-size="14" font-family="sans-serif">FILE EXPLORER</text><path d="M120 180v25" stroke="#34d399" stroke-width="2"/><rect x="255" y="115" width="215" height="65" rx="10" fill="#152234" stroke="#38bdf8"/><text x="271" y="140" fill="#cbd5e1" font-size="10" font-family="monospace">04 / OSWORK</text><text x="271" y="162" fill="#f1f5f9" font-size="14" font-family="sans-serif">AGENT</text><path d="M355 180v25" stroke="#34d399" stroke-width="2"/><rect x="20" y="205" width="215" height="65" rx="10" fill="#152234" stroke="#34d399"/><text x="36" y="230" fill="#cbd5e1" font-size="10" font-family="monospace">05 / OSWORK</text><text x="36" y="252" fill="#f1f5f9" font-size="14" font-family="sans-serif">GIT + GH</text><path d="M120 270v25" stroke="#34d399" stroke-width="2"/><rect x="255" y="205" width="215" height="65" rx="10" fill="#152234" stroke="#38bdf8"/><text x="271" y="230" fill="#cbd5e1" font-size="10" font-family="monospace">06 / OSWORK</text><text x="271" y="252" fill="#f1f5f9" font-size="14" font-family="sans-serif">SSH KEY</text><path d="M355 270v25" stroke="#34d399" stroke-width="2"/><rect x="20" y="295" width="215" height="65" rx="10" fill="#152234" stroke="#34d399"/><text x="36" y="320" fill="#cbd5e1" font-size="10" font-family="monospace">07 / OSWORK</text><text x="36" y="342" fill="#f1f5f9" font-size="14" font-family="sans-serif">GITHUB PAGES</text><rect x="255" y="295" width="215" height="65" rx="10" fill="#152234" stroke="#38bdf8"/><text x="271" y="320" fill="#cbd5e1" font-size="10" font-family="monospace">08 / OSWORK</text><text x="271" y="342" fill="#f1f5f9" font-size="14" font-family="sans-serif">VPS</text></svg><figcaption class="help-note">The whole journey: from your computer to a server, using the same folders all the way.</figcaption>
+</figure>
+</header>
+<div class="stats">
+<div><strong>4</strong><span>parts</span>
+</div>
+<div><strong>25</strong><span>steps with commands</span>
+</div>
+<div><strong>~75 min</strong><span>doing, not reading</span>
+</div>
+<div><strong>3</strong><span>languages</span>
+</div>
+</div>
+<section class="band">
+<p class="kicker">YOUR PATH</p>
+<h2>Four parts, in the order you’ll do them.</h2>
+<div class="grid"><a class="card" href="curso/trilha1/index.html">
+<div class="overline"><span>TRACK 01</span><span>7 STEPS · ~25 MIN</span>
+</div>
+<h2>Your computer</h2>
+<p>Terminal, folders, and the agent working in Windows.</p><span class="accent">Explore track →</span></a><a class="card" href="curso/trilha2/index.html">
+<div class="overline"><span>TRACK 02</span><span>6 STEPS · ~20 MIN</span>
+</div>
+<h2>GitHub</h2>
+<p>Git, gh, and SSH keys: save versions and publish a page.</p><span class="accent">Explore track →</span></a><a class="card" href="curso/trilha3/index.html">
+<div class="overline"><span>TRACK 03</span><span>6 STEPS · ~20 MIN</span>
+</div>
+<h2>VPS</h2>
+<p>The same project on a server, using the navigation you already know.</p><span class="accent">Explore track →</span></a><a class="card" href="curso/trilha4/index.html">
+<div class="overline"><span>TRACK 04</span><span>6 STEPS · ~10 MIN</span>
+</div>
+<h2>Overview: Vercel and Supabase</h2>
+<p>For when you want to connect your project to other systems.</p><span class="accent">Explore track →</span></a>
+</div>
+</section>
+<section class="band grid">
+<div>
+<p class="kicker">BY THE END, YOU’LL HAVE</p>
+<h2>Your own project, saved and published.</h2>
+<ul>
+<li>The C:\Users\YourName\projects\my-site folder, which you can find in the terminal and File Explorer.</li>
+<li>Claude Code or Codex working inside that folder.</li>
+<li>The project on GitHub with an SSH key, and a page at YOUR-USER.github.io.</li>
+<li>The same project on a VPS, navigated with the same commands.</li>
+</ul>
+<p class="help-note">Commands come from the official documentation (Claude Code, Codex, GitHub CLI) checked on 10/07/2026. Screens and versions can change: if something looks different, read the message carefully before running the command again.</p>
+</div>
+<div class="card">
+<h3>Looking for the previous edition?</h3>
+<p>The first edition of Quick (organizing with AI without a terminal, seven lessons, and a video with Nei) is still available: the videos are on the videos page, and the course is in the repository version marked v1-sem-terminal.</p><a class="button" href="../videos/en.html">Videos from the previous edition</a>
+</div>
+</section>
+</main>
+<footer>
+<div class="wrap">OSWork Quick · hands-on · INEMA.CLUB · v2.0.0<br>Commands checked against official documentation on 10/07/2026. Progress and notes stay in this browser; export them from your journey.<br><a href="FONTES.md">Sources</a>
+</div>
+</footer>
+<dialog id="module-dialog" aria-labelledby="modal-title">
+<div class="actions"><strong id="modal-title">Complete module</strong><button onclick="document.getElementById('module-dialog').close()">Close module</button>
+</div><iframe title="Complete module content"></iframe>
+</dialog>
+<script src="assets/learn.js"></script><script src="assets/site.js"></script>
 </body>
 </html>
