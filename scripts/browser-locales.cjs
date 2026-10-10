@@ -9,6 +9,12 @@ const fs = require('fs'), path = require('path'), assert = require('assert');
 
 const ROOT = path.resolve(__dirname, '..');
 const OUT = path.join(ROOT, '.verificacao');
+// a chave de estado vem do PT, não fica escrita aqui: este teste roda em mais de um
+// repositório (oswork-v5 usa 'oswork5', oswork-quick usa 'osworkq').
+const CHAVE_BASE = (fs.readFileSync(path.join(ROOT, 'curso.html'), 'utf-8')
+  .match(/<meta name="curso" content="([^"]+)"/) || [])[1];
+if (!CHAVE_BASE) { console.error('não achei <meta name=curso> no curso.html do PT'); process.exit(1); }
+
 const grupos = [];
 const ok = n => { grupos.push(n); process.stdout.write('  ok  ' + n + '\n'); };
 
@@ -67,9 +73,9 @@ const ok = n => { grupos.push(n); process.stdout.write('  ok  ' + n + '\n'); };
 
     // 4. estado isolado do PT e do outro idioma
     const chave = await page.evaluate(() => document.querySelector('meta[name=curso]').content);
-    assert.equal(chave, 'osworkq-' + lang, lang + ': chave de estado errada: ' + chave);
+    assert.equal(chave, CHAVE_BASE + '-' + lang, lang + ': chave de estado errada: ' + chave);
     const chaves = await page.evaluate(() => Object.keys(localStorage));
-    assert.ok(!chaves.includes('osworkq'), lang + ': escreveu no estado do PT');
+    assert.ok(!chaves.includes(CHAVE_BASE), lang + ': escreveu no estado do PT');
     ok(lang + ': estado isolado em "' + chave + '" (não toca o do PT)');
 
     // 5. o seletor de idioma leva aos outros dois

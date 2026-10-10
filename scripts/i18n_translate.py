@@ -30,6 +30,10 @@ GLOSSARIO = {
         "professor": "teacher", "trilha": "track", "aula": "lesson",
         "pratique agora": "practice now", "teste-se": "test yourself",
         "grifar": "highlight", "cartão": "card", "jornada": "journey",
+        # "script" está na lista que o curso promete não usar: roteiro nunca vira script
+        "roteiro de laboratório": "lab worksheet", "roteiro": "worksheet",
+        # "role" aqui é o verbo rolar a página, não o substantivo inglês
+        "role para estudar": "scroll to study",
     },
     "es": {
         "pedido completo": "pedido completo", "critério de pronto": "criterio de terminado",
@@ -38,6 +42,9 @@ GLOSSARIO = {
         "professor": "profesor", "trilha": "ruta", "aula": "lección",
         "pratique agora": "practica ahora", "teste-se": "ponte a prueba",
         "grifar": "resaltar", "cartão": "tarjeta", "jornada": "trayecto",
+        # "script"/"guion" estão na lista que o curso promete não usar
+        "roteiro de laboratório": "guía de laboratorio", "roteiro": "guía",
+        "role para estudar": "desplázate para estudiar",
     },
 }
 
