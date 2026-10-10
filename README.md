@@ -31,3 +31,9 @@ https://inematds.github.io/oswork-quick/videos/
 ## Editar
 
 Conteúdo em `conteudo/{pt,en,es}.json`; páginas geradas por `scripts/build.py`. Ver `AGENTS.md`.
+
+## Mais no INEMA.CLUB
+
+- Ficha do curso: https://www.inema.club/cursos/280-oswork-quick-do-terminal-a-sua-pagina-no-ar/
+- Guia: como aprender inteligência artificial: https://www.inema.club/aprender-inteligencia-artificial/
+- Todos os cursos: https://www.inema.club/cursos/

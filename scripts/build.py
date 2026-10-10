@@ -22,6 +22,12 @@ def localize_cmd(cmd,lang):
  return cmd
 ANTI="""(function(){try{var p=JSON.parse(localStorage.getItem('inema.prefs')||'{}'),d=document.documentElement;d.classList.toggle('dark',p.theme?p.theme!=='claro':true);if(p.theme)d.dataset.theme=p.theme;if(p.fontScale)d.style.setProperty('--fs-root',p.fontScale+'%');if(p.font)d.dataset.font=p.font;if(p.accent)d.dataset.accent=p.accent;if(p.lineWidth)d.style.setProperty('--measure',p.lineWidth+'ch');if(p.leading)d.style.setProperty('--leading',p.leading)}catch(e){document.documentElement.classList.add('dark')}})();"""
 
+FICHA='https://www.inema.club/cursos/280-oswork-quick-do-terminal-a-sua-pagina-no-ar/'
+GUIA_IA='https://www.inema.club/aprender-inteligencia-artificial/'
+BACKLINK={l:f'<!-- inema-backlink:v1 --><p style="margin:.75rem 0 0;opacity:.85"><a href="{FICHA}">{a}</a> · <a href="{GUIA_IA}">{b}</a> · <a href="https://www.inema.club/cursos/">{c}</a></p><!-- /inema-backlink:v1 -->' for l,(a,b,c) in {
+ 'pt':('Ficha completa deste curso no INEMA.CLUB','Guia: como aprender inteligência artificial','Todos os cursos'),
+ 'en':('Full course page on INEMA.CLUB','Guide: how to learn artificial intelligence','All courses'),
+ 'es':('Ficha completa de este curso en INEMA.CLUB','Guía: cómo aprender inteligencia artificial','Todos los cursos')}.items()}
 def course_id(lang):return 'oswork-quick' if lang=='pt' else 'oswork-quick-'+lang
 def outdir(lang):return ROOT if lang=='pt' else ROOT/lang
 
@@ -60,7 +66,7 @@ def build(lang):
 <a class="skip" href="#conteudo">{U['skip']}</a>
 <nav class="topnav" aria-label="{U['nav']}"><div class="wrap"><div class="nav-main"><a class="brand" href="{root}index.html">OSWork Quick<span aria-hidden="true">_</span></a><span aria-hidden="true">/</span><a class="text-sky-400" href="https://inema.club">INEMA.CLUB</a><span aria-hidden="true">-</span><a class="text-amber-700 dark:text-slate-300" href="https://inema.pro">PRO</a><span class="spacer"></span><button data-inema-journey-open>{U['journey']}</button><button data-inema-appearance-toggle="#aparencia" aria-expanded="false">{U['appearance']}</button><button onclick="toggleTheme()" aria-label="{U['theme_label']}">{U['theme']}</button></div><div class="nav-tracks">{nav}<a href="{root}materiais/index.html">{U['cheat']}</a></div><div class="language-nav" data-os-languages>{langs}</div>
 <div id="aparencia" class="appearance" data-inema-appearance hidden><div class="row">{themes}</div><div class="row"><span>{U['size']}</span><button data-inema-set-fontscale="100">100%</button><button data-inema-set-fontscale="112">112%</button><button data-inema-set-fontscale="125">125%</button><button data-inema-set-font="inter">{U['sans']}</button><button data-inema-set-font="leitura">{U['serif']}</button><button data-inema-set-linewidth="60">{U['narrow']}</button><button data-inema-set-linewidth="75">{U['wide']}</button><button data-inema-set-leading="1.7">{U['leading']}</button></div></div></div></nav>
-<main id="conteudo" class="wrap">{body}</main><footer><div class="wrap">{U['footer']}<br><a href="{root}FONTES.md">{U['sources']}</a></div></footer>
+<main id="conteudo" class="wrap">{body}</main><footer><div class="wrap">{U['footer']}<br><a href="{root}FONTES.md">{U['sources']}</a>{BACKLINK[lang]}</div></footer>
 <dialog id="module-dialog" aria-labelledby="modal-title"><div class="actions"><strong id="modal-title">{U['modal_title']}</strong><button onclick="document.getElementById('module-dialog').close()">{U['close']}</button></div><iframe title="{U['modal_iframe']}"></iframe></dialog>
 <script src="{root}assets/learn.js"></script><script src="{root}assets/site.js"></script></body></html>'''
   out=re.sub(r'>(?=<(?:/?(?:html|head|body|nav|div|section|article|h[1-6]|p|ul|li|ol|main|footer|header|table|tr|figure|details|summary|aside|pre|dialog)\b))','>\n',out)
